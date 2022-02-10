@@ -1,4 +1,25 @@
-.app {
-  background-color: bisque;
+.app-first {
   height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.app-first-imgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#app-first-mq-logo {
+  top: -150px;
+  z-index: 10;
+}
+
+#app-first-mustachios {
+  bottom: -250px;
 }
