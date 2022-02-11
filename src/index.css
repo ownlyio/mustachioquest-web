@@ -8,8 +8,9 @@
   padding: 0;
 }
 
+html,
 body {
-  min-height: 100vh;
+  height: 100%;
 }
 
 /* Utility Classes */
@@ -2423,4 +2424,24 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.content {
+  z-index: 1000;
+}
+
+.text-color-1 {
+  color: #20286c;
+}
+
+.btn-custom-1 {
+  background-color: #0b114b;
+  color: white;
+  transition: 0.5s all ease;
+}
+
+.btn-custom-1:hover,
+.btn-custom-1:focus {
+  background-color: white;
+  color: #0b114b;
 }
