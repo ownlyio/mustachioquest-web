@@ -216,3 +216,147 @@
   font-weight: 200;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-BlackItalic.woff2") format("woff2"),
+    url("fonts/WHermann-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-Regular.woff2") format("woff2"),
+    url("fonts/WHermann-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-Italic.woff2") format("woff2"),
+    url("fonts/WHermann-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-Black.woff2") format("woff2"),
+    url("fonts/WHermann-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-Heavy.woff2") format("woff2"),
+    url("fonts/WHermann-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-HeavyItalic.woff2") format("woff2"),
+    url("fonts/WHermann-HeavyItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-SemiBoldItalic.woff2") format("woff2"),
+    url("fonts/WHermann-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-SemiBold.woff2") format("woff2"),
+    url("fonts/WHermann-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-UltraBold.woff2") format("woff2"),
+    url("fonts/WHermann-UltraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "W Hermann";
+  src: url("fonts/WHermann-UltraBoldItalic.woff2") format("woff2"),
+    url("fonts/WHermann-UltraBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+.font-w-hermann {
+  font-family: "W Hermann";
+}
+
+.w-hermann-black-italic {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.w-hermann-reg {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.w-hermann-italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.w-hermann-black {
+  font-weight: 900;
+  font-style: normal;
+}
+
+.w-hermann-heavy {
+  font-weight: 900;
+  font-style: normal;
+}
+
+.w-hermann-heavy-italic {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.w-hermann-semibold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.w-hermann-semibold {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.w-hermann-ultrabold {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.w-hermann-ultrabold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
