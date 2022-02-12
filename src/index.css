@@ -1,5 +1,4 @@
 @import url(fonts.css);
-@import url(media-queries.css);
 
 * {
   box-sizing: border-box;
@@ -10,7 +9,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* Utility Classes */
