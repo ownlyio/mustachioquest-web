@@ -2448,3 +2448,14 @@ body {
   background-color: white;
   color: #0b114b;
 }
+
+.link-color-1 {
+  color: #0b114b;
+  text-decoration: underline;
+}
+
+.link-color-1:hover,
+.link-color-1:focus {
+  color: white;
+  text-decoration: underline;
+}
