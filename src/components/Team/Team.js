@@ -12,6 +12,9 @@ import ninja from '../../images/team/ninja.jpg'
 import slendie from '../../images/team/slendie.jpg'
 import sludgie from '../../images/team/sludgie.jpg'
 import squarehead from '../../images/team/squarehead.jpg'
+import micah from '../../images/team/micah.jpg'
+import raf from '../../images/team/raf.jpg'
+import boiimustache from '../../images/team/boiimustache.jpg'
 
 import bordertl from '../../images/team-tl.png'
 import bordertr from '../../images/team-tr.png'
@@ -64,24 +67,42 @@ export default function Team() {
         },
         {
             id: 8,
+            thumbnail: boiimustache,
+            name: "BOII MUSTACHE",
+            position: "3D ANIMATOR"
+        },
+        {
+            id: 9,
             thumbnail: candyfloss,
             name: "KENDRA LOPERA",
             position: "CONTENT CREATOR"
         },
         {
-            id: 9,
+            id: 10,
+            thumbnail: micah,
+            name: "MICAH GRACE RICO",
+            position: "CONTENT SPECIALIST"
+        },
+        {
+            id: 11,
             thumbnail: hotdogprince,
             name: "YASHA-CHAN",
             position: "COMMUNITY MANAGER"
         },
         {
-            id: 10,
+            id: 12,
             thumbnail: grim,
             name: "RICO ZUÑIGA",
             position: "TECHNICAL ADVISOR"
         },
         {
-            id: 11,
+            id: 13,
+            thumbnail: raf,
+            name: "RAF BANZUELA",
+            position: "CREATIVE ADVISOR"
+        },
+        {
+            id: 14,
             thumbnail: mountainwarrior,
             name: "KARL VASQUEZ",
             position: "MARKETING ADVISOR"
