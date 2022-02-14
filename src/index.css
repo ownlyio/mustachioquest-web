@@ -2449,6 +2449,18 @@ body {
   color: #0b114b;
 }
 
+.btn-custom-2 {
+  background-color: #ff9f42;
+  color: white;
+  transition: 0.5s all ease;
+}
+
+.btn-custom-2:hover,
+.btn-custom-2:focus {
+  background-color: #ff8e31;
+  color: white;
+}
+
 .link-color-1 {
   color: #0b114b;
   text-decoration: underline;
