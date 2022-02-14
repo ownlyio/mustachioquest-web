@@ -45,6 +45,38 @@
   animation: floating 3s ease-in-out infinite;
 }
 
+.feat-2d,
+.feat-3d {
+  position: absolute;
+  height: 100%;
+}
+
+.feat-2d {
+  height: 100%;
+  width: 20%;
+  left: 100px;
+  margin: 0 auto;
+  top: 90px;
+}
+
+.feat-3d {
+  height: 100%;
+  width: 26%;
+  right: 100px;
+  margin: 0 auto;
+  top: 40px;
+}
+
+.feat-mustachio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 32%;
+  margin: 0 auto;
+  top: 40px;
+}
+
 .feat-title {
   width: 60%;
   margin: 0 auto;

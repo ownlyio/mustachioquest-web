@@ -1,5 +1,7 @@
 import './App.css'
+import { useEffect } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
+import $ from 'jquery'
 
 import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
@@ -9,6 +11,12 @@ import Team from './components/Team/Team'
 import FAQ from './components/FAQ/FAQ'
 
 export default function App() {
+    // useEffect(() => {
+    //     $(window).on('scroll', () => {
+    //         console.log($(window).scrollTop())
+    //     })
+    // }, [])
+    
     return (
         <Router basename={process.env.PUBLIC_URL}>
             <Navbar /> 

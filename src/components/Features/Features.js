@@ -1,8 +1,13 @@
 import './Features.css'
 
 // images
-import featIcon from '../../images/features-icon.png'
+import feat1 from '../../images/feature-1.png'
+import feat2 from '../../images/feature-2.png'
+import feat3 from '../../images/feature-3.png'
 import compass from '../../images/features-compass.png'
+import squarehead from '../../images/feature-3-mustachio.png'
+import must2d from '../../images/feature-1-2d.png'
+import must3d from '../../images/feature-1-3d.png'
 import borderTop from '../../images/feat-top.png'
 import borderBottom from '../../images/feat-bot.png'
 
@@ -15,10 +20,13 @@ export default function Features() {
                     <div className="feat px-3 text-center">
                         <div className="feat-wrapper">
                             <div className="feat-icon">
-                                <img src={featIcon} className="w-100" alt="Features Icon" />
+                                <img src={feat1} className="w-100" alt="Features Icon" />
                             </div>
-                            <div className="feat-compass">
-                                <img src={compass} className="w-100" alt="Compass" />
+                            <div className="feat-2d">
+                                <img src={must2d} className="w-100" alt="2D Mustachio" />
+                            </div>
+                            <div className="feat-3d">
+                                <img src={must3d} className="w-100" alt="3D Mustachio" />
                             </div>
                         </div>
                         <p className="feat-title font-size-170 text-white mb-3">The Mustachios are in motion.</p>
@@ -29,7 +37,7 @@ export default function Features() {
                     <div className="feat px-3 text-center">
                         <div className="feat-wrapper">
                             <div className="feat-icon">
-                                <img src={featIcon} className="w-100" alt="Features Icon" />
+                                <img src={feat2} className="w-100" alt="Features Icon" />
                             </div>
                             <div className="feat-compass">
                                 <img src={compass} className="w-100" alt="Compass" />
@@ -43,10 +51,10 @@ export default function Features() {
                     <div className="feat px-3 text-center">
                         <div className="feat-wrapper">
                             <div className="feat-icon">
-                                <img src={featIcon} className="w-100" alt="Features Icon" />
+                                <img src={feat3} className="w-100" alt="Features Icon" />
                             </div>
-                            <div className="feat-compass">
-                                <img src={compass} className="w-100" alt="Compass" />
+                            <div className="feat-mustachio">
+                                <img src={squarehead} className="w-100" alt="Featured Mustachio" />
                             </div>
                         </div>
                         <p className="feat-title font-size-170 text-white mb-3">Build a fictional world with us.</p>
