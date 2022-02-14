@@ -10,6 +10,7 @@ import Updates from './components/Updates/Updates'
 import Team from './components/Team/Team'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
+import Footer from './components/Footer/Footer'
 
 export default function App() {
     // useEffect(() => {
@@ -28,6 +29,7 @@ export default function App() {
             <Team />
             <FAQ />
             <CTA />
+            <Footer />
         </Router>
     );
 }
