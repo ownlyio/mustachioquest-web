@@ -9,6 +9,7 @@ import Features from './components/Features/Features'
 import Updates from './components/Updates/Updates'
 import Team from './components/Team/Team'
 import FAQ from './components/FAQ/FAQ'
+import CTA from './components/CTA/CTA'
 
 export default function App() {
     // useEffect(() => {
@@ -16,7 +17,7 @@ export default function App() {
     //         console.log($(window).scrollTop())
     //     })
     // }, [])
-    
+
     return (
         <Router basename={process.env.PUBLIC_URL}>
             <Navbar /> 
@@ -26,6 +27,7 @@ export default function App() {
 
             <Team />
             <FAQ />
+            <CTA />
         </Router>
     );
 }
