@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
 import Features from './components/Features/Features'
 import Updates from './components/Updates/Updates'
+import Roadmap from './components/Roadmap/Roadmap'
 import Team from './components/Team/Team'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
@@ -25,7 +26,7 @@ export default function App() {
             <Banner />
             <Features />
             <Updates />
-
+            <Roadmap />
             <Team />
             <FAQ />
             <CTA />

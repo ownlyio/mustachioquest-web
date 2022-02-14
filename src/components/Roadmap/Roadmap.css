@@ -1,0 +1,132 @@
+@import url(https://use.fontawesome.com/releases/v5.15.4/css/solid.css);
+
+#roadmap {
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0 40px;
+}
+
+.roadmap-logo {
+  width: 28%;
+  margin: 70px auto 30px;
+}
+
+.roadmap-title {
+  margin-bottom: 60px;
+}
+
+.roadmap-wrapper {
+  flex-wrap: nowrap;
+  position: relative;
+  overflow-x: auto;
+  top: -80px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* .card {
+  border: 2px solid red;
+  width: 150px;
+  height: 75px;
+  background: black;
+  flex: 0 0 auto;
+  margin-right: 3px;
+} */
+
+.roadmap-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.roadmap-border {
+  border: 5px solid white;
+}
+
+.roadmap-quarter {
+  flex: 0 0 auto;
+  margin-right: 5%;
+}
+
+.roadmap-quarter.year-margin {
+  margin-right: 7%;
+}
+
+.q-column {
+  width: 180px;
+  position: relative;
+}
+
+#past-roadmaps {
+  margin-right: 0;
+}
+
+#past-roadmaps .q-column {
+  width: 250px;
+  text-align: right;
+}
+
+.q-column.past {
+  width: 300px !important;
+  text-align: right;
+}
+
+.q-column.after-past {
+  width: 145px;
+  text-align: right;
+}
+
+.q-column.year {
+  width: 200px;
+  text-align: right;
+}
+
+.q-column.quarter {
+  width: auto;
+}
+
+.q-column.quarter-mr {
+  margin-right: 20px;
+}
+
+.q-pointer {
+  width: 30px;
+  height: 30px;
+  background-color: #ffb800;
+  margin: 43px 0 20px;
+  position: relative;
+}
+
+.q-pointer.done:after {
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  content: "\f00c";
+  font-weight: 400;
+  color: black;
+}
+
+.q-pointer.now {
+  animation: pulse 1.5s infinite;
+}
+
+.q-content {
+  width: 100%;
+  padding: 13px 10px;
+}
+
+.q-content.now {
+  border: 3px solid #db9d00;
+}
+
+.done {
+  background-color: #ffb800;
+}
+
+.now {
+  background-color: #ffb800;
+}
+
+.soon {
+  background-color: white;
+}
