@@ -10,7 +10,7 @@ export default function FAQ() {
             <div className="accordion accordion-flush" id="app-faqs-accordion">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-header-1">
-                        <button className="accordion-button gotham-light font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-1">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-1">
                             What is a Mustachio?
                         </button>
                     </h2>
@@ -23,7 +23,7 @@ export default function FAQ() {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-header-2">
-                        <button className="accordion-button gotham-light font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-2">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-2">
                             How do I get a Mustachio?
                         </button>
                     </h2>
@@ -42,7 +42,7 @@ export default function FAQ() {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-header-3">
-                        <button className="accordion-button gotham-light font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-3">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-3">
                             Do I get to pick which Mustachio I can own?
                         </button>
                     </h2>
@@ -54,7 +54,7 @@ export default function FAQ() {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-header-4">
-                        <button className="accordion-button gotham-light font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-4">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-4">
                             Why is the gas fee so high?
                         </button>
                     </h2>
@@ -68,7 +68,7 @@ export default function FAQ() {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-header-5">
-                        <button className="accordion-button gotham-light font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-5">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-5">
                             How do I contact the Mustachio team?
                         </button>
                     </h2>
@@ -85,7 +85,7 @@ export default function FAQ() {
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-header-6">
-                        <button className="accordion-button gotham-light font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-6">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-6">
                             What else can I do with my Mustachios?
                         </button>
                     </h2>

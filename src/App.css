@@ -1,3 +1,5 @@
+@import url(media-queries.css);
+
 @keyframes floating {
   0% {
     transform: translate(0, 0px);

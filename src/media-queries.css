@@ -1,0 +1,362 @@
+/* MAX WIDTHS */
+@media (max-width: 1400px) {
+  .updates-thumbnail {
+    height: 220px !important;
+  }
+
+  .feat-2d {
+    width: 17% !important;
+    left: 30% !important;
+  }
+
+  .feat-3d {
+    width: 24% !important;
+    right: 25% !important;
+  }
+
+  .feat-mustachio {
+    top: 11% !important;
+  }
+
+  .feat-title {
+    width: 80% !important;
+  }
+
+  .feat-sub {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feat-icon {
+    width: 85% !important;
+  }
+
+  .feat-2d {
+    width: 23% !important;
+    left: 25% !important;
+  }
+
+  .feat-3d {
+    width: 33% !important;
+    right: 17% !important;
+  }
+
+  .feat-compass {
+    width: 55% !important;
+  }
+
+  .feat-mustachio {
+    width: 40% !important;
+    top: 14% !important;
+  }
+
+  .feat-title {
+    width: 90% !important;
+  }
+
+  .feat-sub {
+    width: 100% !important;
+  }
+
+  .updates-thumbnail {
+    height: 245px !important;
+  }
+
+  .footer-item:not(:last-child) {
+    margin-right: 60px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .feat {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .feat-icon {
+    width: 100% !important;
+  }
+
+  .feat-2d {
+    width: 28% !important;
+    left: 17% !important;
+  }
+
+  .feat-3d {
+    width: 40% !important;
+    right: 12% !important;
+  }
+
+  .feat-compass {
+    width: 66% !important;
+  }
+
+  .feat-mustachio {
+    width: 50% !important;
+    top: 12% !important;
+  }
+
+  .feat-title {
+    width: 100% !important;
+  }
+
+  .feat-sub {
+    width: 100% !important;
+  }
+
+  .updates-thumbnail {
+    /* height: 190px !important; */
+    aspect-ratio: 16/9;
+    height: auto !important;
+  }
+
+  .team-sub {
+    width: 85% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #features .col-12 {
+    padding-top: 60px !important;
+  }
+
+  #features .col-12:first-child {
+    padding-top: 110px !important;
+  }
+
+  #features .col-12:last-child {
+    padding-bottom: 180px !important;
+  }
+
+  .feat {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .feat-icon {
+    width: 320px !important;
+  }
+
+  .feat-2d {
+    width: 100px !important;
+    left: 150px !important;
+    top: 120px !important;
+  }
+
+  .feat-3d {
+    width: 120px !important;
+    right: 130px !important;
+    top: 60px !important;
+  }
+
+  .feat-compass {
+    width: 220px !important;
+    top: 100px !important;
+  }
+
+  .feat-mustachio {
+    width: 150px !important;
+    top: 60px !important;
+  }
+
+  .feat-title {
+    width: 50% !important;
+  }
+
+  .feat-sub {
+    width: 60% !important;
+  }
+
+  #features,
+  #faqs {
+    overflow-x: hidden;
+  }
+
+  .feat-border,
+  .faqs-border {
+    width: 150% !important;
+  }
+
+  #updates {
+    padding-top: 110px !important;
+  }
+
+  .updates-border,
+  .team-border {
+    width: 27% !important;
+  }
+
+  .roadmap-logo {
+    width: 350px !important;
+  }
+
+  .team-sub {
+    width: 100% !important;
+  }
+
+  .team-wrap {
+    width: 85% !important;
+  }
+
+  .team-thumbnail {
+    height: 500px !important;
+  }
+
+  .team-name {
+    font-size: 1.3em !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #features .col-12 {
+    padding-top: 60px !important;
+  }
+
+  #features .col-12:first-child {
+    padding-top: 40px !important;
+  }
+
+  #features .col-12:last-child {
+    padding-bottom: 140px !important;
+  }
+
+  .feat {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .feat-icon {
+    width: 320px !important;
+  }
+
+  .feat-2d {
+    width: 90px !important;
+    left: 28% !important;
+  }
+
+  .feat-3d {
+    width: 120px !important;
+    right: 26% !important;
+  }
+
+  .feat-title {
+    width: 220px !important;
+  }
+
+  .feat-sub {
+    width: 300px !important;
+  }
+
+  #features,
+  #faqs {
+    overflow-x: hidden;
+  }
+
+  .feat-border,
+  .faqs-border {
+    width: 1200px !important;
+  }
+
+  #updates,
+  #team {
+    padding-top: 110px !important;
+  }
+
+  .updates-border,
+  .team-border {
+    width: 35% !important;
+  }
+
+  .updates-thumbnail {
+    aspect-ratio: 16/9;
+    height: auto !important;
+  }
+
+  .roadmap-logo {
+    width: 60% !important;
+  }
+
+  .team-wrap {
+    width: 100% !important;
+  }
+
+  .team-thumbnail {
+    height: 530px !important;
+  }
+
+  .team-name {
+    font-size: 1.3em !important;
+  }
+
+  .footer-item svg {
+    font-size: 2em !important;
+  }
+
+  .footer-item:not(:last-child) {
+    margin-right: 10% !important;
+  }
+
+  .accordion-body {
+    word-wrap: break-word;
+  }
+
+  .bm-burger-button {
+    right: 25px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .feat-2d {
+    left: 23% !important;
+  }
+
+  .feat-3d {
+    right: 20% !important;
+  }
+
+  .team-thumbnail {
+    height: 400px !important;
+  }
+
+  .team-name {
+    font-size: 1.1em !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .feat-icon {
+    width: 300px !important;
+  }
+
+  .feat-2d {
+    width: 80px !important;
+    left: 70px !important;
+  }
+
+  .feat-3d {
+    width: 100px !important;
+    right: 70px !important;
+  }
+
+  .feat-compass {
+    width: 200px !important;
+  }
+
+  .feat-mustachio {
+    width: 140px !important;
+    top: 60px !important;
+  }
+
+  .team-thumbnail {
+    height: 320px !important;
+  }
+
+  .team-name {
+    font-size: 1em !important;
+  }
+
+  .roadmap-logo {
+    width: 70% !important;
+  }
+}

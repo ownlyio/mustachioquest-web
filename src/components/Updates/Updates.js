@@ -47,7 +47,7 @@ export default function Updates() {
         <section id="updates">
             <div className="container">
                 <div className="row justify-content-center align-items-start">
-                    <p className="cursor-pointer gotham-black text-white text-center font-size-170 mb-5">WHAT IS UP WITH THE MUSTACHIOS</p>
+                    <p className="updates-title gotham-black text-white text-center font-size-170 mb-5">WHAT IS UP WITH THE MUSTACHIOS</p>
                     { updates.map(x => (
                         <div className="col-12 col-md-6 col-xl-4 mb-3" key={x.id}>
                             <div onClick={() => redirectPage(x.link)} className="cursor-pointer updates-thumbnail mb-3">

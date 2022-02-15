@@ -112,21 +112,38 @@ export default function Team() {
                     
                     {/* Temporary only till we have 12 in the team */}
                     {/* Refactor depending on the number of employees */}
-                    <div className="d-flex justify-content-evenly align-items-center flex-wrap">
-                        { team.filter(x => x.id < 12).map(x => (
-                            <div className="team-wrap" key={x.id}>
-                                <div className="team-thumbnail w-100">
-                                    <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
+                    <div className="d-none d-lg-block">
+                        <div className="d-flex justify-content-evenly align-items-center flex-wrap">
+                            { team.filter(x => x.id < 12).map(x => (
+                                <div className="team-wrap" key={x.id}>
+                                    <div className="team-thumbnail w-100">
+                                        <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
+                                    </div>
+                                    <div className="team-content">
+                                        <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
+                                        <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
+                                    </div>
                                 </div>
-                                <div className="team-content">
-                                    <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
-                                    <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
+                            ))}
+                        </div>
+                        <div className="d-flex justify-content-evenly align-items-center flex-wrap">
+                            { team.filter(x => x.id >= 12).map(x => (
+                                <div className="team-wrap" key={x.id}>
+                                    <div className="team-thumbnail w-100">
+                                        <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
+                                    </div>
+                                    <div className="team-content">
+                                        <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
+                                        <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                    <div className="d-flex justify-content-evenly align-items-center flex-wrap">
-                        { team.filter(x => x.id >= 12).map(x => (
+
+                    {/* For width less than 992px */}
+                    <div className="d-flex d-lg-none justify-content-evenly align-items-center flex-wrap">
+                        { team.map(x => (
                             <div className="team-wrap" key={x.id}>
                                 <div className="team-thumbnail w-100">
                                     <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
