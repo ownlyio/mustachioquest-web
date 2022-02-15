@@ -1,7 +1,8 @@
 import './App.css'
 import { useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import $ from 'jquery'
+import { Discord } from './components/ShortLinks'
 
 import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
@@ -23,14 +24,19 @@ export default function App() {
     return (
         <Router basename={process.env.PUBLIC_URL}>
             <Navbar /> 
-            <Banner />
-            <Features />
-            <Updates />
-            <Roadmap />
-            <Team />
-            <FAQ />
-            <CTA />
-            <Footer />
+            <Switch>
+                <Route exact path="/">
+                    <Banner />
+                    <Features />
+                    <Updates />
+                    <Roadmap />
+                    <Team />
+                    <FAQ />
+                    <CTA />
+                    <Footer />
+                </Route>
+                <Route exact path="/discord" component={Discord}></Route>
+            </Switch>
         </Router>
     );
 }
