@@ -1,10 +1,14 @@
+#first-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .banner,
 .banner-2 {
   width: 100%;
   position: relative;
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .banner-img,
