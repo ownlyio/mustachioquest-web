@@ -17,25 +17,18 @@ import Footer from './components/Footer/Footer'
 export default function App() {
     useEffect(() => {
         let background = $('#first-section')
+        let roadmapBg = $('#roadmap')
         let portal = $('.portal-wrap')
         let mustachios = $('.mustachio-wrap')
         let logo = $('.logo')
         let content = $('.banner-content')
         let landscape = $('.landscape')
-
-        let portalWidth = portal.width()
-        let portalTop = portal.offset().top
+        let landscapeContent = $('.text-3')
+        let discordBtn = $('.join-discord')
 
         let logoWidth = logo.width()
         let logoTop = logo.offset().top
-
         let mustachioWidth = mustachios.width()
-        let mustachioTop = mustachios.offset().top
-
-        let contentFontSize = parseFloat(content.css('font-size'))
-        let contentLeft = content.offset().left
-        let contentWidth = content.width()
-
 
         $(window).on('scroll', () => {
             let valueY = $(window).scrollTop()
@@ -48,15 +41,23 @@ export default function App() {
             })
             mustachios.css({
                 "opacity": 1 - (valueY * 0.01),
-                "width": mustachioWidth - (valueY * 1.5) + "px",
+                "width": mustachioWidth - (valueY * 1.2) + "px",
             })
             content.css({
-                "opacity": 1 - (valueY * 0.003),
-                "font-size": contentFontSize + (valueY * 0.004) + 'px',
+                "opacity": 1 - (valueY * 0.01),
             })
             portal.css({
-                "transform": "rotate(-"+ (360 - (valueY * 0.1)) +"deg)",
+                "transform": "rotate(-"+ (360 - (valueY * 0.3)) +"deg)",
                 "opacity": 1 - (valueY * 0.003),
+            })
+            landscape.css("opacity", 0 + (valueY * 0.0023))
+            landscapeContent.css({
+                "bottom": 100 + (valueY * 0.55) + 'px',
+                "opacity": 0 + (valueY * 0.0017),
+            })
+            discordBtn.css({
+                "bottom": 100 + (valueY * 0.4) + 'px',
+                "opacity": 0 + (valueY * 0.0017),
             })
         })
     }, [])

@@ -35,7 +35,7 @@ export default function Banner() {
                     <img src={landscape} className="w-100" alt="Landscape" />
                 </div>
                 <p className="font-w-hermann w-hermann-semibold text-3 text-center mb-0 font-size-140 text-color-1">Embark on an adventure in the land of Mustachios. Fulfill quests, collect artifacts, and play your heart out in this interactive game.</p>
-                <button onClick={() => redirectPage("https://mustachioverse.com/discord")} type="button" className="banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</button>
+                <button onClick={() => redirectPage("https://mustachioverse.com/discord")} type="button" className="join-discord banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</button>
             </div>
         </section>
     )

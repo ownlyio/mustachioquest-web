@@ -63,18 +63,20 @@
 .text-3 {
   width: 420px;
   margin: 0 auto;
-  top: 180px;
+  bottom: 0;
+  opacity: 0;
 }
 
 .landscape {
   bottom: 0;
+  opacity: 0;
 }
 
 .banner-2 {
   background-position: bottom;
 }
 
-.banner-2 button {
-  top: 340px;
+.join-discord {
+  bottom: 0;
   width: 300px;
 }

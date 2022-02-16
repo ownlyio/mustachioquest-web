@@ -2448,7 +2448,6 @@ body {
 .btn-custom-1 {
   background-color: #0b114b;
   color: white;
-  transition: 0.5s all ease;
 }
 
 .btn-custom-1:hover,
@@ -2460,7 +2459,6 @@ body {
 .btn-custom-2 {
   background-color: #ff9f42;
   color: white;
-  transition: 0.5s all ease;
 }
 
 .btn-custom-2:hover,
