@@ -209,6 +209,11 @@
 }
 
 @media (max-width: 576px) {
+  .text-3 {
+    font-size: 1em !important;
+    width: 70% !important;
+  }
+
   #features .col-12 {
     padding-top: 60px !important;
   }
@@ -360,3 +365,5 @@
     width: 70% !important;
   }
 }
+
+/* MAX HEIGHTS */
