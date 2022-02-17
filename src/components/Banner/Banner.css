@@ -4,6 +4,7 @@
   position: relative;
 }
 
+/* PC */
 .banner,
 .banner-2 {
   width: 100%;
@@ -79,4 +80,87 @@
 .join-discord {
   bottom: 0;
   width: 300px;
+}
+
+/* Tab and Mobile */
+#mobile-first-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.mobile-1 {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.mobile-1-wrapper {
+  height: 100%;
+}
+
+.mobile-2 {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.mobile-landscape {
+  width: 100%;
+  opacity: 0;
+}
+
+.mobile-2-title,
+.mobile-join-discord {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.mobile-2-title {
+  width: 60%;
+  margin: 0 auto;
+  bottom: 0;
+  font-size: 3vw;
+  opacity: 0;
+}
+
+.mobile-join-discord {
+  bottom: 0;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 3vw;
+}
+
+.mobile-assets {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.mobile-mustachio-wrap {
+  margin-top: 5%;
+}
+
+.mobile-banner-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.mobile-logo {
+  width: 50%;
+  margin-bottom: 4%;
+  margin-top: -40%;
+}
+
+.mobile-banner-content p {
+  width: 45%;
+  font-size: 3vw;
 }

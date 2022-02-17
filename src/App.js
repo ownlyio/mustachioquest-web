@@ -17,7 +17,6 @@ import Footer from './components/Footer/Footer'
 export default function App() {
     useEffect(() => {
         let background = $('#first-section')
-        let roadmapBg = $('#roadmap')
         let portal = $('.portal-wrap')
         let mustachios = $('.mustachio-wrap')
         let logo = $('.logo')
@@ -30,9 +29,24 @@ export default function App() {
         let logoTop = logo.offset().top
         let mustachioWidth = mustachios.width()
 
+        // mobile
+        let mobileBackground = $('#mobile-first-section')
+        let mobilePortal = $('.mobile-portal-wrap')
+        let mobileMustachios = $('.mobile-mustachio-wrap')
+        let mobileLogo = $('.mobile-logo')
+        let mobileContent = $('.mobile-banner-content p')
+        let mobileLandscape = $('.mobile-landscape')
+        let mobileLandscapeContent = $('.mobile-2-title')
+        let mobileDiscordBtn = $('.mobile-join-discord')
+
+        let mobileLogoWidth = mobileLogo.width()
+        let mobileLogoTop = mobileLogo.offset().top
+        let mobileMustachioWidth = mobileMustachios.width()
+
         $(window).on('scroll', () => {
             let valueY = $(window).scrollTop()
 
+            // PC
             background.css("background-position", 'center ' + (valueY * 0.6) + 'px')
             logo.css({
                 "opacity": 1 - (valueY * 0.007),
@@ -58,6 +72,34 @@ export default function App() {
             discordBtn.css({
                 "bottom": 100 + (valueY * 0.4) + 'px',
                 "opacity": 0 + (valueY * 0.0017),
+            })
+
+            // Mobile
+            mobileBackground.css("background-position", 'center ' + (valueY * 0.6) + 'px')
+            mobileLogo.css({
+                "opacity": 1 - (valueY * 0.007),
+                "width": mobileLogoWidth - (valueY * 0.5) + 'px',
+                "top": mobileLogoTop + (valueY * 0.7) + 'px'
+            })
+            mobileMustachios.css({
+                "opacity": 1 - (valueY * 0.01),
+                "width": mobileMustachioWidth - (valueY * 1.2) + "px",
+            })
+            mobileContent.css({
+                "opacity": 1 - (valueY * 0.01),
+            })
+            mobilePortal.css({
+                "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
+                "opacity": 1 - (valueY * 0.003),
+            })
+            mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
+            mobileLandscapeContent.css({
+                "bottom": 100 + (valueY * 0.62) + 'px',
+                "opacity": 0 + (valueY * 0.007),
+            })
+            mobileDiscordBtn.css({
+                "bottom": 100 + (valueY * 0.45) + 'px',
+                "opacity": 0 + (valueY * 0.007),
             })
         })
     }, [])
