@@ -52,3 +52,14 @@
   text-decoration: none;
   color: black;
 }
+
+.mq-nav-discord {
+  background-color: #0b114b;
+  color: white;
+}
+
+.mq-nav-discord:hover,
+.mq-nav-discord:focus {
+  background-color: #7289da;
+  color: white;
+}

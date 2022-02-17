@@ -73,31 +73,38 @@ export default function Navbar() {
 
     return (
         <div id="header" className="container">
-            <div id="mq-nav" className="d-none d-md-flex justify-content-between align-items-center">
+            <div id="mq-nav" className="d-none d-lg-flex justify-content-between align-items-center">
                 <div className="mq-nav-logo">
                     <Link exact="true" to="/">
                         <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
                     </Link>
                 </div>
-                <ul className="d-flex justify-content-center align-items-center mb-0 p-0">
-                    <li>
-                        <HashLink smooth to="#features" scroll={el => scrollWithOffset(el)}>FEATURES</HashLink>
-                    </li>
-                    <li>
-                        <HashLink smooth to="#updates" scroll={el => scrollWithOffset(el)}>UPDATES</HashLink>
-                    </li>
-                    <li>
-                        <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)}>ROADMAP</HashLink>
-                    </li>
-                    <li>
-                        <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)}>TEAM</HashLink>
-                    </li>
-                    <li>
-                        <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
-                    </li>
-                </ul>
+                {/* <div classname="d-flex justify-content-end align-items-center"> */}
+                    <ul className="d-flex justify-content-center align-items-center mb-0 p-0">
+                        <li>
+                            <HashLink smooth to="#features" scroll={el => scrollWithOffset(el)}>FEATURES</HashLink>
+                        </li>
+                        <li>
+                            <HashLink smooth to="#updates" scroll={el => scrollWithOffset(el)}>UPDATES</HashLink>
+                        </li>
+                        <li>
+                            <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)}>ROADMAP</HashLink>
+                        </li>
+                        <li>
+                            <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)}>TEAM</HashLink>
+                        </li>
+                        <li>
+                            <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
+                        </li>
+                        <li>
+                            <Link exact="true" to="/discord" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                                JOIN DISCORD
+                            </Link>
+                        </li>
+                    </ul>
+                {/* </div> */}
             </div>
-            <div className="d-md-none align-self-end">
+            <div className="d-lg-none align-self-end">
                 <Menu right styles={styles}
                     isOpen={menuOpenState}
                     onStateChange={(state) => handleStateChange(state)}
@@ -112,6 +119,9 @@ export default function Navbar() {
                     <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
+                    <Link exact="true" to="/discord" className="mt-3 btn mq-nav-discord text-white gotham-black font-size-100">
+                        JOIN DISCORD
+                    </Link>
                 </Menu>
             </div>
         </div>
