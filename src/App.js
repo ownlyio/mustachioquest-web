@@ -83,7 +83,7 @@ export default function App() {
             mobileBackground.css("background-position", 'center ' + (valueY * 0.6) + 'px')
             mobileLogo.css({
                 "opacity": 1 - (valueY * 0.007),
-                "width": mobileLogoWidth - (valueY * 0.5) + 'px',
+                "width": mobileLogoWidth - (valueY * 0.00006) + '%',
                 "top": mobileLogoTop + (valueY * 0.7) + 'px'
             })
             mobileMustachios.css({
