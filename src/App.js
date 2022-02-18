@@ -284,7 +284,7 @@ export default function App() {
                     <FAQ />
                     <CTA />
                 </Route>
-                <Route exact path="/discord" component={Discord}></Route>
+                <Route exact path="/discord" component={Discord} />
             </Switch>
             <Footer />
 
