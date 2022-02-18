@@ -1,3 +1,3 @@
 export const Discord = () => {
-    window.location.href = "http://mustachioverse.com/discord";
+    window.location.href = "http://discord.gg/rfypRx4cjh";
 }

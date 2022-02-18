@@ -197,7 +197,7 @@ export default function App() {
             logo.css({
                 "opacity": 1 - (valueY * 0.007),
                 // "width": logoWidth - (valueY * 0.5) + 'px',
-                "top": logoTop + (valueY * 0.7) + 'px'
+                // "top": logoTop + (valueY * 0.7) + 'px'
             })
 
             if ($(window).height() < 1200) {
