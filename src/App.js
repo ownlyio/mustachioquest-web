@@ -47,7 +47,7 @@ export default function App() {
             let valueY = $(window).scrollTop()
 
             // PC
-            background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
+            // background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
             logo.css({
                 "opacity": 1 - (valueY * 0.007),
                 "width": logoWidth - (valueY * 0.5) + 'px',
@@ -80,7 +80,7 @@ export default function App() {
             })
 
             // Mobile
-            mobileBackground.css("background-position", 'center ' + (valueY * 0.2) + 'px')
+            // mobileBackground.css("background-position", 'center ' + (valueY * 0.2) + 'px')
             mobileLogo.css({
                 "opacity": 1 - (valueY * 0.007),
                 "top": mobileLogoTop + (valueY * 0.7) + 'px'
