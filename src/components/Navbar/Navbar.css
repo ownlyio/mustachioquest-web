@@ -54,12 +54,12 @@
 }
 
 .mq-nav-discord {
-  background-color: #0b114b;
+  background-color: black;
   color: white;
 }
 
 .mq-nav-discord:hover,
 .mq-nav-discord:focus {
-  background-color: #7289da;
+  background-color: #333;
   color: white;
 }

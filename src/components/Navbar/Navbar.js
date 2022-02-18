@@ -98,7 +98,7 @@ export default function Navbar() {
                         </li>
                         <li>
                             <Link exact="true" to="/discord" className="btn mq-nav-discord text-white gotham-black font-size-100">
-                                JOIN DISCORD
+                                MINT NOW
                             </Link>
                         </li>
                     </ul>
@@ -120,7 +120,7 @@ export default function Navbar() {
                     <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
                     <Link exact="true" to="/discord" className="mt-3 btn mq-nav-discord text-white gotham-black font-size-100">
-                        JOIN DISCORD
+                        MINT NOW
                     </Link>
                 </Menu>
             </div>

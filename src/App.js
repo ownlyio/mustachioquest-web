@@ -15,6 +15,7 @@ import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 
 export default function App() {
+
     useEffect(() => {
         let background = $('#first-section')
         let portal = $('.portal-wrap')
@@ -39,72 +40,75 @@ export default function App() {
         let mobileLandscapeContent = $('.mobile-2-title')
         let mobileDiscordBtn = $('.mobile-join-discord')
 
-        let mobileLogoWidth = mobileLogo.width()
         let mobileLogoTop = mobileLogo.offset().top
         let mobileMustachioWidth = mobileMustachios.width()
 
+        var initialScrollEvent = true
         $(window).on('scroll', () => {
-            let valueY = $(window).scrollTop()
+            if (!initialScrollEvent) {
+                let valueY = $(window).scrollTop()
 
-            // PC
-            // background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
-            logo.css({
-                "opacity": 1 - (valueY * 0.007),
-                "width": logoWidth - (valueY * 0.5) + 'px',
-                // "top": logoTop + (valueY * 0.7) + 'px'
-            })
+                // PC
+                background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
+                logo.css({
+                    "opacity": 1 - (valueY * 0.007),
+                    "width": logoWidth - (valueY * 0.5) + 'px',
+                    // "top": logoTop + (valueY * 0.7) + 'px'
+                })
 
-            if ($(window).height() < 1200) {
-                logo.css("top", logoTop + (valueY * 0.7) + 'px')
+                if ($(window).height() < 1200) {
+                    logo.css("top", logoTop + (valueY * 0.7) + 'px')
+                }
+
+                mustachios.css({
+                    "opacity": 1 - (valueY * 0.01),
+                    "width": mustachioWidth - (valueY * 1.2) + "px",
+                })
+                content.css({
+                    "opacity": 1 - (valueY * 0.01),
+                })
+                portal.css({
+                    "transform": "rotate(-"+ (360 - (valueY * 0.3)) +"deg)",
+                    "opacity": 1 - (valueY * 0.003),
+                })
+                landscape.css("opacity", 0 + (valueY * 0.0023))
+                landscapeContent.css({
+                    "bottom": 100 + (valueY * 0.55) + 'px',
+                    "opacity": 0 + (valueY * 0.0017),
+                })
+                discordBtn.css({
+                    "bottom": 100 + (valueY * 0.4) + 'px',
+                    "opacity": 0 + (valueY * 0.0017),
+                })
+
+                // Mobile
+                mobileBackground.css("background-position", 'center ' + (valueY * 0.2) + 'px')
+                mobileLogo.css({
+                    "opacity": 1 - (valueY * 0.007),
+                    "top": mobileLogoTop + (valueY * 0.7) + 'px'
+                })
+                mobileMustachios.css({
+                    "opacity": 1 - (valueY * 0.01),
+                    "width": mobileMustachioWidth - (valueY * 1.2) + "px",
+                })
+                mobileContent.css({
+                    "opacity": 1 - (valueY * 0.01),
+                })
+                mobilePortal.css({
+                    "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
+                    "opacity": 1 - (valueY * 0.003),
+                })
+                mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
+                mobileLandscapeContent.css({
+                    "bottom": 100 + (valueY * 0.62) + 'px',
+                    "opacity": 0 + (valueY * 0.007),
+                })
+                mobileDiscordBtn.css({
+                    "bottom": 100 + (valueY * 0.45) + 'px',
+                    "opacity": 0 + (valueY * 0.007),
+                })
             }
-
-            mustachios.css({
-                "opacity": 1 - (valueY * 0.01),
-                "width": mustachioWidth - (valueY * 1.2) + "px",
-            })
-            content.css({
-                "opacity": 1 - (valueY * 0.01),
-            })
-            portal.css({
-                "transform": "rotate(-"+ (360 - (valueY * 0.3)) +"deg)",
-                "opacity": 1 - (valueY * 0.003),
-            })
-            landscape.css("opacity", 0 + (valueY * 0.0023))
-            landscapeContent.css({
-                "bottom": 100 + (valueY * 0.55) + 'px',
-                "opacity": 0 + (valueY * 0.0017),
-            })
-            discordBtn.css({
-                "bottom": 100 + (valueY * 0.4) + 'px',
-                "opacity": 0 + (valueY * 0.0017),
-            })
-
-            // Mobile
-            // mobileBackground.css("background-position", 'center ' + (valueY * 0.2) + 'px')
-            mobileLogo.css({
-                "opacity": 1 - (valueY * 0.007),
-                "top": mobileLogoTop + (valueY * 0.7) + 'px'
-            })
-            mobileMustachios.css({
-                "opacity": 1 - (valueY * 0.01),
-                "width": mobileMustachioWidth - (valueY * 1.2) + "px",
-            })
-            mobileContent.css({
-                "opacity": 1 - (valueY * 0.01),
-            })
-            mobilePortal.css({
-                "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
-                "opacity": 1 - (valueY * 0.003),
-            })
-            mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
-            mobileLandscapeContent.css({
-                "bottom": 100 + (valueY * 0.62) + 'px',
-                "opacity": 0 + (valueY * 0.007),
-            })
-            mobileDiscordBtn.css({
-                "bottom": 100 + (valueY * 0.45) + 'px',
-                "opacity": 0 + (valueY * 0.007),
-            })
+            initialScrollEvent = false
         })
     }, [])
 
