@@ -6,7 +6,7 @@ import './Navbar.css'
 
 import logo from '../../images/MQ_logo.png'
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [menuOpenState, setMenuOpenState] = useState(false)
 
     const scrollWithOffset = (el) => {
@@ -97,9 +97,9 @@ export default function Navbar() {
                             <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
                         </li>
                         <li>
-                            <Link exact="true" to="/discord" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                            <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                                 MINT NOW
-                            </Link>
+                            </button>
                         </li>
                     </ul>
                 {/* </div> */}
@@ -119,9 +119,9 @@ export default function Navbar() {
                     <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
-                    <Link exact="true" to="/discord" className="mt-3 btn mq-nav-discord text-white gotham-black font-size-100">
+                    <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
-                    </Link>
+                    </button>
                 </Menu>
             </div>
         </div>

@@ -1,8 +1,11 @@
 import './App.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Button, Modal } from 'react-bootstrap'
+import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import $ from 'jquery'
 import { Discord } from './components/ShortLinks'
+import $ from 'jquery'
 
 import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
@@ -14,7 +17,151 @@ import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 
+// Utils
+// import contract from './utils/contractDev'
+import contract from './utils/contract'
+import getCurrentNetwork from './utils/getCurrentNetwork'
+import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
+
+import loading from './images/loading-mustachio.gif'
+import metamask from './images/metamask.png'
+
 export default function App() {
+    // State variables for initialization
+    const [walletAddress, setWallet] = useState("")
+    const [status, setStatus] = useState(0)
+    const [network, setNetwork] = useState("")
+    const [netStatus, setNetStatus] = useState(0)
+    const [tokenId, setTokenId] = useState(0)
+
+    // State variables for minting
+    const [txHash, setTxHash] = useState("")
+    const [txError, setTxError] = useState("")
+    const [txData, setTxData] = useState([])
+
+    // Other Variables (Change upon deployment)
+    // const explorerUrl = "https://rinkeby.etherscan.io/tx/"
+    const explorerUrl = "https://etherscan.io/tx/"
+    // const contractAddress = "0x421dC2b62713223491Daf075C23B39EF0E340E94" // Rinkeby
+    const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
+    // const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
+    const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
+    const marketplaceUrl = "https://ownly.market/?contract=" + contractAddress + "&token=" // (Production only)
+
+    // Modals
+    const [showMetamaskInstall, setShowMetamaskInstall] = useState(false);
+    const handleCloseMetamaskInstall = () => setShowMetamaskInstall(false);
+    const handleShowMetamaskInstall = () => setShowMetamaskInstall(true);
+    const [showWrongNetwork, setShowWrongNetwork] = useState(false);
+    const handleCloseWrongNetwork = () => setShowWrongNetwork(false);
+    const handleShowWrongNetwork = () => setShowWrongNetwork(true);
+    const [showOnProcess, setShowOnProcess] = useState(false);
+    const handleCloseOnProcess = () => setShowOnProcess(false);
+    const handleShowOnProcess = () => setShowOnProcess(true);
+    const [showOnError, setShowOnError] = useState(false);
+    const handleCloseOnError = () => setShowOnError(false);
+    const handleShowOnError = () => setShowOnError(true);
+    const [showOnSuccess, setShowOnSuccess] = useState(false);
+    const handleCloseOnSuccess = () => setShowOnSuccess(false);
+    const handleShowOnSuccess = () => setShowOnSuccess(true);
+    const [showSoldOut, setShowSoldOut] = useState(false);
+    const handleCloseSoldOut = () => setShowSoldOut(false);
+    const handleShowSoldOut = () => setShowSoldOut(true);
+    const [showHowToMint, setShowHowToMint] = useState(false);
+    const handleCloseHowToMint = () => setShowHowToMint(false);
+    const handleShowHowToMint = () => setShowHowToMint(true);
+
+    // Initialize wallet address and network upon button click
+    // Then mint afterwards
+    const initUtilsAndMint = async () => {
+        const walletResponse = await getCurrentWalletConnected()
+        const networkResponse = await getCurrentNetwork()
+        setStatus(walletResponse.status)
+        setWallet(walletResponse.address)
+        setNetwork(networkResponse.network)
+        setNetStatus(networkResponse.netStatus)
+
+        if (status === 1) {
+            // if (network === "rinkeby") {
+            if (network === "main") {
+                mintMustachio()
+            } else {
+                handleShowWrongNetwork()
+            }
+        } else if (status === 0) {
+            handleShowMetamaskInstall()
+        }
+    }
+
+    // Event Listener for Metamask Account Change
+    const addWalletListener = () => {
+        if (window.ethereum) {
+            window.ethereum.on("accountsChanged", (accounts) => {
+                if (accounts.length > 0) {
+                    setWallet(accounts[0])
+                    setStatus(1)
+                } else {
+                    setWallet("");
+                    setStatus(2)
+                }
+            })
+        } else {
+          setStatus(0);
+        }
+    }
+
+    // Event Listener for Metamask Network Change
+    const addNetworkListener = () => {
+        if (window.ethereum) {
+            window.ethereum.on('chainChanged', async function(networkIdMM){
+                const networkResponseOnLoad = await getCurrentNetwork(1)
+                setNetwork(networkResponseOnLoad.network)
+                setNetStatus(networkResponseOnLoad.netStatus)
+            });            
+        }
+    }
+
+    // shorten addresses and/or txHashes
+    // const shortenAddress = (address, prefixCount, postfixCount) => {
+    //     let prefix = address.substr(0, prefixCount);
+    //     let postfix = address.substr(address.length - postfixCount, address.length);
+    
+    //     return prefix + "..." + postfix;
+    // };
+
+    // Mint
+    const mintMustachio = async () => {
+        const lastId = await contract.methods.getLastMintedTokenId().call()
+
+        if (lastId < 100) {
+            const mintPrice = await contract.methods.getMintPrice().call()
+            await contract.methods.mintMustachio().send({
+                from: walletAddress,
+                value: mintPrice,
+                type: '0x2',
+            })
+            .on('transactionHash', function(hash){
+                handleShowOnProcess()
+            })
+            .on('error', function(error) {
+                handleCloseOnProcess()
+                handleShowOnError()
+                setTxError(error.message)
+            })
+            .then(async function(receipt) {
+                handleCloseOnProcess()
+                handleShowOnSuccess()
+                setTxHash(receipt.transactionHash)
+                setTxData(receipt)
+
+                // Get TokenID
+                const lastTokenId = await contract.methods.getLastMintedTokenId().call()
+                setTokenId(lastTokenId)
+            })
+        } else {
+            handleShowSoldOut()
+        }
+    } 
 
     useEffect(() => {
         let background = $('#first-section')
@@ -43,78 +190,91 @@ export default function App() {
         let mobileLogoTop = mobileLogo.offset().top
         let mobileMustachioWidth = mobileMustachios.width()
 
-        var initialScrollEvent = true
         $(window).on('scroll', () => {
-            if (!initialScrollEvent) {
-                let valueY = $(window).scrollTop()
+            let valueY = $(window).scrollTop()
 
-                // PC
-                background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
-                logo.css({
-                    "opacity": 1 - (valueY * 0.007),
-                    "width": logoWidth - (valueY * 0.5) + 'px',
-                    // "top": logoTop + (valueY * 0.7) + 'px'
-                })
+            // PC
+            background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
+            logo.css({
+                "opacity": 1 - (valueY * 0.007),
+                "width": logoWidth - (valueY * 0.5) + 'px',
+                // "top": logoTop + (valueY * 0.7) + 'px'
+            })
 
-                if ($(window).height() < 1200) {
-                    logo.css("top", logoTop + (valueY * 0.7) + 'px')
-                }
-
-                mustachios.css({
-                    "opacity": 1 - (valueY * 0.01),
-                    "width": mustachioWidth - (valueY * 1.2) + "px",
-                })
-                content.css({
-                    "opacity": 1 - (valueY * 0.01),
-                })
-                portal.css({
-                    "transform": "rotate(-"+ (360 - (valueY * 0.3)) +"deg)",
-                    "opacity": 1 - (valueY * 0.003),
-                })
-                landscape.css("opacity", 0 + (valueY * 0.0023))
-                landscapeContent.css({
-                    "bottom": 100 + (valueY * 0.55) + 'px',
-                    "opacity": 0 + (valueY * 0.0017),
-                })
-                discordBtn.css({
-                    "bottom": 100 + (valueY * 0.4) + 'px',
-                    "opacity": 0 + (valueY * 0.0017),
-                })
-
-                // Mobile
-                mobileBackground.css("background-position", 'center ' + (valueY * 0.2) + 'px')
-                mobileLogo.css({
-                    "opacity": 1 - (valueY * 0.007),
-                    "top": mobileLogoTop + (valueY * 0.7) + 'px'
-                })
-                mobileMustachios.css({
-                    "opacity": 1 - (valueY * 0.01),
-                    "width": mobileMustachioWidth - (valueY * 1.2) + "px",
-                })
-                mobileContent.css({
-                    "opacity": 1 - (valueY * 0.01),
-                })
-                mobilePortal.css({
-                    "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
-                    "opacity": 1 - (valueY * 0.003),
-                })
-                mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
-                mobileLandscapeContent.css({
-                    "bottom": 100 + (valueY * 0.62) + 'px',
-                    "opacity": 0 + (valueY * 0.007),
-                })
-                mobileDiscordBtn.css({
-                    "bottom": 100 + (valueY * 0.45) + 'px',
-                    "opacity": 0 + (valueY * 0.007),
-                })
+            if ($(window).height() < 1200) {
+                logo.css("top", logoTop + (valueY * 0.7) + 'px')
             }
-            initialScrollEvent = false
-        })
+
+            mustachios.css({
+                "opacity": 1 - (valueY * 0.01),
+                "width": mustachioWidth - (valueY * 1.2) + "px",
+            })
+            content.css({
+                "opacity": 1 - (valueY * 0.01),
+            })
+            portal.css({
+                "transform": "rotate(-"+ (360 - (valueY * 0.3)) +"deg)",
+                "opacity": 1 - (valueY * 0.003),
+            })
+            landscape.css("opacity", 0 + (valueY * 0.0023))
+            landscapeContent.css({
+                "bottom": 100 + (valueY * 0.55) + 'px',
+                "opacity": 0 + (valueY * 0.0017),
+            })
+            discordBtn.css({
+                "bottom": 100 + (valueY * 0.4) + 'px',
+                "opacity": 0 + (valueY * 0.0017),
+            })
+
+            // Mobile
+            mobileBackground.css("background-position", 'center ' + (valueY * 0.2) + 'px')
+            mobileLogo.css({
+                "opacity": 1 - (valueY * 0.007),
+                "top": mobileLogoTop + (valueY * 0.7) + 'px'
+            })
+            mobileMustachios.css({
+                "opacity": 1 - (valueY * 0.01),
+                "width": mobileMustachioWidth - (valueY * 1.2) + "px",
+            })
+            mobileContent.css({
+                "opacity": 1 - (valueY * 0.01),
+            })
+            mobilePortal.css({
+                "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
+                "opacity": 1 - (valueY * 0.003),
+            })
+            mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
+            mobileLandscapeContent.css({
+                "bottom": 100 + (valueY * 0.62) + 'px',
+                "opacity": 0 + (valueY * 0.007),
+            })
+            mobileDiscordBtn.css({
+                "bottom": 100 + (valueY * 0.45) + 'px',
+                "opacity": 0 + (valueY * 0.007),
+            })
+        })  
+
+        async function initUtilsOnLoad() {
+            const {address, status} = await getCurrentWalletConnected();
+            const {network, netStatus} = await getCurrentNetwork();
+            setWallet(address)
+            setStatus(status)
+            setNetwork(network)
+            setNetStatus(netStatus)
+
+            if (status === 0) {
+                handleShowMetamaskInstall()
+            }
+        }
+
+        initUtilsOnLoad()
+        addWalletListener()
+        addNetworkListener()
     }, [])
 
     return (
         <Router basename={process.env.PUBLIC_URL}>
-            <Navbar /> 
+            <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
                 <Route exact path="/">
                     <Banner />
@@ -124,10 +284,108 @@ export default function App() {
                     <Team />
                     <FAQ />
                     <CTA />
-                    <Footer />
                 </Route>
                 <Route exact path="/discord" component={Discord}></Route>
             </Switch>
+            <Footer />
+
+            {/* Modal for soldout */}
+            <Modal show={showSoldOut} onHide={handleCloseSoldOut} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="yellow" size="6x" icon={faExclamationCircle} />
+                    </div>
+                    <p className="app-soldout-modal-content text-center font-andes text-lg"><b style={{fontSize: "1.5rem"}}>SOLD OUT!</b><br />All 100 Mustachios have gone through The Portal. Watch out for the next generation of mustached beings.</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseSoldOut}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal> 
+
+            {/* Modal for No Metamask */}
+            <Modal show={showMetamaskInstall} onHide={handleCloseMetamaskInstall} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="app-metamask-modal-img">
+                        <img src={metamask} alt="Metamask logo" />
+                    </div>
+                    <p className="app-metamask-modal-content text-center font-andes text-lg">Metamask is currently not installed</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseMetamaskInstall}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={() => window.open("https://metamask.io/download", '_blank').focus()}>
+                        Install Metamask
+                    </Button>
+                </Modal.Footer>
+            </Modal>     
+
+            {/* Modal for incorrect network */}
+            <Modal show={showWrongNetwork} onHide={handleCloseWrongNetwork} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="green" size="6x" icon={faExclamationCircle} />
+                    </div>
+                    {/* <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p> */}
+                    <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Ethereum Mainnet</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseWrongNetwork}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>    
+
+            {/* Modal for pending transaction */}
+            <Modal show={showOnProcess} onHide={handleCloseOnProcess} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <img src={loading} alt="Loading..." style={{width: "150px", margin: "0 auto"}} />
+                    </div>
+                    <p className="app-pending-modal-content text-center font-andes text-lg"><span className="app-loading-big-letter">O</span>, what great honour. Put on your armor and hold your fire, dear friend, for we are minting your Mustachio.</p>
+                </Modal.Body>
+            </Modal>    
+
+            {/* Modal for error transaction */}
+            <Modal show={showOnError} onHide={handleCloseOnError} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="red" size="6x" icon={faExclamationCircle} />
+                    </div>
+                    <p className="app-error-modal-content text-center font-andes text-lg">Error: {txError}</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseOnError}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>    
+
+            {/* Modal for successful transaction */}
+            <Modal show={showOnSuccess} onHide={handleCloseOnSuccess} backdrop="static" keyboard={false} size="md" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="green" size="6x" icon={faCheckCircle} />
+                    </div>
+                    <p className="app-success-modal-content text-center font-andes text-lg">Your Mustachio has been successfully minted! You're ready to join the quest to find the Golden Mustache.</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseOnSuccess}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={() => window.open(explorerUrl + txHash, '_blank').focus()}>
+                        View on EtherScan
+                    </Button>
+                    <Button variant="primary" onClick={() => window.open(openSeaUrl + tokenId, '_blank').focus()}>
+                        View on OpenSea
+                    </Button>
+                    <Button variant="primary" onClick={() => window.open(marketplaceUrl + tokenId, '_blank').focus()}>
+                        View on Marketplace
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </Router>
     );
 }
