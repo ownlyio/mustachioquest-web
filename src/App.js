@@ -162,7 +162,7 @@ export default function App() {
 
     useEffect(() => {
         $(window).scrollTop(0)
-        
+
         // scroll variables
         let background = $('#first-section')
         let portal = $('.portal-wrap')
@@ -173,7 +173,6 @@ export default function App() {
         let landscapeContent = $('.text-3')
         let discordBtn = $('.join-discord')
 
-        let logoWidth = parseFloat(logo.css("width"))
         let logoTop = logo.offset().top
         let mustachioWidth = parseFloat(mustachios.css("width"))
 
@@ -197,8 +196,8 @@ export default function App() {
             background.css("background-position", 'center ' + (valueY * 0.2) + 'px')
             logo.css({
                 "opacity": 1 - (valueY * 0.007),
-                "width": logoWidth - (valueY * 0.5) + 'px',
-                // "top": logoTop + (valueY * 0.7) + 'px'
+                // "width": logoWidth - (valueY * 0.5) + 'px',
+                "top": logoTop + (valueY * 0.7) + 'px'
             })
 
             if ($(window).height() < 1200) {

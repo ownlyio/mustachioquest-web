@@ -6,13 +6,13 @@ import candyfloss from '../../images/team/candy-floss.jpg'
 import grim from '../../images/team/grim.jpg'
 import hotdogprince from '../../images/team/hotdog-prince.jpg'
 import loonywise from '../../images/team/loonywise.jpg'
+import kingstellar from '../../images/team/kingstellar.jpg'
 import mexico from '../../images/team/mexico.jpg'
+import mountainwarrior from '../../images/team/mountainwarrior.jpg'
 import ninja from '../../images/team/ninja.jpg'
 import slendie from '../../images/team/slendie.jpg'
 import sludgie from '../../images/team/sludgie.jpg'
 import squarehead from '../../images/team/squarehead.jpg'
-import micah from '../../images/team/micah.jpg'
-import raf from '../../images/team/raf.jpg'
 import boiimustache from '../../images/team/boiimustache.jpg'
 
 import bordertl from '../../images/team-tl.png'
@@ -67,7 +67,7 @@ export default function Team() {
         {
             id: 8,
             thumbnail: boiimustache,
-            name: "BOII MUSTACHE",
+            name: "MUSTACHIO ARTIST",
             position: "3D ANIMATOR"
         },
         {
@@ -78,7 +78,7 @@ export default function Team() {
         },
         {
             id: 10,
-            thumbnail: micah,
+            thumbnail: kingstellar,
             name: "MICAH GRACE RICO",
             position: "CONTENT SPECIALIST"
         },
@@ -96,7 +96,7 @@ export default function Team() {
         },
         {
             id: 13,
-            thumbnail: raf,
+            thumbnail: mountainwarrior,
             name: "RAF BANZUELA",
             position: "CREATIVE ADVISOR"
         },
