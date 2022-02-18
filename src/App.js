@@ -174,7 +174,7 @@ export default function App() {
         let discordBtn = $('.join-discord')
 
         let logoTop = logo.offset().top
-        let mustachioWidth = parseFloat(mustachios.css("width"))
+        // let mustachioWidth = parseFloat(mustachios.css("width"))
 
         // mobile
         let mobileBackground = $('#mobile-first-section')
@@ -206,7 +206,7 @@ export default function App() {
 
             mustachios.css({
                 "opacity": 1 - (valueY * 0.01),
-                "width": mustachioWidth - (valueY * 1.2) + "px",
+                // "width": mustachioWidth - (valueY * 1.2) + "px",
             })
             content.css({
                 "opacity": 1 - (valueY * 0.01),
