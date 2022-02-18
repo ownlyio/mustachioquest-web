@@ -274,8 +274,8 @@ export default function App() {
     return (
         <Router basename={process.env.PUBLIC_URL}>
             <Navbar mintBtn={initUtilsAndMint} /> 
-            <Switch>
-                <Route exact path="/">
+            {/* <Switch>
+                <Route exact path="/"> */}
                     <Banner />
                     <Features />
                     <Updates />
@@ -283,9 +283,9 @@ export default function App() {
                     <Team />
                     <FAQ />
                     <CTA />
-                </Route>
-                <Route exact path="/discord" component={Discord} />
-            </Switch>
+                {/* </Route>
+                <Route exact path="/discord" component={Discord}></Route>
+            </Switch> */}
             <Footer />
 
             {/* Modal for soldout */}

@@ -37,7 +37,7 @@ export default function Banner() {
                         <img src={landscape} className="w-100" alt="Landscape" />
                     </div>
                     <p className="font-w-hermann w-hermann-semibold text-3 text-center mb-0 font-size-140 text-color-1">Embark on an adventure in the land of Mustachios. Fulfill quests, collect artifacts, and play your heart out in this interactive game.</p>
-                    <button onClick={() => redirectPage("https://mustachioverse.com/discord")} type="button" className="join-discord banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</button>
+                    <button onClick={() => redirectPage("http://discord.gg/rfypRx4cjh")} type="button" className="join-discord banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</button>
                 </div>
             </section>
 
@@ -65,7 +65,7 @@ export default function Banner() {
                         <img src={landscape} className="w-100" alt="Landscape" />
                     </div>
                     <p className="mobile-2-title font-w-hermann w-hermann-semibold text-center mb-0 font-size-140 text-color-1">Embark on an adventure in the land of Mustachios. Fulfill quests, collect artifacts, and play your heart out in this interactive game.</p>
-                    <button onClick={() => redirectPage("https://mustachioverse.com/discord")} type="button" className="mobile-join-discord banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</button>
+                    <button onClick={() => redirectPage("http://discord.gg/rfypRx4cjh")} type="button" className="mobile-join-discord banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</button>
                 </div>
             </section>
         </>
