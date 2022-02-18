@@ -5,6 +5,7 @@ import update1 from '../../images/updates/mq-article.jpg'
 import update2 from '../../images/updates/mustachios-article.jpg'
 import update3 from '../../images/updates/boii-mustache.jpg'
 import update4 from '../../images/updates/mint-ep7.jpg'
+import update5 from '../../images/updates/sneak-peek.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -36,6 +37,12 @@ export default function Updates() {
             thumbnail: update4,
             link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
             title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
+        },
+        {
+            id: 5,
+            thumbnail: update5,
+            link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
+            title: "The Mustachio Quest Sneak Peek is Out!"
         },
     ]
 
