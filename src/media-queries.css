@@ -209,6 +209,29 @@
 }
 
 @media (max-width: 576px) {
+  .bm-burger-button {
+    width: 26px !important;
+    height: 20px !important;
+  }
+
+  .mq-nav-logo-mobile {
+    width: 60% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .bm-item {
+    font-size: 0.8em !important;
+    padding: 0.8em 0 !important;
+  }
+
+  .bm-item-list {
+    padding: 0.5em !important;
+  }
+
+  .mq-nav-discord {
+    padding: 0.5em !important;
+  }
+
   .text-3 {
     font-size: 1em !important;
     width: 70% !important;
@@ -246,11 +269,13 @@
   }
 
   .feat-title {
-    width: 220px !important;
+    width: 180px !important;
+    font-size: 1.3em !important;
   }
 
   .feat-sub {
-    width: 300px !important;
+    width: 200px !important;
+    font-size: 1em !important;
   }
 
   #features,
@@ -267,6 +292,10 @@
   #team {
     padding-top: 110px !important;
   }
+  .updates-title,
+  .update-title {
+    font-size: 1.2em !important;
+  }
 
   .updates-border,
   .team-border {
@@ -282,6 +311,26 @@
     width: 60% !important;
   }
 
+  .roadmap-title {
+    font-size: 1.5em !important;
+  }
+
+  .q-column p {
+    font-size: 1.5em !important;
+  }
+
+  .q-content {
+    font-size: 1em !important;
+  }
+
+  .team-title {
+    font-size: 1.4em !important;
+  }
+
+  .team-sub {
+    font-size: 1em !important;
+  }
+
   .team-wrap {
     width: 100% !important;
   }
@@ -292,6 +341,28 @@
 
   .team-name {
     font-size: 1.3em !important;
+  }
+
+  .faq-title {
+    font-size: 1.2em !important;
+  }
+
+  .accordion-button {
+    font-size: 0.7em !important;
+  }
+
+  .accordion-body p,
+  .accordion-body li,
+  .accordion-body a {
+    font-size: 1em !important;
+  }
+
+  #cta p {
+    font-size: 1.2em !important;
+  }
+
+  #cta button {
+    font-size: 1.2em !important;
   }
 
   .footer-item svg {

@@ -107,7 +107,7 @@ export default function Team() {
         <section id="team">
             <div className="container">
                 <div className="row justify-content-center align-items-start">
-                    <p className="text-color-2 gotham-black text-center font-size-170 mb-3">MEET THE TEAM</p>
+                    <p className="team-title text-color-2 gotham-black text-center font-size-170 mb-3">MEET THE TEAM</p>
                     <p className="text-color-2 team-sub font-w-hermann w-hermann-reg text-center font-size-140 mb-5">With a combined 70 years of experience in finance, software development, education, marketing, art, and design, the same team that won 13th place in Decentraland's Global Game Jam in 2019 launches its first play-to-earn NFT game in 2022.</p>
                     
                     {/* Temporary only till we have 12 in the team */}

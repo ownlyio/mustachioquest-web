@@ -81,31 +81,31 @@ export default function App() {
 
             // Mobile
             mobileBackground.css("background-position", 'center ' + (valueY * 0.6) + 'px')
-            mobileLogo.css({
-                "opacity": 1 - (valueY * 0.007),
-                "width": mobileLogoWidth - (valueY * 0.00006) + '%',
-                "top": mobileLogoTop + (valueY * 0.7) + 'px'
-            })
-            mobileMustachios.css({
-                "opacity": 1 - (valueY * 0.01),
-                "width": mobileMustachioWidth - (valueY * 1.2) + "px",
-            })
-            mobileContent.css({
-                "opacity": 1 - (valueY * 0.01),
-            })
-            mobilePortal.css({
-                "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
-                "opacity": 1 - (valueY * 0.003),
-            })
-            mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
-            mobileLandscapeContent.css({
-                "bottom": 100 + (valueY * 0.62) + 'px',
-                "opacity": 0 + (valueY * 0.007),
-            })
-            mobileDiscordBtn.css({
-                "bottom": 100 + (valueY * 0.45) + 'px',
-                "opacity": 0 + (valueY * 0.007),
-            })
+            // mobileLogo.css({
+            //     "opacity": 1 - (valueY * 0.007),
+            //     "width": mobileLogoWidth - (valueY * 0.00006) + '%',
+            //     "top": mobileLogoTop + (valueY * 0.7) + 'px'
+            // })
+            // mobileMustachios.css({
+            //     "opacity": 1 - (valueY * 0.01),
+            //     "width": mobileMustachioWidth - (valueY * 1.2) + "px",
+            // })
+            // mobileContent.css({
+            //     "opacity": 1 - (valueY * 0.01),
+            // })
+            // mobilePortal.css({
+            //     "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
+            //     "opacity": 1 - (valueY * 0.003),
+            // })
+            // mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
+            // mobileLandscapeContent.css({
+            //     "bottom": 100 + (valueY * 0.62) + 'px',
+            //     "opacity": 0 + (valueY * 0.007),
+            // })
+            // mobileDiscordBtn.css({
+            //     "bottom": 100 + (valueY * 0.45) + 'px',
+            //     "opacity": 0 + (valueY * 0.007),
+            // })
         })
     }, [])
 

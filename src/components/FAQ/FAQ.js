@@ -5,7 +5,7 @@ export default function FAQ() {
   return (
     <section id="faqs">
         <div className="container">
-            <p className="gotham-black text-center text-white font-size-170 mb-5">FREQUENTLY ASKED QUESTIONS</p>
+            <p className="faq-title gotham-black text-center text-white font-size-170 mb-5">FREQUENTLY ASKED QUESTIONS</p>
 
             <div className="accordion accordion-flush" id="app-faqs-accordion">
                 <div className="accordion-item">
