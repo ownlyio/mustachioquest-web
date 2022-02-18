@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.eb4b883b.css",
-    "main.js": "/static/js/main.a2f6eae2.js",
+    "main.js": "/static/js/main.bc040051.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/mq-article.jpg": "/static/media/mq-article.4e2a90b47f1c21c4dd81.jpg",
     "static/media/landscape.png": "/static/media/landscape.63f783530d4b6392419a.png",
@@ -101,11 +101,11 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
     "main.eb4b883b.css.map": "/static/css/main.eb4b883b.css.map",
-    "main.a2f6eae2.js.map": "/static/js/main.a2f6eae2.js.map",
+    "main.bc040051.js.map": "/static/js/main.bc040051.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb4b883b.css",
-    "static/js/main.a2f6eae2.js"
+    "static/js/main.bc040051.js"
   ]
 }
