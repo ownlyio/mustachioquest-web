@@ -17,7 +17,7 @@ import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 
-// Utils
+// Utilss
 // import contract from './utils/contractDev'
 import contract from './utils/contract'
 import getCurrentNetwork from './utils/getCurrentNetwork'
