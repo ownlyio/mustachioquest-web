@@ -117,6 +117,10 @@
 }
 
 @media (max-width: 768px) {
+  .mobile-logo {
+    width: 350px !important;
+  }
+
   #features .col-12 {
     padding-top: 60px !important;
   }
@@ -209,6 +213,10 @@
 }
 
 @media (max-width: 576px) {
+  .mobile-logo {
+    width: 250px !important;
+  }
+
   .bm-burger-button {
     width: 26px !important;
     height: 20px !important;
@@ -383,6 +391,10 @@
 }
 
 @media (max-width: 480px) {
+  .mobile-logo {
+    width: 180px !important;
+  }
+
   .feat-2d {
     left: 23% !important;
   }
