@@ -17,7 +17,7 @@ export default function Footer() {
                     <div className="footer-item cursor-pointer" onClick={() => redirectPage("https://instagram.com/mustachioverse")}>
                         <FontAwesomeIcon color="white" icon={faInstagram} size="3x" />
                     </div>
-                    <div className="footer-item cursor-pointer" onClick={() => redirectPage("https://mustachioverse.com/discord")}>
+                    <div className="footer-item cursor-pointer" onClick={() => redirectPage("http://discord.gg/rfypRx4cjh")}>
                         <FontAwesomeIcon color="white" icon={faDiscord} size="3x" />
                     </div>
                     <div className="footer-item cursor-pointer" onClick={() => redirectPage("https://twitter.com/mustachioverse")}>
