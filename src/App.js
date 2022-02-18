@@ -67,9 +67,6 @@ export default function App() {
     const [showSoldOut, setShowSoldOut] = useState(false);
     const handleCloseSoldOut = () => setShowSoldOut(false);
     const handleShowSoldOut = () => setShowSoldOut(true);
-    const [showHowToMint, setShowHowToMint] = useState(false);
-    const handleCloseHowToMint = () => setShowHowToMint(false);
-    const handleShowHowToMint = () => setShowHowToMint(true);
 
     // Initialize wallet address and network upon button click
     // Then mint afterwards
@@ -164,6 +161,9 @@ export default function App() {
     } 
 
     useEffect(() => {
+        $(window).scrollTop(0)
+        
+        // scroll variables
         let background = $('#first-section')
         let portal = $('.portal-wrap')
         let mustachios = $('.mustachio-wrap')
@@ -173,9 +173,9 @@ export default function App() {
         let landscapeContent = $('.text-3')
         let discordBtn = $('.join-discord')
 
-        let logoWidth = logo.width()
+        let logoWidth = parseFloat(logo.css("width"))
         let logoTop = logo.offset().top
-        let mustachioWidth = mustachios.width()
+        let mustachioWidth = parseFloat(mustachios.css("width"))
 
         // mobile
         let mobileBackground = $('#mobile-first-section')
@@ -188,7 +188,7 @@ export default function App() {
         let mobileDiscordBtn = $('.mobile-join-discord')
 
         let mobileLogoTop = mobileLogo.offset().top
-        let mobileMustachioWidth = mobileMustachios.width()
+        let mobileMustachioWidth = parseFloat(mobileMustachios.css("width"))
 
         $(window).on('scroll', () => {
             let valueY = $(window).scrollTop()
@@ -307,7 +307,7 @@ export default function App() {
             {/* Modal for No Metamask */}
             <Modal show={showMetamaskInstall} onHide={handleCloseMetamaskInstall} backdrop="static" keyboard={false} size="sm" centered>
                 <Modal.Body>
-                    <div className="app-metamask-modal-img">
+                    <div className="text-center">
                         <img src={metamask} alt="Metamask logo" />
                     </div>
                     <p className="app-metamask-modal-content text-center font-andes text-lg">Metamask is currently not installed</p>
