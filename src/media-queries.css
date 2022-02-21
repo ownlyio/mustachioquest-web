@@ -25,6 +25,11 @@
   .feat-sub {
     width: 90% !important;
   }
+
+  .updates-thumbnail {
+    aspect-ratio: 16/9;
+    height: auto !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -450,6 +455,13 @@
 }
 
 /* MIN WIDTH */
+@media (min-width: 1401px) {
+  .updates-thumbnail {
+    aspect-ratio: 16/9;
+    height: auto !important;
+  }
+}
+
 @media (min-width: 1500px) {
   #features {
     padding-top: 4% !important;
