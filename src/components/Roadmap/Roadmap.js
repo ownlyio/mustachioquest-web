@@ -49,7 +49,7 @@ export default function Roadmap() {
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Game: Beta Launch</div>
+                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest: Beta Launch</div>
                     </div>
                 </div>
             </div>
@@ -60,11 +60,11 @@ export default function Roadmap() {
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Game: 1.0 Launch</div>
+                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest: 1.0 Launch</div>
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Game Marketplace via Ownly Market</div>
+                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Marketplace via Ownly Market</div>
                     </div>
                 </div>
             </div>
