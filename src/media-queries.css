@@ -449,6 +449,19 @@
   }
 }
 
+/* MIN WIDTH */
+@media (min-width: 1500px) {
+  #features {
+    padding-top: 4% !important;
+    padding-bottom: 4% !important;
+  }
+
+  #faqs {
+    padding-top: 9% !important;
+    padding-bottom: 5% !important;
+  }
+}
+
 /* MIN HEIGHTS */
 @media (min-height: 1080px) {
   .banner-img {
