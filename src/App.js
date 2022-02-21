@@ -200,10 +200,6 @@ export default function App() {
                 // "top": logoTop + (valueY * 0.7) + 'px'
             })
 
-            if ($(window).height() < 1200) {
-                logo.css("top", logoTop + (valueY * 0.7) + 'px')
-            }
-
             mustachios.css({
                 "opacity": 1 - (valueY * 0.01),
                 // "width": mustachioWidth - (valueY * 1.2) + "px",
