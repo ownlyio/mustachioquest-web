@@ -68,3 +68,7 @@
   background-color: #060606;
   padding: 0.5em 0.8em;
 }
+
+.team-links a:not(:last-child) {
+  margin-right: 10px;
+}

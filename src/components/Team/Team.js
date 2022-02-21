@@ -19,84 +19,111 @@ import bordertl from '../../images/team-tl.png'
 import bordertr from '../../images/team-tr.png'
 import borderbl from '../../images/team-bl.png'
 import borderbr from '../../images/team-br.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArtstation, faBehance, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Team() {
     const team = [
         {
             id: 1,
             thumbnail: mexico,
+            twitter: "https://twitter.com/ismaeljerusalem/",
+            linkedin: "https://www.linkedin.com/in/ismaeljerusalem/",
             name: "ISMAEL JERUSALEM",
             position: "CEO"
         },
         {
             id: 2,
             thumbnail: slendie,
+            twitter: "https://twitter.com/bernhistorillo/",
+            linkedin: "https://www.linkedin.com/in/bernhistorillo/",
             name: "BERNARD HISTORILLO",
             position: "CTO"
         },
         {
             id: 3,
             thumbnail: squarehead,
+            twitter: "https://twitter.com/smcanasco/",
+            linkedin: "https://www.linkedin.com/in/theshiekina/",
             name: "SHIEKINA AÑASCO",
             position: "CMO"
         },
         {
             id: 4,
             thumbnail: loonywise,
+            twitter: "https://twitter.com/itsToffeeLuck",
+            linkedin: "https://www.linkedin.com/in/krcorral45/",
             name: "KRISTOFFER RAY CORRAL",
             position: "LEAD GAME DEVELOPER"
         },
         {
             id: 5,
             thumbnail: abracadoobie,
+            twitter: "https://twitter.com/markiibundalian",
+            linkedin: "https://www.linkedin.com/in/mjmarkii",
             name: "MARK JERLY BUNDALIAN",
             position: "FULL STACK DEVELOPER"
         },
         {
             id: 6,
             thumbnail: ninja,
+            twitter: "https://twitter.com/throwstar28",
+            linkedin: "https://www.linkedin.com/in/ain-art-atos",
             name: "AIN ART ATOS",
             position: "MARKETING SPECIALIST"
         },
         {
             id: 7,
             thumbnail: sludgie,
+            twitter: "https://twitter.com/0xKJ_",
+            linkedin: "https://www.linkedin.com/in/kylejaynaron",
             name: "KYLE JAY NARON",
             position: "MARKETING SPECIALIST"
         },
         {
             id: 8,
             thumbnail: boiimustache,
+            twitter: "https://twitter.com/BoiiMustache",
+            artstation: "https://www.artstation.com/sphinx1232",
             name: "MUSTACHIO ARTIST",
             position: "3D ANIMATOR"
         },
         {
             id: 9,
             thumbnail: candyfloss,
+            twitter: "https://twitter.com/LoperaKendra",
+            linkedin: "https://www.linkedin.com/in/kendralivmelgar/",
             name: "KENDRA LOPERA",
             position: "CONTENT CREATOR"
         },
         {
             id: 10,
             thumbnail: kingstellar,
+            twitter: "https://twitter.com/itsmicahgrace",
+            linkedin: "https://www.linkedin.com/in/micah-grace-rico/",
             name: "MICAH GRACE RICO",
             position: "CONTENT SPECIALIST"
         },
         {
             id: 11,
             thumbnail: hotdogprince,
+            twitter: "https://twitter.com/yashaaachan",
+            linkedin: "https://www.linkedin.com/in/flor-pacatang-26229218a/",
             name: "YASHA-CHAN",
             position: "COMMUNITY MANAGER"
         },
         {
             id: 12,
             thumbnail: grim,
+            twitter: "https://twitter.com/ricozuniga",
+            linkedin: "https://www.linkedin.com/in/ricoz/",
             name: "RICO ZUÑIGA",
             position: "TECHNICAL ADVISOR"
         },
         {
             id: 13,
             thumbnail: mountainwarrior,
+            behance: "http://behance.net/rafbanzuela",
             name: "RAF BANZUELA",
             position: "CREATIVE ADVISOR"
         },
@@ -121,6 +148,28 @@ export default function Team() {
                                     <div className="team-content">
                                         <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
                                         <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
+                                        <div className="team-links d-flex justify-content-start align-items-center">
+                                            {x.twitter !== undefined && (
+                                                <a href={x.twitter} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faTwitter} color="white" size="lg" />
+                                                </a>
+                                            )}
+                                            {x.linkedin !== undefined && (
+                                                <a href={x.linkedin} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faLinkedin} color="white" size="lg" />
+                                                </a>
+                                            )}
+                                            {x.artstation !== undefined && (
+                                                <a href={x.artstation} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faArtstation} color="white" size="lg" />
+                                                </a>
+                                            )}
+                                            {x.behance !== undefined && (
+                                                <a href={x.behance} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faBehance} color="white" size="lg" />
+                                                </a>
+                                            )}                                            
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -134,6 +183,28 @@ export default function Team() {
                                     <div className="team-content">
                                         <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
                                         <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
+                                        <div className="team-links d-flex justify-content-start align-items-center">
+                                            {x.twitter !== undefined && (
+                                                <a href={x.twitter} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faTwitter} color="white" size="lg" />
+                                                </a>
+                                            )}
+                                            {x.linkedin !== undefined && (
+                                                <a href={x.linkedin} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faLinkedin} color="white" size="lg" />
+                                                </a>
+                                            )}
+                                            {x.artstation !== undefined && (
+                                                <a href={x.artstation} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faArtstation} color="white" size="lg" />
+                                                </a>
+                                            )}
+                                            {x.behance !== undefined && (
+                                                <a href={x.behance} target="_blank" rel="noreferrer">
+                                                    <FontAwesomeIcon icon={faBehance} color="white" size="lg" />
+                                                </a>
+                                            )} 
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -150,6 +221,28 @@ export default function Team() {
                                 <div className="team-content">
                                     <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
                                     <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
+                                    <div className="team-links d-flex justify-content-start align-items-center">
+                                        {x.twitter !== undefined && (
+                                            <a href={x.twitter} target="_blank" rel="noreferrer">
+                                                <FontAwesomeIcon icon={faTwitter} color="white" size="lg" />
+                                            </a>
+                                        )}
+                                        {x.linkedin !== undefined && (
+                                            <a href={x.linkedin} target="_blank" rel="noreferrer">
+                                                <FontAwesomeIcon icon={faLinkedin} color="white" size="lg" />
+                                            </a>
+                                        )}
+                                        {x.artstation !== undefined && (
+                                            <a href={x.artstation} target="_blank" rel="noreferrer">
+                                                <FontAwesomeIcon icon={faArtstation} color="white" size="lg" />
+                                            </a>
+                                        )}
+                                        {x.behance !== undefined && (
+                                            <a href={x.behance} target="_blank" rel="noreferrer">
+                                                <FontAwesomeIcon icon={faBehance} color="white" size="lg" />
+                                            </a>
+                                        )} 
+                                    </div>
                                 </div>
                             </div>
                         ))}
