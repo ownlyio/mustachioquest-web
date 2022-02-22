@@ -5,7 +5,6 @@ import update1 from '../../images/updates/mq-article.jpg'
 import update2 from '../../images/updates/mustachios-article.jpg'
 import update3 from '../../images/updates/boii-mustache.jpg'
 import update4 from '../../images/updates/mint-ep7.jpg'
-import update5 from '../../images/updates/sneak-peek.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -38,12 +37,6 @@ export default function Updates() {
             link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
             title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
         },
-        {
-            id: 5,
-            thumbnail: update5,
-            link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
-            title: "The Mustachio Quest Sneak Peek is Out!"
-        },
     ]
 
     const redirectPage = url => {
@@ -57,11 +50,15 @@ export default function Updates() {
                     <p className="updates-title gotham-black text-white text-center font-size-170 mb-5">WHAT IS UP WITH THE MUSTACHIOS</p>
                     { updates.map(x => (
                         <div className="col-12 col-md-6 col-xl-4 mb-3" key={x.id}>
-                            <div onClick={() => redirectPage(x.link)} className="cursor-pointer updates-thumbnail mb-3">
-                                <img src={x.thumbnail} className="w-100" alt={x.title} />
-                            </div>
-                            <p onClick={() => redirectPage(x.link)} className="cursor-pointer update-title font-w-hermann w-hermann-reg text-white font-size-150 mb-3">
-                                {x.title}
+                            <a href={x.link} target="_blank" rel="noreferrer">
+                                <div className="cursor-pointer updates-thumbnail mb-3">
+                                    <img src={x.thumbnail} className="w-100" alt={x.title} />
+                                </div>
+                            </a>
+                            <p className="cursor-pointer mb-3">
+                                <a className="update-title font-w-hermann w-hermann-reg text-white font-size-150" href={x.link} target="_blank" rel="noreferrer">
+                                    {x.title}
+                                </a>
                             </p>
                         </div>
                     ))}

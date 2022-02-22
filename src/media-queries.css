@@ -1,6 +1,7 @@
 /* MAX WIDTHS */
 @media (max-width: 1400px) {
-  .updates-thumbnail {
+  .updates-thumbnail,
+  .sneakpeek-thumbnail {
     height: 220px !important;
   }
 
@@ -26,7 +27,8 @@
     width: 90% !important;
   }
 
-  .updates-thumbnail {
+  .updates-thumbnail,
+  .sneakpeek-thumbnail {
     aspect-ratio: 16/9;
     height: auto !important;
   }
@@ -64,7 +66,8 @@
     width: 100% !important;
   }
 
-  .updates-thumbnail {
+  .updates-thumbnail,
+  .sneakpeek-thumbnail {
     height: 245px !important;
   }
 
@@ -110,7 +113,8 @@
     width: 100% !important;
   }
 
-  .updates-thumbnail {
+  .updates-thumbnail,
+  .sneakpeek-thumbnail {
     /* height: 190px !important; */
     aspect-ratio: 16/9;
     height: auto !important;
@@ -178,11 +182,17 @@
   }
 
   #features,
-  #faqs {
+  #faqs,
+  #sneakpeek {
     overflow-x: hidden;
   }
 
+  .sneakpeek-bot {
+    bottom: 0 !important;
+  }
+
   .feat-border,
+  .sneakpeek-border,
   .faqs-border {
     width: 150% !important;
   }
@@ -292,11 +302,13 @@
   }
 
   #features,
-  #faqs {
+  #faqs,
+  #sneakpeek {
     overflow-x: hidden;
   }
 
   .feat-border,
+  .sneakpeek-border,
   .faqs-border {
     width: 1200px !important;
   }
@@ -315,7 +327,8 @@
     width: 35% !important;
   }
 
-  .updates-thumbnail {
+  .updates-thumbnail,
+  .sneakpeek-thumbnail {
     aspect-ratio: 16/9;
     height: auto !important;
   }
@@ -356,7 +369,8 @@
     font-size: 1.3em !important;
   }
 
-  .faq-title {
+  .faq-title,
+  .sneakpeeks-title {
     font-size: 1.2em !important;
   }
 
@@ -456,7 +470,8 @@
 
 /* MIN WIDTH */
 @media (min-width: 1401px) {
-  .updates-thumbnail {
+  .updates-thumbnail,
+  .sneakpeek-thumbnail {
     aspect-ratio: 16/9;
     height: auto !important;
   }
@@ -471,6 +486,11 @@
   #faqs {
     padding-top: 9% !important;
     padding-bottom: 5% !important;
+  }
+
+  #sneakpeek {
+    padding-top: 9% !important;
+    padding-bottom: 7% !important;
   }
 }
 
