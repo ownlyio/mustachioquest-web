@@ -4,9 +4,9 @@ import './Updates.css'
 import update1 from '../../images/updates/articles/mq-article.jpg'
 import update2 from '../../images/updates/articles/mustachios-article.jpg'
 import update3 from '../../images/updates/articles/boii-mustache.jpg'
-import update4 from '../../images/updates/articles/mint-ep7.jpg'
 import video1 from '../../images/updates/videos/sneakpeek-1.png'
-import video2 from '../../images/updates/videos/yt-sneakpeek.jpg'
+import video2 from '../../images/updates/videos/mint-ep7.jpg'
+import video3 from '../../images/updates/videos/yt-sneakpeek.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -22,8 +22,14 @@ export default function Updates() {
             title: "Game Sneak Peek #1"
         },
         {
-            id: 1,
+            id: 2,
             thumbnail: video2,
+            link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
+            title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
+        },
+        {
+            id: 3,
+            thumbnail: video3,
             link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
             title: "The Mustachio Quest Sneak Peek is Out!"
         },
@@ -47,12 +53,6 @@ export default function Updates() {
             thumbnail: update3,
             link: "https://medium.com/ownlyio/meet-the-secretive-artist-behind-the-mustachios-e94a9c335774",
             title: "Meet the Secretive Artist Behind The Mustachios"
-        },
-        {
-            id: 4,
-            thumbnail: update4,
-            link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
-            title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
         },
     ]
 
