@@ -94,6 +94,9 @@ export default function Navbar(props) {
                             <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)}>TEAM</HashLink>
                         </li>
                         <li>
+                            <HashLink smooth to="#sneakpeek" scroll={el => scrollWithOffset(el)}>PROGRESS</HashLink>
+                        </li>
+                        <li>
                             <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
                         </li>
                         <li>
@@ -118,6 +121,7 @@ export default function Navbar(props) {
                     <HashLink smooth to="#updates" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">UPDATES</HashLink>
                     <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
+                    <HashLink smooth to="#sneakpeek" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">PROGRESS</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
                     <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
