@@ -1,10 +1,12 @@
 import './Updates.css'
 
 // images
-import update1 from '../../images/updates/mq-article.jpg'
-import update2 from '../../images/updates/mustachios-article.jpg'
-import update3 from '../../images/updates/boii-mustache.jpg'
-import update4 from '../../images/updates/mint-ep7.jpg'
+import update1 from '../../images/updates/articles/mq-article.jpg'
+import update2 from '../../images/updates/articles/mustachios-article.jpg'
+import update3 from '../../images/updates/articles/boii-mustache.jpg'
+import update4 from '../../images/updates/articles/mint-ep7.jpg'
+import video1 from '../../images/updates/videos/sneakpeek-1.png'
+import video2 from '../../images/updates/videos/yt-sneakpeek.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -12,7 +14,22 @@ import borderbl from '../../images/updates-bl.png'
 import borderbr from '../../images/updates-br.png'
 
 export default function Updates() {
-    const updates = [
+    const updatesVideos = [
+        {
+            id: 1,
+            thumbnail: video1,
+            link: "https://twitter.com/mustachioverse/status/1488298584563138562",
+            title: "Game Sneak Peek #1"
+        },
+        {
+            id: 1,
+            thumbnail: video2,
+            link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
+            title: "The Mustachio Quest Sneak Peek is Out!"
+        },
+    ]
+
+    const updatesArticles = [
         {
             id: 1,
             thumbnail: update1,
@@ -48,7 +65,27 @@ export default function Updates() {
             <div className="container">
                 <div className="row justify-content-center align-items-start">
                     <p className="updates-title gotham-black text-white text-center font-size-170 mb-5">WHAT IS UP WITH THE MUSTACHIOS</p>
-                    { updates.map(x => (
+
+                    {/* Videos */}
+                    <p className="updates-type text-center gotham-bold text-white font-size-140 mb-2">Videos and Sneak Peeks</p>
+                    { updatesVideos.map(x => (
+                        <div className="col-12 col-md-6 col-xl-4 mb-3" key={x.id}>
+                            <a href={x.link} target="_blank" rel="noreferrer">
+                                <div className="cursor-pointer updates-thumbnail mb-3">
+                                    <img src={x.thumbnail} className="w-100" alt={x.title} />
+                                </div>
+                            </a>
+                            <p className="cursor-pointer mb-3">
+                                <a className="update-title font-w-hermann w-hermann-reg text-white font-size-150" href={x.link} target="_blank" rel="noreferrer">
+                                    {x.title}
+                                </a>
+                            </p>
+                        </div>
+                    ))}
+
+                    {/* Articles */}
+                    <p className="updates-type text-center gotham-bold text-white font-size-140 mt-5 mb-2">Articles</p>
+                    { updatesArticles.map(x => (
                         <div className="col-12 col-md-6 col-xl-4 mb-3" key={x.id}>
                             <a href={x.link} target="_blank" rel="noreferrer">
                                 <div className="cursor-pointer updates-thumbnail mb-3">

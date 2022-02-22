@@ -1,7 +1,9 @@
 import './SneakPeek.css'
 
 // images
-import sneak1 from '../../images/sneakpeeks/sneak-peek.jpg'
+import sneak1 from '../../images/sneakpeeks/sneakpeek-forge.png'
+import sneak2 from '../../images/sneakpeeks/sneakpeek-blacksmith.jpg'
+import sneak3 from '../../images/sneakpeeks/sneakpeek-mainmenu.png'
 
 import bordertop from '../../images/sneakpeek-top.png'
 import borderbot from '../../images/sneakpeek-bot.png'
@@ -11,8 +13,20 @@ export default function SneakPeek() {
         {
             id: 1,
             thumbnail: sneak1,
+            link: "https://twitter.com/mustachioverse/status/1495748029005320198",
+            title: "Enter the Forge!"
+        },
+        {
+            id: 2,
+            thumbnail: sneak2,
+            link: "https://twitter.com/mustachioverse/status/1494212165213233152",
+            title: "Take your pick, you'll find no second-rate items with the Blacksmith"
+        },
+        {
+            id: 3,
+            thumbnail: sneak3,
             link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
-            title: "The Mustachio Quest Sneak Peek is Out!"
+            title: "Dev Update: Temporary Main Menu, Loading Bar and Transitions, and Loading to Different Scenes"
         },
     ]
 

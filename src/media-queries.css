@@ -317,8 +317,12 @@
   #team {
     padding-top: 110px !important;
   }
+
   .updates-title,
-  .update-title {
+  .update-title,
+  .sneakpeeks-title,
+  .sneakpeek-title,
+  .updates-type {
     font-size: 1.2em !important;
   }
 
