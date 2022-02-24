@@ -85,8 +85,8 @@ export default function Team() {
             thumbnail: boiimustache,
             twitter: "https://twitter.com/BoiiMustache",
             artstation: "https://www.artstation.com/sphinx1232",
-            name: "MUSTACHIO ARTIST",
-            position: "3D ANIMATOR"
+            name: "BOII MUSTACHE",
+            position: "MUSTACHIO/3D ARTIST"
         },
         {
             id: 9,
