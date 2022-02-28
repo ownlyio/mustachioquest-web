@@ -5,6 +5,7 @@ import update4 from '../../images/updates/spaces/lets-talk-mq.png'
 import update3 from '../../images/updates/articles/mq-article.jpg'
 import update2 from '../../images/updates/articles/mustachios-article.jpg'
 import update1 from '../../images/updates/articles/boii-mustache.jpg'
+import video6 from '../../images/updates/videos/the-mint-10.jpg'
 import video5 from '../../images/updates/videos/lnwk-mq.jpg'
 import video4 from '../../images/updates/videos/the-mint-9.jpg'
 import video3 from '../../images/updates/videos/sneakpeek-1.png'
@@ -18,6 +19,12 @@ import borderbr from '../../images/updates-br.png'
 
 export default function Updates() {
     const updatesVideos = [
+        {
+            id: 6,
+            thumbnail: video6,
+            link: "https://www.youtube.com/watch?v=SnUtn6rWuSw",
+            title: "The Mint Ep 10: Mustachio Quest Development Updates with Ismael and Toff"
+        },
         {
             id: 5,
             thumbnail: video5,
