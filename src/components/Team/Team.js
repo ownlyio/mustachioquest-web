@@ -65,14 +65,6 @@ export default function Team() {
             position: "FULL STACK DEVELOPER"
         },
         {
-            id: 6,
-            thumbnail: ninja,
-            twitter: "https://twitter.com/throwstar28",
-            linkedin: "https://www.linkedin.com/in/ain-art-atos",
-            name: "AIN ART ATOS",
-            position: "MARKETING SPECIALIST"
-        },
-        {
             id: 7,
             thumbnail: sludgie,
             twitter: "https://twitter.com/0xKJ_",
@@ -140,7 +132,7 @@ export default function Team() {
                     {/* Refactor depending on the number of employees */}
                     <div className="d-none d-lg-block">
                         <div className="d-flex justify-content-evenly align-items-center flex-wrap">
-                            { team.filter(x => x.id < 12).map(x => (
+                            { team.map(x => (
                                 <div className="team-wrap" key={x.id}>
                                     <div className="team-thumbnail w-100">
                                         <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
@@ -174,7 +166,7 @@ export default function Team() {
                                 </div>
                             ))}
                         </div>
-                        <div className="d-flex justify-content-evenly align-items-center flex-wrap">
+                        {/* <div className="d-flex justify-content-evenly align-items-center flex-wrap">
                             { team.filter(x => x.id >= 12).map(x => (
                                 <div className="team-wrap" key={x.id}>
                                     <div className="team-thumbnail w-100">
@@ -208,7 +200,7 @@ export default function Team() {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* For width less than 992px */}
