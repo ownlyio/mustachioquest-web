@@ -252,6 +252,10 @@ export default function App() {
             })
         })  
 
+        $("img").mousedown(function(){
+            return false;
+        })
+
         async function initUtilsOnLoad() {
             const {address, status} = await getCurrentWalletConnected();
             const {network, netStatus} = await getCurrentNetwork();
