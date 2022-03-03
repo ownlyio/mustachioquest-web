@@ -1,6 +1,8 @@
 import './Table.css'
 
-import logo from '../../images/MQ_logo_white.png'
+import royals from '../../images/MQ_royals.png'
+import rulers from '../../images/MQ_rulers.png'
+import redeemers from '../../images/MQ_redeemers.png'
 import greenCheck from '../../images/check-3d-green.png'
 import orangeCheck from '../../images/check-3d-orange.png'
 import goldCheck from '../../images/check-3d-gold.png'
@@ -21,10 +23,9 @@ export default function Table() {
                     <div className="col-12 col-md-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
-                                <img className="w-100" src={logo} alt="Mustachio Royals" />
+                                <img className="w-100" src={royals} alt="Mustachio Royals" />
                             </div>
 
-                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO <span className="gotham">ROYALS</span></p>
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #1 to #100</p>
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b> at 0.4ETH!</p>
                         </div>
@@ -32,10 +33,9 @@ export default function Table() {
                     <div className="col-12 col-md-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
-                                <img className="w-100" src={logo} alt="Mustachio Royals" />
+                                <img className="w-100" src={rulers} alt="Mustachio Royals" />
                             </div>
 
-                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO <span className="gotham">RULERS</span></p>
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 30 Days at <a href="https://ownly.io/stake" className="link-color-2">ownly.io/stake</a> to earn a Ruler</p>
                         </div>
@@ -43,10 +43,9 @@ export default function Table() {
                     <div className="col-12 col-md-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
-                                <img className="w-100" src={logo} alt="Mustachio Redeemers" />
+                                <img className="w-100" src={redeemers} alt="Mustachio Redeemers" />
                             </div>
 
-                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO <span className="gotham">REDEEMERS</span></p>
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">10,000 MUSTACHIOS</p>
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this Q2 2022</p>
                         </div>
