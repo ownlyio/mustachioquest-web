@@ -252,6 +252,7 @@ export default function App() {
             })
         })  
 
+        // disable pointer events for image
         $("img").mousedown(function(){
             return false;
         })
