@@ -5,12 +5,12 @@ import update4 from '../../images/updates/spaces/lets-talk-mq.png'
 import update3 from '../../images/updates/articles/mq-article.jpg'
 import update2 from '../../images/updates/articles/mustachios-article.jpg'
 import update1 from '../../images/updates/articles/boii-mustache.jpg'
+import video7 from '../../images/updates/videos/mq-website-review.jpg'
 import video6 from '../../images/updates/videos/the-mint-10.jpg'
 import video5 from '../../images/updates/videos/lnwk-mq.jpg'
 import video4 from '../../images/updates/videos/the-mint-9.jpg'
 import video3 from '../../images/updates/videos/sneakpeek-1.png'
 import video2 from '../../images/updates/videos/mint-ep7.jpg'
-import video1 from '../../images/updates/videos/yt-sneakpeek.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -19,6 +19,12 @@ import borderbr from '../../images/updates-br.png'
 
 export default function Updates() {
     const updatesVideos = [
+        {
+            id: 7,
+            thumbnail: video7,
+            link: "https://www.youtube.com/watch?v=1Tj5ulhK9jE",
+            title: "Mustachio Quest Website Live Review w/ Yasha-Chan"
+        },
         {
             id: 6,
             thumbnail: video6,
@@ -48,12 +54,6 @@ export default function Updates() {
             thumbnail: video2,
             link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
             title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
-        },
-        {
-            id: 1,
-            thumbnail: video1,
-            link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
-            title: "The Mustachio Quest Sneak Peek is Out!"
         },
     ]
 
