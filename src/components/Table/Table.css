@@ -31,3 +31,13 @@
   bottom: 0;
   right: 0;
 }
+
+/* content */
+.mq-table-types {
+  padding: 20px;
+}
+
+.mq-table-types-img {
+  width: 60%;
+  margin: 0 auto 10%;
+}

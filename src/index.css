@@ -2477,3 +2477,14 @@ body {
   color: white;
   text-decoration: underline;
 }
+
+.link-color-2 {
+  color: white;
+  text-decoration: underline;
+}
+
+.link-color-2:hover,
+.link-color-2:focus {
+  color: #3db867;
+  text-decoration: underline;
+}
