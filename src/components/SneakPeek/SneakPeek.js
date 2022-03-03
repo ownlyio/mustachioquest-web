@@ -1,6 +1,9 @@
 import './SneakPeek.css'
 
 // images
+import sneak9 from '../../images/sneakpeeks/6-mexico-strength.png'
+import sneak8 from '../../images/sneakpeeks/5-sludgie.jpg'
+import sneak7 from '../../images/sneakpeeks/4-abracadoobie.jpg'
 import sneak6 from '../../images/sneakpeeks/3-mexico.png'
 import sneak5 from '../../images/sneakpeeks/2-desert-pit.png'
 import sneak4 from '../../images/sneakpeeks/1-menu-update.png'
@@ -13,6 +16,24 @@ import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        {
+            id: 9,
+            thumbnail: sneak9,
+            link: "https://twitter.com/mustachioverse/status/1499172708009103369",
+            title: "It seems like Mexico's strength is returning. Not a lot, but enough."
+        },
+        {
+            id: 8,
+            thumbnail: sneak8,
+            link: "https://discord.com/channels/878131568806334464/935073739878563840/948472489049210960",
+            title: "Sludgie on the Forge"
+        },
+        {
+            id: 7,
+            thumbnail: sneak7,
+            link: "https://discord.com/channels/878131568806334464/935073739878563840/948221757607788594",
+            title: "Abracadoobie Looking at the Horizon"
+        },
         {
             id: 6,
             thumbnail: sneak6,
