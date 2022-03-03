@@ -24,9 +24,9 @@ export default function Table() {
                                 <img className="w-100" src={logo} alt="Mustachio Royals" />
                             </div>
 
-                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO ROYALS</p>
-                            <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">1-100 MUSTACHIOS</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b> that can be minted at 0.4ETH!</p>
+                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO <span className="gotham">ROYALS</span></p>
+                            <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #1 to #100</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b> at 0.4ETH!</p>
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -35,9 +35,9 @@ export default function Table() {
                                 <img className="w-100" src={logo} alt="Mustachio Royals" />
                             </div>
 
-                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO RULERS</p>
-                            <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">101-300 MUSTACHIOS</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15 Million OWN at <a href="https://stake.ownly.market" className="link-color-2">https://stake.ownly.market</a> without unstaking for 30 Days to earn 1 Mustachio Ruler NFT.</p>
+                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO <span className="gotham">RULERS</span></p>
+                            <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 30 Days at <a href="https://ownly.io/stake" className="link-color-2">ownly.io/stake</a> to earn a Ruler</p>
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -46,7 +46,7 @@ export default function Table() {
                                 <img className="w-100" src={logo} alt="Mustachio Redeemers" />
                             </div>
 
-                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO REDEEMERS</p>
+                            <p className="mq-table-types-title gotham-black font-size-150 text-white text-center">MUSTACHIO <span className="gotham">REDEEMERS</span></p>
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">10,000 MUSTACHIOS</p>
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this Q2 2022</p>
                         </div>
@@ -153,9 +153,7 @@ export default function Table() {
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>  
-
-                        <p className="mq-table-content-title gotham-black text-white text-center font-size-140 mb-4">We reduce the initial 999 max supply of Mustachio NFTs to 300.</p>
+                        </table>
                     </div>
                 </div>
             </div>
