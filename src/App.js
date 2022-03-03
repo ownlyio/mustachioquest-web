@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Discord } from './components/ShortLinks'
 import $ from 'jquery'
 
+// components
 import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
 import Features from './components/Features/Features'
@@ -14,11 +15,12 @@ import Updates from './components/Updates/Updates'
 import Roadmap from './components/Roadmap/Roadmap'
 import Team from './components/Team/Team'
 import SneakPeek from './components/SneakPeek/SneakPeek'
+import Table from './components/Table/Table'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 
-// Utilss
+// Utils
 // import contract from './utils/contractDev'
 import contract from './utils/contract'
 import getCurrentNetwork from './utils/getCurrentNetwork'
@@ -279,6 +281,7 @@ export default function App() {
                     <Roadmap />
                     <Team />
                     <SneakPeek />
+                    <Table />
                     <FAQ />
                     <CTA />
                 </Route>
