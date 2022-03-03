@@ -41,3 +41,12 @@
   width: 60%;
   margin: 0 auto 10%;
 }
+
+.mq-table-table {
+  width: 90%;
+  margin: 0 auto 2em;
+}
+
+.mq-table-check {
+  width: 40px;
+}
