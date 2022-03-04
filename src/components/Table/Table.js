@@ -27,7 +27,7 @@ export default function Table() {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #1 to #100</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b> at 0.4ETH!</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b> on <a href="https://ownly.io/stash" className="link-color-2" target="_blank" rel="noreferrer">MustachioVerse</a></p>
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -37,7 +37,7 @@ export default function Table() {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 30 Days at <a href="https://ownly.io/stake" className="link-color-2">ownly.io/stake</a> to earn a Ruler</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 30 Days at <a href="https://ownly.io/stake" className="link-color-2" target="_blank" rel="noreferrer">ownly.io/stake</a> to earn a Ruler</p>
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -68,7 +68,7 @@ export default function Table() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-120">3D playable character</td>
+                                    <td className="align-middle gotham-light text-white font-size-120">3D Playable Character</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-120">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -92,7 +92,7 @@ export default function Table() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-120">Intricately hand-drawn avatar by Boii Mustache</td>
+                                    <td className="align-middle gotham-light text-white font-size-120">Intricately Hand-drawn Avatar by Boii Mustache</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-120">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -102,7 +102,17 @@ export default function Table() {
                                     <td className="text-center align-middle gotham-light text-white font-size-120"></td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-120">Mirror on BNB Chain of 2D hand-drawn PFP</td>
+                                    <td className="align-middle gotham-light text-white font-size-120">Mirror on BNB Chain of 2D Hand-drawn PFP</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-120">
+                                        <img src={greenCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-120">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-120"></td>
+                                </tr>
+                                <tr>
+                                    <td className="align-middle gotham-light text-white font-size-120">MustachioVerse Land Sale Discount</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-120">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -136,7 +146,7 @@ export default function Table() {
                                     <td className="text-center align-middle gotham-light text-white font-size-120"></td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-120">The first NFT tales and story behind each Mustachio</td>
+                                    <td className="align-middle gotham-light text-white font-size-120">The First NFT Tales and Story Behind Each Mustachio</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-120">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
