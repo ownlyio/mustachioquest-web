@@ -67,7 +67,7 @@ export default function Table() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="font-size-70 font-size-md-100">
+                                <tr>
                                     <td className="align-middle gotham-light text-white font-size-120">3D Playable Character</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-120">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
