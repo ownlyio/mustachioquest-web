@@ -301,6 +301,15 @@
     font-size: 1em !important;
   }
 
+  .mq-table-content th {
+    font-size: 1.3em !important;
+  }
+
+  .mq-table-types-sub,
+  .mq-table-content td {
+    font-size: 1em !important;
+  }
+
   #features,
   #faqs,
   #sneakpeek {
@@ -319,6 +328,8 @@
   }
 
   .updates-title,
+  .mq-table-title,
+  .mq-table-content-title,
   .update-title,
   .sneakpeeks-title,
   .sneakpeek-title,
@@ -371,6 +382,10 @@
 
   .team-name {
     font-size: 1.3em !important;
+  }
+
+  .mq-table-check {
+    width: 22px !important;
   }
 
   .faq-title,

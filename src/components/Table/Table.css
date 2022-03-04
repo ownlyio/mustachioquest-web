@@ -1,0 +1,54 @@
+#mq-table {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0 110px;
+  position: relative;
+  background-color: #1c5091;
+}
+
+/* borders */
+.mq-table-border {
+  width: 20%;
+  position: absolute;
+}
+
+.mq-table-tl {
+  top: 0;
+  left: 0;
+}
+
+.mq-table-tr {
+  top: 0;
+  right: 0;
+}
+
+.mq-table-bl {
+  bottom: -5px;
+  left: 0;
+  z-index: 4;
+}
+
+.mq-table-br {
+  bottom: -5px;
+  right: 0;
+  z-index: 4;
+}
+
+/* content */
+.mq-table-types {
+  padding: 20px;
+}
+
+.mq-table-types-img {
+  width: 80%;
+  margin: 0 auto 6%;
+}
+
+.mq-table-table {
+  width: 90%;
+  margin: 0 auto 2em;
+}
+
+.mq-table-check {
+  width: 40px;
+}
