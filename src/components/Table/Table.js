@@ -57,9 +57,9 @@ export default function Table() {
                     <p className="mq-table-content-title gotham-black text-white text-center font-size-170 mb-4">HERE'S WHAT YOU'LL GET</p>
                     
                     <div className="table-responsive">
-                        <table className="table table-bordered mq-table-table">
+                        <table className="table table-bordered mq-table-table font-size-70 font-size-md-100">
                             <thead>
-                                <tr>
+                                <tr className="font-size-70 font-size-md-100">
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Utilities and Perks</th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Royals</th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Rulers</th>
@@ -67,7 +67,7 @@ export default function Table() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr className="font-size-70 font-size-md-100">
                                     <td className="align-middle gotham-light text-white font-size-120">3D Playable Character</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-120">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
