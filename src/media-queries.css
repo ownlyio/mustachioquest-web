@@ -384,6 +384,10 @@
     font-size: 1.3em !important;
   }
 
+  .mq-table-check {
+    width: 22px !important;
+  }
+
   .faq-title,
   .sneakpeeks-title {
     font-size: 1.2em !important;
