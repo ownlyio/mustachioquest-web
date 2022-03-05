@@ -25,20 +25,12 @@ export default function Roadmap() {
                         <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Concept and Gameplay Announcement</div>
                     </div>
                     <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Early Preview Launch</div>
+                    </div>
+                    <div className="q-column quarter-mr">
                         <div className="now q-pointer"></div>
-                        <div className="now q-content gotham-light text-black font-size-110">Mustachio Quest NFT Land Sale</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Early Preview Launch</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Launch of the 10,000 3D Mustachio Redeemers</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
+                        <div className="now q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
                     </div>
                 </div>
             </div>
@@ -46,6 +38,14 @@ export default function Roadmap() {
                 <div className="d-flex justify-content-evenly align-items-start">
                     <div className="q-column quarter">
                         <p className="text-color-3 gotham-black font-size-170 mb-0">Q2</p>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="soon q-pointer"></div>
+                        <div className="soon q-content gotham-light text-black font-size-110">Launch of the 10,000 3D Mustachio Redeemers</div>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="soon q-pointer"></div>
+                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest NFT Land Sale</div>
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
