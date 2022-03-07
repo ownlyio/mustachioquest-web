@@ -26,10 +26,10 @@ export default function Navbar(props) {
 
     const styles = {
         bmBurgerButton: {
-            position: 'absolute',
+            position: 'fixed',
             width: '36px',
             height: '30px',
-            right: '0px',
+            right: '36px',
             top: '36px'
         },
         bmBurgerBars: {
