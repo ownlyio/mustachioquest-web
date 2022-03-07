@@ -12,11 +12,12 @@
 }
 
 #mq-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 30px;
-  width: 100%;
+  width: 90%;
   background-color: white;
   -webkit-clip-path: polygon(
     50% 0%,
@@ -36,7 +37,7 @@
     0 73%,
     0 0
   );
-  z-index: 3;
+  z-index: 5;
 }
 
 #mq-nav li {
