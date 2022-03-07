@@ -286,7 +286,7 @@ export default function App() {
                     <Roadmap />
                     <Team />
                     <SneakPeek />
-                    <Table />
+                    <Table mintBtn={initUtilsAndMint} />
                     <FAQ />
                     <CTA />
                 </Route>

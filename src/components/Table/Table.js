@@ -12,7 +12,7 @@ import bordertr from '../../images/updates-tr.png'
 import borderbl from '../../images/updates-bl.png'
 import borderbr from '../../images/updates-br.png'
 
-export default function Table() {
+export default function Table(props) {
     return (
         <section id="mq-table">
             <div className="container">
@@ -27,7 +27,7 @@ export default function Table() {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #1 to #100</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b> on <a href="https://ownly.io/stash" className="link-color-2" target="_blank" rel="noreferrer">MustachioVerse</a></p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b>. <button onClick={props.mintBtn} className="btn link-color-2 p-0 font-size-100" target="_blank" rel="noreferrer">MINT NOW!</button></p>
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
