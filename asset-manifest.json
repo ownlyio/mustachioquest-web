@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4698466f.css",
-    "main.js": "/static/js/main.86117608.js",
+    "main.css": "/static/css/main.b47a4305.css",
+    "main.js": "/static/js/main.1e4ffb29.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/sneakpeek-forge.png": "/static/media/sneakpeek-forge.e694290fe7a0e633aeda.png",
     "static/media/sneakpeek-1.png": "/static/media/sneakpeek-1.2c7beda1be082b4fc5c6.png",
@@ -115,19 +115,19 @@
     "static/media/Gotham-Bold.woff2": "/static/media/Gotham-Bold.198b37173d0019f8bc60.woff2",
     "static/media/Gotham-Ultra.woff2": "/static/media/Gotham-Ultra.a71da7c98efca5b72340.woff2",
     "static/media/feature-1-2d.png": "/static/media/feature-1-2d.f52dc9467e42e370a7b8.png",
+    "static/media/MQ_pathfinders.png": "/static/media/MQ_pathfinders.7c37b9427d4cd98062a4.png",
     "static/media/features-compass.png": "/static/media/features-compass.a6e94768c129131bcb57.png",
+    "static/media/MQ_marauders.png": "/static/media/MQ_marauders.761b13eaeee08c189dd6.png",
+    "static/media/MQ_rascals.png": "/static/media/MQ_rascals.248d1744577439437da9.png",
     "static/media/MQ_logo.png": "/static/media/MQ_logo.7588e908b409a4cb4f50.png",
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
-    "static/media/MQ_redeemers.png": "/static/media/MQ_redeemers.ac59874ecf44c4f3c9c5.png",
-    "static/media/MQ_royals.png": "/static/media/MQ_royals.3d548b813ac6c67250cd.png",
-    "static/media/MQ_rulers.png": "/static/media/MQ_rulers.85096102bd1b825c83c7.png",
     "index.html": "/index.html",
-    "main.4698466f.css.map": "/static/css/main.4698466f.css.map",
-    "main.86117608.js.map": "/static/js/main.86117608.js.map",
+    "main.b47a4305.css.map": "/static/css/main.b47a4305.css.map",
+    "main.1e4ffb29.js.map": "/static/js/main.1e4ffb29.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4698466f.css",
-    "static/js/main.86117608.js"
+    "static/css/main.b47a4305.css",
+    "static/js/main.1e4ffb29.js"
   ]
 }
