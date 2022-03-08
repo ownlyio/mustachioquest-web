@@ -45,10 +45,22 @@
 }
 
 .mq-table-table {
-  width: 90%;
-  margin: 0 auto 2em;
+  width: 95%;
+  margin: 0 auto 5em;
 }
 
 .mq-table-check {
   width: 40px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid white;
+}
+
+.border-left-none {
+  border-left: none;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
 }
