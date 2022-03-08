@@ -17,7 +17,7 @@ export default function FAQ() {
                     <div id="flush-collapse-1" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
                             <p className="font-size-120 gotham-light">The Mustachios are the first-ever NFT Tales to be told in the NFT industry. Intricately hand-drawn by the talented Boii Mustache, it took the artist years in the making to actualize the idea of being whatever you want to be, in a land of mustached beings. Now, the concept is solidified through our play-to-earn game, Mustachio Quest, where our Mustachio holders can fulfill quests in an open world NFT game as their 3D Mustachio avatar.</p>
-                            <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called Mustachio Royals. Our second generation of Mustachios from 101-300 are called Mustachio Rulers. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Redeemers.</p>
+                            <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called Mustachio Pathfinders. Our second generation of Mustachios from 101-300 are called Mustachio Marauders. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export default function FAQ() {
                                 <li className="font-size-120 gotham-light">Visit <a href="/" className="link-color-1">mustachioverse.com</a>.</li>
                                 <li className="font-size-120 gotham-light">Click MINT NOW at the upper right corner of the Navigation Menu.</li>
                                 <li className="font-size-120 gotham-light">Connect your MetaMask wallet (Ethereum Network).</li>
-                                <li className="font-size-120 gotham-light">Mint your Mustachio Royal for 0.4 ETH + gas fee.</li>
+                                <li className="font-size-120 gotham-light">Mint your Mustachio Pathfinder for 0.4 ETH + gas fee.</li>
                                 <li className="font-size-120 gotham-light">Check your OpenSea or  <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market/" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio.</li>
                             </ol>
                             <a className="font-size-120 gotham-light link-color-1" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Click here for a more detailed instruction.</a>
@@ -92,7 +92,7 @@ export default function FAQ() {
                     <div id="flush-collapse-6" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
                             <p className="font-size-120 gotham-light">There are so many possibilities on how you can make use of your Mustachio!</p>
-                            <p className="font-size-120 gotham-light">For the Mustachio Royals and Mustachio Rulers, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
+                            <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Marauders, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
                             <p className="font-size-120 gotham-light">Aside from partaking in our play-to-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/?collection=the-sages-rant-collectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
                         </div>
                     </div>
