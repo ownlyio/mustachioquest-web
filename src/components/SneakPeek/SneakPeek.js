@@ -1,6 +1,7 @@
 import './SneakPeek.css'
 
 // images
+import sneak10 from '../../images/sneakpeeks/7-loonywise.png'
 import sneak9 from '../../images/sneakpeeks/6-mexico-strength.png'
 import sneak8 from '../../images/sneakpeeks/5-sludgie.jpg'
 import sneak7 from '../../images/sneakpeeks/4-abracadoobie.jpg'
@@ -16,6 +17,12 @@ import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        {
+            id: 10,
+            thumbnail: sneak10,
+            link: "https://twitter.com/mustachioverse/status/1501070428122808320",
+            title: "Here's Loonywise to say GM to y'all."
+        },
         {
             id: 9,
             thumbnail: sneak9,
