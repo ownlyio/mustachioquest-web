@@ -1,7 +1,7 @@
 import './SneakPeek.css'
 
 // images
-import sneak10 from '../../images/sneakpeeks/7-loonywise.png'
+import sneak10 from '../../images/sneakpeeks/7-loonywise.jpg'
 import sneak9 from '../../images/sneakpeeks/6-mexico-strength.png'
 import sneak8 from '../../images/sneakpeeks/5-sludgie.jpg'
 import sneak7 from '../../images/sneakpeeks/4-abracadoobie.jpg'
