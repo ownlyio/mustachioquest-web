@@ -76,6 +76,12 @@
   }
 }
 
+@media (max-width: 1140px) {
+  .mq-nav-discord {
+    margin-top: 0.5rem;
+  }
+}
+
 @media (max-width: 992px) {
   .feat {
     padding-left: 0 !important;
