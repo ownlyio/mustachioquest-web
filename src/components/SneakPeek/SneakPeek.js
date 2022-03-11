@@ -80,7 +80,7 @@ export default function SneakPeek() {
     ]
 
     return (
-        <section id="sneakpeek">
+        <section id="progress">
             <div className="container">
                 <div className="row justify-content-center align-items-start">
                     <p className="sneakpeeks-title gotham-black text-white text-center font-size-170 mb-5">TAKE A PEEK AT OUR PROGRESS</p>

@@ -193,7 +193,7 @@
 
   #features,
   #faqs,
-  #sneakpeek {
+  #progress {
     overflow-x: hidden;
   }
 
@@ -327,7 +327,7 @@
 
   #features,
   #faqs,
-  #sneakpeek {
+  #progress {
     overflow-x: hidden;
   }
 
@@ -532,7 +532,7 @@
     padding-bottom: 5% !important;
   }
 
-  #sneakpeek {
+  #progress {
     padding-top: 9% !important;
     padding-bottom: 7% !important;
   }
