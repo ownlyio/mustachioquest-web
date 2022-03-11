@@ -2433,6 +2433,14 @@ body {
   z-index: 1000;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-color-1 {
   color: #20286c;
 }
@@ -2486,5 +2494,16 @@ body {
 .link-color-2:hover,
 .link-color-2:focus {
   color: #3db867;
+  text-decoration: underline;
+}
+
+.link-color-3 {
+  color: white;
+  text-decoration: underline;
+}
+
+.link-color-3:hover,
+.link-color-3:focus {
+  color: #ff9f42;
   text-decoration: underline;
 }

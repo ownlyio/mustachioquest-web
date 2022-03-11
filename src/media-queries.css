@@ -123,6 +123,10 @@
   .team-sub {
     width: 85% !important;
   }
+
+  .rewards-img {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -224,6 +228,11 @@
 
   .team-name {
     font-size: 1.3em !important;
+  }
+
+  .rewards-img {
+    width: 70% !important;
+    margin: 0 auto;
   }
 }
 
@@ -328,6 +337,7 @@
   }
 
   .updates-title,
+  .rewards-title,
   .mq-table-title,
   .mq-table-content-title,
   .update-title,
@@ -389,6 +399,7 @@
   }
 
   .faq-title,
+  .rewards-title,
   .sneakpeeks-title {
     font-size: 1.2em !important;
   }
@@ -448,6 +459,10 @@
   .team-name {
     font-size: 1.1em !important;
   }
+
+  .rewards-img {
+    width: 80% !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -484,6 +499,10 @@
 
   .roadmap-logo {
     width: 70% !important;
+  }
+
+  .rewards-img {
+    width: 90% !important;
   }
 }
 
