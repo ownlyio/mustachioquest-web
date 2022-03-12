@@ -136,7 +136,7 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">The First NFT Tales Behind Each Mustachio</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">The First <a href="https://tales.mustachioverse.com" className="link-color-2" target="_blank" rel="noreferrer">NFT Tales</a> Behind Each Mustachio</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -163,7 +163,7 @@ export default function Table(props) {
                                         <button onClick={props.mintBtn} className="btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
                                     </td>
                                     <td className="border-bottom text-center">
-                                        <a href="https://stake.ownly.market/own-marauders" className="link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">EARN NFT</a>
+                                        <a href="https://stake.ownly.market/own-marauders" className="link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
                                         <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q2 2022</p>
