@@ -26,16 +26,19 @@ export default function Rewards() {
                         <p className="text-white gotham-bold text-left font-size-100 font-size-md-130 font-size-lg-150 mb-3 mt-5">PERKS:</p>
                         <ul>
                             <li className="text-white">
-                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">3D Playable Character</p>
-                            </li>
-                            <li className="text-white">
-                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Exclusive Discord Channel</p>
+                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">3D Playable Character in Mustachio Quest</p>
                             </li>
                             <li className="text-white">
                                 <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Intricately Hand-drawn 2D PFP by Boii Mustache</p>
                             </li>
                             <li className="text-white">
                                 <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">MustachioVerse Land Sale Discount</p>
+                            </li>
+                            <li className="text-white">
+                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Maximum supply of only 200 Marauders</p>
+                            </li>
+                            <li className="text-white">
+                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Exclusive Discord Channel</p>
                             </li>
                         </ul>
                         <div className="mt-5">
