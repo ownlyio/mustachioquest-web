@@ -39,7 +39,7 @@ export default function Rewards() {
                             </li>
                         </ul>
                         <div className="mt-5 mb-5  pb-5">
-                            <a href="https://stake.ownly.market/own-marauders" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-130 font-size-md-170 w-100">STAKE OWN NOW!</a>
+                            <a href="https://ownly.io/ownmarauder" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-130 font-size-md-170 w-100">STAKE OWN NOW!</a>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 order-1 order-md-2 mb-5 mb-md-0">
@@ -49,10 +49,6 @@ export default function Rewards() {
                     </div>
                 </div>
             </div>
-
-            {/* Borders */}
-            <img src={bordertop} className="sneakpeek-border sneakpeek-top" alt="Border Top" />
-            <img src={borderbot} className="sneakpeek-border sneakpeek-bot" alt="Border Bottom" />
         </section>
     )
 }
