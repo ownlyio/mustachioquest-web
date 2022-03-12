@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b47a4305.css",
-    "main.js": "/static/js/main.b120e141.js",
+    "main.css": "/static/css/main.b22695f3.css",
+    "main.js": "/static/js/main.9a41a906.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/sneakpeek-forge.png": "/static/media/sneakpeek-forge.e694290fe7a0e633aeda.png",
     "static/media/sneakpeek-1.png": "/static/media/sneakpeek-1.2c7beda1be082b4fc5c6.png",
@@ -33,7 +33,6 @@
     "static/media/lnwk-mq.jpg": "/static/media/lnwk-mq.9a36352845c7f7dee226.jpg",
     "static/media/WHermann-Regular.woff": "/static/media/WHermann-Regular.c7e37924dc81963bfdf4.woff",
     "static/media/feature-2.png": "/static/media/feature-2.756803ef7eedbec78635.png",
-    "static/media/mq-website-review.jpg": "/static/media/mq-website-review.a4d5456c613f951de470.jpg",
     "static/media/kingstellar.jpg": "/static/media/kingstellar.b80667eff02164ccd313.jpg",
     "static/media/WHermann-SemiBoldItalic.woff2": "/static/media/WHermann-SemiBoldItalic.9934f0c82926cb777dfa.woff2",
     "static/media/WHermann-BlackItalic.woff2": "/static/media/WHermann-BlackItalic.8305c7ad4b0ac824ac0b.woff2",
@@ -41,10 +40,10 @@
     "static/media/feature-1.png": "/static/media/feature-1.b3be565935d89465889f.png",
     "static/media/7-loonywise.jpg": "/static/media/7-loonywise.44b9490325d2a5c795ee.jpg",
     "static/media/sneakpeek-blacksmith.jpg": "/static/media/sneakpeek-blacksmith.7b3d447ec077980fe5af.jpg",
-    "static/media/boii-mustache.jpg": "/static/media/boii-mustache.d070457e8af9045792d9.jpg",
     "static/media/WHermann-Italic.woff2": "/static/media/WHermann-Italic.f949063f1346dd45b1d8.woff2",
     "static/media/WHermann-HeavyItalic.woff2": "/static/media/WHermann-HeavyItalic.444dd4947a6c8fc7512e.woff2",
     "static/media/mint-ep7.jpg": "/static/media/mint-ep7.8f1bccc6b48030c13f8e.jpg",
+    "static/media/marauders.png": "/static/media/marauders.ec73e4a0a29dc3bc6ce7.png",
     "static/media/the-mint-10.jpg": "/static/media/the-mint-10.8866f3496645a1070d88.jpg",
     "static/media/boiimustache.jpg": "/static/media/boiimustache.a4d5739fd6cd68afc864.jpg",
     "static/media/feature-3.png": "/static/media/feature-3.bdc277b695d3cba07f66.png",
@@ -61,6 +60,7 @@
     "static/media/sludgie.jpg": "/static/media/sludgie.f5e469159d6732623a90.jpg",
     "static/media/grim.jpg": "/static/media/grim.42dbf9d7b256ce38be8f.jpg",
     "static/media/feat-bot.png": "/static/media/feat-bot.4c0a7f68be37e45935ae.png",
+    "static/media/rewards-bg.jpg": "/static/media/rewards-bg.4a03021eb8598718661a.jpg",
     "static/media/abracadoobie.jpg": "/static/media/abracadoobie.609bd986ebb28ccb5bde.jpg",
     "static/media/feature-3-mustachio.png": "/static/media/feature-3-mustachio.491260829f07d1bc76ab.png",
     "static/media/mexico.jpg": "/static/media/mexico.93371208cbb5faa55a31.jpg",
@@ -123,12 +123,12 @@
     "static/media/MQ_logo.png": "/static/media/MQ_logo.7588e908b409a4cb4f50.png",
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
-    "main.b47a4305.css.map": "/static/css/main.b47a4305.css.map",
-    "main.b120e141.js.map": "/static/js/main.b120e141.js.map",
+    "main.b22695f3.css.map": "/static/css/main.b22695f3.css.map",
+    "main.9a41a906.js.map": "/static/js/main.9a41a906.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b47a4305.css",
-    "static/js/main.b120e141.js"
+    "static/css/main.b22695f3.css",
+    "static/js/main.9a41a906.js"
   ]
 }
