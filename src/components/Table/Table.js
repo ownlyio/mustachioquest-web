@@ -102,16 +102,6 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Mirror on BNB Chain of 2D Hand-drawn PFP</td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={greenCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                </tr>
-                                <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">MustachioVerse Land Sale Discount</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
