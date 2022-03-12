@@ -37,7 +37,7 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days at <a href="https://ownly.io/ownmarauder" className="link-color-2" target="_blank" rel="noreferrer">ownly.io/ownmarauder</a> to earn a Marauder</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder. <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a></p>
                         </div>
                     </div>
                     <div className="col-12 col-md-4">
@@ -150,6 +150,12 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={goldCheck} alt="check" className="mq-table-check" />
                                     </td>
+                                </tr>
+                                <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">Maximum Supply of Mustachios</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">100</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">200</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">10,000</td>
                                 </tr>
                                 <tr>
                                     <td className="border-left-none"></td>
