@@ -136,7 +136,7 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">The First NFT Tales Behind Each Mustachio</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">The First <a href="https://tales.mustachioverse.com" className="link-color-2" target="_blank" rel="noreferrer">NFT Tales</a> Behind Each Mustachio</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
