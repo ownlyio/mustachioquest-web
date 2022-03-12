@@ -10,7 +10,7 @@ export default function Rewards() {
     return (
         <section id="rewards" style={{"backgroundImage": `url(${rewardsBG})`}}>
             <div className="container text-center">
-                <p className="rewards-title gotham-black text-white text-center font-size-170 mt-5 mb-5">EARN A MUSTACHIO MARAUDER NFT</p>
+                <p className="rewards-title gotham-black text-white text-center font-size-170 mt-0 mt-xl-5 mb-5">EARN A MUSTACHIO MARAUDER NFT</p>
                 <div className="row align-items-center">
                     <div className="col-12 col-md-6 order-2 order-md-1">
                         <p className="text-white gotham-bold text-left font-size-100 font-size-md-130 font-size-lg-150 mb-3">HOW TO PARTICIPATE:</p>
@@ -49,6 +49,10 @@ export default function Rewards() {
                     </div>
                 </div>
             </div>
+
+            {/* Borders */}
+            <img src={bordertop} className="sneakpeek-border sneakpeek-top" alt="Border Top" />
+            <img src={borderbot} className="sneakpeek-border sneakpeek-bot" alt="Border Bottom" />
         </section>
     )
 }

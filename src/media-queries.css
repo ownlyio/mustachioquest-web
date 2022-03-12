@@ -132,6 +132,7 @@
 
   .rewards-img {
     width: 100% !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -193,7 +194,8 @@
 
   #features,
   #faqs,
-  #progress {
+  #progress,
+  #rewards {
     overflow-x: hidden;
   }
 
@@ -468,6 +470,7 @@
 
   .rewards-img {
     width: 80% !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -509,6 +512,7 @@
 
   .rewards-img {
     width: 90% !important;
+    margin: 0 auto !important;
   }
 }
 
