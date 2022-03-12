@@ -44,7 +44,7 @@ export default function Team() {
             thumbnail: squarehead,
             twitter: "https://twitter.com/smcanasco/",
             linkedin: "https://www.linkedin.com/in/theshiekina/",
-            name: "SHIEKINA AÑASCO",
+            name: "KINA AÑASCO",
             position: "CMO"
         },
         {
