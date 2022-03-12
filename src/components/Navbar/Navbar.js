@@ -102,6 +102,11 @@ export default function Navbar(props) {
                         <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
                     </li>
                     <li>
+                        <a href="https://stake.ownly.market/own-marauders" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                            STAKE-TO-OWN
+                        </a>
+                    </li>
+                    <li>
                         <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                             MINT NOW
                         </button>
@@ -125,6 +130,9 @@ export default function Navbar(props) {
                     <HashLink smooth to="#progress" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">PROGRESS</HashLink>
                     <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
+                    <a href="https://stake.ownly.market/own-marauders" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                        STAKE-TO-OWN
+                    </a>
                     <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
