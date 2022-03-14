@@ -134,6 +134,10 @@
     width: 100% !important;
     margin: 0 auto !important;
   }
+
+  .mq-nav-discord {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 768px) {
