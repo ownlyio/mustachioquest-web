@@ -1,6 +1,8 @@
 import './SneakPeek.css'
 
 // images
+import sneak12 from '../../images/sneakpeeks/9-squarehead.jpg'
+import sneak11 from '../../images/sneakpeeks/8-hotdog.jpg'
 import sneak10 from '../../images/sneakpeeks/7-loonywise.jpg'
 import sneak9 from '../../images/sneakpeeks/6-mexico-strength.png'
 import sneak8 from '../../images/sneakpeeks/5-sludgie.jpg'
@@ -17,6 +19,18 @@ import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        {
+            id: 12,
+            thumbnail: sneak12,
+            link: "https://twitter.com/mustachioverse/status/1502973290066825216",
+            title: "Say Hi to Squarehead!"
+        },
+        {
+            id: 11,
+            thumbnail: sneak11,
+            link: "https://twitter.com/mustachioverse/status/1502528629305409536",
+            title: "Hotdog Prince will teach you how to sprint and meet the other Mustachios!",
+        },
         {
             id: 10,
             thumbnail: sneak10,
