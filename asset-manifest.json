@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1276feff.css",
-    "main.js": "/static/js/main.82716011.js",
+    "main.css": "/static/css/main.8dc7dbf4.css",
+    "main.js": "/static/js/main.abc4b321.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/sneakpeek-forge.png": "/static/media/sneakpeek-forge.e694290fe7a0e633aeda.png",
     "static/media/sneakpeek-1.png": "/static/media/sneakpeek-1.2c7beda1be082b4fc5c6.png",
@@ -27,6 +27,7 @@
     "static/media/sneakpeek-bot.png": "/static/media/sneakpeek-bot.f92af1542ca3685cd4f7.png",
     "static/media/the-mint-9.jpg": "/static/media/the-mint-9.a7b39d272c3c99839f2c.jpg",
     "static/media/mustachios-article.jpg": "/static/media/mustachios-article.034b7f4fed6b38e1c029.jpg",
+    "static/media/8-hotdog.jpg": "/static/media/8-hotdog.c1e74908e02b892e0336.jpg",
     "static/media/WHermann-Black.woff": "/static/media/WHermann-Black.8cdcbe0ea5f532d5c5c0.woff",
     "static/media/WHermann-SemiBold.woff": "/static/media/WHermann-SemiBold.769125cd44cd23d16a38.woff",
     "static/media/WHermann-UltraBold.woff": "/static/media/WHermann-UltraBold.89d40f9dfa082f177f9e.woff",
@@ -44,6 +45,7 @@
     "static/media/WHermann-Italic.woff2": "/static/media/WHermann-Italic.f949063f1346dd45b1d8.woff2",
     "static/media/WHermann-HeavyItalic.woff2": "/static/media/WHermann-HeavyItalic.444dd4947a6c8fc7512e.woff2",
     "static/media/mint-ep7.jpg": "/static/media/mint-ep7.8f1bccc6b48030c13f8e.jpg",
+    "static/media/9-squarehead.jpg": "/static/media/9-squarehead.f06e96f16df8ae65b1da.jpg",
     "static/media/the-mint-10.jpg": "/static/media/the-mint-10.8866f3496645a1070d88.jpg",
     "static/media/boiimustache.jpg": "/static/media/boiimustache.a4d5739fd6cd68afc864.jpg",
     "static/media/feature-3.png": "/static/media/feature-3.bdc277b695d3cba07f66.png",
@@ -52,6 +54,7 @@
     "static/media/WHermann-UltraBold.woff2": "/static/media/WHermann-UltraBold.807b35c0a85b93331402.woff2",
     "static/media/WHermann-Heavy.woff2": "/static/media/WHermann-Heavy.6b8e716a4b3de041ffb8.woff2",
     "static/media/WHermann-Regular.woff2": "/static/media/WHermann-Regular.d6d41b0ad1f485851e16.woff2",
+    "static/media/game-dev-2.jpg": "/static/media/game-dev-2.6f66bddfbd45a49b799e.jpg",
     "static/media/feat-top.png": "/static/media/feat-top.e11506cb1f6ad1de4e55.png",
     "static/media/loonywise.jpg": "/static/media/loonywise.483de086145df4b0fd43.jpg",
     "static/media/mountainwarrior.jpg": "/static/media/mountainwarrior.8efb9195eed1e2fe5c0a.jpg",
@@ -123,12 +126,12 @@
     "static/media/MQ_logo.png": "/static/media/MQ_logo.7588e908b409a4cb4f50.png",
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
-    "main.1276feff.css.map": "/static/css/main.1276feff.css.map",
-    "main.82716011.js.map": "/static/js/main.82716011.js.map",
+    "main.8dc7dbf4.css.map": "/static/css/main.8dc7dbf4.css.map",
+    "main.abc4b321.js.map": "/static/js/main.abc4b321.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1276feff.css",
-    "static/js/main.82716011.js"
+    "static/css/main.8dc7dbf4.css",
+    "static/js/main.abc4b321.js"
   ]
 }
