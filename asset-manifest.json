@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8dc7dbf4.css",
-    "main.js": "/static/js/main.abc4b321.js",
+    "main.css": "/static/css/main.8fa02d7b.css",
+    "main.js": "/static/js/main.f7a3483c.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/sneakpeek-forge.png": "/static/media/sneakpeek-forge.e694290fe7a0e633aeda.png",
     "static/media/sneakpeek-1.png": "/static/media/sneakpeek-1.2c7beda1be082b4fc5c6.png",
@@ -126,12 +126,12 @@
     "static/media/MQ_logo.png": "/static/media/MQ_logo.7588e908b409a4cb4f50.png",
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
-    "main.8dc7dbf4.css.map": "/static/css/main.8dc7dbf4.css.map",
-    "main.abc4b321.js.map": "/static/js/main.abc4b321.js.map",
+    "main.8fa02d7b.css.map": "/static/css/main.8fa02d7b.css.map",
+    "main.f7a3483c.js.map": "/static/js/main.f7a3483c.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dc7dbf4.css",
-    "static/js/main.abc4b321.js"
+    "static/css/main.8fa02d7b.css",
+    "static/js/main.f7a3483c.js"
   ]
 }
