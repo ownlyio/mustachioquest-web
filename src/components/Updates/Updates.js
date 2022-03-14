@@ -1,6 +1,7 @@
 import './Updates.css'
 
 // images
+import update10 from '../../images/updates/articles/game-dev-2.jpg'
 import update9 from '../../images/updates/videos/the-mint-10.jpg'
 import update8 from '../../images/updates/videos/lnwk-mq.jpg'
 import update7 from '../../images/updates/videos/the-mint-9.jpg'
@@ -17,6 +18,12 @@ import borderbr from '../../images/updates-br.png'
 
 export default function Updates() {
     const updatesList = [
+        {
+            id: 10,
+            thumbnail: update10,
+            link: "https://medium.com/ownlyio/mustachio-quest-updates-2-basic-movements-game-backdrops-character-selection-and-more-22209e147030",
+            title: "Mustachio Quest Updates #2: Basic Movements, Game Backdrops, Character Selection and More"
+        },
         {
             id: 9,
             thumbnail: update9,
