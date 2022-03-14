@@ -68,3 +68,30 @@
 .update-title:hover {
   text-decoration: underline;
 }
+
+.updates-column {
+  position: relative;
+}
+
+.updates-label {
+  position: absolute;
+  top: 10px;
+  left: 22px;
+  width: auto;
+  padding: 2px 10px;
+  color: #fff;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.updates-label.video {
+  background-color: #008080;
+}
+
+.updates-label.article {
+  background-color: #ea9f47;
+}
+
+.updates-label.space {
+  background-color: #85a1da;
+}
