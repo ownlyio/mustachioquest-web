@@ -1,6 +1,7 @@
 import './SneakPeek.css'
 
 // images
+import sneak13 from '../../images/sneakpeeks/10-gif-sludgie.jpg'
 import sneak12 from '../../images/sneakpeeks/9-squarehead.jpg'
 import sneak11 from '../../images/sneakpeeks/8-hotdog.jpg'
 import sneak10 from '../../images/sneakpeeks/7-loonywise.jpg'
@@ -12,13 +13,18 @@ import sneak5 from '../../images/sneakpeeks/2-desert-pit.png'
 import sneak4 from '../../images/sneakpeeks/1-menu-update.png'
 import sneak3 from '../../images/sneakpeeks/sneakpeek-forge.png'
 import sneak2 from '../../images/sneakpeeks/sneakpeek-blacksmith.jpg'
-import sneak1 from '../../images/sneakpeeks/sneakpeek-mainmenu.png'
 
 import bordertop from '../../images/sneakpeek-top.png'
 import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        {
+            id: 13,
+            thumbnail: sneak13,
+            link: "https://twitter.com/mustachioverse/status/1503384073959624710",
+            title: "Just dropping a 360 degree tour with Sludgie.",
+        },
         {
             id: 12,
             thumbnail: sneak12,
@@ -85,12 +91,12 @@ export default function SneakPeek() {
             link: "https://twitter.com/mustachioverse/status/1494212165213233152",
             title: "Take your pick, you'll find no second-rate items with the Blacksmith"
         },
-        {
-            id: 1,
-            thumbnail: sneak1,
-            link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
-            title: "Dev Update: Temporary Main Menu, Loading Bar and Transitions, and Loading to Different Scenes"
-        },
+        // {
+        //     id: 1,
+        //     thumbnail: sneak1,
+        //     link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
+        //     title: "Dev Update: Temporary Main Menu, Loading Bar and Transitions, and Loading to Different Scenes"
+        // },
     ]
 
     return (
