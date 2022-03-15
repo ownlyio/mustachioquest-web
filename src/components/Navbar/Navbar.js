@@ -107,7 +107,7 @@ export default function Navbar(props) {
                         </button>
                     </li>
                     <li>
-                        <a href="https://stake.ownly.market/own-marauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                        <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                             EARN NFT
                         </a>
                     </li>
@@ -133,7 +133,7 @@ export default function Navbar(props) {
                     <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
-                    <a href="https://stake.ownly.market/own-marauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                    <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                         EARN NFT
                     </a>
                 </Menu>
