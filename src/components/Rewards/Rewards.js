@@ -46,7 +46,7 @@ export default function Rewards() {
                         </div>
                     </div>
                     <div className="col-12 col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0 ps-lg-5">
-                        <div className="card" style={{'background-color':'#ffefcb'}}>
+                        <div className="card rewards-img">
                             <div className="card-body p-1">
                                 <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
                             </div>
