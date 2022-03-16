@@ -246,11 +246,6 @@
     font-size: 1em !important;
   }
 
-  .rewards-img {
-    width: 70% !important;
-    margin: 0 auto;
-  }
-
   .mq-table-types-img {
     width: 100% !important;
   }
@@ -495,11 +490,6 @@
   .team-name {
     font-size: 1.1em !important;
   }
-
-  .rewards-img {
-    width: 80% !important;
-    margin: 0 auto !important;
-  }
 }
 
 @media (max-width: 400px) {
@@ -536,11 +526,6 @@
 
   .roadmap-logo {
     width: 70% !important;
-  }
-
-  .rewards-img {
-    width: 90% !important;
-    margin: 0 auto !important;
   }
 }
 

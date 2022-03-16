@@ -8,8 +8,6 @@
 }
 
 .rewards-img {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   background-color: #ffefcb;
-  box-shadow: 5px 5px 10px;
 }

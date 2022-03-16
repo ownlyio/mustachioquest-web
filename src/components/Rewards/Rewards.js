@@ -9,10 +9,19 @@ import borderbot from "../../images/sneakpeek-bot.png";
 export default function Rewards() {
     return (
         <section id="rewards" style={{"backgroundImage": `url(${rewardsBG})`}}>
+            <div className="container text-center pb-2 pb-lg-5">
+                <p className="rewards-title gotham-black text-white text-center font-size-170 mt-0 mt-xl-5 mb-3 mb-lg-5">EARN A MUSTACHIO MARAUDER&nbsp;NFT</p>
+            </div>
+
+            <div className="d-block d-lg-none">
+                <div className="w-100 mb-3 mb-sm-4 mb-md-5">
+                    <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
+                </div>
+            </div>
+
             <div className="container text-center pb-5">
-                <p className="rewards-title gotham-black text-white text-center font-size-170 mt-0 mt-xl-5 mb-5">EARN A MUSTACHIO MARAUDER&nbsp;NFT</p>
                 <div className="row align-items-center pb-4">
-                    <div className="col-12 col-lg-5 order-2 order-lg-1">
+                    <div className="col-12 col-lg-5">
                         <p className="text-white gotham-bold text-left font-size-100 font-size-md-130 font-size-lg-150 mb-3">HOW TO PARTICIPATE:</p>
                         <ul>
                             <li className="text-white">
@@ -45,7 +54,7 @@ export default function Rewards() {
                             <a href="https://ownly.io/ownmarauder" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-130 font-size-md-170 w-100">STAKE OWN NOW!</a>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-7 order-1 order-lg-2 mb-5 mb-lg-0 ps-lg-5">
+                    <div className="d-none d-lg-block col-12 col-lg-7 mb-0 ps-5">
                         <div className="card rewards-img">
                             <div className="card-body p-1">
                                 <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
