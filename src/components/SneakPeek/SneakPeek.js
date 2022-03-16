@@ -105,7 +105,7 @@ export default function SneakPeek() {
                 <div className="row justify-content-center align-items-start">
                     <p className="sneakpeeks-title gotham-black text-white text-center font-size-170 mb-5">TAKE A PEEK AT OUR PROGRESS</p>
                     { sneak.map(x => (
-                        <div className="col-12 col-md-6 col-xl-4 mb-3" key={x.id}>
+                        <div className="col-12 col-sm-6 col-xl-4 mb-3" key={x.id}>
                             <a href={x.link} target="_blank" rel="noreferrer">
                                 <div className="cursor-pointer sneakpeek-thumbnail mb-3">
                                     <img src={x.thumbnail} className="w-100" alt={x.title} />
