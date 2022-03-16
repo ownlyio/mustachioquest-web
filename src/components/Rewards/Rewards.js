@@ -2,7 +2,8 @@ import './Rewards.css'
 
 // images
 import rewardsBG from '../../images/rewards-bg.jpg'
-import marauders from '../../images/marauders2.png'
+import marauders from '../../images/marauders20x10.png'
+import maraudersTab from '../../images/marauders25x8.jpg'
 import bordertop from "../../images/sneakpeek-top.png";
 import borderbot from "../../images/sneakpeek-bot.png";
 
@@ -15,7 +16,7 @@ export default function Rewards() {
 
             <div className="d-block d-lg-none">
                 <div className="w-100 mb-3 mb-sm-4 mb-md-5">
-                    <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
+                    <img src={maraudersTab} className="w-100" alt="Mustachio Marauders 2D" />
                 </div>
             </div>
 
