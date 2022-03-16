@@ -56,10 +56,8 @@ export default function Rewards() {
                         </div>
                     </div>
                     <div className="d-none d-lg-block col-12 col-lg-7 mb-0 ps-5">
-                        <div className="card rewards-img">
-                            <div className="card-body p-1">
-                                <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
-                            </div>
+                        <div className="rewards-img">
+                            <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
                         </div>
                     </div>
                 </div>
