@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.4f592281.css",
-    "main.js": "/static/js/main.b2b15a59.js",
+    "main.js": "/static/js/main.b48febdc.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/sneakpeek-forge.png": "/static/media/sneakpeek-forge.e694290fe7a0e633aeda.png",
     "static/media/sneakpeek-1.png": "/static/media/sneakpeek-1.2c7beda1be082b4fc5c6.png",
-    "static/media/marauders2.png": "/static/media/marauders2.f48d571536d6f399a638.png",
+    "static/media/marauders20x10.png": "/static/media/marauders20x10.f48d571536d6f399a638.png",
     "static/media/1-menu-update.png": "/static/media/1-menu-update.b6379b358b2653b8cfbc.png",
     "static/media/3-mexico.png": "/static/media/3-mexico.c5431fe5bac31888b487.png",
     "static/media/loading-mustachio.gif": "/static/media/loading-mustachio.22785f7ec1ff4abe700a.gif",
@@ -13,6 +13,7 @@
     "static/media/10-gif-sludgie.jpg": "/static/media/10-gif-sludgie.e7317c43937ede1a1af5.jpg",
     "static/media/6-mexico-strength.png": "/static/media/6-mexico-strength.90abe7b7e489075a961f.png",
     "static/media/5-sludgie.jpg": "/static/media/5-sludgie.950a1b4c4c3afaabdb44.jpg",
+    "static/media/marauders25x8.jpg": "/static/media/marauders25x8.53ea39a2ac5b7c2269b8.jpg",
     "static/media/lets-talk-mq.png": "/static/media/lets-talk-mq.0a12331261fde350ccfe.png",
     "static/media/landscape.png": "/static/media/landscape.63f783530d4b6392419a.png",
     "static/media/2-desert-pit.png": "/static/media/2-desert-pit.2932b8ae43dff9954aa2.png",
@@ -127,11 +128,11 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
     "main.4f592281.css.map": "/static/css/main.4f592281.css.map",
-    "main.b2b15a59.js.map": "/static/js/main.b2b15a59.js.map",
+    "main.b48febdc.js.map": "/static/js/main.b48febdc.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f592281.css",
-    "static/js/main.b2b15a59.js"
+    "static/js/main.b48febdc.js"
   ]
 }
