@@ -94,7 +94,7 @@ export default function Updates() {
                     <p className="updates-title gotham-black text-white text-center font-size-170 mb-5">WHAT IS UP WITH THE MUSTACHIOS</p>
 
                     { updatesList.map(x => (
-                        <div className="col-12 col-md-6 col-xl-4 mb-3 updates-column" key={x.id}>
+                        <div className="col-12 col-sm-6 col-xl-4 mb-3 updates-column" key={x.id}>
                             <div className={`updates-label ${x.type} font-size-80`}>
                                 {toCapitalWord(x.type)}
                             </div>
