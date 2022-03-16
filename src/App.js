@@ -165,7 +165,26 @@ export default function App() {
     } 
 
     useEffect(() => {
-        $(window).scrollTop(0)
+        async function initUtilsOnLoad() {
+            const {address, status} = await getCurrentWalletConnected();
+            const {network, netStatus} = await getCurrentNetwork();
+            setWallet(address)
+            setStatus(status)
+            setNetwork(network)
+            setNetStatus(netStatus)
+
+            if (status === 0) {
+                handleShowMetamaskInstall()
+            }
+        }
+
+        initUtilsOnLoad()
+        addWalletListener()
+        addNetworkListener()
+    }, [])
+
+    $(document).ready(function(){
+        $(this).scrollTop(0);
 
         // scroll variables
         let background = $('#first-section')
@@ -257,24 +276,7 @@ export default function App() {
         $("img").mousedown(function(){
             return false;
         })
-
-        async function initUtilsOnLoad() {
-            const {address, status} = await getCurrentWalletConnected();
-            const {network, netStatus} = await getCurrentNetwork();
-            setWallet(address)
-            setStatus(status)
-            setNetwork(network)
-            setNetStatus(netStatus)
-
-            if (status === 0) {
-                handleShowMetamaskInstall()
-            }
-        }
-
-        initUtilsOnLoad()
-        addWalletListener()
-        addNetworkListener()
-    }, [])
+     });
 
     return (
         <Router basename={process.env.PUBLIC_URL}>
