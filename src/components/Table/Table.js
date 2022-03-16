@@ -20,7 +20,7 @@ export default function Table(props) {
 
                 {/* Types */}
                 <div className="row justify-content-center align-items-start mb-5">
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-sm-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
                                 <img className="w-100" src={pathfinders} alt="Mustachio Pathfinders" />
@@ -30,7 +30,7 @@ export default function Table(props) {
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b>. <button onClick={props.mintBtn} className="btn link-color-2 p-0 font-size-100">MINT NOW!</button></p>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-sm-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
                                 <img className="w-100" src={marauders} alt="Mustachio Marauders" />
@@ -40,7 +40,7 @@ export default function Table(props) {
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder. <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a></p>
                         </div>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-sm-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
                                 <img className="w-100" src={rascals} alt="Mustachio Rascals" />
