@@ -127,83 +127,7 @@ export default function Team() {
                     <p className="team-title text-color-2 gotham-black text-center font-size-170 mb-3">MEET THE TEAM</p>
                     <p className="text-color-2 team-sub font-w-hermann w-hermann-reg text-center font-size-140 mb-5">With a combined 70 years of experience in software development, education, marketing, art, and design, the same team that won 13th place in Decentraland's Global Game Jam in 2019 launches its first play-to-earn NFT game in 2022.</p>
                     
-                    {/* Temporary only till we have 12 in the team */}
-                    {/* Refactor depending on the number of employees */}
-                    <div className="d-none d-lg-block">
-                        <div className="d-flex justify-content-evenly align-items-center flex-wrap">
-                            { team.map(x => (
-                                <div className="team-wrap" key={x.id}>
-                                    <div className="team-thumbnail w-100">
-                                        <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
-                                        <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
-                                        <div className="team-links d-flex justify-content-start align-items-center">
-                                            {x.twitter !== undefined && (
-                                                <a href={x.twitter} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faTwitter} color="white" size="lg" />
-                                                </a>
-                                            )}
-                                            {x.linkedin !== undefined && (
-                                                <a href={x.linkedin} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faLinkedin} color="white" size="lg" />
-                                                </a>
-                                            )}
-                                            {x.artstation !== undefined && (
-                                                <a href={x.artstation} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faArtstation} color="white" size="lg" />
-                                                </a>
-                                            )}
-                                            {x.behance !== undefined && (
-                                                <a href={x.behance} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faBehance} color="white" size="lg" />
-                                                </a>
-                                            )}                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        {/* <div className="d-flex justify-content-evenly align-items-center flex-wrap">
-                            { team.filter(x => x.id >= 12).map(x => (
-                                <div className="team-wrap" key={x.id}>
-                                    <div className="team-thumbnail w-100">
-                                        <img src={x.thumbnail} className="w-100" alt={`${x.name}'s Mustachio`} />
-                                    </div>
-                                    <div className="team-content">
-                                        <p className="team-name text-color-2 gotham-bold mb-0">{x.name}</p>
-                                        <p className="team-name gotham-light text-color-2 gotham-bold mb-0">{x.position}</p>
-                                        <div className="team-links d-flex justify-content-start align-items-center">
-                                            {x.twitter !== undefined && (
-                                                <a href={x.twitter} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faTwitter} color="white" size="lg" />
-                                                </a>
-                                            )}
-                                            {x.linkedin !== undefined && (
-                                                <a href={x.linkedin} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faLinkedin} color="white" size="lg" />
-                                                </a>
-                                            )}
-                                            {x.artstation !== undefined && (
-                                                <a href={x.artstation} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faArtstation} color="white" size="lg" />
-                                                </a>
-                                            )}
-                                            {x.behance !== undefined && (
-                                                <a href={x.behance} target="_blank" rel="noreferrer">
-                                                    <FontAwesomeIcon icon={faBehance} color="white" size="lg" />
-                                                </a>
-                                            )} 
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div> */}
-                    </div>
-
-                    {/* For width less than 992px */}
-                    <div className="d-flex d-lg-none justify-content-evenly align-items-center flex-wrap">
+                    <div className="row justify-content-evenly align-items-center flex-wrap">
                         { team.map(x => (
                             <div className="team-wrap" key={x.id}>
                                 <div className="team-thumbnail w-100">
@@ -232,7 +156,7 @@ export default function Team() {
                                             <a href={x.behance} target="_blank" rel="noreferrer">
                                                 <FontAwesomeIcon icon={faBehance} color="white" size="lg" />
                                             </a>
-                                        )} 
+                                        )}                                            
                                     </div>
                                 </div>
                             </div>

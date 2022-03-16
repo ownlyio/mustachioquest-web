@@ -231,15 +231,19 @@
   }
 
   .team-wrap {
-    width: 85% !important;
+    width: 33.33% !important;
   }
 
   .team-thumbnail {
-    height: 500px !important;
+    height: 180px !important;
   }
 
   .team-name {
-    font-size: 1.3em !important;
+    font-size: 0.5em !important;
+  }
+
+  .team-links .fa-lg {
+    font-size: 1em !important;
   }
 
   .rewards-img {
@@ -407,15 +411,19 @@
   }
 
   .team-wrap {
-    width: 100% !important;
+    width: 50% !important;
   }
 
   .team-thumbnail {
-    height: 530px !important;
+    height: 180px !important;
   }
 
   .team-name {
-    font-size: 1.3em !important;
+    font-size: 0.6em !important;
+  }
+
+  .team-links .fa-lg {
+    font-size: 1.1em !important;
   }
 
   .mq-table-check {
@@ -476,8 +484,12 @@
     right: 20% !important;
   }
 
+  .team-wrap {
+    width: 100% !important;
+  }
+
   .team-thumbnail {
-    height: 400px !important;
+    height: 300px !important;
   }
 
   .team-name {
@@ -515,7 +527,7 @@
   }
 
   .team-thumbnail {
-    height: 320px !important;
+    height: 280px !important;
   }
 
   .team-name {
