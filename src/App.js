@@ -184,7 +184,7 @@ export default function App() {
     }, [])
 
     $(document).ready(function(){
-        $(this).scrollTop(0);
+        if (window.location.hash !== "#rewards") $(this).scrollTop(0)
 
         // scroll variables
         let background = $('#first-section')
