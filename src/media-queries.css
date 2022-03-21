@@ -74,6 +74,14 @@
   .footer-item:not(:last-child) {
     margin-right: 60px !important;
   }
+
+  .visualizer-img {
+    width: 40% !important;
+  }
+
+  .visualizer-btn {
+    width: 35% !important;
+  }
 }
 
 @media (max-width: 1140px) {
@@ -137,6 +145,14 @@
 
   .mq-nav-discord {
     width: 100% !important;
+  }
+
+  .visualizer-img {
+    width: 50% !important;
+  }
+
+  .visualizer-btn {
+    width: 45% !important;
   }
 }
 
@@ -252,6 +268,19 @@
 
   .mq-table-types-sub {
     font-size: 0.9rem !important;
+  }
+
+  .visualizer-wrap {
+    align-items: center;
+  }
+
+  .visualizer-img {
+    width: 60% !important;
+  }
+
+  .visualizer-btn {
+    width: 60% !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -489,6 +518,15 @@
 
   .team-name {
     font-size: 1.1em !important;
+  }
+
+  .visualizer-img {
+    width: 80% !important;
+  }
+
+  .visualizer-btn {
+    width: 80% !important;
+    margin-left: 0 !important;
   }
 }
 

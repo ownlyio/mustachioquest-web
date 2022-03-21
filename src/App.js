@@ -17,6 +17,7 @@ import Team from './components/Team/Team'
 import SneakPeek from './components/SneakPeek/SneakPeek'
 import Table from './components/Table/Table'
 import Rewards from './components/Rewards/Rewards'
+import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
@@ -291,6 +292,7 @@ export default function App() {
                     <SneakPeek />
                     <Table mintBtn={initUtilsAndMint} />
                     <Rewards />
+                    <Visualizer />
                     <FAQ />
                     <CTA />
                 </Route>

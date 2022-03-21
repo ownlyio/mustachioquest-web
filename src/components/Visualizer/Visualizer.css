@@ -1,0 +1,17 @@
+#visualizer {
+  position: relative;
+  background-position: left center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.visualizer-img {
+  width: 30%;
+}
+
+.visualizer-btn {
+  width: 25%;
+  margin-left: 2.5%;
+  margin-top: 1em;
+}
