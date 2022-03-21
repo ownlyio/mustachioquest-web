@@ -1,6 +1,7 @@
 import './SneakPeek.css'
 
 // images
+import sneak14 from '../../images/sneakpeeks/11-gif-slendie.jpg'
 import sneak13 from '../../images/sneakpeeks/10-gif-sludgie.jpg'
 import sneak12 from '../../images/sneakpeeks/9-squarehead.jpg'
 import sneak11 from '../../images/sneakpeeks/8-hotdog.jpg'
@@ -12,13 +13,18 @@ import sneak6 from '../../images/sneakpeeks/3-mexico.png'
 import sneak5 from '../../images/sneakpeeks/2-desert-pit.png'
 import sneak4 from '../../images/sneakpeeks/1-menu-update.png'
 import sneak3 from '../../images/sneakpeeks/sneakpeek-forge.png'
-import sneak2 from '../../images/sneakpeeks/sneakpeek-blacksmith.jpg'
 
 import bordertop from '../../images/sneakpeek-top.png'
 import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        {
+            id: 14,
+            thumbnail: sneak14,
+            link: "https://twitter.com/mustachioverse/status/1505148327440134150",
+            title: "Wondering what Slendie is looking for this weekend?",
+        },
         {
             id: 13,
             thumbnail: sneak13,
@@ -85,18 +91,6 @@ export default function SneakPeek() {
             link: "https://twitter.com/mustachioverse/status/1495748029005320198",
             title: "Enter the Forge!"
         },
-        {
-            id: 2,
-            thumbnail: sneak2,
-            link: "https://twitter.com/mustachioverse/status/1494212165213233152",
-            title: "Take your pick, you'll find no second-rate items with the Blacksmith"
-        },
-        // {
-        //     id: 1,
-        //     thumbnail: sneak1,
-        //     link: "https://www.youtube.com/watch?v=eLce8nuH0Yo",
-        //     title: "Dev Update: Temporary Main Menu, Loading Bar and Transitions, and Loading to Different Scenes"
-        // },
     ]
 
     return (
