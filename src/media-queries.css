@@ -74,14 +74,6 @@
   .footer-item:not(:last-child) {
     margin-right: 60px !important;
   }
-
-  .visualizer-img {
-    width: 40% !important;
-  }
-
-  .visualizer-btn {
-    width: 35% !important;
-  }
 }
 
 @media (max-width: 1140px) {
@@ -147,12 +139,13 @@
     width: 100% !important;
   }
 
-  .visualizer-img {
+  .visualizer-img,
+  .visualizer-btn {
     width: 50% !important;
   }
 
-  .visualizer-btn {
-    width: 45% !important;
+  .visualizer-content {
+    width: 80% !important;
   }
 }
 
@@ -268,19 +261,6 @@
 
   .mq-table-types-sub {
     font-size: 0.9rem !important;
-  }
-
-  .visualizer-wrap {
-    align-items: center;
-  }
-
-  .visualizer-img {
-    width: 60% !important;
-  }
-
-  .visualizer-btn {
-    width: 60% !important;
-    margin-left: 0 !important;
   }
 }
 
@@ -493,6 +473,15 @@
   .bm-burger-button {
     right: 25px !important;
   }
+
+  .visualizer-img,
+  .visualizer-btn {
+    width: 80% !important;
+  }
+
+  .visualizer-content {
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -518,15 +507,6 @@
 
   .team-name {
     font-size: 1.1em !important;
-  }
-
-  .visualizer-img {
-    width: 80% !important;
-  }
-
-  .visualizer-btn {
-    width: 80% !important;
-    margin-left: 0 !important;
   }
 }
 
