@@ -81,9 +81,6 @@ export default function Navbar(props) {
                 </div>
                 <ul className="d-flex justify-content-center align-items-center flex-wrap mb-0 p-0">
                     <li>
-                        <HashLink smooth to="#features" scroll={el => scrollWithOffset(el)}>FEATURES</HashLink>
-                    </li>
-                    <li>
                         <HashLink smooth to="#updates" scroll={el => scrollWithOffset(el)}>UPDATES</HashLink>
                     </li>
                     <li>
@@ -97,6 +94,9 @@ export default function Navbar(props) {
                     </li>
                     <li>
                         <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)}>REWARDS</HashLink>
+                    </li>
+                    <li>
+                        <HashLink smooth to="#visualizer" scroll={el => scrollWithOffset(el)}>VISUALIZER</HashLink>
                     </li>
                     <li>
                         <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
@@ -123,12 +123,12 @@ export default function Navbar(props) {
                             <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
                         </Link>
                     </div>
-                    <HashLink smooth to="#features" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FEATURES</HashLink>
                     <HashLink smooth to="#updates" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">UPDATES</HashLink>
                     <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
                     <HashLink smooth to="#progress" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">PROGRESS</HashLink>
                     <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink>
+                    <HashLink smooth to="#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
                     <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
