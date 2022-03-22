@@ -6,6 +6,7 @@ import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Discord } from './components/ShortLinks'
 import $ from 'jquery'
+import * as smoothscroll from "smoothscroll-polyfill"
 
 // components
 import Navbar from './components/Navbar/Navbar'
@@ -30,6 +31,9 @@ import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 
 import loading from './images/loading-mustachio.gif'
 import metamask from './images/metamask.png'
+
+// smooth scrolling for safari
+smoothscroll.polyfill()
 
 export default function App() {
     // State variables for initialization
