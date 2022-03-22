@@ -29,8 +29,8 @@ export default function Roadmap() {
                         <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Early Preview Launch</div>
                     </div>
                     <div className="q-column quarter-mr">
-                        <div className="now q-pointer"></div>
-                        <div className="now q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@ export default function Roadmap() {
                         <p className="text-color-3 gotham-black font-size-170 mb-0">Q2</p>
                     </div>
                     <div className="q-column quarter-mr">
-                        <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Launch of the 10,000 3D Mustachio Rascals</div>
+                        <div className="now q-pointer"></div>
+                        <div className="now q-content gotham-light text-black font-size-110">Launch of the 10,000 3D Mustachio Rascals</div>
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
