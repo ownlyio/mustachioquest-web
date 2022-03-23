@@ -7,9 +7,9 @@ import update8 from '../../images/updates/videos/lnwk-mq.jpg'
 import update7 from '../../images/updates/videos/the-mint-9.jpg'
 import update6 from '../../images/updates/videos/sneakpeek-1.png'
 import update5 from '../../images/updates/videos/mint-ep7.jpg'
-import update4 from '../../images/updates/spaces/lets-talk-mq.png'
 import update3 from '../../images/updates/articles/mq-article.jpg'
 import update2 from '../../images/updates/articles/mustachios-article.jpg'
+import update1 from '../../images/updates/articles/mustachios_nft.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -65,13 +65,6 @@ export default function Updates() {
             title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
         },
         {
-            id: 4,
-            thumbnail: update4,
-            type: "space",
-            link: "https://twitter.com/ownlyio/status/1496828506553999365",
-            title: "Twitter Space: Let's Talk About All Things Mustachio Quest"
-        },
-        {
             id: 3,
             thumbnail: update3,
             type: "article",
@@ -84,6 +77,13 @@ export default function Updates() {
             type: "article",
             link: "https://medium.com/ownlyio/three-reasons-why-you-should-mint-a-mustachio-now-5ddbf4424d3d",
             title: "The Mustachios: From Features and Rewards to the Project Roadmap"
+        },
+        {
+            id: 1,
+            thumbnail: update1,
+            type: "article",
+            link: "https://medium.com/ownlyio/the-mustachios-first-nft-avatars-powered-by-ownly-e5314715bca7",
+            title: "The Mustachios: First NFT Tales Powered by Ownly"
         },
     ]
 
@@ -112,6 +112,10 @@ export default function Updates() {
                         </div>
                     ))}
                 </div>
+
+                <p className="updates-yt-link mt-2 text-center">
+                    <a href="https://www.youtube.com/playlist?list=PLONck0-y6ITwBSne6p4RqN7sC_KLwIC1c" target="_blank" rel="noreferrer" className="gotham-black text-white font-size-90 font-size-md-110 font-size-lg-130 font-size-xl-150">Watch Mustachio Quest Videos on YouTube!</a>
+                </p>
             </div>
 
             {/* Borders */}

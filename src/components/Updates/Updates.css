@@ -95,3 +95,8 @@
 .updates-label.space {
   background-color: #85a1da;
 }
+
+.updates-yt-link a:hover,
+.updates-yt-link a:focus {
+  color: #87a3dd !important;
+}
