@@ -30,6 +30,10 @@ export default function Roadmap() {
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Launch of the Stake-to-Own Mustachio Marauder NFT Program</div>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
                         <div className="done q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
                     </div>
                 </div>
