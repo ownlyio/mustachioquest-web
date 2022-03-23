@@ -92,6 +92,18 @@ export default function Table(props) {
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">Mustachio NFT Visualizer Experience</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={greenCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={goldCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">Intricately Hand-drawn 2D PFP by Boii Mustache</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
