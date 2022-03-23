@@ -80,7 +80,7 @@ export default function Table(props) {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Exclusive Discord Channel</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">Mustachio NFT Visualizer Experience</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -92,7 +92,7 @@ export default function Table(props) {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Mustachio NFT Visualizer Experience</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">Exclusive Discord Channel</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
