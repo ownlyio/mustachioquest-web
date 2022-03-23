@@ -96,6 +96,10 @@
   background-color: #85a1da;
 }
 
+.updates-label.post {
+  background-color: #1c5090;
+}
+
 .updates-yt-link a:hover,
 .updates-yt-link a:focus {
   color: #87a3dd !important;
