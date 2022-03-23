@@ -45,7 +45,7 @@
 }
 
 .team-thumbnail {
-  height: 300px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .team-name {
-  font-size: 1.05em;
+  font-size: 1em;
   color: white;
 }
 
