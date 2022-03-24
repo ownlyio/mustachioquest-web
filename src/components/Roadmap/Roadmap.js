@@ -79,7 +79,7 @@ export default function Roadmap() {
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Play-To-Earn Launch</div>
+                        <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Play-and-Earn Launch</div>
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>

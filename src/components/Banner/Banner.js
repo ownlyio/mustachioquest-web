@@ -25,7 +25,7 @@ export default function Banner() {
                     </div>
                     <div className="banner-content">
                         <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Conquer the wild. Embrace the feat.</p>
-                        <p className="font-w-hermann w-hermann-semibold text-2 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first Play-to-Earn NFT game.</p>
+                        <p className="font-w-hermann w-hermann-semibold text-2 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first Play-And-Earn NFT game.</p>
                     </div>
                 </div>
                 <div className="banner-2">
@@ -52,7 +52,7 @@ export default function Banner() {
                             <div className="mobile-logo">
                                 <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
                             </div>
-                            <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Conquer the wild. Embrace the feat. Welcome to Ownly’s first Play-to-Earn NFT game.</p>
+                            <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Conquer the wild. Embrace the feat. Welcome to Ownly’s first Play-and-Earn NFT game.</p>
                         </div>
                     </div>
                 </div>

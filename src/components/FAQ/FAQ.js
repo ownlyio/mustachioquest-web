@@ -16,7 +16,7 @@ export default function FAQ() {
                     </h2>
                     <div id="flush-collapse-1" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
-                            <p className="font-size-120 gotham-light">The Mustachios are the first-ever NFT Tales to be told in the NFT industry. Intricately hand-drawn by the talented Boii Mustache, it took the artist years in the making to actualize the idea of being whatever you want to be, in a land of mustached beings. Now, the concept is solidified through our play-to-earn game, Mustachio Quest, where our Mustachio holders can fulfill quests in an open world NFT game as their 3D Mustachio avatar.</p>
+                            <p className="font-size-120 gotham-light">The Mustachios are the first-ever NFT Tales to be told in the NFT industry. Intricately hand-drawn by the talented Boii Mustache, it took the artist years in the making to actualize the idea of being whatever you want to be, in a land of mustached beings. Now, the concept is solidified through our play-and-earn game, Mustachio Quest, where our Mustachio holders can fulfill quests in an open world NFT game as their 3D Mustachio avatar.</p>
                             <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called Mustachio Pathfinders. Our second generation of Mustachios from 101-300 are called Mustachio Marauders. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ export default function FAQ() {
                         <div className="accordion-body">
                             <p className="font-size-120 gotham-light">There are so many possibilities on how you can make use of your Mustachio!</p>
                             <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Marauders, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
-                            <p className="font-size-120 gotham-light">Aside from partaking in our play-to-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/?collection=the-sages-rant-collectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
+                            <p className="font-size-120 gotham-light">Aside from partaking in our play-and-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/?collection=the-sages-rant-collectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
                         </div>
                     </div>
                 </div>

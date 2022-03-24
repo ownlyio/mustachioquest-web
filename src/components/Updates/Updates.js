@@ -76,7 +76,7 @@ export default function Updates() {
             thumbnail: update2,
             type: "video",
             link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
-            title: "The Mint Ep 07: Mustachio Quest Play-to-Earn NFT Game Sneak Peek"
+            title: "The Mint Ep 07: Mustachio Quest Play-and-Earn NFT Game Sneak Peek"
         },
         {
             id: 1,
