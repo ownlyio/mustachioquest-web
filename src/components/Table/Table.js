@@ -172,10 +172,12 @@ export default function Table(props) {
                                 <tr>
                                     <td className="border-left-none"></td>
                                     <td className="border-bottom text-center">
-                                        <button onClick={props.mintBtn} className="btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
+                                        <button onClick={props.mintBtn} className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT<br />NOW</button>
+                                        <button onClick={props.mintBtn} className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
                                     </td>
                                     <td className="border-bottom text-center">
-                                        <a href="https://ownly.io/ownmarauder" className="link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a>
+                                        <a href="https://ownly.io/ownmarauder" className="d-block d-md-none mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE<br />OWN</a>
+                                        <a href="https://ownly.io/ownmarauder" className="d-none d-md-block mt-2 mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
                                         <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q2 2022</p>
