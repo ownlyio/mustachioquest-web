@@ -2456,6 +2456,7 @@ body {
 .btn-custom-1 {
   background-color: #0b114b;
   color: white;
+  width: 320px;
 }
 
 .btn-custom-1:hover,
@@ -2466,6 +2467,7 @@ body {
 
 .btn-custom-2 {
   background-color: #ff9f42;
+  width: 320px;
   color: white;
 }
 

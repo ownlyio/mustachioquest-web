@@ -52,7 +52,7 @@ export default function Rewards() {
                             </li>
                         </ul>
                         <div className="mt-5">
-                            <a href="https://ownly.io/ownmarauder" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-130 font-size-md-170 w-100">STAKE OWN NOW!</a>
+                            <a href="https://ownly.io/ownmarauder" target="_blank" rel="noreferrer" className="rewards-btn btn btn-custom-2 gotham-black font-size-130 font-size-md-170">STAKE OWN NOW!</a>
                         </div>
                     </div>
                     <div className="d-none d-lg-block col-12 col-lg-7 mb-0 ps-5">

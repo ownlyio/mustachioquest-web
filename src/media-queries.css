@@ -262,6 +262,13 @@
   .mq-table-types-sub {
     font-size: 0.9rem !important;
   }
+
+  .mobile-join-discord,
+  .rewards-btn,
+  .visualizer-btn,
+  #cta a.btn {
+    width: 60% !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -482,6 +489,12 @@
   .visualizer-content {
     width: 90% !important;
   }
+
+  .rewards-btn,
+  .visualizer-btn,
+  #cta a.btn {
+    width: 80% !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -544,6 +557,12 @@
 
   .roadmap-logo {
     width: 70% !important;
+  }
+
+  .rewards-btn,
+  .visualizer-btn,
+  #cta a.btn {
+    width: 90% !important;
   }
 }
 
