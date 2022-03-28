@@ -1,6 +1,7 @@
 import './Updates.css'
 
 // images
+import update10 from '../../images/updates/articles/game-dev-3.jpg'
 import update9 from '../../images/updates/articles/game-dev-2.jpg'
 import update8 from '../../images/updates/posts/3-mexico-strength.png'
 import update7 from '../../images/updates/posts/2-sludgie.jpg'
@@ -9,7 +10,6 @@ import update5 from '../../images/updates/videos/lnwk-mq.jpg'
 import update4 from '../../images/updates/videos/the-mint-9.jpg'
 import update3 from '../../images/updates/videos/sneakpeek-1.png'
 import update2 from '../../images/updates/videos/mint-ep7.jpg'
-import update1 from '../../images/updates/posts/1-menu-update.png'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -22,6 +22,13 @@ export default function Updates() {
     }
 
     const updatesList = [
+        {
+            id: 10,
+            thumbnail: update10,
+            type: "article",
+            link: "https://medium.com/ownlyio/mustachio-quest-updates-3-mustachio-nft-visualizer-2d-backgrounds-npc-template-and-more-4da7df2be3dd",
+            title: "Mustachio Quest Updates #3: Mustachio NFT Visualizer, 2D Backgrounds, NPC Template, and More"
+        },
         {
             id: 9,
             thumbnail: update9,
@@ -77,13 +84,6 @@ export default function Updates() {
             type: "video",
             link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
             title: "The Mint Ep 07: Mustachio Quest Play-and-Earn NFT Game Sneak Peek"
-        },
-        {
-            id: 1,
-            thumbnail: update1,
-            type: "post",
-            link: "https://twitter.com/mustachioverse/status/1495748029005320198",
-            title: "Dev Update: MetaMask wallet integration, Loading Mustachio NFTs, and Start Page and Character Selection"
         },
     ]
 
