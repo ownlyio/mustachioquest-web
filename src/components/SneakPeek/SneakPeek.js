@@ -1,6 +1,9 @@
 import './SneakPeek.css'
 
 // images
+import sneak12 from '../../images/sneakpeeks/12-abracadoobie.jpg'
+import sneak11 from '../../images/sneakpeeks/11-gif-slendie.png'
+import sneak10 from '../../images/sneakpeeks/10-gif-squarehead.png'
 import sneak9 from '../../images/sneakpeeks/9-gif-slendie.jpg'
 import sneak8 from '../../images/sneakpeeks/8-gif-sludgie.jpg'
 import sneak7 from '../../images/sneakpeeks/7-squarehead.jpg'
@@ -16,6 +19,24 @@ import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        {
+            id: 12,
+            thumbnail: sneak12,
+            link: "https://twitter.com/mustachioverse/status/1513449276763885569",
+            title: "Abracadoobie is serving you this 'aerial shot'",
+        },
+        {
+            id: 11,
+            thumbnail: sneak11,
+            link: "https://twitter.com/mustachioverse/status/1508074752350429185",
+            title: "Slendie getting an awesome pose by the king's throne",
+        },
+        {
+            id: 10,
+            thumbnail: sneak10,
+            link: "https://twitter.com/mustachioverse/status/1506948618242367488",
+            title: "Squarehead giving us 'Adventure Vibe'",
+        },
         {
             id: 9,
             thumbnail: sneak9,
