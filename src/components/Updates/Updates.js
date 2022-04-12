@@ -1,6 +1,8 @@
 import './Updates.css'
 
 // images
+import update12 from '../../images/updates/videos/the-mint-12.jpg'
+import update11 from '../../images/updates/posts/4-pathfinders.png'
 import update10 from '../../images/updates/articles/game-dev-3.jpg'
 import update9 from '../../images/updates/articles/game-dev-2.jpg'
 import update8 from '../../images/updates/posts/3-mexico-strength.png'
@@ -22,6 +24,20 @@ export default function Updates() {
     }
 
     const updatesList = [
+        {
+            id: 12,
+            thumbnail: update12,
+            type: "video",
+            link: "https://www.youtube.com/watch?v=Kzz6oXxBg0k",
+            title: "The Mint Ep 12: Mustachio Quest Dev Updates #3 + Q1 Buyback and Burn Celebration"
+        },
+        {
+            id: 11,
+            thumbnail: update11,
+            type: "post",
+            link: "https://twitter.com/ownlyio/status/1513403976749879301",
+            title: "3D Mustachio Pathfinders are now complete!"
+        },
         {
             id: 10,
             thumbnail: update10,
