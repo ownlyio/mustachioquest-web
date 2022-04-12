@@ -10,8 +10,6 @@ import update7 from '../../images/updates/posts/2-sludgie.jpg'
 import update6 from '../../images/updates/videos/the-mint-10.jpg'
 import update5 from '../../images/updates/videos/lnwk-mq.jpg'
 import update4 from '../../images/updates/videos/the-mint-9.jpg'
-import update3 from '../../images/updates/videos/sneakpeek-1.png'
-import update2 from '../../images/updates/videos/mint-ep7.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -86,20 +84,6 @@ export default function Updates() {
             type: "video",
             link: "https://www.youtube.com/watch?v=k_pb-gy9XNk&t=3398s",
             title: "The Mint Ep 09: A Closer Look at the Mustachio Quest Website"
-        },
-        {
-            id: 3,
-            thumbnail: update3,
-            type: "video",
-            link: "https://twitter.com/mustachioverse/status/1488298584563138562",
-            title: "Game Sneak Peek #1"
-        },
-        {
-            id: 2,
-            thumbnail: update2,
-            type: "video",
-            link: "https://www.youtube.com/watch?v=q_VkBbLkipY&t=784s",
-            title: "The Mint Ep 07: Mustachio Quest Play-and-Earn NFT Game Sneak Peek"
         },
     ]
 
