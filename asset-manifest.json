@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e2fd5d8d.css",
-    "main.js": "/static/js/main.039e59fd.js",
+    "main.css": "/static/css/main.5e5de354.css",
+    "main.js": "/static/js/main.941f5986.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/sneakpeek-forge.png": "/static/media/sneakpeek-forge.e694290fe7a0e633aeda.png",
     "static/media/marauders20x10.png": "/static/media/marauders20x10.f48d571536d6f399a638.png",
@@ -129,12 +129,12 @@
     "static/media/MQ_logo.png": "/static/media/MQ_logo.7588e908b409a4cb4f50.png",
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
-    "main.e2fd5d8d.css.map": "/static/css/main.e2fd5d8d.css.map",
-    "main.039e59fd.js.map": "/static/js/main.039e59fd.js.map",
+    "main.5e5de354.css.map": "/static/css/main.5e5de354.css.map",
+    "main.941f5986.js.map": "/static/js/main.941f5986.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2fd5d8d.css",
-    "static/js/main.039e59fd.js"
+    "static/css/main.5e5de354.css",
+    "static/js/main.941f5986.js"
   ]
 }
