@@ -14,7 +14,7 @@ import borderbr from '../../images/updates-br.png'
 
 export default function Table(props) {
     return (
-        <section id="mq-table">
+        <section id="nft">
             <div className="container">
                 <p className="mq-table-title gotham-black text-white text-center font-size-170 mb-5">WHAT MUSTACHIOS CAN I OWN?</p>
 
