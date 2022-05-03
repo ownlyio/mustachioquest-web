@@ -1,6 +1,10 @@
 import './SneakPeek.css'
 
 // images
+import sneak16 from '../../images/sneakpeeks/16-candyfloss.png'
+import sneak15 from '../../images/sneakpeeks/15-mountainwarrior.png'
+import sneak14 from '../../images/sneakpeeks/14-ninja.png'
+import sneak13 from '../../images/sneakpeeks/13-kingstellar.png'
 import sneak12 from '../../images/sneakpeeks/12-abracadoobie.jpg'
 import sneak11 from '../../images/sneakpeeks/11-gif-slendie.png'
 import sneak10 from '../../images/sneakpeeks/10-gif-squarehead.png'
@@ -9,16 +13,37 @@ import sneak8 from '../../images/sneakpeeks/8-gif-sludgie.jpg'
 import sneak7 from '../../images/sneakpeeks/7-squarehead.jpg'
 import sneak6 from '../../images/sneakpeeks/6-hotdog.jpg'
 import sneak5 from '../../images/sneakpeeks/5-loonywise.jpg'
-import sneak4 from '../../images/sneakpeeks/4-abracadoobie.jpg'
-import sneak3 from '../../images/sneakpeeks/3-mexico.png'
-import sneak2 from '../../images/sneakpeeks/2-desert-pit.png'
-import sneak1 from '../../images/sneakpeeks/sneakpeek-forge.png'
 
 import bordertop from '../../images/sneakpeek-top.png'
 import borderbot from '../../images/sneakpeek-bot.png'
 
 export default function SneakPeek() {
     const sneak = [
+        
+        {
+            id: 16,
+            thumbnail: sneak16,
+            link: "https://twitter.com/mustachioverse/status/1519958861397909504",
+            title: "Candy Floss is here to let you check this part of MustachioVerse land!"
+        },
+        {
+            id: 15,
+            thumbnail: sneak15,
+            link: "https://twitter.com/mustachioverse/status/1518484278094733313",
+            title: "Mountain Warrior is here to give you a 360 view!"
+        },
+        {
+            id: 14,
+            thumbnail: sneak14,
+            link: "https://twitter.com/mustachioverse/status/1517374024523083776",
+            title: "Would you call this a Ninja Run?"
+        },
+        {
+            id: 13,
+            thumbnail: sneak13,
+            link: "https://twitter.com/mustachioverse/status/1516679230628970498",
+            title: "We got King Stellar today for you guys!"
+        },
         {
             id: 12,
             thumbnail: sneak12,
@@ -66,30 +91,6 @@ export default function SneakPeek() {
             thumbnail: sneak5,
             link: "https://twitter.com/mustachioverse/status/1501070428122808320",
             title: "Here's Loonywise to say GM to y'all."
-        },
-        {
-            id: 4,
-            thumbnail: sneak4,
-            link: "https://discord.com/channels/878131568806334464/935073739878563840/948221757607788594",
-            title: "Abracadoobie Looking at the Horizon"
-        },
-        {
-            id: 3,
-            thumbnail: sneak3,
-            link: "https://discord.com/channels/878131568806334464/935073739878563840/946207407271469076",
-            title: "Mexico on the Desert"
-        },
-        {
-            id: 2,
-            thumbnail: sneak2,
-            link: "https://discord.com/channels/878131568806334464/935073739878563840/945292032870580225",
-            title: "Sneak Peek on the Desert Pit"
-        },
-        {
-            id: 1,
-            thumbnail: sneak1,
-            link: "https://twitter.com/mustachioverse/status/1495748029005320198",
-            title: "Enter the Forge!"
         },
     ]
 
