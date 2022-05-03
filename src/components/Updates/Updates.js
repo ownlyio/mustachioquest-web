@@ -1,6 +1,7 @@
 import './Updates.css'
 
 // images
+import update13 from '../../images/updates/articles/game-dev-4.png'
 import update12 from '../../images/updates/videos/the-mint-12.jpg'
 import update11 from '../../images/updates/posts/4-pathfinders.png'
 import update10 from '../../images/updates/articles/game-dev-3.jpg'
@@ -9,7 +10,6 @@ import update8 from '../../images/updates/posts/3-mexico-strength.png'
 import update7 from '../../images/updates/posts/2-sludgie.jpg'
 import update6 from '../../images/updates/videos/the-mint-10.jpg'
 import update5 from '../../images/updates/videos/lnwk-mq.jpg'
-import update4 from '../../images/updates/videos/the-mint-9.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -22,6 +22,13 @@ export default function Updates() {
     }
 
     const updatesList = [
+        {
+            id: 13,
+            thumbnail: update13,
+            type: "article",
+            link: "https://medium.com/ownlyio/mustachio-quest-updates-4-closed-testing-with-genesis-holders-c8984693605d",
+            title: "Mustachio Quest Updates #4: Closed Testing with Genesis Holders"
+        },
         {
             id: 12,
             thumbnail: update12,
@@ -77,13 +84,6 @@ export default function Updates() {
             type: "video",
             link: "https://www.youtube.com/watch?v=wDZhFBNRSWs",
             title: "What’s Possible for Mustachio Quest? Future Features, and More by Kenny"
-        },
-        {
-            id: 4,
-            thumbnail: update4,
-            type: "video",
-            link: "https://www.youtube.com/watch?v=k_pb-gy9XNk&t=3398s",
-            title: "The Mint Ep 09: A Closer Look at the Mustachio Quest Website"
         },
     ]
 
