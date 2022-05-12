@@ -105,6 +105,9 @@ export default function Navbar(props) {
                         <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
                     </li>
                     <li>
+                        <a href="https://mustachio.quest" target="_blank" rel="noreferrer">BETA TEST</a>
+                    </li>
+                    <li>
                         <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                             MINT NOW
                         </button>
