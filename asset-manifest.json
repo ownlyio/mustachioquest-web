@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e5de354.css",
-    "main.js": "/static/js/main.f43febf1.js",
+    "main.css": "/static/css/main.0feabd69.css",
+    "main.js": "/static/js/main.94445a05.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
-    "static/media/marauders20x10.png": "/static/media/marauders20x10.f48d571536d6f399a638.png",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
@@ -13,7 +12,6 @@
     "static/media/8-gif-sludgie.jpg": "/static/media/8-gif-sludgie.e7317c43937ede1a1af5.jpg",
     "static/media/3-mexico-strength.png": "/static/media/3-mexico-strength.90abe7b7e489075a961f.png",
     "static/media/2-sludgie.jpg": "/static/media/2-sludgie.950a1b4c4c3afaabdb44.jpg",
-    "static/media/marauders25x8.jpg": "/static/media/marauders25x8.53ea39a2ac5b7c2269b8.jpg",
     "static/media/16-candyfloss.png": "/static/media/16-candyfloss.fff33e69dd36a4e19b62.png",
     "static/media/landscape.png": "/static/media/landscape.63f783530d4b6392419a.png",
     "static/media/14-ninja.png": "/static/media/14-ninja.ae100e0f6b54525b0739.png",
@@ -66,7 +64,6 @@
     "static/media/sludgie.jpg": "/static/media/sludgie.f5e469159d6732623a90.jpg",
     "static/media/grim.jpg": "/static/media/grim.42dbf9d7b256ce38be8f.jpg",
     "static/media/feat-bot.png": "/static/media/feat-bot.4c0a7f68be37e45935ae.png",
-    "static/media/rewards-bg.jpg": "/static/media/rewards-bg.4a03021eb8598718661a.jpg",
     "static/media/abracadoobie.jpg": "/static/media/abracadoobie.609bd986ebb28ccb5bde.jpg",
     "static/media/feature-3-mustachio.png": "/static/media/feature-3-mustachio.491260829f07d1bc76ab.png",
     "static/media/mexico.jpg": "/static/media/mexico.93371208cbb5faa55a31.jpg",
@@ -129,12 +126,12 @@
     "static/media/MQ_logo.png": "/static/media/MQ_logo.7588e908b409a4cb4f50.png",
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
-    "main.5e5de354.css.map": "/static/css/main.5e5de354.css.map",
-    "main.f43febf1.js.map": "/static/js/main.f43febf1.js.map",
+    "main.0feabd69.css.map": "/static/css/main.0feabd69.css.map",
+    "main.94445a05.js.map": "/static/js/main.94445a05.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e5de354.css",
-    "static/js/main.f43febf1.js"
+    "static/css/main.0feabd69.css",
+    "static/js/main.94445a05.js"
   ]
 }
