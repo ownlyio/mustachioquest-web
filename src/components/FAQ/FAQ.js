@@ -39,15 +39,15 @@ export default function FAQ() {
                             </ol>
                             <a className="font-size-120 gotham-light link-color-1" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Click here for a more detailed instruction.</a>
 
-                            <p className="font-size-120 mt-4">To earn a Mustachio Marauder NFT:</p>
-                            <ol>
-                                <li className="font-size-120 gotham-light">Get your OWN Tokens at <a className="font-size-100 gotham-light link-color-1" href="http://ownly.io/pancake" target="_blank" rel="noreferrer">ownly.io/pancake</a> or <a className="font-size-100 gotham-light link-color-1" href="http://ownly.io/swap" target="_blank" rel="noreferrer">ownly.io/swap</a>.</li>
-                                <li className="font-size-120 gotham-light">Visit <a className="font-size-100 gotham-light link-color-1" href="http://ownly.io/ownmarauder" target="_blank" rel="noreferrer">ownly.io/ownmarauder</a>.</li>
-                                <li className="font-size-120 gotham-light">Connect your MetaMask wallet and add 15 Million OWN, the required amount to earn a Mustachio Marauder NFT.</li>
-                                <li className="font-size-120 gotham-light">Approve and stake your OWN tokens.</li>
-                                <li className="font-size-120 gotham-light">Hodl your OWN Tokens for 60 days without unstaking or withdrawing to earn 1 Mustachio Marauder NFT.<span className="fst-italic">Note: 1 Mustachio NFT reward per wallet address only.</span></li>
-                                <li className="font-size-120 gotham-light">Self-Mint your Mustachio Marauder NFT and claim back your OWN Tokens after 60 Days of staking.</li>
-                            </ol>
+                            {/*<p className="font-size-120 mt-4">To earn a Mustachio Marauder NFT:</p>*/}
+                            {/*<ol>*/}
+                            {/*    <li className="font-size-120 gotham-light">Get your OWN Tokens at <a className="font-size-100 gotham-light link-color-1" href="http://ownly.io/pancake" target="_blank" rel="noreferrer">ownly.io/pancake</a> or <a className="font-size-100 gotham-light link-color-1" href="http://ownly.io/swap" target="_blank" rel="noreferrer">ownly.io/swap</a>.</li>*/}
+                            {/*    <li className="font-size-120 gotham-light">Visit <a className="font-size-100 gotham-light link-color-1" href="http://ownly.io/ownmarauder" target="_blank" rel="noreferrer">ownly.io/ownmarauder</a>.</li>*/}
+                            {/*    <li className="font-size-120 gotham-light">Connect your MetaMask wallet and add 15 Million OWN, the required amount to earn a Mustachio Marauder NFT.</li>*/}
+                            {/*    <li className="font-size-120 gotham-light">Approve and stake your OWN tokens.</li>*/}
+                            {/*    <li className="font-size-120 gotham-light">Hodl your OWN Tokens for 60 days without unstaking or withdrawing to earn 1 Mustachio Marauder NFT.<span className="fst-italic">Note: 1 Mustachio NFT reward per wallet address only.</span></li>*/}
+                            {/*    <li className="font-size-120 gotham-light">Self-Mint your Mustachio Marauder NFT and claim back your OWN Tokens after 60 Days of staking.</li>*/}
+                            {/*</ol>*/}
                         </div>
                     </div>
                 </div>

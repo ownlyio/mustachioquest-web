@@ -37,9 +37,10 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder. 
-                                {/* <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a> */}
-                            </p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Get 40% off our Mustachio Marauder NFT using OWN in June.</p>
+                            {/*<p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder.*/}
+                            {/*    /!* <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a> *!/*/}
+                            {/*</p>*/}
                         </div>
                     </div>
                     <div className="col-12 col-sm-4">
