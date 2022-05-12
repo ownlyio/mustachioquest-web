@@ -17,7 +17,7 @@ import Roadmap from './components/Roadmap/Roadmap'
 import Team from './components/Team/Team'
 import SneakPeek from './components/SneakPeek/SneakPeek'
 import Table from './components/Table/Table'
-import Rewards from './components/Rewards/Rewards'
+// import Rewards from './components/Rewards/Rewards'
 import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
@@ -295,7 +295,7 @@ export default function App() {
                     <Team />
                     <SneakPeek />
                     <Table mintBtn={initUtilsAndMint} />
-                    <Rewards />
+                    {/* <Rewards /> */}
                     <Visualizer />
                     <FAQ />
                     <CTA />

@@ -95,9 +95,9 @@ export default function Navbar(props) {
                     <li>
                         <HashLink smooth to="#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)}>REWARDS</HashLink>
-                    </li>
+                    </li> */}
                     <li>
                         <HashLink smooth to="#visualizer" scroll={el => scrollWithOffset(el)}>VISUALIZER</HashLink>
                     </li>
@@ -109,11 +109,11 @@ export default function Navbar(props) {
                             MINT NOW
                         </button>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                             EARN NFT
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="d-lg-none align-self-end">
@@ -131,15 +131,15 @@ export default function Navbar(props) {
                     <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
                     <HashLink smooth to="#progress" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">PROGRESS</HashLink>
                     <HashLink smooth to="#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
-                    <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink>
+                    {/* <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink> */}
                     <HashLink smooth to="#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>
                     <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
                     <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
-                    <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
+                    {/* <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                         EARN NFT
-                    </a>
+                    </a> */}
                 </Menu>
             </div>
         </div>
