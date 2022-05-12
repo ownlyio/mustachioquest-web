@@ -37,7 +37,9 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder. <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a></p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder. 
+                                {/* <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a> */}
+                            </p>
                         </div>
                     </div>
                     <div className="col-12 col-sm-4">
@@ -178,8 +180,8 @@ export default function Table(props) {
                                         <button onClick={props.mintBtn} className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
                                     </td>
                                     <td className="border-bottom text-center">
-                                        <a href="https://ownly.io/ownmarauder" className="d-block d-md-none mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE<br />OWN</a>
-                                        <a href="https://ownly.io/ownmarauder" className="d-none d-md-block mt-2 mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a>
+                                        {/* <a href="https://ownly.io/ownmarauder" className="d-block d-md-none mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE<br />OWN</a> */}
+                                        {/* <a href="https://ownly.io/ownmarauder" className="d-none d-md-block mt-2 mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a> */}
                                     </td>
                                     <td className="border-bottom align-middle text-center">
                                         <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q2 2022</p>
