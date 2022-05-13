@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0feabd69.css",
-    "main.js": "/static/js/main.911b4e7c.js",
+    "main.js": "/static/js/main.a5f4cc0d.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
@@ -127,11 +127,11 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
     "main.0feabd69.css.map": "/static/css/main.0feabd69.css.map",
-    "main.911b4e7c.js.map": "/static/js/main.911b4e7c.js.map",
+    "main.a5f4cc0d.js.map": "/static/js/main.a5f4cc0d.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0feabd69.css",
-    "static/js/main.911b4e7c.js"
+    "static/js/main.a5f4cc0d.js"
   ]
 }
