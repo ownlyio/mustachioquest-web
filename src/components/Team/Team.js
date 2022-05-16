@@ -42,7 +42,7 @@ export default function Team() {
         {
             id: 3,
             thumbnail: squarehead,
-            twitter: "https://twitter.com/smcanasco/",
+            twitter: "https://twitter.com/kinaanasco",
             linkedin: "https://www.linkedin.com/in/theshiekina/",
             name: "KINA AÑASCO",
             position: "CMO"
