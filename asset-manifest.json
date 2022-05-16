@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0feabd69.css",
-    "main.js": "/static/js/main.a5f4cc0d.js",
+    "main.js": "/static/js/main.c452300a.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
     "static/media/11-gif-slendie.png": "/static/media/11-gif-slendie.8ce94297e85ee873f566.png",
+    "static/media/the-mint-14.png": "/static/media/the-mint-14.8cbb26edc4067dd8e219.png",
     "static/media/loading-mustachio.gif": "/static/media/loading-mustachio.22785f7ec1ff4abe700a.gif",
     "static/media/4-pathfinders.png": "/static/media/4-pathfinders.e126a1358ac3658849ab.png",
     "static/media/8-gif-sludgie.jpg": "/static/media/8-gif-sludgie.e7317c43937ede1a1af5.jpg",
     "static/media/3-mexico-strength.png": "/static/media/3-mexico-strength.90abe7b7e489075a961f.png",
-    "static/media/2-sludgie.jpg": "/static/media/2-sludgie.950a1b4c4c3afaabdb44.jpg",
     "static/media/16-candyfloss.png": "/static/media/16-candyfloss.fff33e69dd36a4e19b62.png",
     "static/media/landscape.png": "/static/media/landscape.63f783530d4b6392419a.png",
     "static/media/14-ninja.png": "/static/media/14-ninja.ae100e0f6b54525b0739.png",
@@ -127,11 +127,11 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "index.html": "/index.html",
     "main.0feabd69.css.map": "/static/css/main.0feabd69.css.map",
-    "main.a5f4cc0d.js.map": "/static/js/main.a5f4cc0d.js.map",
+    "main.c452300a.js.map": "/static/js/main.c452300a.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0feabd69.css",
-    "static/js/main.a5f4cc0d.js"
+    "static/js/main.c452300a.js"
   ]
 }
