@@ -1,13 +1,13 @@
 import './Updates.css'
 
 // images
+import update14 from '../../images/updates/videos/the-mint-14.png'
 import update13 from '../../images/updates/articles/game-dev-4.png'
 import update12 from '../../images/updates/videos/the-mint-12.jpg'
 import update11 from '../../images/updates/posts/4-pathfinders.png'
 import update10 from '../../images/updates/articles/game-dev-3.jpg'
 import update9 from '../../images/updates/articles/game-dev-2.jpg'
 import update8 from '../../images/updates/posts/3-mexico-strength.png'
-import update7 from '../../images/updates/posts/2-sludgie.jpg'
 import update6 from '../../images/updates/videos/the-mint-10.jpg'
 import update5 from '../../images/updates/videos/lnwk-mq.jpg'
 
@@ -22,6 +22,13 @@ export default function Updates() {
     }
 
     const updatesList = [
+        {
+            id: 14,
+            thumbnail: update14,
+            type: "video",
+            link: "https://www.youtube.com/watch?v=BsmuLYfvyA8&t=62s",
+            title: "The Mint Ep 14: Mustachio Quest Closed Beta Testing Update Video Walkthrough"
+        },
         {
             id: 13,
             thumbnail: update13,
@@ -63,13 +70,6 @@ export default function Updates() {
             type: "post",
             link: "https://twitter.com/mustachioverse/status/1499172708009103369",
             title: "It seems like Mexico's strength is returning. Not a lot, but enough."
-        },
-        {
-            id: 7,
-            thumbnail: update7,
-            type: "post",
-            link: "https://discord.com/channels/878131568806334464/935073739878563840/948472489049210960",
-            title: "Sludgie on the Forge"
         },
         {
             id: 6,
