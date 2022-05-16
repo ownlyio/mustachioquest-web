@@ -36,6 +36,10 @@ export default function Roadmap() {
                         <div className="done q-pointer"></div>
                         <div className="done q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
                     </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Closed Beta Testing for Genesis Holders</div>
+                    </div>
                 </div>
             </div>
             <div id="2022-q2" className="roadmap-quarter q-margin">
