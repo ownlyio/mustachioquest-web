@@ -50,7 +50,7 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">10,000 MUSTACHIOS</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this Q2 2022</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this Q3 2022</p>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@ export default function Table(props) {
                                         {/* <a href="https://ownly.io/ownmarauder" className="d-none d-md-block mt-2 mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a> */}
                                     </td>
                                     <td className="border-bottom align-middle text-center">
-                                        <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q2 2022</p>
+                                        <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q3 2022</p>
                                     </td>
                                 </tr>
                             </tbody>
