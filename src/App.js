@@ -17,6 +17,7 @@ import Roadmap from './components/Roadmap/Roadmap'
 import Team from './components/Team/Team'
 import SneakPeek from './components/SneakPeek/SneakPeek'
 import Table from './components/Table/Table'
+import Gmfrens from './components/Gmfrens/Gmfrens'
 // import Rewards from './components/Rewards/Rewards'
 import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
@@ -297,6 +298,7 @@ export default function App() {
                     <Table mintBtn={initUtilsAndMint} />
                     {/* <Rewards /> */}
                     <Visualizer />
+                    <Gmfrens />
                     <FAQ />
                     <CTA />
                 </Route>
