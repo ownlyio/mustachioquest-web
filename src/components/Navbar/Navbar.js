@@ -1,10 +1,30 @@
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import { Link } from "react-router-dom"
 import { bubble as Menu } from "react-burger-menu"
 import { HashLink } from "react-router-hash-link"
 import './Navbar.css'
 
 import logo from '../../images/MQ_logo.png'
+import {Button, Modal} from "react-bootstrap";
+import metamask from "../../images/metamask.png";
+import pathfinders from "../../images/MQ_pathfinders.png";
+import marauders from "../../images/MQ_marauders.png";
+import {faCheckCircle, faTimes} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+// images
+import bnbImage from "../../images/bnb.png";
+import ownImage from "../../images/own-token.png";
+
+// blockchain
+import connectToMetaMask from "../../utils/connectToMetaMask";
+import ownContract from "../../utils/ownContract";
+import sparkSwapContract from "../../utils/sparkSwapRouterContract";
+import marketplaceContract from "../../utils/marketplaceContract";
+import numberFormat from "../../utils/numberFormat";
+import web3 from "../../utils/web3"
+import getCurrentWalletConnected from "../../utils/getCurrentWalletConnected";
+import getCurrentNetwork from "../../utils/getCurrentNetwork";
 
 export default function Navbar(props) {
     const [menuOpenState, setMenuOpenState] = useState(false)
@@ -23,6 +43,238 @@ export default function Navbar(props) {
     const closeMenu = () => {
         setMenuOpenState(false)
     }
+
+    const [showMustachioMintTypes, setShowMustachioMintTypes] = useState(false);
+    const handleCloseMustachioMintTypes = () => setShowMustachioMintTypes(false);
+    const handleShowMustachioMintTypes = () => setShowMustachioMintTypes(true);
+
+    const [showMintMarauder, setShowMintMarauder] = useState(false);
+    const handleCloseMintMarauder = () => setShowMintMarauder(false);
+    const handleShowMintMarauder = () => setShowMintMarauder(true);
+
+    const [ownBalance, setOwnBalance] = useState('Loading')
+    const [bnbBalance, setBnbBalance] = useState('Loading')
+    const [ownAllowance, setOwnAllowance] = useState('0')
+    const [marketItem, setMarketItem] = useState(null)
+    const [finalPrice, setFinalPrice] = useState('Loading')
+    const [price, setPrice] = useState('Loading')
+    const [discountPercentage, setDiscountPercentage] = useState('Loading')
+    const [mintList, setMintList] = useState([])
+
+    const [inputsValues, setInputsValues] = useState({
+        paymentMethod: "OWN",
+    })
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setInputsValues({ ...inputsValues, [name]: value });
+
+        if(name === "paymentMethod") {
+            paymentMethodChange(value);
+        }
+    }
+
+    const paymentMethodChange = async (value) => {
+        let address = await connectToMetaMask();
+
+        setPrice("Loading");
+        setDiscountPercentage("Loading");
+
+        if(value === "OWN") {
+            let _ownBalance = await ownContract.methods.balanceOf(address).call();
+            _ownBalance = web3.utils.fromWei(_ownBalance, "ether");
+            setOwnBalance(_ownBalance);
+
+            let _ownAllowance = await ownContract.methods.allowance(address, marketplaceContract.options.address).call();
+            _ownAllowance = web3.utils.fromWei(_ownAllowance, "ether");
+            setOwnAllowance(_ownAllowance);
+
+            getMarketItem();
+        } else if(value === "BNB") {
+            let _bnbBalance = await web3.eth.getBalance(address);
+            _bnbBalance = web3.utils.fromWei(_bnbBalance, "ether");
+
+            setBnbBalance(_bnbBalance);
+
+            let priceInBnb = await sparkSwapContract.methods.getAmountsOut("5000000000000000000000000", ["0x7665CB7b0d01Df1c9f9B9cC66019F00aBD6959bA", "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"]).call();
+
+            setPrice(priceInBnb[1]);
+            setDiscountPercentage(0);
+
+            setFinalPrice(web3.utils.fromWei(priceInBnb[1], "ether"));
+        }
+    };
+
+    const updateBalanceContent = () => {
+        let balance = "Loading";
+
+        if((inputsValues.paymentMethod === "OWN" && !isNaN(ownBalance)) || (inputsValues.paymentMethod === "BNB" && !isNaN(bnbBalance))) {
+            balance = ((inputsValues.paymentMethod === "OWN") ? numberFormat(ownBalance, 0) : numberFormat(bnbBalance, 4)) + " " + inputsValues.paymentMethod;
+        }
+
+        return (
+            <div className="d-flex justify-content-center align-items-center mb-4">
+                <div>
+                    <img src={ (inputsValues.paymentMethod === "OWN") ? ownImage : bnbImage } width="35" />
+                </div>
+
+                <div className="ps-3">
+                    <div className="d-flex align-items-center">
+                        <p className="text-white font-size-80 mb-0">Balance:</p>
+
+
+                    </div>
+                    <p className="text-white font-size-90 mb-0">{ balance }</p>
+                </div>
+
+                <div>{ displayGetOwnButton() }</div>
+            </div>
+        );
+    };
+
+    const displayGetOwnButton = () => {
+        if(inputsValues.paymentMethod === "OWN") {
+            return (
+                <div className="ps-3">
+                    <button className="btn btn-custom-2 font-size-80 py-1" style={{"width":"110px"}}>GET $OWN</button>
+                </div>
+            );
+        }
+    }
+
+    const updateDiscountContent = () => {
+        if(inputsValues.paymentMethod === "OWN") {
+            return (
+                <div>
+                    <div className="d-flex justify-content-center align-items-center position-relative">
+                        <p className="text-white text-center font-size-100 mb-0 pe-2">5,000,000</p>
+                        <img src={ownImage} width="18" />
+
+                        <div className="w-100 d-flex justify-content-center position-absolute" style={{"top":"50%", "left":"0"}}>
+                            <div className="" style={{"backgroundColor":"#ffffff", "height":"1px", "width":"150px"}}></div>
+                        </div>
+                    </div>
+
+                    <p className="text-white text-center font-size-90 mb-0 pe-2 mb-3">Enjoy { discountPercentage }% Discount</p>
+                </div>
+            );
+        }
+    };
+
+    const updatePaymentMethodTokenLogo = () => {
+        if(inputsValues.paymentMethod === "OWN") {
+            return (
+                <div className="">
+                    <img src={ownImage} width="35" />
+                </div>
+            );
+        } else {
+            return (
+                <div className="">
+                    <img src={bnbImage} width="35" />
+                </div>
+            );
+        }
+    };
+
+    const updateActionButtons = () => {
+        if(inputsValues.paymentMethod === "OWN") {
+            return (
+                <div className="row mb-4 pb-2">
+                    <div className="col-6">
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={approveOwn} style={{"width":"initial"}} disabled={ !(parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) < parseFloat(finalPrice)) }>APPROVE $OWN</button>
+                    </div>
+                    <div className="col-6">
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithOwn} style={{"width":"initial"}} disabled={ !(parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) >= parseFloat(finalPrice)) }>MINT NOW!</button>
+                    </div>
+                </div>
+            );
+        } else {
+            return (
+                <div className="row mb-4 pb-2">
+                    <div className="col-12">
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithBnb}style={{"width":"initial"}}>MINT NOW!</button>
+                    </div>
+                </div>
+            );
+        }
+    };
+
+    const getMarketItem = async function() {
+        // let marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
+        let marauderContractAddress = '0x2cc2D29c6514748b723eac6eFBff793Fb276c3f1'; // testnet
+        let tokenId = 1;
+        let _marketItem;
+
+        for(let i = tokenId; i <= 199; i++) {
+            _marketItem = await marketplaceContract.methods.fetchMarketItemV2(marauderContractAddress, i).call();
+
+            console.log(marauderContractAddress + " " + i);
+
+            // Mainnet
+            // let owner = "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B";
+            // Testnet
+            let owner = "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
+
+            if(_marketItem && _marketItem.itemId !== "0" && _marketItem.seller === owner) {
+                setMarketItem(_marketItem);
+
+                setPrice(_marketItem.price);
+                setDiscountPercentage(_marketItem.discountPercentage);
+
+                setFinalPrice(web3.utils.fromWei(_marketItem.price.toString(), "ether") * ((100 - _marketItem.discountPercentage) / 100));
+
+                break;
+            }
+        }
+    };
+
+    const approveOwn = async function() {
+        let address = await connectToMetaMask();
+
+        console.log(marketplaceContract.options.address);
+        console.log(web3.utils.toWei(finalPrice.toString(), "ether"));
+
+        await ownContract.methods.approve(marketplaceContract.options.address, web3.utils.toWei(finalPrice.toString(), "ether")).send({
+            from: address
+        });
+
+        let _ownAllowance = await ownContract.methods.allowance(address, marketplaceContract.options.address).call();
+        _ownAllowance = web3.utils.fromWei(_ownAllowance, "ether");
+        setOwnAllowance(_ownAllowance);
+    };
+
+    const purchaseWithOwn = async function() {
+        let address = await connectToMetaMask();
+
+        console.log(marketItem.itemId);
+
+        await marketplaceContract.methods.createMarketSaleV2(marketItem.itemId, "OWN").send({
+            from: address,
+            value: 0
+        });
+
+
+    };
+
+    const purchaseWithBnb = async function() {
+        let address = await connectToMetaMask();
+
+        console.log(marketItem.itemId);
+
+        await marketplaceContract.methods.createMarketSaleV2(marketItem.itemId, "OWN").send({
+            from: address,
+            value: 0
+        });
+    };
+
+    const mintMarauder = async () => {
+        await connectToMetaMask();
+        paymentMethodChange(inputsValues.paymentMethod);
+
+        handleCloseMustachioMintTypes();
+        handleShowMintMarauder();
+    };
 
     const styles = {
         bmBurgerButton: {
@@ -69,7 +321,11 @@ export default function Navbar(props) {
             background: 'rgba(0, 0, 0, 0.3)',
             left: 0
         }
-    } 
+    }
+
+    useEffect(() => {
+        getMarketItem();
+    }, [])
 
     return (
         <div id="header" className="container">
@@ -109,8 +365,13 @@ export default function Navbar(props) {
                             BETA TEST
                         </a>
                     </li>
+                    {/*<li>*/}
+                    {/*    <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">*/}
+                    {/*        MINT NOW*/}
+                    {/*    </button>*/}
+                    {/*</li>*/}
                     <li>
-                        <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
+                        <button type="button" onClick={handleShowMustachioMintTypes} className="btn mq-nav-discord text-white gotham-black font-size-100">
                             MINT NOW
                         </button>
                     </li>
@@ -142,7 +403,10 @@ export default function Navbar(props) {
                     <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                         BETA TEST
                     </a>
-                    <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">
+                    {/*<button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">*/}
+                    {/*    MINT NOW*/}
+                    {/*</button>*/}
+                    <button type="button" onClick={handleShowMustachioMintTypes} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
                     {/* <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
@@ -150,6 +414,74 @@ export default function Navbar(props) {
                     </a> */}
                 </Menu>
             </div>
+
+            {/* Modal for Mustachio Mint Selection */}
+            <Modal show={showMustachioMintTypes} onHide={handleCloseMustachioMintTypes} centered>
+                <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"2px solid white"}}>
+                    <div className="position-absolute" style={{"top":"15px", "right":"20px", "zIndex":"5"}}>
+                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMustachioMintTypes} />
+                    </div>
+
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-130 px-md-5 pt-4 pb-4">Select the Mustachio type you want to mint.</p>
+                    <div className="row pb-4 mb-3">
+                        <div className="col-sm-6 mb-4 mb-sm-0">
+                            <div className="p-3 cursor-pointer select-mustachio-to-mint" style={{"border":"2px solid white", "borderRadius":"10px"}} onClick={function(event){ props.mintBtn(); handleCloseMustachioMintTypes()}}>
+                                <img className="w-100 mt-2" src={pathfinders} alt="Mustachio Pathfinders" />
+                            </div>
+                        </div>
+
+                        <div className="col-sm-6">
+                            <div className="p-3 cursor-pointer select-mustachio-to-mint" style={{"border":"2px solid white", "borderRadius":"10px"}}  onClick={mintMarauder}>
+                                <img className="w-100 mt-2" src={marauders} alt="Mustachio Marauders" />
+                            </div>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+
+            <Modal show={showMintMarauder} onHide={handleCloseMintMarauder} centered>
+                <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"3px solid white"}}>
+                    <div className="position-absolute" style={{"top":"15px", "right":"20px", "zIndex":"5"}}>
+                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMintMarauder} />
+                    </div>
+
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Mint a Marauder</p>
+
+                    <div className="mb-4">
+                        <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
+                    </div>
+
+                    <p className="app-metamask-modal-content text-white text-center font-andes font-size-90 px-5 mb-1">Select Payment Method:</p>
+
+                    <div className="d-flex justify-content-center mb-3" id="select-mint-method">
+                        <div className="form-check form-check-inline px-4 mx-4 d-flex align-items-center me-0">
+                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio1" value="OWN" onChange={handleInputChange} style={{"width":"25px", "height":"25px"}} checked={inputsValues.paymentMethod === "OWN"} />
+                            <label className="form-check-label text-white font-size-150 ps-3 cursor-pointer" htmlFor="inlineRadio1">OWN</label>
+                        </div>
+                        <div className="form-check form-check-inline px-4 mx-4 d-flex align-items-center me-0">
+                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio2" value="BNB" onChange={handleInputChange} style={{"width":"25px", "height":"25px"}} checked={inputsValues.paymentMethod === "BNB"} />
+                            <label className="form-check-label text-white font-size-150 ps-3 cursor-pointer" htmlFor="inlineRadio2">BNB</label>
+                        </div>
+                    </div>
+
+                    <div>{ updateBalanceContent() }</div>
+
+                    <div className="mb-4">
+                        <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
+                    </div>
+
+                    <p className="app-metamask-modal-content text-white text-center font-andes font-size-90 px-5 mb-2">Price:</p>
+
+                    <div>{ updateDiscountContent() }</div>
+
+                    <div className="d-flex justify-content-center align-items-center mb-4 pb-2">
+                        <p className="text-white text-center fw-bold font-size-150 mb-0 pe-3">{ (price !== "Loading") ? numberFormat(finalPrice,(inputsValues.paymentMethod === "OWN") ? 0 : 4) : price }</p>
+                        <div>{ updatePaymentMethodTokenLogo() }</div>
+                    </div>
+
+                    <div>{ updateActionButtons() }</div>
+                </Modal.Body>
+            </Modal>
         </div>
     )
 }

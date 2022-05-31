@@ -64,3 +64,25 @@
   background-color: #333;
   color: white;
 }
+
+.select-mustachio-to-mint {
+  background-color: #1c5191;
+  transition: 0.2s;
+}
+
+.select-mustachio-to-mint:hover {
+  background-color: #194a85;
+  transition: 0.2s;
+}
+
+#select-mint-method .form-check-input {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transition: 0.4s;
+}
+
+#select-mint-method .form-check-input:checked {
+  background-color: #ffb800;
+  border-color: #ffb800;
+  transition: 0.4s;
+}
