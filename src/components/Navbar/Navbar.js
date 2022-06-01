@@ -54,6 +54,7 @@ export default function Navbar(props) {
 
     const [ownBalance, setOwnBalance] = useState('Loading')
     const [bnbBalance, setBnbBalance] = useState('Loading')
+    const [addressListDiscountPercentage, setAddressListDiscountPercentage] = useState(0)
     const [ownAllowance, setOwnAllowance] = useState('0')
     const [marketItem, setMarketItem] = useState(null)
     const [finalPrice, setFinalPrice] = useState('Loading')
@@ -104,6 +105,13 @@ export default function Navbar(props) {
             setFinalPrice(web3.utils.fromWei(priceInBnb[1], "ether"));
         }
     };
+
+    const checkAddressListDiscountPercentage = async () => {
+        let address = await connectToMetaMask();
+
+        let _addressListDiscountPercentage = await marketplaceContract.methods.getAddressListDiscountPercentage(1, address).call();
+        setAddressListDiscountPercentage(_addressListDiscountPercentage);
+    }
 
     const updateBalanceContent = () => {
         let balance = "Loading";
@@ -201,6 +209,8 @@ export default function Navbar(props) {
     };
 
     const getMarketItem = async function() {
+        await checkAddressListDiscountPercentage();
+
         // let marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
         let marauderContractAddress = '0x2cc2D29c6514748b723eac6eFBff793Fb276c3f1'; // testnet
         let tokenId = 1;
@@ -208,8 +218,6 @@ export default function Navbar(props) {
 
         for(let i = tokenId; i <= 199; i++) {
             _marketItem = await marketplaceContract.methods.fetchMarketItemV2(marauderContractAddress, i).call();
-
-            console.log(marauderContractAddress + " " + i);
 
             // Mainnet
             // let owner = "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B";
@@ -220,9 +228,12 @@ export default function Navbar(props) {
                 setMarketItem(_marketItem);
 
                 setPrice(_marketItem.price);
-                setDiscountPercentage(_marketItem.discountPercentage);
 
-                setFinalPrice(web3.utils.fromWei(_marketItem.price.toString(), "ether") * ((100 - _marketItem.discountPercentage) / 100));
+                let _discountPercentage = parseInt(_marketItem.discountPercentage) + parseInt(addressListDiscountPercentage);
+
+                setFinalPrice(web3.utils.fromWei(_marketItem.price.toString(), "ether") * ((100 - _discountPercentage) / 100));
+
+                setDiscountPercentage(_discountPercentage);
 
                 break;
             }
@@ -253,8 +264,6 @@ export default function Navbar(props) {
             from: address,
             value: 0
         });
-
-
     };
 
     const purchaseWithBnb = async function() {
@@ -270,6 +279,7 @@ export default function Navbar(props) {
 
     const mintMarauder = async () => {
         await connectToMetaMask();
+
         paymentMethodChange(inputsValues.paymentMethod);
 
         handleCloseMustachioMintTypes();
