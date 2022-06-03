@@ -12,6 +12,10 @@ const connectToMetaMask = async () => {
             }
 
             address = accounts[0];
+
+            window.ethereum.on('accountsChanged', function (accounts) {
+                window.location.reload();
+            });
         }).catch((err) => console.log(err))
     }
 

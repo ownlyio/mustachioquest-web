@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { bubble as Menu } from "react-burger-menu"
 import { HashLink } from "react-router-hash-link"
 import './Navbar.css'
+import $ from 'jquery'
 
 import logo from '../../images/MQ_logo.png'
 import {Button, Modal} from "react-bootstrap";
@@ -44,6 +45,9 @@ export default function Navbar(props) {
         setMenuOpenState(false)
     }
 
+    // const marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
+    const marauderContractAddress = '0x2cc2D29c6514748b723eac6eFBff793Fb276c3f1'; // testnet
+
     const [showMustachioMintTypes, setShowMustachioMintTypes] = useState(false);
     const handleCloseMustachioMintTypes = () => setShowMustachioMintTypes(false);
     const handleShowMustachioMintTypes = () => setShowMustachioMintTypes(true);
@@ -51,6 +55,10 @@ export default function Navbar(props) {
     const [showMintMarauder, setShowMintMarauder] = useState(false);
     const handleCloseMintMarauder = () => setShowMintMarauder(false);
     const handleShowMintMarauder = () => setShowMintMarauder(true);
+
+    const [showSuccessfullyMintedMarauder, setShowSuccessfullyMintedMarauder] = useState(false);
+    const handleCloseSuccessfullyMintedMarauder = () => setShowSuccessfullyMintedMarauder(false);
+    const handleShowSuccessfullyMintedMarauder = () => setShowSuccessfullyMintedMarauder(true);
 
     const [ownBalance, setOwnBalance] = useState('Loading')
     const [bnbBalance, setBnbBalance] = useState('Loading')
@@ -60,7 +68,10 @@ export default function Navbar(props) {
     const [finalPrice, setFinalPrice] = useState('Loading')
     const [price, setPrice] = useState('Loading')
     const [discountPercentage, setDiscountPercentage] = useState('Loading')
-    const [mintList, setMintList] = useState([])
+    const [tokenIdPurchased, setTokenIdPurchased] = useState(0)
+    const [purchaseTransactionHash, setPurchaseTransactionHash] = useState("#")
+    const [isApproving, setIsApproving] = useState(false)
+    const [isPurchasing, setIsPurchasing] = useState(false)
 
     const [inputsValues, setInputsValues] = useState({
         paymentMethod: "OWN",
@@ -76,6 +87,12 @@ export default function Navbar(props) {
     }
 
     const paymentMethodChange = async (value) => {
+        let paymentMethodRadio = $("input[name='paymentMethod']");
+        paymentMethodRadio.prop("disabled", true);
+
+        setIsApproving(false);
+        setIsPurchasing(false);
+
         let address = await connectToMetaMask();
 
         setPrice("Loading");
@@ -90,7 +107,7 @@ export default function Navbar(props) {
             _ownAllowance = web3.utils.fromWei(_ownAllowance, "ether");
             setOwnAllowance(_ownAllowance);
 
-            getMarketItem();
+            await getMarketItem();
         } else if(value === "BNB") {
             let _bnbBalance = await web3.eth.getBalance(address);
             _bnbBalance = web3.utils.fromWei(_bnbBalance, "ether");
@@ -104,6 +121,8 @@ export default function Navbar(props) {
 
             setFinalPrice(web3.utils.fromWei(priceInBnb[1], "ether"));
         }
+
+        paymentMethodRadio.prop("disabled", false);
     };
 
     const checkAddressListDiscountPercentage = async () => {
@@ -111,6 +130,8 @@ export default function Navbar(props) {
 
         let _addressListDiscountPercentage = await marketplaceContract.methods.getAddressListDiscountPercentage(1, address).call();
         setAddressListDiscountPercentage(_addressListDiscountPercentage);
+
+        return _addressListDiscountPercentage;
     }
 
     const updateBalanceContent = () => {
@@ -144,7 +165,7 @@ export default function Navbar(props) {
         if(inputsValues.paymentMethod === "OWN") {
             return (
                 <div className="ps-3">
-                    <button className="btn btn-custom-2 font-size-80 py-1" style={{"width":"110px"}}>GET $OWN</button>
+                    <a href="https://sparkswap.finance/#/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0x7665cb7b0d01df1c9f9b9cc66019f00abd6959ba" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-80 py-1" style={{"width":"110px"}}>GET $OWN</a>
                 </div>
             );
         }
@@ -190,10 +211,10 @@ export default function Navbar(props) {
             return (
                 <div className="row mb-4 pb-2">
                     <div className="col-6">
-                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={approveOwn} style={{"width":"initial"}} disabled={ !(parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) < parseFloat(finalPrice)) }>APPROVE $OWN</button>
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={approveOwn} style={{"width":"initial"}} disabled={ !(price !== "Loading" && !isApproving && parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) < parseFloat(finalPrice)) }>APPROVE $OWN</button>
                     </div>
                     <div className="col-6">
-                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithOwn} style={{"width":"initial"}} disabled={ !(parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) >= parseFloat(finalPrice)) }>MINT NOW!</button>
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithOwn} style={{"width":"initial"}} disabled={ !(price !== "Loading" && !isPurchasing && parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) >= parseFloat(finalPrice)) }>MINT NOW!</button>
                     </div>
                 </div>
             );
@@ -201,7 +222,7 @@ export default function Navbar(props) {
             return (
                 <div className="row mb-4 pb-2">
                     <div className="col-12">
-                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithBnb}style={{"width":"initial"}}>MINT NOW!</button>
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithBnb} style={{"width":"initial"}} disabled={ !(price !== "Loading" && !isPurchasing && parseFloat(bnbBalance) >= parseFloat(finalPrice)) }>MINT NOW!</button>
                     </div>
                 </div>
             );
@@ -209,11 +230,10 @@ export default function Navbar(props) {
     };
 
     const getMarketItem = async function() {
-        await checkAddressListDiscountPercentage();
+        let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
         // let marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
-        let marauderContractAddress = '0x2cc2D29c6514748b723eac6eFBff793Fb276c3f1'; // testnet
-        let tokenId = 1;
+        let tokenId = 5;
         let _marketItem;
 
         for(let i = tokenId; i <= 199; i++) {
@@ -224,16 +244,19 @@ export default function Navbar(props) {
             // Testnet
             let owner = "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
 
+            console.log(_marketItem);
+
             if(_marketItem && _marketItem.itemId !== "0" && _marketItem.seller === owner) {
                 setMarketItem(_marketItem);
 
                 setPrice(_marketItem.price);
 
-                let _discountPercentage = parseInt(_marketItem.discountPercentage) + parseInt(addressListDiscountPercentage);
+                let _discountPercentage = parseInt(_marketItem.discountPercentage) + parseInt(_addressListDiscountPercentage);
 
                 setFinalPrice(web3.utils.fromWei(_marketItem.price.toString(), "ether") * ((100 - _discountPercentage) / 100));
 
                 setDiscountPercentage(_discountPercentage);
+                setTokenIdPurchased(_marketItem.tokenId);
 
                 break;
             }
@@ -246,8 +269,12 @@ export default function Navbar(props) {
         console.log(marketplaceContract.options.address);
         console.log(web3.utils.toWei(finalPrice.toString(), "ether"));
 
+        setIsApproving(true);
+
         await ownContract.methods.approve(marketplaceContract.options.address, web3.utils.toWei(finalPrice.toString(), "ether")).send({
             from: address
+        }).on('error', function() {
+            setIsApproving(false);
         });
 
         let _ownAllowance = await ownContract.methods.allowance(address, marketplaceContract.options.address).call();
@@ -259,31 +286,52 @@ export default function Navbar(props) {
         let address = await connectToMetaMask();
 
         console.log(marketItem.itemId);
+        console.log(finalPrice);
+
+        setIsPurchasing(true);
 
         await marketplaceContract.methods.createMarketSaleV2(marketItem.itemId, "OWN").send({
             from: address,
             value: 0
+        }).on('error', function() {
+            setIsPurchasing(false);
+        }).on('transactionHash', function(hash) {
+            setPurchaseTransactionHash("https://testnet.bscscan.com/tx/" + hash);
         });
+
+        handleCloseMintMarauder();
+        handleShowSuccessfullyMintedMarauder();
     };
 
     const purchaseWithBnb = async function() {
         let address = await connectToMetaMask();
 
         console.log(marketItem.itemId);
+        console.log(finalPrice);
 
-        await marketplaceContract.methods.createMarketSaleV2(marketItem.itemId, "OWN").send({
+        setIsPurchasing(true);
+
+        await marketplaceContract.methods.createMarketSaleV2(marketItem.itemId, "BNB").send({
             from: address,
-            value: 0
+            // value: web3.utils.toWei(finalPrice.toString(), "ether")
+            value: web3.utils.toWei("0.1", "ether")
+        }).on('error', function() {
+            setIsPurchasing(false);
+        }).on('transactionHash', function(hash) {
+            setPurchaseTransactionHash("https://testnet.bscscan.com/tx/" + hash);
         });
+
+        handleCloseMintMarauder();
+        handleShowSuccessfullyMintedMarauder();
     };
 
     const mintMarauder = async () => {
         await connectToMetaMask();
 
-        paymentMethodChange(inputsValues.paymentMethod);
-
         handleCloseMustachioMintTypes();
         handleShowMintMarauder();
+
+        paymentMethodChange(inputsValues.paymentMethod);
     };
 
     const styles = {
@@ -334,7 +382,7 @@ export default function Navbar(props) {
     }
 
     useEffect(() => {
-        getMarketItem();
+
     }, [])
 
     return (
@@ -381,7 +429,7 @@ export default function Navbar(props) {
                     {/*    </button>*/}
                     {/*</li>*/}
                     <li>
-                        <button type="button" onClick={handleShowMustachioMintTypes} className="btn mq-nav-discord text-white gotham-black font-size-100">
+                        <button type="button" onClick={mintMarauder} className="btn mq-nav-discord text-white gotham-black font-size-100">
                             MINT NOW
                         </button>
                     </li>
@@ -455,7 +503,7 @@ export default function Navbar(props) {
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMintMarauder} />
                     </div>
 
-                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Mint a Marauder</p>
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Marauder</p>
 
                     <div className="mb-4">
                         <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
@@ -490,6 +538,32 @@ export default function Navbar(props) {
                     </div>
 
                     <div>{ updateActionButtons() }</div>
+                </Modal.Body>
+            </Modal>
+
+            <Modal show={showSuccessfullyMintedMarauder} onHide={handleCloseSuccessfullyMintedMarauder} centered>
+                <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"2px solid white"}}>
+                    <div className="position-absolute" style={{"top":"15px", "right":"20px", "zIndex":"5"}}>
+                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseSuccessfullyMintedMarauder} />
+                    </div>
+
+                    <div className="text-center pt-4">
+                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Marauders" />
+                    </div>
+
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-140 px-md-5 pt-3 mb-1">Congratulations!</p>
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-110 px-md-5 pb-4 mb-2">You have successfully owned your Mustachio Marauder</p>
+
+                    <div className="row mb-4">
+                        <div className="col-12 text-center">
+                            {/* Mainnet */}
+                            {/*<a href={ 'https://ownly.market/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>*/}
+
+                            {/* Testnet */}
+                            <a href={ 'http://ownlyio.marketplace.test/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>
+                            <a href={ purchaseTransactionHash } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
+                        </div>
+                    </div>
                 </Modal.Body>
             </Modal>
         </div>
