@@ -233,7 +233,7 @@ export default function Navbar(props) {
         let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
         // let marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
-        let tokenId = 5;
+        let tokenId = 79;
         let _marketItem;
 
         for(let i = tokenId; i <= 199; i++) {
