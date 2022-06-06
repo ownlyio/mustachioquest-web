@@ -109,6 +109,18 @@ export default function Table(props) {
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">Discount when using $OWN token as payment</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={greenCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={goldCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">Intricately Hand-drawn 2D PFP by Boii Mustache</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
@@ -136,22 +148,22 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
-                                <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">10% Cryptoback in OWN</td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={greenCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                </tr>
-                                <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Quarterly OWN Airdrop</td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={greenCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                </tr>
+                                {/*<tr>*/}
+                                {/*    <td className="align-middle gotham-light text-white font-size-100">10% Cryptoback in OWN</td>*/}
+                                {/*    <td className="text-center align-middle gotham-light text-white font-size-100">*/}
+                                {/*        <img src={greenCheck} alt="check" className="mq-table-check" />*/}
+                                {/*    </td>*/}
+                                {/*    <td className="text-center align-middle gotham-light text-white font-size-100"></td>*/}
+                                {/*    <td className="text-center align-middle gotham-light text-white font-size-100"></td>*/}
+                                {/*</tr>*/}
+                                {/*<tr>*/}
+                                {/*    <td className="align-middle gotham-light text-white font-size-100">Quarterly OWN Airdrop</td>*/}
+                                {/*    <td className="text-center align-middle gotham-light text-white font-size-100">*/}
+                                {/*        <img src={greenCheck} alt="check" className="mq-table-check" />*/}
+                                {/*    </td>*/}
+                                {/*    <td className="text-center align-middle gotham-light text-white font-size-100"></td>*/}
+                                {/*    <td className="text-center align-middle gotham-light text-white font-size-100"></td>*/}
+                                {/*</tr>*/}
                                 <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">The First <a href="https://tales.mustachioverse.com" className="link-color-2" target="_blank" rel="noreferrer">NFT Tales</a> Behind Each Mustachio</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
