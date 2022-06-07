@@ -21,7 +21,7 @@ export default function Gmfrens() {
 
                         <div className="col-lg-8">
                             <div className="ps-lg-3 mb-5 pb-3 mb-lg-0 pb-lg-0">
-                                <h2 className="text-white text-center text-lg-start fw-bold font-size-xl-250 font-size-xxl-300 mb-4 pb-2">Mustachio Quest took part in GM&nbsp;Frens's acceleration program.</h2>
+                                <h2 className="text-white text-center text-lg-start fw-bold font-size-xl-250 font-size-xxl-300 mb-4 pb-2">Mustachio Quest took part in GM&nbsp;Frens' acceleration program.</h2>
                                 <p className="text-white text-center text-lg-start font-size-xl-140 mb-4">The GM Frens Accelerator is a 3-month program that provides aspiring developers with the building blocks to create fun, profitable Web3 games in partnership with YGG and OP Games.</p>
 
                                 <div className="text-center text-lg-start">
