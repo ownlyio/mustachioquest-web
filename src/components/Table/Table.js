@@ -27,7 +27,7 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #1 to #100</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b>. <button onClick={props.mintBtn} className="btn link-color-2 p-0 font-size-100">MINT NOW!</button></p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">The First 100 Mustachios or the <b>"Genesis Set"</b>.</p>
                         </div>
                     </div>
                     <div className="col-12 col-sm-4">
@@ -37,7 +37,8 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Get 40% off our Mustachio Marauder NFT using OWN in June.</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Get 40% off our Mustachio Marauder NFT using OWN. 
+                            <button className="btn link-color-2 p-0 font-size-100" style={{"marginTop": "-6px"}}>MINT NOW!</button></p>
                             {/*<p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder.*/}
                             {/*    /!* <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a> *!/*/}
                             {/*</p>*/}
@@ -97,7 +98,9 @@ export default function Table(props) {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Exclusive Discord Channel</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">
+                                        <a href="https://mustachioverse.com/discord" className="link-color-2" target="_blank" rel="noreferrer">Exclusive Discord Channel</a>
+                                    </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -189,12 +192,12 @@ export default function Table(props) {
                                 <tr>
                                     <td className="border-left-none"></td>
                                     <td className="border-bottom text-center">
-                                        <button onClick={props.mintBtn} className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT<br />NOW</button>
-                                        <button onClick={props.mintBtn} className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
+                                        {/* <button onClick={props.mintBtn} className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT<br />NOW</button>
+                                        <button onClick={props.mintBtn} className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button> */}
                                     </td>
                                     <td className="border-bottom text-center">
-                                        {/* <a href="https://ownly.io/ownmarauder" className="d-block d-md-none mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE<br />OWN</a> */}
-                                        {/* <a href="https://ownly.io/ownmarauder" className="d-none d-md-block mt-2 mx-auto link-color-2 p-0 font-size-100 font-size-sm-140" target="_blank" rel="noreferrer">STAKE OWN</a> */}
+                                        <button className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT<br />NOW</button>
+                                        <button className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
                                         <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q3 2022</p>

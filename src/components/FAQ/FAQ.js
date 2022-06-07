@@ -29,12 +29,12 @@ export default function FAQ() {
                     </h2>
                     <div id="flush-collapse-2" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
-                            <p className="font-size-120">To get a Mustachio Pathfinder NFT:</p>
+                            <p className="font-size-120">To get a Mustachio Marauder NFT:</p>
                             <ol>
                                 <li className="font-size-120 gotham-light">Visit <a href="/" className="link-color-1">mustachioverse.com</a>.</li>
                                 <li className="font-size-120 gotham-light">Click MINT NOW at the upper right corner of the Navigation Menu.</li>
                                 <li className="font-size-120 gotham-light">Connect your MetaMask wallet (Ethereum Network).</li>
-                                <li className="font-size-120 gotham-light">Mint your Mustachio Pathfinder for 0.4 ETH + gas fee.</li>
+                                <li className="font-size-120 gotham-light">Mint your Mustachio Marauder and pay the gas fee.</li>
                                 <li className="font-size-120 gotham-light">Check your OpenSea or  <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market/" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio.</li>
                             </ol>
                             <a className="font-size-120 gotham-light link-color-1" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Click here for a more detailed instruction.</a>
