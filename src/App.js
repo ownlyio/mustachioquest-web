@@ -171,22 +171,22 @@ export default function App() {
     } 
 
     useEffect(() => {
-        async function initUtilsOnLoad() {
-            const {address, status} = await getCurrentWalletConnected();
-            const {network, netStatus} = await getCurrentNetwork();
-            setWallet(address)
-            setStatus(status)
-            setNetwork(network)
-            setNetStatus(netStatus)
-
-            if (status === 0) {
-                handleShowMetamaskInstall()
-            }
-        }
-
-        initUtilsOnLoad()
-        addWalletListener()
-        addNetworkListener()
+        // async function initUtilsOnLoad() {
+        //     const {address, status} = await getCurrentWalletConnected();
+        //     const {network, netStatus} = await getCurrentNetwork();
+        //     setWallet(address)
+        //     setStatus(status)
+        //     setNetwork(network)
+        //     setNetStatus(netStatus)
+        //
+        //     if (status === 0) {
+        //         handleShowMetamaskInstall()
+        //     }
+        // }
+        //
+        // initUtilsOnLoad()
+        // addWalletListener()
+        // addNetworkListener()
     }, [])
 
     $(document).ready(function(){

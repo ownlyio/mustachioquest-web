@@ -429,7 +429,7 @@ export default function Navbar(props) {
                     {/*    </button>*/}
                     {/*</li>*/}
                     <li>
-                        <button type="button" onClick={mintMarauder} className="btn mq-nav-discord text-white gotham-black font-size-100">
+                        <button type="button" onClick={mintMarauder} className="btn mq-nav-discord text-white gotham-black font-size-100 mint-marauder">
                             MINT NOW
                         </button>
                     </li>

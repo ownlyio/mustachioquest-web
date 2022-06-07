@@ -12,7 +12,13 @@ import bordertr from '../../images/updates-tr.png'
 import borderbl from '../../images/updates-bl.png'
 import borderbr from '../../images/updates-br.png'
 
+import $ from 'jquery'
+
 export default function Table(props) {
+    let triggerMintButton = function() {
+        $(".mint-marauder").trigger("click");
+    };
+
     return (
         <section id="nft">
             <div className="container">
@@ -196,8 +202,8 @@ export default function Table(props) {
                                         <button onClick={props.mintBtn} className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button> */}
                                     </td>
                                     <td className="border-bottom text-center">
-                                        <button className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT<br />NOW</button>
-                                        <button className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
+                                        <button className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={triggerMintButton}>MINT<br />NOW</button>
+                                        <button className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={triggerMintButton}>MINT NOW</button>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
                                         <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q3 2022</p>
