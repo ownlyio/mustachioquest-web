@@ -18,6 +18,7 @@ import Team from './components/Team/Team'
 import SneakPeek from './components/SneakPeek/SneakPeek'
 import Table from './components/Table/Table'
 import Gmfrens from './components/Gmfrens/Gmfrens'
+import Marauders from './components/Marauders/Marauders'
 // import Rewards from './components/Rewards/Rewards'
 import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
@@ -303,6 +304,9 @@ export default function App() {
                     <CTA />
                 </Route>
                 <Route exact path="/discord" component={Discord}></Route>
+                <Route exact path="/marauders">
+                    <Marauders />
+                </Route>
             </Switch>
             <Footer />
 
