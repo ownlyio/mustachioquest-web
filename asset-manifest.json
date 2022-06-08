@@ -1,9 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.919fb637.css",
-    "main.js": "/static/js/main.9b796004.js",
+    "main.css": "/static/css/main.5c25dba5.css",
+    "main.js": "/static/js/main.cb9077b7.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
+    "static/media/Demo Day Video.mp4": "/static/media/Demo Day Video.7949018a6bf4271bfbb5.mp4",
+    "static/media/marauder6.png": "/static/media/marauder6.024008206de21184ffa4.png",
+    "static/media/marauder2.png": "/static/media/marauder2.0111b896b13730075e97.png",
+    "static/media/marauder5.png": "/static/media/marauder5.809eb1e0e1af6e367bc5.png",
+    "static/media/marauder1.png": "/static/media/marauder1.eace662811a0da8bc9fd.png",
+    "static/media/marauder3.png": "/static/media/marauder3.6f31bd6139aacb35d018.png",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
+    "static/media/marauder4.png": "/static/media/marauder4.4b90d0425da558fe83cd.png",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
     "static/media/gmfrens.png": "/static/media/gmfrens.bcc92fb2f3839657554b.png",
@@ -14,8 +21,12 @@
     "static/media/8-gif-sludgie.jpg": "/static/media/8-gif-sludgie.e7317c43937ede1a1af5.jpg",
     "static/media/3-mexico-strength.png": "/static/media/3-mexico-strength.90abe7b7e489075a961f.png",
     "static/media/OPGames_Blue.png": "/static/media/OPGames_Blue.c5b2f50a241cd04cb4e5.png",
+    "static/media/MV_Cyboverse- Square.jpg": "/static/media/MV_Cyboverse- Square.24822ae6f0052f9cc533.jpg",
+    "static/media/MV_OldChap - Square.jpg": "/static/media/MV_OldChap - Square.d2345f2d45e391867f7c.jpg",
     "static/media/16-candyfloss.png": "/static/media/16-candyfloss.fff33e69dd36a4e19b62.png",
+    "static/media/MV_FIN- Square.jpg": "/static/media/MV_FIN- Square.5685ae4f3d95216867b2.jpg",
     "static/media/landscape.png": "/static/media/landscape.63f783530d4b6392419a.png",
+    "static/media/KUSHO X MQ Mintlist Giveaway (1).jpg": "/static/media/KUSHO X MQ Mintlist Giveaway (1).f99447d63bb950516b29.jpg",
     "static/media/14-ninja.png": "/static/media/14-ninja.ae100e0f6b54525b0739.png",
     "static/media/12-abracadoobie.jpg": "/static/media/12-abracadoobie.990cd30bd025f83f2d47.jpg",
     "static/media/banner-portal.png": "/static/media/banner-portal.d2438956239e8bdbf9bd.png",
@@ -26,6 +37,7 @@
     "static/media/WHermann-SemiBoldItalic.woff": "/static/media/WHermann-SemiBoldItalic.413bb88828b05baf05f9.woff",
     "static/media/WHermann-BlackItalic.woff": "/static/media/WHermann-BlackItalic.bf9eb8358d1cbc442747.woff",
     "static/media/WHermann-UltraBoldItalic.woff": "/static/media/WHermann-UltraBoldItalic.81fe754f0aef4b107fb2.woff",
+    "static/media/Rico-Meka.jpg": "/static/media/Rico-Meka.0417376638f4739ed7ac.jpg",
     "static/media/WHermann-Italic.woff": "/static/media/WHermann-Italic.f1fa15c4d4dab64cea0a.woff",
     "static/media/WHermann-HeavyItalic.woff": "/static/media/WHermann-HeavyItalic.18ceff9b8b29acf29521.woff",
     "static/media/sneakpeek-top.png": "/static/media/sneakpeek-top.6bfc0031ebd85dff54d9.png",
@@ -43,6 +55,7 @@
     "static/media/WHermann-BlackItalic.woff2": "/static/media/WHermann-BlackItalic.8305c7ad4b0ac824ac0b.woff2",
     "static/media/WHermann-UltraBoldItalic.woff2": "/static/media/WHermann-UltraBoldItalic.4aa187b8d10c37312b19.woff2",
     "static/media/feature-1.png": "/static/media/feature-1.b3be565935d89465889f.png",
+    "static/media/MV_AntiStigma - Square.jpg": "/static/media/MV_AntiStigma - Square.d7de95783eff313d2a38.jpg",
     "static/media/5-loonywise.jpg": "/static/media/5-loonywise.44b9490325d2a5c795ee.jpg",
     "static/media/WHermann-Italic.woff2": "/static/media/WHermann-Italic.f949063f1346dd45b1d8.woff2",
     "static/media/WHermann-HeavyItalic.woff2": "/static/media/WHermann-HeavyItalic.444dd4947a6c8fc7512e.woff2",
@@ -129,12 +142,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.919fb637.css.map": "/static/css/main.919fb637.css.map",
-    "main.9b796004.js.map": "/static/js/main.9b796004.js.map",
+    "main.5c25dba5.css.map": "/static/css/main.5c25dba5.css.map",
+    "main.cb9077b7.js.map": "/static/js/main.cb9077b7.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.919fb637.css",
-    "static/js/main.9b796004.js"
+    "static/css/main.5c25dba5.css",
+    "static/js/main.cb9077b7.js"
   ]
 }
