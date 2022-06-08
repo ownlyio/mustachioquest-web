@@ -126,10 +126,13 @@ export default function Marauders() {
 
                                 <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
 
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Marauders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">As the Pathfinders (Genesis Mustachios) created the route and discovered the land of MustachioVerse, here comes the next generation of mustached adventurers called the Mustachio Marauders.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our second generation of Mustachios from 101-300 are called Mustachio Marauders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our mintlisted are called “Vigilantes”.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</p>
 
                                 <div className="text-center text-lg-start">
-                                    <button className="btn btn-custom-2 font-size-150 py-2 fw-bold" onClick={handleShowMintingNotYetAvailable}>MINT NOW</button>
+                                    <a href="#nft" className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}}>HOW DO I BECOME A VIGILANTE?</a>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +149,7 @@ export default function Marauders() {
                         </div>
                     </div>
                 </div>
+
                 <div className="background-image-cover py-5" style={{"backgroundImage":"url(" + banner + ")"}}>
                     <div className="container py-4">
                         <p className="fw-bold text-center font-size-200 font-size-md-250 text-white mb-4">What do I get when I own a Marauder?</p>
@@ -357,24 +361,6 @@ export default function Marauders() {
                                 </div>
                             </div>
                             <div className="accordion-item">
-                                <h2 className="accordion-header" id="flush-header-5">
-                                    <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-5">
-                                        Are there discounts if I use $OWN as payment?
-                                    </button>
-                                </h2>
-                                <div id="flush-collapse-5" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
-                                    <div className="accordion-body">
-                                        <p className="font-size-120 gotham-light">A Mustachio Marauder costs around 5M worth of OWN in BNB if you pay in full price. If you purchase using $OWN token, you automatically get 20% off. If you received a mintlist slot from us, you get 40% discount when you use $OWN.</p>
-
-                                        <ul>
-                                            <li className="font-size-120 gotham-light">Original Price: 5M OWN</li>
-                                            <li className="font-size-120 gotham-light">Public Sale: 20% OFF or 4M OWN</li>
-                                            <li className="font-size-120 gotham-light">Mintlisted/Vigilantes: 40% OFF or 3M OWN</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="accordion-item">
                                 <h2 className="accordion-header" id="flush-header-6">
                                     <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-6">
                                         I have a mintlist slot! What advantages do I get?
@@ -382,7 +368,26 @@ export default function Marauders() {
                                 </h2>
                                 <div id="flush-collapse-6" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
-                                        <p className="font-size-120 gotham-light">For those who received a mintlist slot from our events, games, and giveaways, you will automatically get 40% off when you mint your Mustachio Marauder using $OWN token. You also get the chance to mint first on June 09, 2022 before our public sale on June 10, 2022</p>
+                                        <p className="font-size-120 gotham-light">For those who received a mintlist slot from our events, games, and giveaways, you are now part of the "Vigilante" and will automatically get 40% OFF when you mint your Mustachio Marauder using $OWN token.</p>
+                                        <p className="font-size-120 gotham-light">You also get the chance to mint first on June 09, 2022 before our public sale on June 10, 2022.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="accordion-item">
+                                <h2 className="accordion-header" id="flush-header-5">
+                                    <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-5">
+                                        Are there discounts if I use $OWN as payment?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse-5" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
+                                    <div className="accordion-body">
+                                        <p className="font-size-120 gotham-light">A Mustachio Marauder costs around 5 million worth of OWN in BNB if you pay in full price. If you purchase using $OWN token, you automatically get 20% off. If you received a mintlist slot from us, you get 40% discount when you use $OWN.</p>
+
+                                        <ul>
+                                            <li className="font-size-120 gotham-light">Original Price: 5 Million OWN</li>
+                                            <li className="font-size-120 gotham-light">Public Sale: 20% OFF or 4 Million OWN</li>
+                                            <li className="font-size-120 gotham-light">Mintlisted/Vigilantes: 40% OFF or 3 Million OWN</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

@@ -287,6 +287,10 @@ export default function App() {
 
     return (
         <Router basename={process.env.PUBLIC_URL}>
+            <div className="position-fixed w-100" style={{"zIndex":"99999", "top":"0", "left":"0", "backgroundColor":"black"}}>
+                <div className="container text-center text-white font-size-80 py-1">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</div>
+            </div>
+
             <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
                 <Route exact path="/">

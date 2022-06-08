@@ -13,30 +13,31 @@
 
 #mq-nav {
   position: fixed;
-  top: 0;
+  top: 27px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 30px;
   width: 90%;
   background-color: white;
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 0,
-    100% 73%,
-    98.7% 100%,
-    1.3% 100%,
-    0 73%,
-    0 0
-  );
-  clip-path: polygon(
-    50% 0%,
-    100% 0,
-    100% 73%,
-    98.7% 100%,
-    1.3% 100%,
-    0 73%,
-    0 0
-  );
+    border-radius:0 0 20px 20px;
+  /*-webkit-clip-path: polygon(*/
+  /*  50% 0%,*/
+  /*  100% 0,*/
+  /*  100% 73%,*/
+  /*  98.7% 100%,*/
+  /*  1.3% 100%,*/
+  /*  0 73%,*/
+  /*  0 0*/
+  /*);*/
+  /*clip-path: polygon(*/
+  /*  50% 0%,*/
+  /*  100% 0,*/
+  /*  100% 73%,*/
+  /*  98.7% 100%,*/
+  /*  1.3% 100%,*/
+  /*  0 73%,*/
+  /*  0 0*/
+  /*);*/
   z-index: 10;
 }
 
@@ -45,7 +46,7 @@
 }
 
 #mq-nav li:not(:first-child) {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 #mq-nav li a {
