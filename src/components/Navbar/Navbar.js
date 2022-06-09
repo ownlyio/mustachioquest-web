@@ -234,7 +234,7 @@ export default function Navbar(props) {
     const getMarketItem = async function() {
         let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
-        let tokenId = 166;
+        let tokenId = 184;
         let _marketItem;
 
         for(let i = tokenId; i <= 199; i++) {
@@ -326,6 +326,7 @@ export default function Navbar(props) {
     const mintMarauder = async () => {
         await connectToMetaMask();
 
+        closeMenu();
         handleShowMintMarauder();
 
         paymentMethodChange(inputsValues.paymentMethod);
