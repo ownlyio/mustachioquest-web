@@ -18,6 +18,7 @@ import Team from './components/Team/Team'
 import SneakPeek from './components/SneakPeek/SneakPeek'
 import Table from './components/Table/Table'
 import Gmfrens from './components/Gmfrens/Gmfrens'
+import Marauders from './components/Marauders/Marauders'
 // import Rewards from './components/Rewards/Rewards'
 import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
@@ -286,6 +287,10 @@ export default function App() {
 
     return (
         <Router basename={process.env.PUBLIC_URL}>
+            <div className="position-fixed w-100" style={{"zIndex":"99999", "top":"0", "left":"0", "backgroundColor":"#ff9f42"}}>
+                <div className="container text-center text-black font-size-100 fw-bold py-2">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</div>
+            </div>
+
             <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
                 <Route exact path="/">
@@ -303,6 +308,9 @@ export default function App() {
                     <CTA />
                 </Route>
                 <Route exact path="/discord" component={Discord}></Route>
+                <Route exact path="/marauders">
+                    <Marauders />
+                </Route>
             </Switch>
             <Footer />
 
