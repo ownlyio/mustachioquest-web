@@ -6,8 +6,8 @@ const connectToMetaMask = async () => {
             // Get network ID
             let n = parseInt(window.ethereum.chainId);
 
-            // if(n !== 56) {
-            if(n !== 97) {
+            if(n !== 56) {
+            // if(n !== 97) {
                 await switchNetwork();
             }
 
@@ -27,8 +27,8 @@ const switchNetwork = async () => {
         console.log("switch");
         await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
-            // params: [{ chainId: "0x38"}],
-            params: [{ chainId: "0x61"}],
+            params: [{ chainId: "0x38"}],
+            // params: [{ chainId: "0x61"}],
         });
         console.log("You have switched to the right network")
     } catch (switchError) {
@@ -45,22 +45,22 @@ const addNetwork = async () => {
             method: 'wallet_addEthereumChain',
             params: [
                 {
-                    // chainId: '0x38',
-                    // chainName:'BNB Chain',
-                    // rpcUrls:['https://bsc-dataseed.binance.org/'],
-                    // blockExplorerUrls:['https://bscscan.com/'],
-                    // nativeCurrency: {
-                    //     symbol:'BNB',
-                    //     decimals: 18
-                    // }
-                    chainId: '0x61',
-                    chainName:'BNB Chain Testnet',
-                    rpcUrls:['https://data-seed-prebsc-1-s1.binance.org:8545/'],
-                    blockExplorerUrls:['https://testnet.bscscan.com/'],
+                    chainId: '0x38',
+                    chainName:'BNB Chain',
+                    rpcUrls:['https://bsc-dataseed.binance.org/'],
+                    blockExplorerUrls:['https://bscscan.com/'],
                     nativeCurrency: {
                         symbol:'BNB',
                         decimals: 18
                     }
+                    // chainId: '0x61',
+                    // chainName:'BNB Chain Testnet',
+                    // rpcUrls:['https://data-seed-prebsc-1-s1.binance.org:8545/'],
+                    // blockExplorerUrls:['https://testnet.bscscan.com/'],
+                    // nativeCurrency: {
+                    //     symbol:'BNB',
+                    //     decimals: 18
+                    // }
                 }
             ]
         });

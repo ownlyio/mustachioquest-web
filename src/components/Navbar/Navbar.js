@@ -46,8 +46,9 @@ export default function Navbar(props) {
         setMenuOpenState(false)
     }
 
-    // const marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
-    const marauderContractAddress = '0x2cc2D29c6514748b723eac6eFBff793Fb276c3f1'; // testnet
+    let isProduction = true;
+
+    const marauderContractAddress = (isProduction) ? '0x7De755985E7079A07bfC4919c770450436D413a9' : '0x2cc2D29c6514748b723eac6eFBff793Fb276c3f1';
 
     const [showMustachioMintTypes, setShowMustachioMintTypes] = useState(false);
     const handleCloseMustachioMintTypes = () => setShowMustachioMintTypes(false);
@@ -233,17 +234,13 @@ export default function Navbar(props) {
     const getMarketItem = async function() {
         let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
-        // let marauderContractAddress = '0x7De755985E7079A07bfC4919c770450436D413a9'; // mainnet
-        let tokenId = 79;
+        let tokenId = 166;
         let _marketItem;
 
         for(let i = tokenId; i <= 199; i++) {
             _marketItem = await marketplaceContract.methods.fetchMarketItemV2(marauderContractAddress, i).call();
 
-            // Mainnet
-            // let owner = "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B";
-            // Testnet
-            let owner = "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
+            let owner = (isProduction) ? "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B" : "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
 
             console.log(_marketItem);
 
@@ -297,7 +294,7 @@ export default function Navbar(props) {
         }).on('error', function() {
             setIsPurchasing(false);
         }).on('transactionHash', function(hash) {
-            setPurchaseTransactionHash("https://testnet.bscscan.com/tx/" + hash);
+            setPurchaseTransactionHash(((isProduction) ? "https://bscscan.com/tx/" : "https://testnet.bscscan.com/tx/") + hash);
         });
 
         handleCloseMintMarauder();
@@ -319,7 +316,7 @@ export default function Navbar(props) {
         }).on('error', function() {
             setIsPurchasing(false);
         }).on('transactionHash', function(hash) {
-            setPurchaseTransactionHash("https://testnet.bscscan.com/tx/" + hash);
+            setPurchaseTransactionHash(((isProduction) ? "https://bscscan.com/tx/" : "https://testnet.bscscan.com/tx/") + hash);
         });
 
         handleCloseMintMarauder();
@@ -329,7 +326,6 @@ export default function Navbar(props) {
     const mintMarauder = async () => {
         await connectToMetaMask();
 
-        handleCloseMustachioMintTypes();
         handleShowMintMarauder();
 
         paymentMethodChange(inputsValues.paymentMethod);
@@ -440,7 +436,7 @@ export default function Navbar(props) {
                         <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100">
                             BETA TEST
                         </a>
-                        <button type="button" onClick={props.mintBtn} className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100">
+                        <button type="button" onClick={mintMarauder} className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100 mint-marauder">
                             MINT NOW
                         </button>
                     </li>
@@ -485,7 +481,7 @@ export default function Navbar(props) {
                     {/*<button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">*/}
                     {/*    MINT NOW*/}
                     {/*</button>*/}
-                    <button type="button" onClick={handleShowMustachioMintTypes} className="btn mq-nav-discord text-white gotham-black font-size-100">
+                    <button type="button" onClick={mintMarauder} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
                     {/* <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
@@ -578,10 +574,11 @@ export default function Navbar(props) {
                     <div className="row mb-4">
                         <div className="col-12 text-center">
                             {/* Mainnet */}
-                            {/*<a href={ 'https://ownly.market/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>*/}
+                            <a href={ 'https://ownly.market/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>
 
                             {/* Testnet */}
-                            <a href={ 'http://ownlyio.marketplace.test/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>
+                            {/*<a href={ 'http://ownlyio.marketplace.test/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>*/}
+
                             <a href={ purchaseTransactionHash } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
                         </div>
                     </div>
