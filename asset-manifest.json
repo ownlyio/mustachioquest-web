@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd002f72.css",
-    "main.js": "/static/js/main.24c1d1a6.js",
+    "main.css": "/static/css/main.020de726.css",
+    "main.js": "/static/js/main.04f491b4.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/Demo Day Video.mp4": "/static/media/Demo Day Video.7949018a6bf4271bfbb5.mp4",
     "static/media/marauder6.png": "/static/media/marauder6.024008206de21184ffa4.png",
@@ -144,12 +144,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.cd002f72.css.map": "/static/css/main.cd002f72.css.map",
-    "main.24c1d1a6.js.map": "/static/js/main.24c1d1a6.js.map",
+    "main.020de726.css.map": "/static/css/main.020de726.css.map",
+    "main.04f491b4.js.map": "/static/js/main.04f491b4.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd002f72.css",
-    "static/js/main.24c1d1a6.js"
+    "static/css/main.020de726.css",
+    "static/js/main.04f491b4.js"
   ]
 }
