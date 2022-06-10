@@ -234,10 +234,10 @@ export default function Navbar(props) {
     const getMarketItem = async function() {
         let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
-        let tokenId = 184;
+        let tokenId = 192;
         let _marketItem;
 
-        for(let i = tokenId; i <= 199; i++) {
+        for(let i = tokenId; i <= 299; i++) {
             _marketItem = await marketplaceContract.methods.fetchMarketItemV2(marauderContractAddress, i).call();
 
             let owner = (isProduction) ? "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B" : "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
