@@ -234,7 +234,7 @@ export default function Navbar(props) {
     const getMarketItem = async function() {
         let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
-        let tokenId = 192;
+        let tokenId = 196;
         let _marketItem;
 
         for(let i = tokenId; i <= 299; i++) {
