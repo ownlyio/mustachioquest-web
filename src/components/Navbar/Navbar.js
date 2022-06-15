@@ -324,12 +324,14 @@ export default function Navbar(props) {
     };
 
     const mintMarauder = async () => {
-        await connectToMetaMask();
+        let address = await connectToMetaMask();
 
-        closeMenu();
-        handleShowMintMarauder();
+        if(address) {
+            closeMenu();
+            handleShowMintMarauder();
 
-        paymentMethodChange(inputsValues.paymentMethod);
+            paymentMethodChange(inputsValues.paymentMethod);
+        }
     };
 
     const styles = {

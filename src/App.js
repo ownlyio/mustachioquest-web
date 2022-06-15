@@ -30,9 +30,11 @@ import Footer from './components/Footer/Footer'
 import contract from './utils/contract'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
+import connectToMetaMaskEth  from './utils/connectToMetaMaskEth'
 
 import loading from './images/loading-mustachio.gif'
 import metamask from './images/metamask.png'
+import connectToMetaMask from "./utils/connectToMetaMask";
 
 // smooth scrolling for safari
 smoothscroll.polyfill()
@@ -82,22 +84,30 @@ export default function App() {
     // Initialize wallet address and network upon button click
     // Then mint afterwards
     const initUtilsAndMint = async () => {
-        const walletResponse = await getCurrentWalletConnected()
-        const networkResponse = await getCurrentNetwork()
-        setStatus(walletResponse.status)
-        setWallet(walletResponse.address)
-        setNetwork(networkResponse.network)
-        setNetStatus(networkResponse.netStatus)
+        // const walletResponse = await getCurrentWalletConnected()
+        // const networkResponse = await getCurrentNetwork()
+        // setStatus(walletResponse.status)
+        // setWallet(walletResponse.address)
+        // setNetwork(networkResponse.network)
+        // setNetStatus(networkResponse.netStatus)
+        //
+        // if (status === 1) {
+        //     // if (network === "rinkeby") {
+        //     if (network === "main") {
+        //         mintMustachio()
+        //     } else {
+        //         handleShowWrongNetwork()
+        //     }
+        // } else if (status === 0) {
+        //     handleShowMetamaskInstall()
+        // }
 
-        if (status === 1) {
-            // if (network === "rinkeby") {
-            if (network === "main") {
-                mintMustachio()
-            } else {
-                handleShowWrongNetwork()
-            }
-        } else if (status === 0) {
-            handleShowMetamaskInstall()
+        let address = await connectToMetaMaskEth();
+
+        if(address) {
+            setWallet(address)
+
+            mintMustachio()
         }
     }
 
@@ -287,9 +297,9 @@ export default function App() {
 
     return (
         <Router basename={process.env.PUBLIC_URL}>
-            <div className="position-fixed w-100" style={{"zIndex":"99999", "top":"0", "left":"0", "backgroundColor":"#ff9f42"}}>
-                <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>
-            </div>
+            {/*<div className="position-fixed w-100" style={{"zIndex":"99999", "top":"0", "left":"0", "backgroundColor":"#ff9f42"}}>*/}
+            {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
+            {/*</div>*/}
 
             <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
