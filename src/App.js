@@ -105,9 +105,7 @@ export default function App() {
         let address = await connectToMetaMaskEth();
 
         if(address) {
-            setWallet(address)
-
-            mintMustachio()
+            mintMustachio(address)
         }
     }
 
@@ -148,13 +146,13 @@ export default function App() {
     // };
 
     // Mint
-    const mintMustachio = async () => {
+    const mintMustachio = async (address) => {
         const lastId = await contract.methods.getLastMintedTokenId().call()
 
         if (lastId < 100) {
             const mintPrice = await contract.methods.getMintPrice().call()
             await contract.methods.mintMustachio().send({
-                from: walletAddress,
+                from: address,
                 value: mintPrice,
                 type: '0x2',
             })
