@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f4c412f.css",
-    "main.js": "/static/js/main.9f57aae7.js",
+    "main.css": "/static/css/main.609d4ddb.css",
+    "main.js": "/static/js/main.075922eb.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/Demo Day Video.mp4": "/static/media/Demo Day Video.7949018a6bf4271bfbb5.mp4",
     "static/media/marauder6.png": "/static/media/marauder6.024008206de21184ffa4.png",
     "static/media/marauder2.png": "/static/media/marauder2.0111b896b13730075e97.png",
     "static/media/marauder5.png": "/static/media/marauder5.809eb1e0e1af6e367bc5.png",
+    "static/media/pathfinder1.png": "/static/media/pathfinder1.ee664125c30d52626360.png",
+    "static/media/whatsup2.png": "/static/media/whatsup2.a008c351bbba07970073.png",
+    "static/media/pathfinder3.png": "/static/media/pathfinder3.99722e5dcc2736a1fd56.png",
+    "static/media/pathfinder6.png": "/static/media/pathfinder6.a6916be1f110b8777616.png",
+    "static/media/whatsup3.png": "/static/media/whatsup3.e5083a08254a587850b0.png",
     "static/media/marauder1.png": "/static/media/marauder1.eace662811a0da8bc9fd.png",
     "static/media/marauder3.png": "/static/media/marauder3.6f31bd6139aacb35d018.png",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
+    "static/media/pathfinder4.png": "/static/media/pathfinder4.dfc4bd6d41d46ff30993.png",
+    "static/media/pathfinder2.png": "/static/media/pathfinder2.63a5f5c7d61d1b990f4e.png",
+    "static/media/pathfinder5.png": "/static/media/pathfinder5.2c5edee57e348847f645.png",
     "static/media/marauder4.png": "/static/media/marauder4.4b90d0425da558fe83cd.png",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
+    "static/media/whatsup1.png": "/static/media/whatsup1.9cfcd0cb4c20347dc35a.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
     "static/media/gmfrens.png": "/static/media/gmfrens.bcc92fb2f3839657554b.png",
     "static/media/11-gif-slendie.png": "/static/media/11-gif-slendie.8ce94297e85ee873f566.png",
@@ -28,6 +37,7 @@
     "static/media/landscape.png": "/static/media/landscape.63f783530d4b6392419a.png",
     "static/media/KUSHO X MQ Mintlist Giveaway (1).jpg": "/static/media/KUSHO X MQ Mintlist Giveaway (1).f99447d63bb950516b29.jpg",
     "static/media/14-ninja.png": "/static/media/14-ninja.ae100e0f6b54525b0739.png",
+    "static/media/Rico-Grim2.jpg": "/static/media/Rico-Grim2.4e5d4271f15f87008f25.jpg",
     "static/media/12-abracadoobie.jpg": "/static/media/12-abracadoobie.990cd30bd025f83f2d47.jpg",
     "static/media/banner-portal.png": "/static/media/banner-portal.d2438956239e8bdbf9bd.png",
     "static/media/15-mountainwarrior.png": "/static/media/15-mountainwarrior.fc31070f778acccfe3ee.png",
@@ -144,12 +154,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.3f4c412f.css.map": "/static/css/main.3f4c412f.css.map",
-    "main.9f57aae7.js.map": "/static/js/main.9f57aae7.js.map",
+    "main.609d4ddb.css.map": "/static/css/main.609d4ddb.css.map",
+    "main.075922eb.js.map": "/static/js/main.075922eb.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f4c412f.css",
-    "static/js/main.9f57aae7.js"
+    "static/css/main.609d4ddb.css",
+    "static/js/main.075922eb.js"
   ]
 }
