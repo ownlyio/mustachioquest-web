@@ -39,7 +39,7 @@ export default function Table(props) {
                     <div className="col-12 col-sm-4">
                         <div className="mq-table-types">
                             <div className="mq-table-types-img">
-                                <img className="w-100" src={marauders} alt="Mustachio Marauders" />
+                                <img className="w-100" src={marauders} alt="Mustachio Pathfinders" />
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
@@ -72,7 +72,7 @@ export default function Table(props) {
                                 <tr className="font-size-70 font-size-md-100">
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Utilities and Perks</th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Pathfinders</th>
-                                    <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Marauders</th>
+                                    <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Pathfinders</th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Rascals</th>
                                 </tr>
                             </thead>
@@ -118,18 +118,6 @@ export default function Table(props) {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Discount when using $OWN token as payment</td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={greenCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                    <td className="text-center align-middle gotham-light text-white font-size-100">
-                                        <img src={goldCheck} alt="check" className="mq-table-check" />
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">Intricately Hand-drawn 2D PFP by Boii Mustache</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
@@ -148,6 +136,26 @@ export default function Table(props) {
                                         <img src={orangeCheck} alt="check" className="mq-table-check" />
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
+                                </tr>
+                                <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100"><a href="https://ownly.io/ar" target="_blank" className="text-white" rel="noreferrer">Augmented Reality Filter on Instagram</a></td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={greenCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
+                                </tr>
+                                <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">Discount when using $OWN token as payment</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={goldCheck} alt="check" className="mq-table-check" />
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">Exclusive Land Access within Mustachio Quest</td>
@@ -174,7 +182,7 @@ export default function Table(props) {
                                 {/*    <td className="text-center align-middle gotham-light text-white font-size-100"></td>*/}
                                 {/*</tr>*/}
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">The First <a href="https://tales.mustachioverse.com" className="link-color-2" target="_blank" rel="noreferrer">NFT Tales</a> Behind Each Mustachio</td>
+                                    <td className="align-middle gotham-light text-white font-size-100"><a href="https://tales.mustachioverse.com" className="link-color-2" target="_blank" rel="noreferrer">The First NFT Tales Behind Each Mustachio</a></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>

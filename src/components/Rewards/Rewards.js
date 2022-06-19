@@ -16,7 +16,7 @@ export default function Rewards() {
 
             <div className="d-block d-lg-none">
                 <div className="w-100 mb-3 mb-sm-4 mb-md-5">
-                    <img src={maraudersTab} className="w-100" alt="Mustachio Marauders 2D" />
+                    <img src={maraudersTab} className="w-100" alt="Mustachio PathfindersMarauders 2D" />
                 </div>
             </div>
 
@@ -45,7 +45,7 @@ export default function Rewards() {
                                 <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">MustachioVerse Land Sale Discount</p>
                             </li>
                             <li className="text-white">
-                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Maximum supply of only 200 Marauders</p>
+                                <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Maximum supply of only 200 Pathfinders</p>
                             </li>
                             <li className="text-white">
                                 <p className="text-white text-left gotham-light font-size-90 font-size-md-110 font-size-lg-120 mb-2">Exclusive Discord Channel</p>
@@ -57,7 +57,7 @@ export default function Rewards() {
                     </div>
                     <div className="d-none d-lg-block col-12 col-lg-7 mb-0 ps-5">
                         <div className="rewards-img">
-                            <img src={marauders} className="w-100" alt="Mustachio Marauders 2D" />
+                            <img src={marauders} className="w-100" alt="Mustachio Pathfinders 2D" />
                         </div>
                     </div>
                 </div>

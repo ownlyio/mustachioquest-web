@@ -488,8 +488,8 @@ export default function Roadmap() {
                         <div className="done q-content gotham-light text-black font-size-110">Closed Beta Testing for Genesis Holders</div>
                     </div>
                     <div className="q-column quarter-mr">
-                        <div className="now q-pointer"></div>
-                        <div className="now q-content gotham-light text-black font-size-110">Minting of Mustachio Marauder NFTs</div>
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Minting of Mustachio Marauder NFTs</div>
                     </div>
                 </div>
             </div>

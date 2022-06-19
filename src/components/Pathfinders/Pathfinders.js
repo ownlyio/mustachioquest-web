@@ -1,20 +1,18 @@
 // images
 import banner from '../../images/banner.jpg'
 import demoVideo from '../../images/Demo Day Video.mp4'
-import mechSuit from '../../images/marauders/Rico-Meka.jpg'
-import marauder1 from "../../images/marauders/marauder1.png";
-import marauder2 from "../../images/marauders/marauder3.png";
-import marauder3 from "../../images/marauders/marauder2.png";
-import marauder4 from "../../images/marauders/marauder4.png";
-import marauder5 from "../../images/marauders/marauder5.png";
-import marauder6 from "../../images/marauders/marauder6.png";
+import grim from '../../images/pathfinders/Rico-Grim2.jpg'
+import pathfinder1 from "../../images/pathfinders/pathfinder1.png";
+import pathfinder2 from "../../images/pathfinders/pathfinder2.png";
+import pathfinder3 from "../../images/pathfinders/pathfinder3.png";
+import pathfinder4 from "../../images/pathfinders/pathfinder4.png";
+import pathfinder5 from "../../images/pathfinders/pathfinder5.png";
+import pathfinder6 from "../../images/pathfinders/pathfinder6.png";
 import bordertop from "../../images/sneakpeek-top.png";
 import borderbot from "../../images/sneakpeek-bot.png";
-import mintlist1 from "../../images/marauders/MV_AntiStigma - Square.jpg";
-import mintlist2 from "../../images/marauders/MV_Cyboverse- Square.jpg";
-import mintlist3 from "../../images/marauders/KUSHO X MQ Mintlist Giveaway (1).jpg";
-import mintlist4 from "../../images/marauders/MV_FIN- Square.jpg";
-import mintlist5 from "../../images/marauders/MV_OldChap - Square.jpg";
+import whatsup1 from "../../images/pathfinders/whatsup1.png";
+import whatsup2 from "../../images/pathfinders/whatsup2.png";
+import whatsup3 from "../../images/pathfinders/whatsup3.png";
 import bordertl from "../../images/updates-tl.png";
 import bordertr from "../../images/updates-tr.png";
 import borderbl from "../../images/updates-bl.png";
@@ -28,76 +26,43 @@ import {faTimes} from "@fortawesome/free-solid-svg-icons";
 import marauders from "../../images/MQ_marauders.png";
 import {useState} from "react";
 
-export default function Pathfinders() {
+export default function Pathfinders(props) {
     const sneak = [
         {
             id: 0,
-            thumbnail: marauder1,
+            thumbnail: pathfinder1,
             link: "#",
             title: ""
         },
         {
             id: 1,
-            thumbnail: marauder2,
+            thumbnail: pathfinder2,
             link: "#",
             title: ""
         },
         {
             id: 2,
-            thumbnail: marauder3,
+            thumbnail: pathfinder3,
             link: "#",
             title: ""
         },
         {
             id: 3,
-            thumbnail: marauder4,
+            thumbnail: pathfinder4,
             link: "#",
             title: ""
         },
         {
             id: 4,
-            thumbnail: marauder5,
+            thumbnail: pathfinder5,
             link: "#",
             title: "",
         },
         {
             id: 5,
-            thumbnail: marauder6,
+            thumbnail: pathfinder6,
             link: "#",
             title: "",
-        }
-    ]
-
-    const mintlist = [
-        {
-            id: 0,
-            thumbnail: mintlist1,
-            link: "https://twitter.com/antistigmaNFT/status/1534145789655941120",
-            title: "Mintlist Giveaway with Anti-Stigma Society"
-        },
-        {
-            id: 1,
-            thumbnail: mintlist2,
-            link: "https://twitter.com/Cyboverse/status/1534399861818540033",
-            title: "Mintlist Giveaway with Cyboverse"
-        },
-        {
-            id: 2,
-            thumbnail: mintlist3,
-            link: "https://twitter.com/KUSHOWRLD/status/1534380046336806912",
-            title: "Mintlist Giveaway with Kusho"
-        },
-        {
-            id: 3,
-            thumbnail: mintlist4,
-            link: "https://twitter.com/FilipinasNFT/status/1534002456694517760",
-            title: "Mintlist Giveaway with Filipinas NFT"
-        },
-        {
-            id: 4,
-            thumbnail: mintlist5,
-            link: "https://twitter.com/OldChapClub/status/1534433190139400192",
-            title: "Mintlist Giveaway with Old Chap Club",
         }
     ]
 
@@ -126,13 +91,13 @@ export default function Pathfinders() {
 
                                 <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
 
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">As the Pathfinders (Genesis Mustachios) created the route and discovered the land of MustachioVerse, here comes the next generation of mustached adventurers called the Mustachio Pathfinders.</p>
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Pathfinders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">There are three archetypes of Mustachios in the land of MustachioVerse and the Genesis set from 1-100 are called Mustachio Pathfinders with a maximum supply of 100 Mustachio Pathfinder NFTs. These Pathfinders created the route and discovered the land of MustachioVerse in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant</a>.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Each Pathfinder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our mintlisted are called “Vigilantes”.</p>*/}
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</p>*/}
 
                                 <div className="text-center text-lg-start">
-                                    <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}} onClick={triggerMintButton}>MINT A MARAUDER</button>
+                                    <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}} onClick={props.mintBtn}>MINT A PATHFINDER</button>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +106,7 @@ export default function Pathfinders() {
                             <div className="ps-lg-4">
                                 <div className="mx-4 mx-sm-5 mx-lg-0 px-sm-5 px-lg-0">
                                     <div className="mx-md-5 mx-lg-0 px-md-5 px-lg-0">
-                                        <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + mechSuit + ")"}}>
+                                        <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + grim + ")"}}>
                                         </div>
                                     </div>
                                 </div>
@@ -152,9 +117,9 @@ export default function Pathfinders() {
 
                 <div className="background-image-cover py-5" style={{"backgroundImage":"url(" + banner + ")"}}>
                     <div className="container py-4">
-                        <p className="gotham-black text-center font-size-200 text-white mb-4">What do I get when I own a Marauder?</p>
+                        <p className="gotham-black text-center font-size-200 text-white mb-4">What do I get when I own a Pathfinder?</p>
 
-                        <div className="row py-5">
+                        <div className="row justify-content-center py-5">
                             <div className="col-lg-4 pb-4">
                                 <div className="card border-0 border-radius-0 h-100">
                                     <div className="card-body p-5">
@@ -205,21 +170,6 @@ export default function Pathfinders() {
                                     <div className="card-body p-5">
                                         <div className="d-flex justify-content-center mb-4">
                                             <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
-                                                <i className="fa-solid fa-tags font-size-180 text-white"></i>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-center fw-bold font-size-140">Use $OWN, Get a Discount</p>
-                                        <p className="text-center mb-0">You get 20% discount on our Mustachio Pathfinders when you use your $OWN tokens as payment. Got a mintlist slot? Even more! You get 40% off!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 pb-4">
-                                <div className="card border-0 border-radius-0 h-100">
-                                    <div className="card-body p-5">
-                                        <div className="d-flex justify-content-center mb-4">
-                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
                                                 <i className="fa-solid fa-pen-line font-size-180 text-white"></i>
                                             </div>
                                         </div>
@@ -244,6 +194,51 @@ export default function Pathfinders() {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-mobile-notch font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">Augmented Reality Filter on Instagram</p>
+                                        <p className="text-center mb-0">#CanYourJPEG immerse in your day-to-day activities? Well, these Mustachios can! Try out our <a href="https://ownly.io/ar" target="_blank" rel="noreferrer" className="link-color-1" >Mustachio filter on Instagram</a> to see ‘em dancing in IRL.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-mountains font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">Exclusive Land Access within Mustachio Quest</p>
+                                        <p className="text-center mb-0">Who doesn’t love VIPs-only places? Pathfinders get the privilege of access to a private land within Mustachio Quest where you can hang out together with other Pathfinders!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-book-open-cover font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">The First NFT Tales Behind Each Mustachio</p>
+                                        <p className="text-center mb-0">Join the Pathfinders in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="link-color-1" >The Sages Rant</a>, a book with 10 chapters that reveal the stories of the Pathfinders on their quest to find The Sages Rant Collectibles.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,8 +249,8 @@ export default function Pathfinders() {
                             <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">The Pathfinders Gallery</p>
                             { sneak.map(x => (
                                 <div className="col-12 col-sm-6 col-xl-4 mb-3" key={x.id}>
-                                    <div className="sneakpeek-thumbnail mb-3">
-                                        <img src={x.thumbnail} className="w-100" alt={x.title} />
+                                    <div className="sneakpeek-thumbnail mb-3 background-image-cover" style={{"background-image":"url('" + x.thumbnail + "')"}}>
+                                        {/*<img src={x.thumbnail} className="w-100" alt={x.title} />*/}
                                     </div>
                                     <p className="cursor-pointer mb-3">
                                         <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href={x.link} target="_blank" rel="noreferrer">
@@ -273,23 +268,48 @@ export default function Pathfinders() {
                 </section>
 
                 <section id="nft">
-                    <div className="container py-5">
+                    <div className="container pt-5">
                         <div className="row justify-content-center align-items-start">
                             <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">What is Up with the Pathfinders?</p>
-                            { mintlist.map(x => (
-                                <div className="col-12 col-sm-6 col-xl-4 mb-3 px-4" key={x.id}>
-                                    <a href={x.link} target="_blank" rel="noreferrer">
-                                        <div className="cursor-pointer mb-3">
-                                            <img src={x.thumbnail} className="w-100" alt={x.title} />
-                                        </div>
+
+                            <div className="col-12 col-sm-6 col-xl-4 mb-3 px-4">
+                                <a href="https://medium.com/ownlyio/mustachio-quest-updates-4-closed-testing-with-genesis-holders-c8984693605d" target="_blank" rel="noreferrer">
+                                    <div className="cursor-pointer mb-3">
+                                        <img src={whatsup1} className="w-100" alt="Mustachio Quest Updates #4: Closed Testing with Genesis Holders" />
+                                    </div>
+                                </a>
+                                <p className="cursor-pointer text-center mb-3">
+                                    <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href="https://medium.com/ownlyio/mustachio-quest-updates-4-closed-testing-with-genesis-holders-c8984693605d" target="_blank" rel="noreferrer">
+                                        Mustachio Quest Updates #4: Closed Testing with Genesis Holders
                                     </a>
-                                    <p className="cursor-pointer text-center mb-3">
-                                        <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href={x.link} target="_blank" rel="noreferrer">
-                                            {x.title}
-                                        </a>
-                                    </p>
-                                </div>
-                            ))}
+                                </p>
+                            </div>
+
+                            <div className="col-12 col-sm-6 col-xl-4 mb-3 px-4">
+                                <a href="https://twitter.com/ownlyio/status/1513403976749879301" target="_blank" rel="noreferrer">
+                                    <div className="cursor-pointer mb-3">
+                                        <img src={whatsup2} className="w-100" alt="3D Mustachio Pathfinders are now complete!" />
+                                    </div>
+                                </a>
+                                <p className="cursor-pointer text-center mb-3">
+                                    <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href="https://twitter.com/ownlyio/status/1513403976749879301" target="_blank" rel="noreferrer">
+                                        3D Mustachio Pathfinders are now complete!
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div className="col-12 col-sm-6 col-xl-4 mb-3 px-4">
+                                <a href="https://twitter.com/hashtag/CanYourJPEG" target="_blank" rel="noreferrer">
+                                    <div className="cursor-pointer mb-3">
+                                        <img src={whatsup3} className="w-100" alt="The #CanYourJPEG game has started and the Pathfinders are winning!" />
+                                    </div>
+                                </a>
+                                <p className="cursor-pointer text-center mb-3">
+                                    <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href="https://twitter.com/hashtag/CanYourJPEG" target="_blank" rel="noreferrer">
+                                        The #CanYourJPEG game has started and the Pathfinders are winning!
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -321,18 +341,19 @@ export default function Pathfinders() {
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="flush-header-2">
                                     <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-2">
-                                        How do I get a Mustachio Marauder?
+                                        How do I get a Mustachio Pathfinder?
                                     </button>
                                 </h2>
                                 <div id="flush-collapse-2" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
-                                        <p className="font-size-120">To get a Mustachio Marauder NFT:</p>
+                                        <p className="font-size-120">To get a Mustachio Pathfinder NFT:</p>
                                         <ol>
-                                            <li className="font-size-120 gotham-light">Click MINT NOW at the upper right corner of the Navigation Menu.</li>
-                                            <li className="font-size-120 gotham-light">Connect your MetaMask wallet (BNB Chain Network).</li>
-                                            <li className="font-size-120 gotham-light">Mint your Mustachio Marauder and pay the gas fee.</li>
-                                            <li className="font-size-120 gotham-light">Check your <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market/" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Marauder.</li>
+                                            <li className="font-size-120 gotham-light">Click MINT NOW at the <a className="font-size-100 gotham-light link-color-1" href="#nft" target="_blank">Archetypes Table in the Home Page</a>.</li>
+                                            <li className="font-size-120 gotham-light">Connect your MetaMask wallet (Ethereum Network).</li>
+                                            <li className="font-size-120 gotham-light">Mint your Mustachio Pathfinder and pay the gas fee.</li>
+                                            <li className="font-size-120 gotham-light">Check your OpenSea or  <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market/" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Pathfinder.</li>
                                         </ol>
+                                        <a className="font-size-120 gotham-light link-color-1" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Click here for a more detailed instruction.</a>
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +377,7 @@ export default function Pathfinders() {
                                 </h2>
                                 <div id="flush-collapse-4" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
-                                        <p className="font-size-120 gotham-light">Since the Mustachio Pathfinders are intricately hand-drawn by Boii Mustache, we only have a <span className="fw-bold">limited supply of 200 Mustachio Pathfinders</span> available for minting.</p>
+                                        <p className="font-size-120 gotham-light">Since the Mustachio Pathfinders are intricately hand-drawn by Boii Mustache, we only have a <span className="fw-bold">limited supply of 100 Mustachio Pathfinders</span> available for minting. As of June 19, 2022, we have remaining 17 Mustachio Pathfinders left.</p>
                                     </div>
                                 </div>
                             </div>
@@ -381,30 +402,21 @@ export default function Pathfinders() {
                                 </h2>
                                 <div id="flush-collapse-5" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
-                                        <p className="font-size-120 gotham-light">A Mustachio Marauder costs around 5 million worth of OWN in BNB if you pay in full price. If you purchase using $OWN token, you automatically get 20% off. If you received a mintlist slot from us, you get 40% discount when you use $OWN.</p>
-
-                                        <ul>
-                                            <li className="font-size-120 gotham-light">Original Price: 5 Million OWN</li>
-                                            <li className="font-size-120 gotham-light">Public Sale: 20% OFF or 4 Million OWN</li>
-                                            <li className="font-size-120 gotham-light">Mintlisted/Vigilantes: 40% OFF or 3 Million OWN</li>
-                                        </ul>
+                                        <p className="font-size-120 gotham-light">A Mustachio Pathfinder costs 0.4 ETH if you pay in full price. Since the Pathfinders are available in the Ethereum Network, there are no discounts when you use $OWN as payment.</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="flush-header-7">
                                     <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-7">
-                                        Where can I get OWN tokens?
+                                        Why is the gas fee so high?
                                     </button>
                                 </h2>
                                 <div id="flush-collapse-7" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
-                                        <p className="font-size-120 gotham-light">$OWN is available in the following exchanges:</p>
-
-                                        <ul>
-                                            <li className="font-size-120 gotham-light">OWN-BNB on SparkSwap: <a href="https://ownly.io/swap" className="link-color-1">https://ownly.io/swap</a></li>
-                                            <li className="font-size-120 gotham-light">OWN-BUSD on PancakeSwap: <a href="https://ownly.io/pancake" className="link-color-1">https://ownly.io/pancake</a></li>
-                                        </ul>
+                                        <p className="font-size-120 gotham-light">A gas fee is required to execute transactions within the Ethereum network. If your gas fee is high, you can try to lower your gas fees in your transaction settings. The lower the gas fee, the longer it takes for the transactions to process.</p>
+                                        <p className="font-size-120 gotham-light">Here’s the Etherscan link to our previously minted Mustachios for your reference on our past transactions: <a href="https://etherscan.io/address/0x9e7a3a2e0c60c70efc115bf03e6c544ef07620e5" className="link-color-1" target="_blank" rel="noreferrer">https://etherscan.io/address/0x9e7a3a2...c544ef07620e5</a></p>
+                                        <p className="font-size-120 gotham-light">You can also monitor gas prices daily as they fluctuate here: <a href="https://ethgasstation.info/index.php" className="link-color-1" target="_blank" rel="noreferrer">https://ethgasstation.info/index.php</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -448,8 +460,8 @@ export default function Pathfinders() {
 
                 <section id="cta">
                     <div className="container text-center py-4">
-                        <p className="gotham-black text-color-1 font-size-150 mb-5 px-lg-5">Mint your Mustachio Marauder and get your own 3D Playable Character for our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
-                        <button className="btn btn-custom-2 gotham-black font-size-140" onClick={triggerMintButton}>MINT NOW</button>
+                        <p className="gotham-black text-color-1 font-size-150 mb-5 px-lg-5">Mint your Mustachio Pathfinder and get your own 3D Playable Character for our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                        <button className="btn btn-custom-2 gotham-black font-size-140" onClick={props.mintBtn}>MINT NOW</button>
                     </div>
                 </section>
             </section>

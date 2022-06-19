@@ -399,17 +399,23 @@ export default function Navbar(props) {
                             <Dropdown.Toggle className="text-decoration-none font-size-lg-90 font-size-xxl-100" variant="link" id="dropdown-basic" style={{"color":"black"}}>ARCHETYPES</Dropdown.Toggle>
 
                             <Dropdown.Menu className="pe-2">
-                                {/*<Dropdown.Item href="/pathfinders">Pathfindes</Dropdown.Item>*/}
+                                <Dropdown.Item href="/pathfinders"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;PATHFINDERS</Dropdown.Item>
                                 <Dropdown.Item href="/marauders"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;MARAUDERS</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
+                    </li>
+                    <li className="px-0 px-xxl-2">
+                        <Dropdown>
+                            <Dropdown.Toggle className="text-decoration-none font-size-lg-90 font-size-xxl-100" variant="link" id="dropdown-basic" style={{"color":"black"}}>FEATURES</Dropdown.Toggle>
 
-                        {/*<button className="btn btn-link text-decoration-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{"color":"black"}}>ARCHETYPES</button>*/}
-                        {/*<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">*/}
-                        {/*    <li><a className="dropdown-item" href="#">Action</a></li>*/}
-                        {/*    <li><a className="dropdown-item" href="#">Another action</a></li>*/}
-                        {/*    <li><a className="dropdown-item" href="#">Something else here</a></li>*/}
-                        {/*</ul>*/}
+                            <Dropdown.Menu className="pe-2">
+                                <Dropdown.Item href="https://mustachio.quest" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;CLOSED BETA TESTING</Dropdown.Item>
+                                <Dropdown.Item href="https://my.mustachioverse.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;NFT VISUALIZER</Dropdown.Item>
+                                <Dropdown.Item href="https://mustachioverse.com/discord" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;DISCORD CHANNEL</Dropdown.Item>
+                                <Dropdown.Item href="https://ownly.io/ar" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
+                                <Dropdown.Item href="https://tales.mustahioverse.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#updates" scroll={el => scrollWithOffset(el)}>UPDATES</HashLink>
@@ -429,9 +435,9 @@ export default function Navbar(props) {
                     {/* <li>
                         <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)}>REWARDS</HashLink>
                     </li> */}
-                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)}>VISUALIZER</HashLink>
-                    </li>
+                    {/*<li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">*/}
+                    {/*    <HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)}>VISUALIZER</HashLink>*/}
+                    {/*</li>*/}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
                     </li>
@@ -461,12 +467,24 @@ export default function Navbar(props) {
                         </Link>
                     </div>
 
-                    <Dropdown style={{"zIndex":"9999999999999"}}>
-                        <Dropdown.Toggle className="text-decoration-none font-size-100 ps-0" variant="link" id="dropdown-basic" style={{"color":"black"}}>ARCHETYPES</Dropdown.Toggle>
+                    <Dropdown style={{"zIndex":"100"}}>
+                        <Dropdown.Toggle className="text-decoration-none font-size-100 ps-0 py-0" variant="link" id="dropdown-basic" style={{"color":"black"}}>ARCHETYPES</Dropdown.Toggle>
 
                         <Dropdown.Menu className="pe-2" >
-                            {/*<Dropdown.Item href="/pathfinders">Pathfindes</Dropdown.Item>*/}
+                            <Dropdown.Item href="/pathfinders" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;PATHFINDERS</Dropdown.Item>
                             <Dropdown.Item href="/marauders" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;MARAUDERS</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+
+                    <Dropdown style={{"zIndex":"99"}}>
+                        <Dropdown.Toggle className="text-decoration-none font-size-100 ps-0 py-0" variant="link" id="dropdown-basic" style={{"color":"black"}}>FEATURES</Dropdown.Toggle>
+
+                        <Dropdown.Menu className="pe-2">
+                            <Dropdown.Item href="https://mustachio.quest" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;CLOSED BETA TESTING</Dropdown.Item>
+                            <Dropdown.Item href="https://my.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;NFT VISUALIZER</Dropdown.Item>
+                            <Dropdown.Item href="https://mustachioverse.com/discord" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;DISCORD CHANNEL</Dropdown.Item>
+                            <Dropdown.Item href="https://ownly.io/ar" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
+                            <Dropdown.Item href="https://tales.mustahioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
 
@@ -476,7 +494,7 @@ export default function Navbar(props) {
                     <HashLink smooth to="/#progress" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">PROGRESS</HashLink>
                     <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
                     {/* <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink> */}
-                    <HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>
+                    {/*<HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>*/}
                     <HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
                     <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                         BETA TEST
@@ -510,7 +528,7 @@ export default function Navbar(props) {
 
                         <div className="col-sm-6">
                             <div className="p-3 cursor-pointer select-mustachio-to-mint" style={{"border":"2px solid white", "borderRadius":"10px"}}  onClick={mintMarauder}>
-                                <img className="w-100 mt-2" src={marauders} alt="Mustachio Marauders" />
+                                <img className="w-100 mt-2" src={marauders} alt="Mustachio Pathfinders" />
                             </div>
                         </div>
                     </div>
@@ -568,7 +586,7 @@ export default function Navbar(props) {
                     </div>
 
                     <div className="text-center pt-4">
-                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Marauders" />
+                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Pathfinders" />
                     </div>
 
                     <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-140 px-md-5 pt-3 mb-1">Congratulations!</p>
