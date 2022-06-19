@@ -122,12 +122,12 @@ export default function Pathfinders() {
                     <div className="row align-items-center py-5">
                         <div className="col-lg-8 order-1 order-lg-0">
                             <div className="pe-lg-3">
-                                <p className="gotham-black text-center text-lg-start font-size-240 font-size-md-270 mb-4">What are the Pathfinders?</p>
+                                <p className="gotham-black text-center text-lg-start font-size-240 font-size-md-270 mb-4">What are the Marauders?</p>
 
                                 <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
 
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">As the Pathfinders (Genesis Mustachios) created the route and discovered the land of MustachioVerse, here comes the next generation of mustached adventurers called the Mustachio Pathfinders.</p>
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Pathfinders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">As the Pathfinders (Genesis Mustachios) created the route and discovered the land of MustachioVerse, here comes the next generation of mustached adventurers called the Mustachio Marauders.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Marauders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our mintlisted are called “Vigilantes”.</p>*/}
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</p>*/}
 
@@ -210,7 +210,7 @@ export default function Pathfinders() {
                                         </div>
 
                                         <p className="text-center fw-bold font-size-140">Use $OWN, Get a Discount</p>
-                                        <p className="text-center mb-0">You get 20% discount on our Mustachio Pathfinders when you use your $OWN tokens as payment. Got a mintlist slot? Even more! You get 40% off!</p>
+                                        <p className="text-center mb-0">You get 20% discount on our Mustachio Marauders when you use your $OWN tokens as payment. Got a mintlist slot? Even more! You get 40% off!</p>
                                     </div>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@ export default function Pathfinders() {
                 <section id="progress">
                     <div className="container py-5">
                         <div className="row justify-content-center align-items-start">
-                            <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">The Pathfinders Gallery</p>
+                            <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">The Marauders Gallery</p>
                             { sneak.map(x => (
                                 <div className="col-12 col-sm-6 col-xl-4 mb-3" key={x.id}>
                                     <div className="sneakpeek-thumbnail mb-3">
@@ -275,7 +275,7 @@ export default function Pathfinders() {
                 <section id="nft">
                     <div className="container py-5">
                         <div className="row justify-content-center align-items-start">
-                            <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">What is Up with the Pathfinders?</p>
+                            <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">What is Up with the Marauders?</p>
                             { mintlist.map(x => (
                                 <div className="col-12 col-sm-6 col-xl-4 mb-3 px-4" key={x.id}>
                                     <a href={x.link} target="_blank" rel="noreferrer">
@@ -314,7 +314,7 @@ export default function Pathfinders() {
                                 <div id="flush-collapse-1" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
                                         <p className="font-size-120 gotham-light">The Mustachios are the first-ever NFT Tales to be told in the NFT industry. Intricately hand-drawn by the talented Boii Mustache, it took the artist years in the making to actualize the idea of being whatever you want to be, in a land of mustached beings. Now, the concept is solidified through our play-and-earn game, Mustachio Quest, where our Mustachio holders can fulfill quests in an open world NFT game as their 3D Mustachio avatar.</p>
-                                        <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called Mustachio Pathfinders. Our second generation of Mustachios from 101-300 are called Mustachio Pathfinders. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
+                                        <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called <a className="font-size-100 gotham-light link-color-1" href="https://mustachioverse.com/pathfinders">Mustachio Pathfinders</a>. Our second generation of Mustachios from 101-300 are called <a className="font-size-100 gotham-light link-color-1" href="https://mustachioverse.com/marauders">Mustachio Marauders</a>. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
                                     </div>
                                 </div>
                             </div>
@@ -351,12 +351,12 @@ export default function Pathfinders() {
                             <div className="accordion-item">
                                 <h2 className="accordion-header" id="flush-header-4">
                                     <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-4">
-                                        How many Mustachio Pathfinders are there?
+                                        How many Mustachio Marauders are there?
                                     </button>
                                 </h2>
                                 <div id="flush-collapse-4" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
-                                        <p className="font-size-120 gotham-light">Since the Mustachio Pathfinders are intricately hand-drawn by Boii Mustache, we only have a <span className="fw-bold">limited supply of 200 Mustachio Pathfinders</span> available for minting.</p>
+                                        <p className="font-size-120 gotham-light">Since the Mustachio Marauders are intricately hand-drawn by Boii Mustache, we only have a <span className="fw-bold">limited supply of 200 Mustachio Marauders</span> available for minting.</p>
                                     </div>
                                 </div>
                             </div>
@@ -434,7 +434,7 @@ export default function Pathfinders() {
                                 <div id="flush-collapse-9" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
                                         <p className="font-size-120 gotham-light">There are so many possibilities on how you can make use of your Mustachio!</p>
-                                        <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Pathfinders, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
+                                        <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Marauders, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
                                         <p className="font-size-120 gotham-light">Aside from partaking in our play-and-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/?collection=the-sages-rant-collectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
                                     </div>
                                 </div>
@@ -461,7 +461,7 @@ export default function Pathfinders() {
                     </div>
 
                     <div className="text-center pt-4">
-                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Pathfinders" />
+                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Marauders" />
                     </div>
 
                     <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-140 px-md-5 pt-3 mb-4">Minting is not yet available.</p>

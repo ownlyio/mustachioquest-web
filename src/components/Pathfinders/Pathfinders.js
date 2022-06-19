@@ -204,7 +204,7 @@ export default function Pathfinders(props) {
                                             </div>
                                         </div>
 
-                                        <p className="text-center fw-bold font-size-140">Augmented Reality Filter on Instagram</p>
+                                        <p className="text-center fw-bold font-size-140">Augmented Reality Filter</p>
                                         <p className="text-center mb-0">#CanYourJPEG immerse in your day-to-day activities? Well, these Mustachios can! Try out our <a href="https://ownly.io/ar" target="_blank" rel="noreferrer" className="link-color-1" >Mustachio filter on Instagram</a> to see ‘em dancing in IRL.</p>
                                     </div>
                                 </div>
@@ -219,7 +219,7 @@ export default function Pathfinders(props) {
                                             </div>
                                         </div>
 
-                                        <p className="text-center fw-bold font-size-140">Exclusive Land Access within Mustachio Quest</p>
+                                        <p className="text-center fw-bold font-size-140">Exclusive Land Access</p>
                                         <p className="text-center mb-0">Who doesn’t love VIPs-only places? Pathfinders get the privilege of access to a private land within Mustachio Quest where you can hang out together with other Pathfinders!</p>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@ export default function Pathfinders(props) {
                                             </div>
                                         </div>
 
-                                        <p className="text-center fw-bold font-size-140">The First NFT Tales Behind Each Mustachio</p>
+                                        <p className="text-center fw-bold font-size-140">The First-Ever NFT Tales</p>
                                         <p className="text-center mb-0">Join the Pathfinders in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="link-color-1" >The Sages Rant</a>, a book with 10 chapters that reveal the stories of the Pathfinders on their quest to find The Sages Rant Collectibles.</p>
                                     </div>
                                 </div>
@@ -334,7 +334,7 @@ export default function Pathfinders(props) {
                                 <div id="flush-collapse-1" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                                     <div className="accordion-body">
                                         <p className="font-size-120 gotham-light">The Mustachios are the first-ever NFT Tales to be told in the NFT industry. Intricately hand-drawn by the talented Boii Mustache, it took the artist years in the making to actualize the idea of being whatever you want to be, in a land of mustached beings. Now, the concept is solidified through our play-and-earn game, Mustachio Quest, where our Mustachio holders can fulfill quests in an open world NFT game as their 3D Mustachio avatar.</p>
-                                        <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called Mustachio Pathfinders. Our second generation of Mustachios from 101-300 are called Mustachio Pathfinders. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
+                                        <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called <a className="font-size-100 gotham-light link-color-1" href="https://mustachioverse.com/pathfinders">Mustachio Pathfinders</a>. Our second generation of Mustachios from 101-300 are called <a className="font-size-100 gotham-light link-color-1" href="https://mustachioverse.com/marauders">Mustachio Marauders</a>. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
                                     </div>
                                 </div>
                             </div>
