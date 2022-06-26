@@ -20,6 +20,7 @@ import Table from './components/Table/Table'
 import Gmfrens from './components/Gmfrens/Gmfrens'
 import Pathfinders from './components/Pathfinders/Pathfinders'
 import Marauders from './components/Marauders/Marauders'
+import AR from './components/AR/AR'
 // import Rewards from './components/Rewards/Rewards'
 import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
@@ -322,6 +323,9 @@ export default function App() {
                 </Route>
                 <Route exact path="/marauders">
                     <Marauders />
+                </Route>
+                <Route exact path="/ar">
+                    <AR />
                 </Route>
             </Switch>
             <Footer />

@@ -412,7 +412,7 @@ export default function Navbar(props) {
                                 <Dropdown.Item href="https://mustachio.quest" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;CLOSED BETA TESTING</Dropdown.Item>
                                 <Dropdown.Item href="https://my.mustachioverse.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;NFT VISUALIZER</Dropdown.Item>
                                 <Dropdown.Item href="https://mustachioverse.com/discord" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;DISCORD CHANNEL</Dropdown.Item>
-                                <Dropdown.Item href="https://ownly.io/ar" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
+                                <Dropdown.Item href="/ar"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
                                 <Dropdown.Item href="https://tales.mustahioverse.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
@@ -483,8 +483,8 @@ export default function Navbar(props) {
                             <Dropdown.Item href="https://mustachio.quest" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;CLOSED BETA TESTING</Dropdown.Item>
                             <Dropdown.Item href="https://my.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;NFT VISUALIZER</Dropdown.Item>
                             <Dropdown.Item href="https://mustachioverse.com/discord" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;DISCORD CHANNEL</Dropdown.Item>
-                            <Dropdown.Item href="https://ownly.io/ar" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
-                            <Dropdown.Item href="https://tales.mustahioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
+                            <Dropdown.Item href="https://mustachioverse.com/ar" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
+                            <Dropdown.Item href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
 
