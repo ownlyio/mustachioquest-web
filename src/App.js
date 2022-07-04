@@ -21,6 +21,7 @@ import Gmfrens from './components/Gmfrens/Gmfrens'
 import Pathfinders from './components/Pathfinders/Pathfinders'
 import Marauders from './components/Marauders/Marauders'
 import AR from './components/AR/AR'
+import ARSection from './components/ARSection/ARSection'
 // import Rewards from './components/Rewards/Rewards'
 import Visualizer from './components/Visualizer/Visualizer'
 import FAQ from './components/FAQ/FAQ'
@@ -37,6 +38,7 @@ import connectToMetaMaskEth  from './utils/connectToMetaMaskEth'
 import loading from './images/loading-mustachio.gif'
 import metamask from './images/metamask.png'
 import connectToMetaMask from "./utils/connectToMetaMask";
+import Ar from "./components/AR/AR";
 
 // smooth scrolling for safari
 smoothscroll.polyfill()
@@ -313,6 +315,7 @@ export default function App() {
                     <Table mintBtn={initUtilsAndMint} />
                     {/* <Rewards /> */}
                     <Visualizer />
+                    <ARSection />
                     <Gmfrens />
                     <FAQ />
                     <CTA />

@@ -1,3 +1,5 @@
+import './AR.css'
+
 // images
 import fighters from '../../images/ar/Fighters.png'
 import fighters2 from '../../images/ar/Fighters 2.png'
@@ -26,6 +28,7 @@ import arCandyfloss from '../../images/ar/ar-candyfloss.mp4'
 import arGrim from '../../images/ar/ar-grim.mp4'
 import arCheetah from '../../images/ar/ar-cheetah.mp4'
 import arSlendie from '../../images/ar/ar-slendie.mp4'
+import imgAR from "../../images/ar/AR.gif";
 
 export default function Ar() {
     const batches = [
@@ -36,7 +39,7 @@ export default function Ar() {
             description: "Try out Mexico, Slendie, Squarehead, Abracadoobie, Grim, Loonywise, Sludgie and Candy Floss."
         }, {
             image: mustachioTime,
-            link: "https://www.instagram.com/ar/3647206415601903/?ch=OTRhMjEyODdiYTc1MThlMzk4MGRmMmRkNmViNmMzYzg%3D",
+            link: "https://www.instagram.com/ar/351165700431866",
             title: "Mustachio Time",
             description: "Try out Dwinn, BubbleGum, Gamer Boi, King Stellar, Lich King, Magic Man, Marci, Peppermint Butler and Simone."
         }, {
@@ -46,7 +49,7 @@ export default function Ar() {
             description: "Try out Shoko, Candy Cane, Rench, Ghost Clarence, Penny, Door Keeper, Dummy, Lisby and Spirit Dream."
         }, {
             image: horrorIcons,
-            link: "https://www.instagram.com/ar/405341651609113/?ch=ODQwOWQ2OWZhMmIzZGIzY2JlODQzNzA3NzQyMmEyMzU%3D",
+            link: "https://www.instagram.com/ar/532090108612350/",
             title: "Horror Icons",
             description: "Try out Shucks, DaKu, Eddie Crog, Frankie Stan, Jason D Killer, Leather Face, Ghostface, Creepy Strawhat and Scare Crow."
         }, {
@@ -86,27 +89,27 @@ export default function Ar() {
             description: "Try out Bandwip, Bacon Prince, Jungle, King Hobgoblin, Lizzard Prince, Lullaby, Nightmare, Pan Cake Prince and Pulsar."
         }, {
             image: fighters,
-            link: "https://www.instagram.com/ar/1988371968179652/?ch=YzhlM2Q3ODM5NWQ4MzVhNjc3ZGE0ZDRlNDEyYWMyZTM%3D",
+            link: "https://www.instagram.com/ar/566589575081776/",
             title: "Fighters",
             description: "Try out Frontline, Dark Knight, Forest Lord, Forest Warrior, Mountain Warrior and Mountain Warrior 2."
         }, {
             image: fighters2,
-            link: "https://www.instagram.com/ar/3235759223413103/?ch=ZWU0ZmEzMTcyNWU4YmU1ODMzMmU5NWVmNjE4MzU5NzA%3D",
+            link: "https://www.instagram.com/ar/566589575081776/",
             title: "Fighters 2",
             description: "Try out Fishman Prince, Forest Medic, Forest Ranger, Gladiator, Igorot, Jedi, Midas, Royal Gladiator and Warrior."
         }, {
             image: hobbyists,
-            link: "https://www.instagram.com/ar/4943436532435241/?ch=OWI0M2RmYTRjYmU2NGU4MWQ0N2ZlNTgwOTM1MmYwNmE%3D",
+            link: "https://www.instagram.com/ar/1093172514953420/",
             title: "Hobbyists",
             description: "Try out Bird Watcher, Farm Man Afro, Gardener, Grave Keeper, Guitar Man, Hatcher, Insurance Man, Mushroom Picker and Paper Plane Maker."
         }, {
             image: players,
-            link: "https://www.instagram.com/ar/722196479018570/?ch=N2U3NWE0NTIyOTYyYzgxNjhjNWMzN2NkMzNlOTAzNjk%3D",
+            link: "https://www.instagram.com/ar/445360823648781/",
             title: "Players",
             description: "Try out Football Player 26, Hip Hop and Ice Hockey Player."
         }, {
             image: weirdos,
-            link: "https://www.instagram.com/ar/1044915986414404/?ch=MjU2M2UyMDJhODA0MmZkNmNiMWNjOTVlMjM5MmNlZWQ%3D",
+            link: "https://www.instagram.com/ar/1062796600994936/",
             title: "Weirdos",
             description: "Try out Alien, Chee, Cheesy Hair, Dino Hoodie, Elvi, Humanoid, Jester, Mech Suit and Merchant."
         }
@@ -114,6 +117,33 @@ export default function Ar() {
 
     return (
         <div>
+            <section className="position-relative overflow-hidden py-5" id="ar" style={{"background-color":"#008080"}}>
+                <div className="container pb-5">
+                    <div className="row align-items-center mt-3 mb-5 py-lg-5">
+                        <div className="col-lg-5 mb-4 mb-lg-0">
+                            <div className="px-sm-5 px-lg-0 mx-3 mx-sm-5 mx-lg-0 mb-3">
+                                <img src={imgAR} className="w-100" alt="Augmented Reality" />
+                            </div>
+                        </div>
+
+                        <div className="col-lg-7">
+                            <div className="ps-lg-5 mb-4 mb-lg-0 pb-lg-0">
+                                <h2 className="text-white text-center text-lg-start fw-bold font-size-xl-250 font-size-xxl-300 mb-4 pb-2">Augmented Reality Filter</h2>
+                                <p className="text-white text-center text-lg-start font-size-xl-130 mb-4">#CanYourJPEG immerse in your day-to-day activities? Well, these Mustachios can! Try out our <a href="#filters" className="link-color-2" >Mustachio filter on Instagram</a> to see ‘em dancing in IRL.</p>
+                                <p className="text-white text-center text-lg-start font-size-xl-130 mb-4">Over 100 Mustachios have been loaded so you can see your very own Mustachios in action.</p>
+                                <p className="text-white text-center text-lg-start font-size-xl-130 mb-4 pb-3">Make sure you use the hashtag #CanYourJPEG so we can track your entries and have them featured on our website and social media platforms.</p>
+
+                                <div className="text-center text-lg-start">
+                                    <a href="#filters" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-130 px-4">TRY THEM OUT NOW!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <img src={borderbot} className="sneakpeek-border sneakpeek-bot" alt="Border Bottom" />
+            </section>
+
             <section id="first-section" style={{"backgroundImage": `url(${mainbanner})`}}>
                 <div className="container">
                     <div className="py-5">
@@ -172,9 +202,9 @@ export default function Ar() {
                 </div>
             </section>
 
-            <section id="progress" style={{"paddingTop":"100px!important"}}>
-                <div className="container">
-                    <h1 className="gotham-black text-center text-white mt-0">AR FILTERS</h1>
+            <section className="overflow-hidden position-relative" id="filters" style={{"paddingTop":"100px!important", "background-color":"#008080"}}>
+                <div className="container my-5 py-5">
+                    <h1 className="gotham-black text-center text-white mt-5">AR FILTERS</h1>
 
                     <div className="row justify-content-center py-5">
                         { batches.map(x => (
@@ -185,8 +215,16 @@ export default function Ar() {
                                             <img src={x.image} className="w-100"/>
                                         </a>
                                     </div>
+
                                     <p className="neo-bold text-center font-size-130 text-white fw-bold">{x.title}</p>
-                                    <p className="text-center text-white">{x.description}</p>
+
+                                    <div className="d-flex align-items-center mb-4 ar-description">
+                                        <p className="text-center text-white mb-0">{x.description}</p>
+                                    </div>
+
+                                    <div className="text-center mb-4">
+                                        <a href={x.link} className="btn btn-custom-2 px-5" style={{"width":"initial"}}>Try Filter</a>
+                                    </div>
                                 </div>
                             </div>
                         ))}
