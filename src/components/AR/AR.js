@@ -129,7 +129,7 @@ export default function Ar() {
                         <div className="col-lg-7">
                             <div className="ps-lg-5 mb-4 mb-lg-0 pb-lg-0">
                                 <h2 className="text-white text-center text-lg-start fw-bold font-size-xl-250 font-size-xxl-300 mb-4 pb-2">Augmented Reality Filter</h2>
-                                <p className="text-white text-center text-lg-start font-size-xl-130 mb-4">#CanYourJPEG immerse in your day-to-day activities? Well, these Mustachios can! Try out our <a href="#filters" className="link-color-2" >Mustachio filter on Instagram</a> to see ‘em dancing in IRL.</p>
+                                <p className="text-white text-center text-lg-start font-size-xl-130 mb-4">#CanYourJPEG immerse in your day-to-day activities? Well, these Mustachios can! Try out our <a href="#filters" className="link-color-2" >Mustachio filter on Instagram</a> to see ‘em dancing IRL.</p>
                                 <p className="text-white text-center text-lg-start font-size-xl-130 mb-4">Over 100 Mustachios have been loaded so you can see your very own Mustachios in action.</p>
                                 <p className="text-white text-center text-lg-start font-size-xl-130 mb-4 pb-3">Make sure you use the hashtag #CanYourJPEG so we can track your entries and have them featured on our website and social media platforms.</p>
 
