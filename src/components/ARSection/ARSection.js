@@ -1,7 +1,7 @@
 import './ARSection.css'
 
 // images
-import imgAR from "../../images/ar/AR.gif";
+import videoAR from "../../images/ar/AR.mp4";
 
 import bordertop from '../../images/sneakpeek-top.png'
 import borderbot from '../../images/sneakpeek-bot.png'
@@ -13,7 +13,11 @@ export default function ARSection() {
                 <div className="row align-items-center my-5 py-lg-5">
                     <div className="col-lg-5 mb-4 mb-lg-0">
                         <div className="px-sm-5 px-lg-0 mx-3 mx-sm-5 mx-lg-0 mb-3">
-                            <img src={imgAR} className="w-100" alt="Augmented Reality" />
+                            <div className="d-flex justify-content-center align-items-center w-100 h-100">
+                                <video autoPlay loop muted preload className="h-100">
+                                    <source src={videoAR} type="video/mp4" />
+                                </video>
+                            </div>
                         </div>
                     </div>
 
