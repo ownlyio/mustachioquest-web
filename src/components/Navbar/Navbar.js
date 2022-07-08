@@ -404,7 +404,7 @@ export default function Navbar(props) {
                             </Dropdown.Menu>
                         </Dropdown>
                     </li>
-                    <li className="px-0 px-xxl-2">
+                    {/* <li className="px-0 px-xxl-2">
                         <Dropdown>
                             <Dropdown.Toggle className="text-decoration-none font-size-lg-90 font-size-xxl-100" variant="link" id="dropdown-basic" style={{"color":"black"}}>FEATURES</Dropdown.Toggle>
 
@@ -416,7 +416,7 @@ export default function Navbar(props) {
                                 <Dropdown.Item href="https://tales.mustahioverse.com" target="_blank" rel="noreferrer"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </li>
+                    </li> */}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#updates" scroll={el => scrollWithOffset(el)}>UPDATES</HashLink>
                     </li>
@@ -476,7 +476,7 @@ export default function Navbar(props) {
                         </Dropdown.Menu>
                     </Dropdown>
 
-                    <Dropdown style={{"zIndex":"99"}}>
+                    {/* <Dropdown style={{"zIndex":"99"}}>
                         <Dropdown.Toggle className="text-decoration-none font-size-100 ps-0 py-0" variant="link" id="dropdown-basic" style={{"color":"black"}}>FEATURES</Dropdown.Toggle>
 
                         <Dropdown.Menu className="pe-2">
@@ -486,7 +486,7 @@ export default function Navbar(props) {
                             <Dropdown.Item href="https://mustachioverse.com/ar" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;AR INSTAGRAM FILTER</Dropdown.Item>
                             <Dropdown.Item href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                         </Dropdown.Menu>
-                    </Dropdown>
+                    </Dropdown> */}
 
                     <HashLink smooth to="/#updates" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">UPDATES</HashLink>
                     <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
