@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0ef7a441.css",
-    "main.js": "/static/js/main.8559cdf7.js",
+    "main.js": "/static/js/main.81800727.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/Demo Day Video.mp4": "/static/media/Demo Day Video.7949018a6bf4271bfbb5.mp4",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
@@ -81,9 +81,9 @@
     "static/media/WHermann-SemiBold.woff": "/static/media/WHermann-SemiBold.769125cd44cd23d16a38.woff",
     "static/media/WHermann-UltraBold.woff": "/static/media/WHermann-UltraBold.89d40f9dfa082f177f9e.woff",
     "static/media/WHermann-Heavy.woff": "/static/media/WHermann-Heavy.769f70661fb5c442bbdf.woff",
-    "static/media/lnwk-mq.jpg": "/static/media/lnwk-mq.9a36352845c7f7dee226.jpg",
     "static/media/WHermann-Regular.woff": "/static/media/WHermann-Regular.c7e37924dc81963bfdf4.woff",
     "static/media/feature-2.png": "/static/media/feature-2.756803ef7eedbec78635.png",
+    "static/media/the-mint-17.jpg": "/static/media/the-mint-17.32103cd061e15670802e.jpg",
     "static/media/kingstellar.jpg": "/static/media/kingstellar.b80667eff02164ccd313.jpg",
     "static/media/WHermann-SemiBoldItalic.woff2": "/static/media/WHermann-SemiBoldItalic.9934f0c82926cb777dfa.woff2",
     "static/media/WHermann-BlackItalic.woff2": "/static/media/WHermann-BlackItalic.8305c7ad4b0ac824ac0b.woff2",
@@ -179,11 +179,11 @@
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
     "main.0ef7a441.css.map": "/static/css/main.0ef7a441.css.map",
-    "main.8559cdf7.js.map": "/static/js/main.8559cdf7.js.map",
+    "main.81800727.js.map": "/static/js/main.81800727.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ef7a441.css",
-    "static/js/main.8559cdf7.js"
+    "static/js/main.81800727.js"
   ]
 }
