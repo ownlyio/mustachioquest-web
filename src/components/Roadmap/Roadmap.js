@@ -455,52 +455,14 @@ export default function Roadmap() {
         <div className="roadmap-border my-3"></div>
         <div className="roadmap-wrapper d-flex justify-content-start">
             {/* 2022 */}
-            <div id="2022-q1" className="roadmap-quarter q-margin">
-                <div className="d-flex justify-content-evenly align-items-start">
-                    <div className="q-column year">
-                        <p className="text-color-3 gotham-black font-size-170 mb-0">2022 Q1</p>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="done q-pointer"></div>
-                        <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Concept and Gameplay Announcement</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="done q-pointer"></div>
-                        <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Early Preview Launch</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="done q-pointer"></div>
-                        <div className="done q-content gotham-light text-black font-size-110">Launch of the Stake-to-Own Mustachio Marauder NFT Program</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="done q-pointer"></div>
-                        <div className="done q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
-                    </div>
-                </div>
-            </div>
-            <div id="2022-q2" className="roadmap-quarter q-margin">
-                <div className="d-flex justify-content-evenly align-items-start">
-                    <div className="q-column quarter">
-                        <p className="text-color-3 gotham-black font-size-170 mb-0">Q2</p>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="done q-pointer"></div>
-                        <div className="done q-content gotham-light text-black font-size-110">Closed Beta Testing for Genesis Holders</div>
-                    </div>
-                    <div className="q-column quarter-mr">
-                        <div className="done q-pointer"></div>
-                        <div className="done q-content gotham-light text-black font-size-110">Minting of Mustachio Marauder NFTs</div>
-                    </div>
-                </div>
-            </div>
             <div id="2022-q3" className="roadmap-quarter q-margin">
                 <div className="d-flex justify-content-evenly align-items-start">
-                    <div className="q-column quarter">
-                        <p className="text-color-3 gotham-black font-size-170 mb-0">Q3</p>
+                    <div className="q-column year">
+                        <p className="text-color-3 gotham-black font-size-170 mb-0">2022 Q3</p>
                     </div>
                     <div className="q-column quarter-mr">
-                        <div className="soon q-pointer"></div>
-                        <div className="soon q-content gotham-light text-black font-size-110">Launch of the 10,000 3D Mustachio Rascals</div>
+                        <div className="now q-pointer"></div>
+                        <div className="now q-content gotham-light text-black font-size-110">Launch of the 10,000 3D Mustachio Rascals</div>
                     </div>
                     <div className="q-column quarter-mr">
                         <div className="soon q-pointer"></div>
@@ -700,6 +662,46 @@ export default function Roadmap() {
                     <div className="q-column quarter-mr">
                         <div className="done q-pointer"></div>
                         <div className="done q-content gotham-light text-black font-size-110">Launch of The Sages Rant Collectibles</div>
+                    </div>
+                </div>
+            </div>
+
+            {/* 2022 */}
+            <div id="2022-q1" className="roadmap-quarter q-margin">
+                <div className="d-flex justify-content-evenly align-items-start">
+                    <div className="q-column quarter">
+                        <p className="text-color-3 gotham-black font-size-170 mb-0">2022 Q1</p>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Concept and Gameplay Announcement</div>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Mustachio Quest Early Preview Launch</div>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Launch of the Stake-to-Own Mustachio Marauder NFT Program</div>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Launch of 3D Mustachio Visualizer</div>
+                    </div>
+                </div>
+            </div>
+            <div id="2022-q2" className="roadmap-quarter q-margin">
+                <div className="d-flex justify-content-evenly align-items-start">
+                    <div className="q-column quarter">
+                        <p className="text-color-3 gotham-black font-size-170 mb-0">Q2</p>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Closed Beta Testing for Genesis Holders</div>
+                    </div>
+                    <div className="q-column quarter-mr">
+                        <div className="done q-pointer"></div>
+                        <div className="done q-content gotham-light text-black font-size-110">Minting of Mustachio Marauder NFTs</div>
                     </div>
                 </div>
             </div>

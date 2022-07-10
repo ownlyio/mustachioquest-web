@@ -1,6 +1,7 @@
 import './Updates.css'
 
 // images
+import update15 from '../../images/updates/videos/the-mint-17.jpg'
 import update14 from '../../images/updates/videos/the-mint-14.png'
 import update13 from '../../images/updates/articles/game-dev-4.png'
 import update12 from '../../images/updates/videos/the-mint-12.jpg'
@@ -9,7 +10,6 @@ import update10 from '../../images/updates/articles/game-dev-3.jpg'
 import update9 from '../../images/updates/articles/game-dev-2.jpg'
 import update8 from '../../images/updates/posts/3-mexico-strength.png'
 import update6 from '../../images/updates/videos/the-mint-10.jpg'
-import update5 from '../../images/updates/videos/lnwk-mq.jpg'
 
 import bordertl from '../../images/updates-tl.png'
 import bordertr from '../../images/updates-tr.png'
@@ -23,10 +23,17 @@ export default function Updates() {
 
     const updatesList = [
         {
+            id: 15,
+            thumbnail: update15,
+            type: "video",
+            link: "https://www.youtube.com/watch?v=DXK7O3D50sU",
+            title: "The Mint EP 17: Mustachio Quest Game Development Update #07"
+        },
+        {
             id: 14,
             thumbnail: update14,
             type: "video",
-            link: "https://www.youtube.com/watch?v=BsmuLYfvyA8&t=62s",
+            link: "https://www.youtube.com/watch?v=BsmuLYfvyA8",
             title: "The Mint Ep 14: Mustachio Quest Closed Beta Testing Update Video Walkthrough"
         },
         {
@@ -77,14 +84,7 @@ export default function Updates() {
             type: "video",
             link: "https://www.youtube.com/watch?v=SnUtn6rWuSw",
             title: "The Mint Ep 10: Mustachio Quest Development Updates with Ismael and Toff"
-        },
-        {
-            id: 5,
-            thumbnail: update5,
-            type: "video",
-            link: "https://www.youtube.com/watch?v=wDZhFBNRSWs",
-            title: "What’s Possible for Mustachio Quest? Future Features, and More by Kenny"
-        },
+        }
     ]
 
     return (
