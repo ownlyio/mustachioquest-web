@@ -63,7 +63,7 @@ export default function App() {
     const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
     // const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
     const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
-    const marketplaceUrl = "https://ownly.market/?contract=" + contractAddress + "&token=" // (Production only)
+    const marketplaceUrl = "https://ownly.market/pathfinders2d/" // (Production only)
 
     // Modals
     const [showMetamaskInstall, setShowMetamaskInstall] = useState(false);

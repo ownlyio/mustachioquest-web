@@ -351,7 +351,7 @@ export default function Pathfinders(props) {
                                             <li className="font-size-120 gotham-light">Click MINT NOW at the <a className="font-size-100 gotham-light link-color-1" href="#nft" target="_blank">Archetypes Table in the Home Page</a>.</li>
                                             <li className="font-size-120 gotham-light">Connect your MetaMask wallet (Ethereum Network).</li>
                                             <li className="font-size-120 gotham-light">Mint your Mustachio Pathfinder and pay the gas fee.</li>
-                                            <li className="font-size-120 gotham-light">Check your OpenSea or  <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market/" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Pathfinder.</li>
+                                            <li className="font-size-120 gotham-light">Check your OpenSea or  <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Pathfinder.</li>
                                         </ol>
                                         <a className="font-size-120 gotham-light link-color-1" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Click here for a more detailed instruction.</a>
                                     </div>
@@ -447,7 +447,7 @@ export default function Pathfinders(props) {
                                     <div className="accordion-body">
                                         <p className="font-size-120 gotham-light">There are so many possibilities on how you can make use of your Mustachio!</p>
                                         <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Pathfinders, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
-                                        <p className="font-size-120 gotham-light">Aside from partaking in our play-and-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/?collection=the-sages-rant-collectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
+                                        <p className="font-size-120 gotham-light">Aside from partaking in our play-and-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/sagesrantcollectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
                                     </div>
                                 </div>
                             </div>
