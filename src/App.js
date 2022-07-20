@@ -219,7 +219,7 @@ export default function App() {
         let mobilePortal = $('.mobile-portal-wrap')
         let mobileMustachios = $('.mobile-mustachio-wrap')
         let mobileLogo = $('.mobile-logo')
-        let mobileContent = $('.mobile-banner-content p')
+        let mobileContent = $('.mobile-banner-content')
         let mobileLandscape = $('.mobile-landscape')
         let mobileLandscapeContent = $('.mobile-2-title')
         let mobileDiscordBtn = $('.mobile-join-discord')

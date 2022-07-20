@@ -24,8 +24,9 @@ export default function Banner() {
                         <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
                     </div>
                     <div className="banner-content">
-                        <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Conquer the wild. Embrace the feat.</p>
-                        <p className="font-w-hermann w-hermann-semibold text-2 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first Play-And-Earn NFT game.</p>
+                        <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first</p>
+                        <p className="font-w-hermann w-hermann-semibold text-2 text-center mb-0 font-size-140 text-color-1">3D Open World Metaverse Game</p>
+                        <a href="https://mustachioverse.com/quest" target="_blank" rel="noreferrer" className="mt-1 banner-3-btn btn btn-custom-2 gotham-black font-size-140">LEARN MORE</a>
                     </div>
                 </div>
                 <div className="banner-2">
@@ -52,7 +53,8 @@ export default function Banner() {
                             <div className="mobile-logo">
                                 <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
                             </div>
-                            <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Conquer the wild. Embrace the feat. Welcome to Ownly’s first Play-and-Earn NFT game.</p>
+                            <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first<br />3D Open World Metaverse Game</p>
+                            <a href="https://mustachioverse.com/quest" target="_blank" rel="noreferrer" className="banner-3-btn btn btn-custom-2 gotham-black font-size-140">LEARN MORE</a>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,8 @@
 .banner-content,
 .landscape,
 .text-3,
-.banner-2-btn {
+.banner-2-btn,
+.banner-3-btn {
   position: absolute;
   left: 0;
   right: 0;
@@ -57,7 +58,7 @@
 }
 
 .text-2 {
-  width: 250px;
+  width: 350px;
   margin: 0 auto;
 }
 
@@ -165,4 +166,8 @@
 .mobile-banner-content p {
   width: 45%;
   font-size: 3vw;
+}
+
+.mobile-banner-content a {
+  margin-top: 3.5em !important;
 }

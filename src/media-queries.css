@@ -148,6 +148,10 @@
   .tales-content {
     width: 80% !important;
   }
+
+  .mobile-banner-content a {
+    font-size: 3vw !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -265,6 +269,7 @@
   }
 
   .mobile-join-discord,
+  .banner-3-btn,
   .rewards-btn,
   .visualizer-btn,
   #cta a.btn {
@@ -623,7 +628,7 @@
   }
 
   .text-2 {
-    width: 300px !important;
+    width: 400px !important;
   }
 
   .text-3 {
@@ -721,7 +726,7 @@
   }
 
   .text-2 {
-    width: 350px !important;
+    width: 450px !important;
   }
 
   .text-3 {
