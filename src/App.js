@@ -11,11 +11,8 @@ import * as smoothscroll from "smoothscroll-polyfill"
 // components
 import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
-import Features from './components/Features/Features'
-import Updates from './components/Updates/Updates'
 import Roadmap from './components/Roadmap/Roadmap'
 import Team from './components/Team/Team'
-import SneakPeek from './components/SneakPeek/SneakPeek'
 import Table from './components/Table/Table'
 import Gmfrens from './components/Gmfrens/Gmfrens'
 import Pathfinders from './components/Pathfinders/Pathfinders'
@@ -307,16 +304,13 @@ export default function App() {
             <Switch>
                 <Route exact path="/">
                     <Banner />
-                    <Features />
-                    <Updates />
-                    <Roadmap />
-                    <Team />
-                    <SneakPeek />
-                    <Table mintBtn={initUtilsAndMint} />
-                    {/* <Rewards /> */}
-                    <Visualizer />
                     <ARSection />
+                    {/* Tales */}
+                    <Visualizer />
+                    <Table mintBtn={initUtilsAndMint} />
+                    <Roadmap />
                     <Gmfrens />
+                    <Team />
                     <FAQ />
                     <CTA />
                 </Route>
