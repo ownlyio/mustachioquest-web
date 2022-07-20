@@ -144,7 +144,8 @@
     width: 50% !important;
   }
 
-  .visualizer-content {
+  .visualizer-content,
+  .tales-content {
     width: 80% !important;
   }
 }
@@ -490,7 +491,8 @@
     width: 80% !important;
   }
 
-  .visualizer-content {
+  .visualizer-content,
+  .tales-content {
     width: 90% !important;
   }
 

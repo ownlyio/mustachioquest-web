@@ -1,0 +1,16 @@
+#tales {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .tales-content {
+    width: 55%;
+  }
+  
+  .tales-btn {
+    margin-top: 1em;
+  }

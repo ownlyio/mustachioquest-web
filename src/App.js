@@ -11,31 +11,30 @@ import * as smoothscroll from "smoothscroll-polyfill"
 // components
 import Navbar from './components/Navbar/Navbar'
 import Banner from './components/Banner/Banner'
-import Roadmap from './components/Roadmap/Roadmap'
-import Team from './components/Team/Team'
-import Table from './components/Table/Table'
-import Gmfrens from './components/Gmfrens/Gmfrens'
-import Pathfinders from './components/Pathfinders/Pathfinders'
-import Marauders from './components/Marauders/Marauders'
-import AR from './components/AR/AR'
 import ARSection from './components/ARSection/ARSection'
-// import Rewards from './components/Rewards/Rewards'
+import Tales from './components/Tales/Tales'
 import Visualizer from './components/Visualizer/Visualizer'
+import Table from './components/Table/Table'
+import Roadmap from './components/Roadmap/Roadmap'
+import Gmfrens from './components/Gmfrens/Gmfrens'
+import Team from './components/Team/Team'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
+
+// pages
+import Pathfinders from './components/Pathfinders/Pathfinders'
+import Marauders from './components/Marauders/Marauders'
+import AR from './components/AR/AR'
 
 // Utils
 // import contract from './utils/contractDev'
 import contract from './utils/contract'
 import getCurrentNetwork from './utils/getCurrentNetwork'
-import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 import connectToMetaMaskEth  from './utils/connectToMetaMaskEth'
 
 import loading from './images/loading-mustachio.gif'
 import metamask from './images/metamask.png'
-import connectToMetaMask from "./utils/connectToMetaMask";
-import Ar from "./components/AR/AR";
 
 // smooth scrolling for safari
 smoothscroll.polyfill()
@@ -305,7 +304,7 @@ export default function App() {
                 <Route exact path="/">
                     <Banner />
                     <ARSection />
-                    {/* Tales */}
+                    <Tales />
                     <Visualizer />
                     <Table mintBtn={initUtilsAndMint} />
                     <Roadmap />
