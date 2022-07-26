@@ -394,7 +394,7 @@ export default function Navbar(props) {
                     </a>
                 </div>
                 <ul className="d-flex justify-content-center align-items-center flex-wrap mb-0 p-0">
-                    <li className="px-0 px-xxl-2">
+                    {/* <li className="px-0 px-xxl-2">
                         <Dropdown>
                             <Dropdown.Toggle className="text-decoration-none font-size-lg-90 font-size-xxl-100" variant="link" id="dropdown-basic" style={{"color":"black"}}>ARCHETYPES</Dropdown.Toggle>
 
@@ -403,7 +403,7 @@ export default function Navbar(props) {
                                 <Dropdown.Item href="/marauders"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;MARAUDERS</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </li>
+                    </li> */}
                     {/* <li className="px-0 px-xxl-2">
                         <Dropdown>
                             <Dropdown.Toggle className="text-decoration-none font-size-lg-90 font-size-xxl-100" variant="link" id="dropdown-basic" style={{"color":"black"}}>FEATURES</Dropdown.Toggle>
@@ -418,10 +418,7 @@ export default function Navbar(props) {
                         </Dropdown>
                     </li> */}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#game" scroll={el => scrollWithOffset(el)}>GAME</HashLink>
-                    </li>
-                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#ar" scroll={el => scrollWithOffset(el)}>AR</HashLink>
+                        <HashLink smooth to="/#ar" scroll={el => scrollWithOffset(el)}>AR FILTER</HashLink>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
@@ -467,14 +464,14 @@ export default function Navbar(props) {
                         </a>
                     </div>
 
-                    <Dropdown style={{"zIndex":"100"}}>
+                    {/* <Dropdown style={{"zIndex":"100"}}>
                         <Dropdown.Toggle className="text-decoration-none font-size-100 ps-0 py-0" variant="link" id="dropdown-basic" style={{"color":"black"}}>ARCHETYPES</Dropdown.Toggle>
 
                         <Dropdown.Menu className="pe-2" >
                             <Dropdown.Item href="/pathfinders" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;PATHFINDERS</Dropdown.Item>
                             <Dropdown.Item href="/marauders" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;MARAUDERS</Dropdown.Item>
                         </Dropdown.Menu>
-                    </Dropdown>
+                    </Dropdown> */}
 
                     {/* <Dropdown style={{"zIndex":"99"}}>
                         <Dropdown.Toggle className="text-decoration-none font-size-100 ps-0 py-0" variant="link" id="dropdown-basic" style={{"color":"black"}}>FEATURES</Dropdown.Toggle>
@@ -487,7 +484,7 @@ export default function Navbar(props) {
                             <Dropdown.Item href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> */}
-                    <HashLink smooth to="/#ar" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">AR</HashLink>
+                    <HashLink smooth to="/#ar" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">AR FILTER</HashLink>
                     <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
                     <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
