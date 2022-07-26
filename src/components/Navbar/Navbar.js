@@ -418,6 +418,9 @@ export default function Navbar(props) {
                         </Dropdown>
                     </li> */}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
+                        <HashLink smooth to="/#game" scroll={el => scrollWithOffset(el)}>GAME</HashLink>
+                    </li>
+                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">

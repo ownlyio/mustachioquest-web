@@ -10,7 +10,7 @@ import logo from '../../images/MQ_logo_banner.png'
 
 export default function Banner() {
     return (
-        <>
+        <div id="game">
             {/* PC */}
             <section id="first-section" className="d-none d-lg-block" style={{"backgroundImage": `url(${mainbanner})`}}>
                 <div className="banner mb-5">
@@ -67,6 +67,6 @@ export default function Banner() {
                     <a href="https://mustachioverse.com/discord" target="_blank" rel="noreferrer" className="mobile-join-discord banner-2-btn btn btn-custom-1 gotham-black font-size-140">JOIN OUR DISCORD!</a>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
