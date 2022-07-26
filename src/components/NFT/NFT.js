@@ -1,6 +1,6 @@
 import './NFT.css'
 
-import mustachios from '../../images/Mustachios_Banner.jpg'
+import mustachios from '../../images/mustachios-cover.png'
 import borderTop from '../../images/faq-top.png'
 import mexico from "../../images/mexico-3d.png";
 
