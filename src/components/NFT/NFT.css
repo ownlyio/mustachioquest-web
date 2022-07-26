@@ -1,0 +1,29 @@
+#mustachios {
+    position: relative;
+    padding: 80px 0 70px;
+    background-color: #CED2CF;
+    overflow-x: hidden;
+}
+
+.mustachio-image {
+    border-radius: 10px;
+}
+
+.mustachio-image img {
+    border-radius: 10px;
+}
+
+.mustachios-3d-wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.mustachios-number {
+    padding: 8px 20px;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+
+.mustachios-btn {
+    margin: 0 auto;
+}

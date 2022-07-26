@@ -144,8 +144,17 @@
     width: 50% !important;
   }
 
-  .visualizer-content {
+  .visualizer-content,
+  .tales-content {
     width: 80% !important;
+  }
+
+  .mobile-banner-content a {
+    font-size: 3vw !important;
+  }
+
+  .mq-banner-logo {
+    width: 60%;
   }
 }
 
@@ -264,10 +273,15 @@
   }
 
   .mobile-join-discord,
+  .banner-3-btn,
   .rewards-btn,
   .visualizer-btn,
   #cta a.btn {
     width: 60% !important;
+  }
+
+  #mq-banner {
+    margin-top: 0;
   }
 }
 
@@ -490,7 +504,8 @@
     width: 80% !important;
   }
 
-  .visualizer-content {
+  .visualizer-content,
+  .tales-content {
     width: 90% !important;
   }
 
@@ -498,6 +513,10 @@
   .visualizer-btn,
   #cta a.btn {
     width: 80% !important;
+  }
+
+  .mq-banner-logo {
+    width: 280px;
   }
 }
 
@@ -621,7 +640,7 @@
   }
 
   .text-2 {
-    width: 300px !important;
+    width: 400px !important;
   }
 
   .text-3 {
@@ -719,7 +738,7 @@
   }
 
   .text-2 {
-    width: 350px !important;
+    width: 450px !important;
   }
 
   .text-3 {

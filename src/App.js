@@ -10,45 +10,48 @@ import * as smoothscroll from "smoothscroll-polyfill"
 
 // components
 import Navbar from './components/Navbar/Navbar'
-import Banner from './components/Banner/Banner'
-import Features from './components/Features/Features'
-import Updates from './components/Updates/Updates'
-import Roadmap from './components/Roadmap/Roadmap'
-import Team from './components/Team/Team'
-import SneakPeek from './components/SneakPeek/SneakPeek'
-import Table from './components/Table/Table'
-import Gmfrens from './components/Gmfrens/Gmfrens'
-import Pathfinders from './components/Pathfinders/Pathfinders'
-import Marauders from './components/Marauders/Marauders'
-import AR from './components/AR/AR'
+import NFT from './components/NFT/NFT'
+import Game from './components/Game/Game'
 import ARSection from './components/ARSection/ARSection'
-// import Rewards from './components/Rewards/Rewards'
+import Tales from './components/Tales/Tales'
 import Visualizer from './components/Visualizer/Visualizer'
+import Table from './components/Table/Table'
+import Roadmap from './components/Roadmap/Roadmap'
+import Gmfrens from './components/Gmfrens/Gmfrens'
+import Team from './components/Team/Team'
 import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
+
+// components /game
+import BannerGame from './components/Banner/BannerGame'
+import Features from './components/Features/Features'
+import SneakPeek from './components/SneakPeek/SneakPeek'
+import Updates from './components/Updates/Updates'
+
+// pages
+import Pathfinders from './components/Pathfinders/Pathfinders'
+import Marauders from './components/Marauders/Marauders'
+import AR from './components/AR/AR'
 
 // Utils
 // import contract from './utils/contractDev'
 import contract from './utils/contract'
 import getCurrentNetwork from './utils/getCurrentNetwork'
-import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 import connectToMetaMaskEth  from './utils/connectToMetaMaskEth'
 
 import loading from './images/loading-mustachio.gif'
 import metamask from './images/metamask.png'
-import connectToMetaMask from "./utils/connectToMetaMask";
-import Ar from "./components/AR/AR";
 
 // smooth scrolling for safari
 smoothscroll.polyfill()
 
 export default function App() {
     // State variables for initialization
-    const [walletAddress, setWallet] = useState("")
-    const [status, setStatus] = useState(0)
-    const [network, setNetwork] = useState("")
-    const [netStatus, setNetStatus] = useState(0)
+    // const [walletAddress, setWallet] = useState("")
+    // const [status, setStatus] = useState(0)
+    // const [network, setNetwork] = useState("")
+    // const [netStatus, setNetStatus] = useState(0)
     const [tokenId, setTokenId] = useState(0)
 
     // State variables for minting
@@ -114,32 +117,32 @@ export default function App() {
     }
 
     // Event Listener for Metamask Account Change
-    const addWalletListener = () => {
-        if (window.ethereum) {
-            window.ethereum.on("accountsChanged", (accounts) => {
-                if (accounts.length > 0) {
-                    setWallet(accounts[0])
-                    setStatus(1)
-                } else {
-                    setWallet("");
-                    setStatus(2)
-                }
-            })
-        } else {
-          setStatus(0);
-        }
-    }
+    // const addWalletListener = () => {
+    //     if (window.ethereum) {
+    //         window.ethereum.on("accountsChanged", (accounts) => {
+    //             if (accounts.length > 0) {
+    //                 setWallet(accounts[0])
+    //                 setStatus(1)
+    //             } else {
+    //                 setWallet("");
+    //                 setStatus(2)
+    //             }
+    //         })
+    //     } else {
+    //       setStatus(0);
+    //     }
+    // }
 
-    // Event Listener for Metamask Network Change
-    const addNetworkListener = () => {
-        if (window.ethereum) {
-            window.ethereum.on('chainChanged', async function(networkIdMM){
-                const networkResponseOnLoad = await getCurrentNetwork(1)
-                setNetwork(networkResponseOnLoad.network)
-                setNetStatus(networkResponseOnLoad.netStatus)
-            });            
-        }
-    }
+    // // Event Listener for Metamask Network Change
+    // const addNetworkListener = () => {
+    //     if (window.ethereum) {
+    //         window.ethereum.on('chainChanged', async function(networkIdMM){
+    //             const networkResponseOnLoad = await getCurrentNetwork(1)
+    //             setNetwork(networkResponseOnLoad.network)
+    //             setNetStatus(networkResponseOnLoad.netStatus)
+    //         });            
+    //     }
+    // }
 
     // shorten addresses and/or txHashes
     // const shortenAddress = (address, prefixCount, postfixCount) => {
@@ -223,7 +226,7 @@ export default function App() {
         let mobilePortal = $('.mobile-portal-wrap')
         let mobileMustachios = $('.mobile-mustachio-wrap')
         let mobileLogo = $('.mobile-logo')
-        let mobileContent = $('.mobile-banner-content p')
+        let mobileContent = $('.mobile-banner-content')
         let mobileLandscape = $('.mobile-landscape')
         let mobileLandscapeContent = $('.mobile-2-title')
         let mobileDiscordBtn = $('.mobile-join-discord')
@@ -306,17 +309,15 @@ export default function App() {
             <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
                 <Route exact path="/">
-                    <Banner />
-                    <Features />
-                    <Updates />
-                    <Roadmap />
-                    <Team />
-                    <SneakPeek />
-                    <Table mintBtn={initUtilsAndMint} />
-                    {/* <Rewards /> */}
-                    <Visualizer />
+                    <NFT />
+                    <Game />
                     <ARSection />
+                    <Tales />
+                    <Visualizer />
+                    <Table mintBtn={initUtilsAndMint} />
+                    <Roadmap />
                     <Gmfrens />
+                    <Team />
                     <FAQ />
                     <CTA />
                 </Route>
@@ -329,6 +330,16 @@ export default function App() {
                 </Route>
                 <Route exact path="/ar">
                     <AR />
+                </Route>
+                <Route exact path="/quest"> 
+                    <BannerGame />
+                    <Features />
+                    <Updates />
+                    <Roadmap />
+                    <SneakPeek />
+                    <Table mintBtn={initUtilsAndMint} />
+                    <FAQ />
+                    <CTA />
                 </Route>
             </Switch>
             <Footer />

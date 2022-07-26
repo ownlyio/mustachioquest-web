@@ -127,12 +127,17 @@ export default function Pathfinders() {
                                 <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
 
                                 <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">As the Pathfinders (Genesis Mustachios) created the route and discovered the land of MustachioVerse, here comes the next generation of mustached adventurers called the Mustachio Marauders.</p>
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Marauders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Marauders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our mintlisted are called “Vigilantes”.</p>*/}
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</p>*/}
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">
+                                    <a href="https://ownly.market/marauders" target="_blank" rel="noreferrer" className="font-size-100 text-center text-lg-start line-height-150 link-color-4" style={{"width":"initial"}}>
+                                        <i class="fa-solid fa-up-right-from-square"></i> VIEW MARAUDERS
+                                    </a>
+                                </p>
 
                                 <div className="text-center text-lg-start">
-                                    <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}} onClick={triggerMintButton}>MINT A MARAUDER</button>
+                                    <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}} onClick={triggerMintButton}>MINT NOW!</button>
                                 </div>
                             </div>
                         </div>

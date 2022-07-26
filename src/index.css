@@ -2453,6 +2453,10 @@ body {
   color: #ffb800;
 }
 
+.text-color-4 {
+  color: #110833;
+}
+
 .btn-custom-1 {
   background-color: #0b114b;
   color: white;
@@ -2506,6 +2510,28 @@ body {
 
 .link-color-3:hover,
 .link-color-3:focus {
+  color: #ff9f42;
+  text-decoration: underline;
+}
+
+.link-color-4 {
+  color: #212529;
+  text-decoration: underline;
+}
+
+.link-color-4:hover,
+.link-color-4:focus {
+  color: #ff9f42;
+  text-decoration: underline;
+}
+
+.link-color-5 {
+  color: #110833;
+  text-decoration: underline;
+}
+
+.link-color-5:hover,
+.link-color-5:focus {
   color: #ff9f42;
   text-decoration: underline;
 }
