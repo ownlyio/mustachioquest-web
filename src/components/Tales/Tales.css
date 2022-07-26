@@ -8,9 +8,18 @@
   }
 
   .tales-content {
-    width: 55%;
+    width: 80%;
   }
   
   .tales-btn {
     margin-top: 1em;
+  }
+
+  .tales-wrapper {
+    position: relative;
+  }
+
+  .tales-wrapper img {
+    position: absolute;
+    bottom: 0;
   }
