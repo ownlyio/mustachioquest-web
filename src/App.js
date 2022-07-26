@@ -11,7 +11,7 @@ import * as smoothscroll from "smoothscroll-polyfill"
 // components
 import Navbar from './components/Navbar/Navbar'
 import NFT from './components/NFT/NFT'
-import Banner from './components/Banner/Banner'
+import Game from './components/Game/Game'
 import ARSection from './components/ARSection/ARSection'
 import Tales from './components/Tales/Tales'
 import Visualizer from './components/Visualizer/Visualizer'
@@ -28,7 +28,6 @@ import BannerGame from './components/Banner/BannerGame'
 import Features from './components/Features/Features'
 import SneakPeek from './components/SneakPeek/SneakPeek'
 import Updates from './components/Updates/Updates'
-
 
 // pages
 import Pathfinders from './components/Pathfinders/Pathfinders'
@@ -310,8 +309,8 @@ export default function App() {
             <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
                 <Route exact path="/">
-                    <Banner />
                     <NFT />
+                    <Game />
                     <ARSection />
                     <Tales />
                     <Visualizer />

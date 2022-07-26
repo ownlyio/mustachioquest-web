@@ -152,6 +152,10 @@
   .mobile-banner-content a {
     font-size: 3vw !important;
   }
+
+  .mq-banner-logo {
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -274,6 +278,10 @@
   .visualizer-btn,
   #cta a.btn {
     width: 60% !important;
+  }
+
+  #mq-banner {
+    margin-top: 0;
   }
 }
 
@@ -505,6 +513,10 @@
   .visualizer-btn,
   #cta a.btn {
     width: 80% !important;
+  }
+
+  .mq-banner-logo {
+    width: 280px;
   }
 }
 
