@@ -23,3 +23,8 @@
     position: absolute;
     bottom: 0;
   }
+
+  .tales-img-wrap {
+    width: 80%;
+    margin: 0 auto 5%;
+  }
