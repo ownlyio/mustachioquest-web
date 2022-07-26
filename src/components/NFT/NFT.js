@@ -19,26 +19,30 @@ export default function NFT() {
 
                     <div className="mt-4 row align-items-center">
                         <div className="col-12 col-lg-6 order-2 order-lg-1">
-                            <p className="mustachios-text-title font-size-200 gotham-black text-start text-white mb-4">THE ARCHETYPES</p>
+                            <p className="mustachios-text-title font-size-150 font-size-lg-200 gotham-black text-center text-lg-start text-white mb-4">THE ARCHETYPES</p>
                             <div className="mustachios-text-item d-flex align-items-start mb-4">
-                                <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-150">1</div>
+                                <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-130 font-size-lg-150">1</div>
                                 <div className="mustachios-text-wrap">
-                                    <p className="mustachios-text font-size-150 gotham-bold text-start text-white mt-2 mb-1">Pathfinders</p>
-                                    <p className="mustachios-text font-size-120 text-start text-white line-height-160">The Genesis Set of the Mustachios (#1-#100) with a maximum supply of 100 Mustachio Pathfinder NFTs.</p>
+                                    <p className="mustachios-text mt-2 mb-1">
+                                        <a href="/pathfinders" className="font-size-130 font-size-lg-150 gotham-bold text-start text-white link-color-2">Pathfinders</a>
+                                    </p>
+                                    <p className="mustachios-text font-size-100 font-size-lg-120 text-start text-white line-height-160">The Genesis Set of the Mustachios (#1-#100) with a maximum supply of 100 Mustachio Pathfinder NFTs.</p>
                                 </div>
                             </div>
                             <div className="mustachios-text-item d-flex align-items-start mb-4">
-                                <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-150">2</div>
+                                <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-130 font-size-lg-150">2</div>
                                 <div className="mustachios-text-wrap">
-                                    <p className="mustachios-text font-size-150 gotham-bold text-start text-white mt-2 mb-1">Marauders</p>
-                                    <p className="mustachios-text font-size-120 text-start text-white line-height-160">Second Generation of Mustachios (#101-#300) with a maximum supply of 200 Mustachio Marauder NFTs.</p>
+                                    <p className="mustachios-text mt-2 mb-1">
+                                        <a href="/marauders" className="font-size-130 font-size-lg-150 gotham-bold text-start text-white link-color-2">Marauders</a>
+                                    </p>
+                                    <p className="mustachios-text font-size-100 font-size-lg-120 text-start text-white line-height-160">Second Generation of Mustachios (#101-#300) with a maximum supply of 200 Mustachio Marauder NFTs.</p>
                                 </div>
                             </div>
                             <div className="mustachios-text-item d-flex align-items-start">
-                                <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-150">3</div>
+                                <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-130 font-size-lg-150">3</div>
                                 <div className="mustachios-text-wrap">
-                                    <p className="mustachios-text font-size-150 gotham-bold text-start text-white mt-2 mb-1">Rascals</p>
-                                    <p className="mustachios-text font-size-120 text-start text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
+                                    <p className="mustachios-text font-size-130 font-size-lg-150 gotham-bold text-start text-white mt-2 mb-1">Rascals</p>
+                                    <p className="mustachios-text font-size-100 font-size-lg-120 text-start text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
                                 </div>
                             </div>
                             <div className="mustachios-btn mt-3 text-center">
