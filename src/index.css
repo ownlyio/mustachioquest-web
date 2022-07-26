@@ -2509,3 +2509,14 @@ body {
   color: #ff9f42;
   text-decoration: underline;
 }
+
+.link-color-4 {
+  color: #212529;
+  text-decoration: underline;
+}
+
+.link-color-4:hover,
+.link-color-4:focus {
+  color: #ff9f42;
+  text-decoration: underline;
+}

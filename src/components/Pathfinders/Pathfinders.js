@@ -92,12 +92,23 @@ export default function Pathfinders(props) {
                                 <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
 
                                 <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">There are three archetypes of Mustachios in the land of MustachioVerse and the Genesis set from 1-100 are called Mustachio Pathfinders with a maximum supply of 100 Mustachio Pathfinder NFTs. These Pathfinders created the route and discovered the land of MustachioVerse in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant</a>.</p>
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Each Pathfinder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2 pb-3">Each Pathfinder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2 pb-0">
+                                    <a href="https://ownly.market/pathfinders2d" target="_blank" rel="noreferrer" className="font-size-100 text-center text-lg-start line-height-150 link-color-4" style={{"width":"initial"}} onClick={props.mintBtn}>
+                                        <i class="fa-solid fa-up-right-from-square"></i> VIEW 2D PATHFINDERS
+                                    </a>
+                                </p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">
+                                    <a href="https://ownly.market/pathfinders3d" target="_blank" rel="noreferrer" className="font-size-100 text-center text-lg-start line-height-150 link-color-4" style={{"width":"initial"}} onClick={props.mintBtn}>
+                                        <i class="fa-solid fa-up-right-from-square"></i> VIEW 3D PATHFINDERS
+                                    </a>
+                                </p>
+
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our mintlisted are called “Vigilantes”.</p>*/}
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</p>*/}
 
                                 <div className="text-center text-lg-start">
-                                    <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}} onClick={props.mintBtn}>MINT A PATHFINDER</button>
+                                    <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial", "marginRight": "5px"}} onClick={props.mintBtn}>MINT NOW</button>
                                 </div>
                             </div>
                         </div>
