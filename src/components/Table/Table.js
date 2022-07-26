@@ -71,8 +71,12 @@ export default function Table(props) {
                             <thead>
                                 <tr className="font-size-70 font-size-md-100">
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Utilities and Perks</th>
-                                    <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Pathfinders</th>
-                                    <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Marauders</th>
+                                    <th className="text-center align-middle gotham-bold text-white font-size-150">
+                                        <a href="/pathfinders" className="link-color-2" target="_blank" rel="noreferrer">Mustachio Pathfinders</a>
+                                    </th>
+                                    <th className="text-center align-middle gotham-bold text-white font-size-150">
+                                        <a href="/marauders" className="link-color-2" target="_blank" rel="noreferrer">Mustachio Marauders</a>
+                                    </th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Rascals</th>
                                 </tr>
                             </thead>
