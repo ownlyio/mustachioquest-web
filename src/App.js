@@ -22,6 +22,13 @@ import FAQ from './components/FAQ/FAQ'
 import CTA from './components/CTA/CTA'
 import Footer from './components/Footer/Footer'
 
+// components /game
+import BannerGame from './components/Banner/BannerGame'
+import Features from './components/Features/Features'
+import SneakPeek from './components/SneakPeek/SneakPeek'
+import Updates from './components/Updates/Updates'
+
+
 // pages
 import Pathfinders from './components/Pathfinders/Pathfinders'
 import Marauders from './components/Marauders/Marauders'
@@ -41,10 +48,10 @@ smoothscroll.polyfill()
 
 export default function App() {
     // State variables for initialization
-    const [walletAddress, setWallet] = useState("")
-    const [status, setStatus] = useState(0)
-    const [network, setNetwork] = useState("")
-    const [netStatus, setNetStatus] = useState(0)
+    // const [walletAddress, setWallet] = useState("")
+    // const [status, setStatus] = useState(0)
+    // const [network, setNetwork] = useState("")
+    // const [netStatus, setNetStatus] = useState(0)
     const [tokenId, setTokenId] = useState(0)
 
     // State variables for minting
@@ -110,32 +117,32 @@ export default function App() {
     }
 
     // Event Listener for Metamask Account Change
-    const addWalletListener = () => {
-        if (window.ethereum) {
-            window.ethereum.on("accountsChanged", (accounts) => {
-                if (accounts.length > 0) {
-                    setWallet(accounts[0])
-                    setStatus(1)
-                } else {
-                    setWallet("");
-                    setStatus(2)
-                }
-            })
-        } else {
-          setStatus(0);
-        }
-    }
+    // const addWalletListener = () => {
+    //     if (window.ethereum) {
+    //         window.ethereum.on("accountsChanged", (accounts) => {
+    //             if (accounts.length > 0) {
+    //                 setWallet(accounts[0])
+    //                 setStatus(1)
+    //             } else {
+    //                 setWallet("");
+    //                 setStatus(2)
+    //             }
+    //         })
+    //     } else {
+    //       setStatus(0);
+    //     }
+    // }
 
-    // Event Listener for Metamask Network Change
-    const addNetworkListener = () => {
-        if (window.ethereum) {
-            window.ethereum.on('chainChanged', async function(networkIdMM){
-                const networkResponseOnLoad = await getCurrentNetwork(1)
-                setNetwork(networkResponseOnLoad.network)
-                setNetStatus(networkResponseOnLoad.netStatus)
-            });            
-        }
-    }
+    // // Event Listener for Metamask Network Change
+    // const addNetworkListener = () => {
+    //     if (window.ethereum) {
+    //         window.ethereum.on('chainChanged', async function(networkIdMM){
+    //             const networkResponseOnLoad = await getCurrentNetwork(1)
+    //             setNetwork(networkResponseOnLoad.network)
+    //             setNetStatus(networkResponseOnLoad.netStatus)
+    //         });            
+    //     }
+    // }
 
     // shorten addresses and/or txHashes
     // const shortenAddress = (address, prefixCount, postfixCount) => {
@@ -322,6 +329,16 @@ export default function App() {
                 </Route>
                 <Route exact path="/ar">
                     <AR />
+                </Route>
+                <Route exact path="/quest"> 
+                    <BannerGame />
+                    <Features />
+                    <Updates />
+                    <Roadmap />
+                    <SneakPeek />
+                    <Table mintBtn={initUtilsAndMint} />
+                    <FAQ />
+                    <CTA />
                 </Route>
             </Switch>
             <Footer />

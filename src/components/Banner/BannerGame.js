@@ -1,5 +1,4 @@
 import './Banner.css'
-import { Link } from 'react-router-dom'
 
 // images
 import mainbanner from '../../images/banner.jpg'
@@ -8,7 +7,7 @@ import portal from '../../images/banner-portal.png'
 import mustachios from '../../images/mustachios.png'
 import logo from '../../images/MQ_logo_banner.png'
 
-export default function Banner() {
+export default function BannerGame() {
     return (
         <>
             {/* PC */}
@@ -27,7 +26,7 @@ export default function Banner() {
                     <div className="banner-content">
                         <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first</p>
                         <p className="font-w-hermann w-hermann-semibold text-2 text-center mb-0 font-size-140 text-color-1">3D Open World Metaverse Game</p>
-                        <a href="/quest" className="mt-1 banner-3-btn btn btn-custom-2 gotham-black font-size-140">LEARN MORE</a>
+                        <a href="https://mustachio.quest" target="_blank" rel="noreferrer" className="mt-1 banner-3-btn btn btn-custom-2 gotham-black font-size-140">PLAY NOW!</a>
                     </div>
                 </div>
                 <div className="banner-2">
@@ -55,7 +54,7 @@ export default function Banner() {
                                 <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
                             </div>
                             <p className="font-w-hermann w-hermann-semibold text-1 text-center mb-0 font-size-140 text-color-1">Welcome to Ownly’s first<br />3D Open World Metaverse Game</p>
-                            <a href="/quest" className="mt-1 banner-3-btn btn btn-custom-2 gotham-black font-size-140">LEARN MORE</a>
+                            <a href="https://mustachio.quest" target="_blank" rel="noreferrer" className="mt-1 banner-3-btn btn btn-custom-2 gotham-black font-size-140">LEARN MORE</a>
                         </div>
                     </div>
                 </div>

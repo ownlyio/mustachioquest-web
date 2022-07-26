@@ -389,9 +389,9 @@ export default function Navbar(props) {
         <div id="header" className="container">
             <div id="mq-nav" className="d-none d-lg-flex justify-content-between align-items-center">
                 <div className="mq-nav-logo">
-                    <Link exact="true" to="/">
+                    <a href="/">
                         <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
-                    </Link>
+                    </a>
                 </div>
                 <ul className="d-flex justify-content-center align-items-center flex-wrap mb-0 p-0">
                     <li className="px-0 px-xxl-2">
@@ -418,19 +418,13 @@ export default function Navbar(props) {
                         </Dropdown>
                     </li> */}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#updates" scroll={el => scrollWithOffset(el)}>UPDATES</HashLink>
+                        <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)}>ROADMAP</HashLink>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)}>TEAM</HashLink>
-                    </li>
-                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#progress" scroll={el => scrollWithOffset(el)}>PROGRESS</HashLink>
-                    </li>
-                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
                     </li>
                     {/* <li>
                         <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)}>REWARDS</HashLink>
@@ -443,7 +437,7 @@ export default function Navbar(props) {
                     </li>
                     <li className="px-0 pe-xxl-2 pe-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100">
-                            BETA TEST
+                            PLAY NOW
                         </a>
                         <button type="button" onClick={mintMarauder} className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100 mint-marauder">
                             MINT NOW
@@ -462,9 +456,9 @@ export default function Navbar(props) {
                     onStateChange={(state) => handleStateChange(state)}
                 >
                     <div className="mq-nav-logo-mobile">
-                        <Link exact="true" to="/">
+                        <a href="/">
                             <img src={logo} className="w-100" alt="Mustachio Quest Logo" />
-                        </Link>
+                        </a>
                     </div>
 
                     <Dropdown style={{"zIndex":"100"}}>
@@ -487,12 +481,9 @@ export default function Navbar(props) {
                             <Dropdown.Item href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> */}
-
-                    <HashLink smooth to="/#updates" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">UPDATES</HashLink>
+                    <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
                     <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
-                    <HashLink smooth to="/#progress" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">PROGRESS</HashLink>
-                    <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
                     {/* <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink> */}
                     {/*<HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>*/}
                     <HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
