@@ -13,7 +13,7 @@ export default function NFT() {
                     <div className="mustachio-image mb-4">
                         <img src={mustachios} alt="Mustachios" className="w-100" />
                     </div>
-                    <p className="mustachios-sub font-size-130 text-center text-white line-height-170 mt-2 mb-4">With his mighty pen and a slight quiver on his shoulders, Boii Mustache have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales, that now comes with its own 3D Open World Metaverse Game, Mustachio Quest.</p>
+                    <p className="mustachios-sub font-size-130 text-center text-white line-height-170 mt-2 mb-4">With his mighty pen and a slight quiver on his shoulders, Boii Mustache has created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales, that now comes with its own 3D Open World Metaverse Game, Mustachio Quest.</p>
 
                     <div className="bg-color-1 w-100 mb-4" style={{"height": "1px"}}></div>
 
