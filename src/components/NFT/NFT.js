@@ -1,7 +1,6 @@
 import './NFT.css'
 
 import mustachios from '../../images/mustachios-cover.png'
-// import mexico from "../../images/mexico-3d.png";
 import mexico from "../../images/mexico-3d.webm";
 
 export default function NFT() {
