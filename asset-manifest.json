@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.0ffaf0bd.css",
-    "main.js": "/static/js/main.b8be0ac6.js",
+    "main.js": "/static/js/main.e5c69c02.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/Demo Day Video.mp4": "/static/media/Demo Day Video.7949018a6bf4271bfbb5.mp4",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
     "static/media/ar-grim.mp4": "/static/media/ar-grim.c49251a092549124c0fa.mp4",
-    "static/media/mustachios-cover.png": "/static/media/mustachios-cover.d04b2a043b9710b7c713.png",
     "static/media/ar-mexico.mp4": "/static/media/ar-mexico.7374efb6af1c280bdac9.mp4",
     "static/media/tale-img.png": "/static/media/tale-img.1c3de115de14c597a0a7.png",
     "static/media/ar-cheetah.mp4": "/static/media/ar-cheetah.279569376b53e6dbfe56.mp4",
@@ -19,6 +18,7 @@
     "static/media/marauder5.png": "/static/media/marauder5.809eb1e0e1af6e367bc5.png",
     "static/media/pathfinder1.png": "/static/media/pathfinder1.ee664125c30d52626360.png",
     "static/media/whatsup2.png": "/static/media/whatsup2.a008c351bbba07970073.png",
+    "static/media/mexico-3d.webm": "/static/media/mexico-3d.b94ad2f6da43ab21d29b.webm",
     "static/media/pathfinder3.png": "/static/media/pathfinder3.99722e5dcc2736a1fd56.png",
     "static/media/pathfinder6.png": "/static/media/pathfinder6.a6916be1f110b8777616.png",
     "static/media/whatsup3.png": "/static/media/whatsup3.e5083a08254a587850b0.png",
@@ -28,6 +28,7 @@
     "static/media/pathfinder4.png": "/static/media/pathfinder4.dfc4bd6d41d46ff30993.png",
     "static/media/pathfinder2.png": "/static/media/pathfinder2.63a5f5c7d61d1b990f4e.png",
     "static/media/pathfinder5.png": "/static/media/pathfinder5.2c5edee57e348847f645.png",
+    "static/media/mustachios-cover.png": "/static/media/mustachios-cover.6e2b5e22407b8d2957ea.png",
     "static/media/marauder4.png": "/static/media/marauder4.4b90d0425da558fe83cd.png",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
     "static/media/whatsup1.png": "/static/media/whatsup1.9cfcd0cb4c20347dc35a.png",
@@ -78,7 +79,6 @@
     "static/media/WHermann-HeavyItalic.woff": "/static/media/WHermann-HeavyItalic.18ceff9b8b29acf29521.woff",
     "static/media/sneakpeek-top.png": "/static/media/sneakpeek-top.6bfc0031ebd85dff54d9.png",
     "static/media/sneakpeek-bot.png": "/static/media/sneakpeek-bot.f92af1542ca3685cd4f7.png",
-    "static/media/mexico-3d.png": "/static/media/mexico-3d.6f56c8731741dcb32afa.png",
     "static/media/6-hotdog.jpg": "/static/media/6-hotdog.c1e74908e02b892e0336.jpg",
     "static/media/WHermann-Black.woff": "/static/media/WHermann-Black.8cdcbe0ea5f532d5c5c0.woff",
     "static/media/WHermann-SemiBold.woff": "/static/media/WHermann-SemiBold.769125cd44cd23d16a38.woff",
@@ -184,11 +184,11 @@
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
     "main.0ffaf0bd.css.map": "/static/css/main.0ffaf0bd.css.map",
-    "main.b8be0ac6.js.map": "/static/js/main.b8be0ac6.js.map",
+    "main.e5c69c02.js.map": "/static/js/main.e5c69c02.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ffaf0bd.css",
-    "static/js/main.b8be0ac6.js"
+    "static/js/main.e5c69c02.js"
   ]
 }
