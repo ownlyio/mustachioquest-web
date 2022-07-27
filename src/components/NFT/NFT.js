@@ -1,7 +1,8 @@
 import './NFT.css'
 
 import mustachios from '../../images/mustachios-cover.png'
-import mexico from "../../images/mexico-3d.png";
+// import mexico from "../../images/mexico-3d.png";
+import mexico from "../../images/mexico-3d.webm";
 
 export default function NFT() {
     return (
@@ -47,9 +48,12 @@ export default function NFT() {
                         </div>
                     </div>
                     <div className="col-12 col-lg-6 order-1 order-lg-2">
-                        <div className="mustachios-3d-wrap">
+                        {/* <div className="mustachios-3d-wrap">
                             <img src={mexico} alt="Mexico" className="w-100" />
-                        </div>
+                        </div> */}
+                        <video autoPlay={true} loop muted className="w-100 h-100" style={{"borderRadius": "10px"}}>
+                            <source src={mexico} type="video/webm" />    
+                        </video>
                     </div>
                 </div>
             </div>
