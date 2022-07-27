@@ -283,6 +283,10 @@
   #mq-banner {
     margin-top: 0;
   }
+
+  .mustachios-sub {
+    width: 95% !important;
+  }
 }
 
 .bm-burger-button {

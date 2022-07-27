@@ -331,7 +331,7 @@ export default function App() {
                 <Route exact path="/ar">
                     <AR />
                 </Route>
-                <Route exact path="/quest"> 
+                <Route exact path="/game"> 
                     <BannerGame />
                     <Features />
                     <Updates />

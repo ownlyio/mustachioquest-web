@@ -6,7 +6,7 @@ import { Dropdown } from "react-bootstrap"
 import './Navbar.css'
 import $ from 'jquery'
 
-import logo from '../../images/MQ_logo.png'
+import logo from '../../images/mustachio-logo-black-1.png'
 import {Button, Modal} from "react-bootstrap";
 import metamask from "../../images/metamask.png";
 import pathfinders from "../../images/MQ_pathfinders.png";
@@ -418,7 +418,14 @@ export default function Navbar(props) {
                         </Dropdown>
                     </li> */}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#ar" scroll={el => scrollWithOffset(el)}>AR FILTER</HashLink>
+                        <a href="/game" className="btn font-size-100">
+                            GAME
+                        </a>
+                    </li>
+                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
+                        <a href="/ar" className="btn font-size-100">
+                            AR FILTER
+                        </a>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
@@ -484,7 +491,8 @@ export default function Navbar(props) {
                             <Dropdown.Item href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="font-size-90"><i className="fa-solid fa-circle-small ps-2"></i>&nbsp;&nbsp;&nbsp;FIRST NFT TALES</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown> */}
-                    <HashLink smooth to="/#ar" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">AR FILTER</HashLink>
+                    <a href="/game" className="btn text-start px-0 py-3 font-size-100">GAME</a>
+                    <a href="/ar" className="btn text-start px-0 py-3 font-size-100">AR FILTER</a>
                     <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
                     <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
