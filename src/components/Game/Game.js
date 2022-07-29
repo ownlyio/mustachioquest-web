@@ -37,7 +37,7 @@ export default function Game() {
                         </div>
 						<div className="text-white text-center font-size-100 font-size-sm-120 font-size-md-130 font-size-lg-140 mb-3">Inspired by the tales and adventures of the Mustachios in The Sages Rant, Mustachio Quest is Ownly’s first 3D Open World Metaverse Game created inside MustachioVerse where players can play around using the 3D versions of their Mustachios.</div>
 						<div className="text-center">
-                            <a href="/game" className="btn btn-custom-2 gotham-black font-size-130 px-4">Learn More</a>
+                            <a href="/game" className="btn btn-custom-2 gotham-black font-size-130 px-4">LEARN MORE</a>
 						</div>
 					</div>
 					<div className="d-none d-lg-block col-lg-6">

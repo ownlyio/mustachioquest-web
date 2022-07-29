@@ -43,7 +43,7 @@ export default function NFT() {
                             </div>
                         </div>
                         <div className="mustachios-btn mt-3 text-center">
-                            <a href="/#nft" className="btn btn-custom-2 gotham-black font-size-130 px-4">Learn More</a>
+                            <a href="/#nft" className="btn btn-custom-2 gotham-black font-size-130 px-4">LEARN MORE</a>
                         </div>
                     </div>
                     <div className="col-12 col-lg-6 order-1 order-lg-2">
