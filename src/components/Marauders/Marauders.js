@@ -1,6 +1,7 @@
 // images
 import banner from '../../images/banner.jpg'
-import demoVideo from '../../images/Demo Day Video.mp4'
+import bannerMarauders from '../../images/banner-marauders.gif'
+import maraudersLogo from '../../images/MQ_marauders.png'
 import mechSuit from '../../images/marauders/Rico-Meka.jpg'
 import marauder1 from "../../images/marauders/marauder1.png";
 import marauder2 from "../../images/marauders/marauder3.png";
@@ -27,6 +28,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
 import marauders from "../../images/MQ_marauders.png";
 import {useState} from "react";
+import './Marauders.css'
 
 export default function Pathfinders() {
     const sneak = [
@@ -112,10 +114,19 @@ export default function Pathfinders() {
     return (
         <div>
             <section>
-                <div className="carousel slide" style={{"backgroundColor": "#000000"}} data-bs-ride="carousel">
-                    <video className="w-100" style={{"max-height": "100vh"}} autoplay="true" muted controls >
-                        <source src={demoVideo} type="video/mp4" />
-                    </video>
+                <div className="marauders-banner h-screen" style={{"backgroundImage": `url(${bannerMarauders})`}}>
+                    <div className="arch-wrap d-flex flex-column h-100 justify-content-center align-items-center">
+                        <div className="arch-logo">
+                            <img src={maraudersLogo} alt="Marauders Logo" className="w-100" />
+                        </div>
+                        <p className="arch-text font-size-110 font-size-sm-130 font-size-lg-160 text-center text-white line-height-160">Second Generation of Mustachios (#101-#300) with a maximum supply of 200 Mustachio Marauder NFTs.</p>
+
+                        <div className="arch-btns d-flex flex-wrap">
+                            <div>
+                                <a href="https://ownly.market/marauders" target="_blank" rel="noreferrer" className="btn font-size-110 font-size-sm-120 font-size-lg-130 text-center line-height-150 btn-custom-2 mx-2" style={{"width":"300px"}}>VIEW MARAUDERS</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="container py-5">
@@ -130,11 +141,6 @@ export default function Pathfinders() {
                                 <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2 pb-3">Our second generation of Mustachios from 101-300 are called Mustachio Marauders with a maximum supply of 200 Mustachio Marauder NFTs. Each Marauder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our mintlisted are called “Vigilantes”.</p>*/}
                                 {/*<p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">Vigilantes’ Mint Date: Jun 9, 2022 - 8:00PM (SGT)</p>*/}
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4 pb-3">
-                                    <a href="https://ownly.market/marauders" target="_blank" rel="noreferrer" className="font-size-100 text-center text-lg-start line-height-150 link-color-4" style={{"width":"initial"}}>
-                                        <i class="fa-solid fa-up-right-from-square"></i> VIEW MARAUDERS
-                                    </a>
-                                </p>
 
                                 <div className="text-center text-lg-start">
                                     <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial"}} onClick={triggerMintButton}>MINT NOW!</button>

@@ -80,6 +80,14 @@
   .mq-nav-discord {
     margin-top: 0.5rem;
   }
+
+  .arch-logo {
+    width: 47% !important;
+  }
+
+  .arch-text {
+    width: 70% !important;
+  }
 }
 
 @media (max-width: 992px) {
@@ -286,6 +294,17 @@
 
   .mustachios-sub {
     width: 95% !important;
+  }
+
+  .arch-btns a {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .arch-btns div {
+    display: block;
+    width: 70% !important;
+    margin: 0.25em auto;
   }
 }
 
@@ -547,6 +566,18 @@
 
   .team-name {
     font-size: 1.1em !important;
+  }
+
+  .arch-logo {
+    width: 75% !important;
+  }
+
+  .arch-text {
+    width: 90% !important;
+  }
+
+  .arch-btns div {
+    width: 90% !important;
   }
 }
 

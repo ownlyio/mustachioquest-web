@@ -1,0 +1,15 @@
+.pathfinders-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.arch-logo {
+    width: 30%;
+    margin: 0 auto 1em;
+}
+
+.arch-text {
+    width: 45%;
+    margin: 0 auto 1em;
+}
