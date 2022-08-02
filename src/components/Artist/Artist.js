@@ -30,13 +30,13 @@ export default function Artist() {
                              
 
                             <div className="d-flex justify-content-center justify-content-lg-start align-items-center">
-                                <a className="footer-item cursor-pointer" href="https://facebook.com/mustachioverse" target="_blank" rel="noreferrer">
+                                <a className="footer-item cursor-pointer" href="https://twitter.com/BoiiMustache" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon color="black" icon={faTwitter} size="3x" />
                                 </a>
-                                <a className="footer-item cursor-pointer" href="https://instagram.com/mustachioverse" target="_blank" rel="noreferrer">
+                                <a className="footer-item cursor-pointer" href="https://www.instagram.com/mustache.boii/" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon color="black" icon={faInstagram} size="3x" />
                                 </a>
-                                <a className="footer-item cursor-pointer" href="https://mustachioverse.com/discord" target="_blank" rel="noreferrer">
+                                <a className="footer-item cursor-pointer" href="https://www.artstation.com/sphinx1232" target="_blank" rel="noreferrer">
                                     <FontAwesomeIcon color="black" icon={faArtstation} size="3x" />
                                 </a>
                             </div>
