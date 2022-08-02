@@ -33,6 +33,7 @@ import Updates from './components/Updates/Updates'
 import Pathfinders from './components/Pathfinders/Pathfinders'
 import Marauders from './components/Marauders/Marauders'
 import AR from './components/AR/AR'
+import Artist from './components/Artist/Artist'
 
 // Utils
 // import contract from './utils/contractDev'
@@ -340,6 +341,9 @@ export default function App() {
                     <Table mintBtn={initUtilsAndMint} />
                     <FAQ />
                     <CTA />
+                </Route>
+                <Route exact path="/artist">
+                    <Artist />
                 </Route>
             </Switch>
             <Footer />

@@ -428,6 +428,11 @@ export default function Navbar(props) {
                         </a>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
+                        <a href="/artist" className="btn font-size-100">
+                            ARTIST
+                        </a>
+                    </li>
+                    <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
@@ -436,12 +441,6 @@ export default function Navbar(props) {
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)}>TEAM</HashLink>
                     </li>
-                    {/* <li>
-                        <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)}>REWARDS</HashLink>
-                    </li> */}
-                    {/*<li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">*/}
-                    {/*    <HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)}>VISUALIZER</HashLink>*/}
-                    {/*</li>*/}
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)}>FAQS</HashLink>
                     </li>
@@ -453,11 +452,6 @@ export default function Navbar(props) {
                             MINT NOW
                         </button>
                     </li>
-                    {/* <li>
-                        <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
-                            EARN NFT
-                        </a>
-                    </li> */}
                 </ul>
             </div>
             <div className="d-lg-none align-self-end">
@@ -493,6 +487,7 @@ export default function Navbar(props) {
                     </Dropdown> */}
                     <a href="/game" className="btn text-start px-0 py-3 font-size-100">GAME</a>
                     <a href="/ar" className="btn text-start px-0 py-3 font-size-100">AR FILTER</a>
+                    <a href="/artist" className="btn text-start px-0 py-3 font-size-100">ARTIST</a>
                     <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
                     <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
@@ -500,17 +495,11 @@ export default function Navbar(props) {
                     {/*<HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>*/}
                     <HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">FAQS</HashLink>
                     <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
-                        BETA TEST
+                        PLAY NOW
                     </a>
-                    {/*<button type="button" onClick={props.mintBtn} className="btn mq-nav-discord text-white gotham-black font-size-100">*/}
-                    {/*    MINT NOW*/}
-                    {/*</button>*/}
                     <button type="button" onClick={mintMarauder} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
-                    {/* <a href="https://ownly.io/ownmarauder" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
-                        EARN NFT
-                    </a> */}
                 </Menu>
             </div>
 

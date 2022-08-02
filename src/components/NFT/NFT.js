@@ -10,7 +10,7 @@ export default function NFT() {
                 <img src={mustachios} alt="Mustachios" className="w-100" />
             </div>
             <div className="container">
-                <p className="mustachios-sub font-size-100 font-size-lg-130 text-center text-color-4 line-height-170 mt-2 mb-4">Boii Mustache crafted another masterpiece with his sturdy pen and a subtle tremble in his shoulders. The Mustachios, the first <a href="https://tales.mustachioverse.com" className="font-size-100 link-color-5">NFT Tales</a>, is a work of art that now integrates its own 3D Open World Metaverse Game, <a href="https://mustachio.quest" className="font-size-100 link-color-5">Mustachio Quest</a>.</p>
+                <p className="mustachios-sub font-size-100 font-size-lg-130 text-center text-color-4 line-height-170 mt-2 mb-4"><a href="/artist" className="font-size-100 link-color-5">Boii Mustache</a> crafted another masterpiece with his sturdy pen and a subtle tremble in his shoulders. The Mustachios, the first <a href="https://tales.mustachioverse.com" className="font-size-100 link-color-5">NFT Tales</a>, is a work of art that now integrates its own 3D Open World Metaverse Game, <a href="https://mustachio.quest" className="font-size-100 link-color-5">Mustachio Quest</a>.</p>
 
                 <div className="bg-color-1 w-100 mb-4" style={{"height": "1px"}}></div>
 
