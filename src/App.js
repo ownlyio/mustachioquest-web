@@ -32,6 +32,7 @@ import Updates from './components/Updates/Updates'
 // pages
 import Pathfinders from './components/Pathfinders/Pathfinders'
 import Marauders from './components/Marauders/Marauders'
+import Rascals from './components/Rascals/Rascals'
 import AR from './components/AR/AR'
 import Artist from './components/Artist/Artist'
 
@@ -328,6 +329,9 @@ export default function App() {
                 </Route>
                 <Route exact path="/marauders">
                     <Marauders />
+                </Route>
+                <Route exact path="/rascals">
+                    <Rascals />
                 </Route>
                 <Route exact path="/ar">
                     <AR />

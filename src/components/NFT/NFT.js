@@ -38,7 +38,9 @@ export default function NFT() {
                         <div className="mustachios-text-item d-flex align-items-start">
                             <div className="mustachios-number bg-color-1 gotham-bold text-center text-white font-size-130 font-size-lg-150">3</div>
                             <div className="mustachios-text-wrap">
-                                <p className="mustachios-text font-size-130 font-size-lg-150 gotham-bold text-start text-color-4 mt-2 mb-1">Rascals</p>
+                                <p className="mustachios-text mt-2 mb-1">
+                                    <a href="/rascals" className="font-size-130 font-size-lg-150 gotham-bold text-start link-color-5">Rascals</a>
+                                </p>
                                 <p className="mustachios-text font-size-100 font-size-lg-120 text-start text-color-4 line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
                             </div>
                         </div>

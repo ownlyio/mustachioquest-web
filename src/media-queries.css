@@ -579,6 +579,25 @@
   .arch-btns div {
     width: 90% !important;
   }
+
+  .rascals-input-wrapper {
+    width: 100% !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  .rascals-input-wrapper input {
+    border-radius: 5px !important;
+  }
+
+  .rascals-btn-form-wrapper {
+    width: 70% !important;
+    margin: 0 auto !important;
+  }
+
+  .rascals-btn-form-wrapper button {
+    width: 100% !important;
+    border-radius: 5px !important;
+  }
 }
 
 @media (max-width: 400px) {
