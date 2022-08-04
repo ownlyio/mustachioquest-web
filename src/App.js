@@ -35,6 +35,7 @@ import Marauders from './components/Marauders/Marauders'
 import Rascals from './components/Rascals/Rascals'
 import AR from './components/AR/AR'
 import Artist from './components/Artist/Artist'
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 
 // Utils
 // import contract from './utils/contractDev'
@@ -348,6 +349,9 @@ export default function App() {
                 </Route>
                 <Route exact path="/artist">
                     <Artist />
+                </Route>
+                <Route exact path="/privacy-policy">
+                    <PrivacyPolicy />
                 </Route>
             </Switch>
             <Footer />

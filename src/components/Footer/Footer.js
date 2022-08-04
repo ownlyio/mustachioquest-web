@@ -23,6 +23,9 @@ export default function Footer() {
                         <FontAwesomeIcon color="white" icon={faTiktok} size="3x" />
                     </a>
                 </div>
+                <p className="text-center mt-3 mb-0">
+                    <a href="/privacy-policy" className="font-size-80 text-white">Privacy Policy</a>
+                </p>
             </div>
         </section>
     )

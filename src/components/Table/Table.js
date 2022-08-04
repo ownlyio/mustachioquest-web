@@ -95,6 +95,20 @@ export default function Table(props) {
                                 </tr>
                                 <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">
+                                        <a href="/ar" className="link-color-2" target="_blank" rel="noreferrer">Mustachio Instagram AR Filter</a>
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={greenCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={goldCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">
                                         <a href="https://my.mustachioverse.com" className="link-color-2" target="_blank" rel="noreferrer">Mustachio NFT Visualizer Experience</a>
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">

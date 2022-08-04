@@ -242,6 +242,36 @@ export default function Rascals() {
                                     <div className="card-body p-5">
                                         <div className="d-flex justify-content-center mb-4">
                                             <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-calendar-star font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">Exclusive IRL, URL and IMV Events</p>
+                                        <p className="text-center mb-0">Make your Own</p>
+                                    </div>
+                                </div>
+                            </div> */}
+
+                            {/* <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-face-viewfinder font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">AR Experience</p>
+                                        <p className="text-center mb-0">Make your Own</p>
+                                    </div>
+                                </div>
+                            </div> */}
+
+                            {/* <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
                                                 <i className="fa-solid fa-vr-cardboard font-size-180 text-white"></i>
                                             </div>
                                         </div>

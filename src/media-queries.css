@@ -164,6 +164,10 @@
   .mq-banner-logo {
     width: 60%;
   }
+
+  #privacy {
+    padding-top: 2em !important;
+  }
 }
 
 @media (max-width: 768px) {
