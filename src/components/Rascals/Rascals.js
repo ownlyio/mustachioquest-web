@@ -192,6 +192,38 @@ export default function Rascals() {
                                 </div>
                             </div>
 
+                            
+
+                            <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-calendar-star font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">Exclusive IRL, URL and IMV Events</p>
+                                        <p className="text-center mb-0">Get an exclusive pass on all of our IRL, URL, and IMV events! Simply show your Mustachio Rascal NFT and you're good to go!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-lg-4 pb-4">
+                                <div className="card border-0 border-radius-0 h-100">
+                                    <div className="card-body p-5">
+                                        <div className="d-flex justify-content-center mb-4">
+                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
+                                                <i className="fa-solid fa-mobile-notch font-size-180 text-white"></i>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-center fw-bold font-size-140">Augmented Reality Filter</p>
+                                        <p className="text-center mb-0">#CanYourJPEG immerse in your day-to-day activities? Well, these Mustachios can! Try out our <a href="https://ownly.io/ar" target="_blank" rel="noreferrer" className="link-color-4" >Mustachio filter on Instagram</a> to see ‘em dancing in IRL.</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className="col-lg-4 pb-4">
                                 <div className="card border-0 border-radius-0 h-100">
                                     <div className="card-body p-5">
@@ -237,37 +269,7 @@ export default function Rascals() {
                                 </div>
                             </div>
 
-                            {/* <div className="col-lg-4 pb-4">
-                                <div className="card border-0 border-radius-0 h-100">
-                                    <div className="card-body p-5">
-                                        <div className="d-flex justify-content-center mb-4">
-                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
-                                                <i className="fa-solid fa-calendar-star font-size-180 text-white"></i>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-center fw-bold font-size-140">Exclusive IRL, URL and IMV Events</p>
-                                        <p className="text-center mb-0">Make your Own</p>
-                                    </div>
-                                </div>
-                            </div> */}
-
-                            {/* <div className="col-lg-4 pb-4">
-                                <div className="card border-0 border-radius-0 h-100">
-                                    <div className="card-body p-5">
-                                        <div className="d-flex justify-content-center mb-4">
-                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
-                                                <i className="fa-solid fa-face-viewfinder font-size-180 text-white"></i>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-center fw-bold font-size-140">AR Experience</p>
-                                        <p className="text-center mb-0">Make your Own</p>
-                                    </div>
-                                </div>
-                            </div> */}
-
-                            {/* <div className="col-lg-4 pb-4">
+                            <div className="col-lg-4 pb-4">
                                 <div className="card border-0 border-radius-0 h-100">
                                     <div className="card-body p-5">
                                         <div className="d-flex justify-content-center mb-4">
@@ -277,10 +279,10 @@ export default function Rascals() {
                                         </div>
 
                                         <p className="text-center fw-bold font-size-140">Generative 3D Art</p>
-                                        <p className="text-center mb-0">Make your Own</p>
+                                        <p className="text-center mb-0">Play with your newly minted Mustachio Rascal in our game, Mustachio Quest, by minting a random mix of 3D qualities.</p>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
