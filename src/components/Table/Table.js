@@ -157,7 +157,7 @@ export default function Table(props) {
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
-                                <tr>
+                                {/* <tr>
                                     <td className="align-middle gotham-light text-white font-size-100"><a href="https://ownly.io/ar" target="_blank" className="text-white" rel="noreferrer">Augmented Reality Filter on Instagram</a></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
@@ -166,7 +166,7 @@ export default function Table(props) {
                                         <img src={orangeCheck} alt="check" className="mq-table-check" />
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                </tr>
+                                </tr> */}
                                 <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">Exclusive Land Access within Mustachio Quest</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
