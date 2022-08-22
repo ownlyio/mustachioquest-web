@@ -71,6 +71,11 @@ export default function Pathfinders(props) {
     const [showMintingNotYetAvailable, setShowMintingNotYetAvailable] = useState(false);
     const handleCloseMintingNotYetAvailable = () => setShowMintingNotYetAvailable(false);
     const handleShowMintingNotYetAvailable = () => setShowMintingNotYetAvailable(true);
+    const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+    const handleCloseVideoPlayer = () => setShowVideoPlayer(false);
+    const handleShowVideoPlayer = () => setShowVideoPlayer(true);
+
+    const youTubeUrl = "https://youtu.be/qKziayF7Cic"
 
     let triggerMintButton = function() {
         $(".mint-marauder").trigger("click");
@@ -85,6 +90,10 @@ export default function Pathfinders(props) {
                             <img src={pathfindersLogo} alt="Pathfinders Logo" className="w-100" />
                         </div>
                         <p className="arch-text font-size-110 font-size-sm-130 font-size-lg-160 text-center text-white line-height-160">The Genesis Set of the Mustachios (#1-#100) with a maximum supply of 100 Mustachio Pathfinder NFTs.</p>
+
+                        <button className="arch-play-btn btn" onClick={handleShowVideoPlayer}>
+                            <i className="fa-solid fa-play font-size-180 font-size-sm-210 font-size-md-250 font-size-lg-300 text-white"></i>
+                        </button>
 
                         <div className="arch-btns d-flex flex-wrap">
                             <div>
@@ -512,6 +521,17 @@ export default function Pathfinders(props) {
                     <div className="row mb-4">
                         <div className="col-12 text-center">
                             <button className="btn btn-custom-2 gotham-black font-size-110 py-2 mb-2 px-5" style={{"width":"initial"}} onClick={handleCloseMintingNotYetAvailable}>Okay</button>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+
+            <Modal className="no-border" show={showVideoPlayer} onHide={handleCloseVideoPlayer} backdrop="static" keyboard={false} size="xl" centered>
+                <Modal.Body className="p-0">
+                    <div className="position-relative">
+                        <button className="video-close-btn text-white font-size-80 font-size-sm-100 btn fw-bold" onClick={handleCloseVideoPlayer}>X</button>
+                        <div className="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qKziayF7Cic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </Modal.Body>
