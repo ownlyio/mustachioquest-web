@@ -77,7 +77,9 @@ export default function Table(props) {
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">
                                         <a href="/marauders" className="link-color-2">Mustachio Marauders</a>
                                     </th>
-                                    <th className="text-center align-middle gotham-bold text-white font-size-150">Mustachio Rascals</th>
+                                    <th className="text-center align-middle gotham-bold text-white font-size-150">
+                                        <a href="/rascals" className="link-color-2">Mustachio Rascals</a>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
