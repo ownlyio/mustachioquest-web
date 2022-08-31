@@ -179,7 +179,7 @@ export default function App() {
                 handleShowOnSuccess()
                 setTxHash(receipt.transactionHash)
                 setTxData(receipt)
-
+                
                 // Get TokenID
                 const lastTokenId = await contract.methods.getLastMintedTokenId().call()
                 setTokenId(lastTokenId)
