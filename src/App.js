@@ -10,6 +10,7 @@ import * as smoothscroll from "smoothscroll-polyfill"
 
 // components
 import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
 import NFT from './components/NFT/NFT'
 import Game from './components/Game/Game'
 import ARSection from './components/ARSection/ARSection'
@@ -312,6 +313,7 @@ export default function App() {
             <Navbar mintBtn={initUtilsAndMint} /> 
             <Switch>
                 <Route exact path="/">
+                    <Hero />
                     <NFT />
                     <Game />
                     <ARSection />
