@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.37c1ef22.css",
-    "main.js": "/static/js/main.a92aea72.js",
+    "main.css": "/static/css/main.d7c80a59.css",
+    "main.js": "/static/js/main.e2522acb.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
+    "static/media/rascal-gif.gif": "/static/media/rascal-gif.bde750bd1b2bc3a875f6.gif",
     "static/media/banner-marauders.gif": "/static/media/banner-marauders.abe8f145f7aa1121bdf0.gif",
     "static/media/banner-pathfinders.gif": "/static/media/banner-pathfinders.c34e9f823d01a140eff5.gif",
     "static/media/ar-grim.mp4": "/static/media/ar-grim.c49251a092549124c0fa.mp4",
+    "static/media/rascals-bg.gif": "/static/media/rascals-bg.3cdc67a690f4db59a4d2.gif",
     "static/media/ar-mexico.mp4": "/static/media/ar-mexico.7374efb6af1c280bdac9.mp4",
     "static/media/tale-img.png": "/static/media/tale-img.1c3de115de14c597a0a7.png",
     "static/media/ar-cheetah.mp4": "/static/media/ar-cheetah.279569376b53e6dbfe56.mp4",
@@ -33,7 +35,6 @@
     "static/media/marauder4.png": "/static/media/marauder4.4b90d0425da558fe83cd.png",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
     "static/media/whatsup1.png": "/static/media/whatsup1.9cfcd0cb4c20347dc35a.png",
-    "static/media/rascals-cover.png": "/static/media/rascals-cover.e861303c547fdb526204.png",
     "static/media/bm_square.png": "/static/media/bm_square.5d160190826618da1d8a.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
     "static/media/gmfrens.png": "/static/media/gmfrens.bcc92fb2f3839657554b.png",
@@ -189,12 +190,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.37c1ef22.css.map": "/static/css/main.37c1ef22.css.map",
-    "main.a92aea72.js.map": "/static/js/main.a92aea72.js.map",
+    "main.d7c80a59.css.map": "/static/css/main.d7c80a59.css.map",
+    "main.e2522acb.js.map": "/static/js/main.e2522acb.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37c1ef22.css",
-    "static/js/main.a92aea72.js"
+    "static/css/main.d7c80a59.css",
+    "static/js/main.e2522acb.js"
   ]
 }
