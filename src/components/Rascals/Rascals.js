@@ -1,6 +1,6 @@
 // images
 import banner from '../../images/banner.jpg'
-import rascals from '../../images/rascals-cover.png'
+import rascals from '../../images/rascals-bg.gif'
 import rascalsLogo from '../../images/MQ_rascals.png'
 // import pathfinder1 from "../../images/pathfinders/pathfinder1.png";
 // import pathfinder2 from "../../images/pathfinders/pathfinder2.png";
