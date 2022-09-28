@@ -650,6 +650,12 @@
   #cta a.btn {
     width: 90% !important;
   }
+
+  .countdown {
+    width: 45% !important;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
 }
 
 /* MIN WIDTH */
