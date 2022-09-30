@@ -147,7 +147,7 @@ export default function Rascals() {
                                         </div>
 
                                         <p className="text-center fw-bold font-size-140">3D Playable Character</p>
-                                        <p className="text-center mb-0">Use your 3D Marauder NFT as your own character in our 3D open-world game, Mustachio Quest. Fulfill quests, collect artifacts, and play your heart out!</p>
+                                        <p className="text-center mb-0">Use your 3D Rascal NFT as your own character in our 3D open-world game, Mustachio Quest. Fulfill quests, collect artifacts, and play your heart out!</p>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@ export default function Rascals() {
                                         </div>
 
                                         <p className="text-center fw-bold font-size-140">Visualizer Experience</p>
-                                        <p className="text-center mb-0">Test out your minted Mustachio Marauder/s using your Metamask Wallet. Your Mustachio Marauder awaits you, wanderer!</p>
+                                        <p className="text-center mb-0">Test out your minted Mustachio Rascal/s using your Metamask Wallet. Your Mustachio Rascals awaits you, wanderer!</p>
                                     </div>
                                 </div>
                             </div>
@@ -210,21 +210,6 @@ export default function Rascals() {
 
                                         <p className="text-center fw-bold font-size-140">Exclusive Discord Channel</p>
                                         <p className="text-center mb-0">Get on board our exclusive Mustachios community on Discord where you can network and make friends with your fellow Mustachios.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 pb-4">
-                                <div className="card border-0 border-radius-0 h-100">
-                                    <div className="card-body p-5">
-                                        <div className="d-flex justify-content-center mb-4">
-                                            <div className="bg-dark d-flex align-items-center justify-content-center" style={{"borderRadius":"50%", "width":"80px", "height":"80px"}}>
-                                                <i className="fa-solid fa-tags font-size-180 text-white"></i>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-center fw-bold font-size-140">Use $OWN, Get a Discount</p>
-                                        <p className="text-center mb-0">You get 20% discount on our Mustachio Marauders when you use your $OWN tokens as payment. Got a mintlist slot? Even more! You get 40% off!</p>
                                     </div>
                                 </div>
                             </div>

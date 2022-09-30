@@ -1,6 +1,7 @@
 // images
 import rascals from '../../images/rascal-gif.gif'
 import rascalsLogo from '../../images/MQ_rascals.png'
+import amacLogo from '../../images/amac-logo.png'
 
 import axios from 'axios'
 // import { Button, Modal } from "react-bootstrap";
@@ -79,7 +80,13 @@ export default function Hero() {
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
                         <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">Launching on October 8, 2022</p>
+                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160 mb-0">Launching on October 8, 2022 at</p>
+                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">
+                            <a href="https://amac.ph" target="_blank" rel="noreferrer">
+                                <span className="link-color-2">AMAC2022</span>&nbsp;
+                                <img src={amacLogo} alt="AMAC Logo" style={{"width": "50px"}} />
+                            </a>
+                        </p>
 
                         <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap">
                             <div className="countdown days">
