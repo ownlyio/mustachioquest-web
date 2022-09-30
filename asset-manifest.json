@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d7c80a59.css",
-    "main.js": "/static/js/main.e2522acb.js",
+    "main.js": "/static/js/main.a6676755.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
     "static/media/rascal-gif.gif": "/static/media/rascal-gif.bde750bd1b2bc3a875f6.gif",
@@ -73,6 +73,7 @@
     "static/media/banner-portal.png": "/static/media/banner-portal.d2438956239e8bdbf9bd.png",
     "static/media/15-mountainwarrior.png": "/static/media/15-mountainwarrior.fc31070f778acccfe3ee.png",
     "static/media/bm_wide.png": "/static/media/bm_wide.81b6cd21283a72777fef.png",
+    "static/media/amac-logo.png": "/static/media/amac-logo.7b0e510ac849fc4a281d.png",
     "static/media/candy-floss.jpg": "/static/media/candy-floss.9f35f6b1261f4ca25127.jpg",
     "static/media/Players.png": "/static/media/Players.06805779dccd7ffbfb6a.png",
     "static/media/game-dev-4.png": "/static/media/game-dev-4.991de96c458a82220c15.png",
@@ -191,11 +192,11 @@
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
     "main.d7c80a59.css.map": "/static/css/main.d7c80a59.css.map",
-    "main.e2522acb.js.map": "/static/js/main.e2522acb.js.map",
+    "main.a6676755.js.map": "/static/js/main.a6676755.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d7c80a59.css",
-    "static/js/main.e2522acb.js"
+    "static/js/main.a6676755.js"
   ]
 }
