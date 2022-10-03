@@ -4,9 +4,9 @@ import rascalsLogo from '../../images/MQ_rascals.png'
 import amacLogo from '../../images/amac-logo.png'
 
 import axios from 'axios'
-// import { Button, Modal } from "react-bootstrap";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { Button, Modal } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react"
 import './Hero.css'
 
@@ -17,6 +17,30 @@ export default function Hero() {
     const [minutes, setMinutes] = useState(defaultTime)
     const [seconds, setSeconds] = useState(defaultTime)
     const [isComingSoon, setIsComingSoon] = useState(true)
+    const [emailAdd, setEmailAdd] = useState("")
+    const [showSubscribed, setShowSubscribed] = useState(false);
+    const handleCloseSubscribed = () => setShowSubscribed(false);
+    const handleShowSubscribed = () => setShowSubscribed(true);
+    const [showErrorEmail, setShowErrorEmail] = useState(false);
+    const handleCloseErrorEmail = () => setShowErrorEmail(false);
+    const handleShowErrorEmail = () => setShowErrorEmail(true);
+
+    const submitForm = (e) => {
+        e.preventDefault()
+
+        let re = /^[ ]*([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i;
+    
+        if (re.test(emailAdd)) {
+            axios.post('https://ownly.market/api/email-signup', {email: emailAdd, type: 'rascals'}).then(res => {
+                document.getElementById("emailAdd").value = ""
+                document.getElementById("agreement").checked = false
+                setEmailAdd("")
+                handleShowSubscribed()
+            })
+        } else {
+            handleShowErrorEmail()
+        }
+    }
 
     let interval
 
@@ -88,6 +112,30 @@ export default function Hero() {
                             </a>
                         </p>
 
+                        <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
+                        <div className="px-lg-4 mx-lg-4">
+                            <form className="rascals-form" onSubmit={submitForm}>
+                                <div className="d-flex align-items-center flex-wrap mb-3">
+                                    <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
+                                        <input id="emailAdd" type="email" name="email_address" className="form-control d-block px-3 py-1 font-size-100" style={{"borderRadius": "5px 0 0 5px"}} placeholder="Your email address" required onChange={(e) => setEmailAdd(e.target.value)} />
+                                    </div>
+                                    <div className="rascals-form rascals-btn-form-wrapper">
+                                        <button type="submit" className="btn btn-custom-2 px-3 py-1 font-size-100" style={{"width": "200px","letterSpacing": "0.05em", "borderRadius": "0 5px 5px 0"}}>LET ME IN!</button>
+                                    </div>
+                                </div>
+                                <div className="form-check d-flex align-items-start mb-3">
+                                    <div>
+                                        <input className="form-check-input" type="checkbox" id="agreement" required />
+                                    </div>
+                                    <div className="ps-1">
+                                        <label className="form-check-label font-size-80 text-white" for="agreement">
+                                        You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                         <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap">
                             <div className="countdown days">
                                 <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{days}</p>
@@ -112,6 +160,36 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+
+            {/* Modal for successful subscription */}
+            <Modal show={showSubscribed} onHide={handleCloseSubscribed} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="green" size="6x" icon={faCheckCircle} />
+                    </div>
+                    <p className="text-center text-lg">Thank you for subscribing!</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseSubscribed}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal> 
+
+            {/* Modal for error in email */}
+            <Modal show={showErrorEmail} onHide={handleCloseErrorEmail} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="red" size="6x" icon={faExclamationCircle} />
+                    </div>
+                    <p className="text-center text-lg">Please provide a valid email address and try again.</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseErrorEmail}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal> 
         </section>
     )
 }
