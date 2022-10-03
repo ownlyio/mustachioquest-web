@@ -46,6 +46,7 @@ export default function Hero() {
 
     const startTimer = timeSec => {
         const countdownObj = document.querySelector(".hero-countdown")
+        const whitelistObj = document.querySelector("#whitelist-section")
         const countdownDate = new Date().getTime() + (timeSec * 1000)
 
         interval = setInterval(() => {
@@ -62,6 +63,8 @@ export default function Hero() {
                 setIsComingSoon(false)
                 countdownObj?.classList.remove('d-flex')
                 countdownObj?.classList.add('d-none')
+                whitelistObj?.classList.remove('d-block')
+                whitelistObj?.classList.add('d-none')
             } else {
                 setDays(d)
                 setHours(h)
@@ -112,28 +115,30 @@ export default function Hero() {
                             </a>
                         </p>
 
-                        <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
-                        <div className="px-lg-4 mx-lg-4">
-                            <form className="rascals-form" onSubmit={submitForm}>
-                                <div className="d-flex align-items-center flex-wrap mb-3">
-                                    <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
-                                        <input id="emailAdd" type="email" name="email_address" className="form-control d-block px-3 py-1 font-size-100" style={{"borderRadius": "5px 0 0 5px"}} placeholder="Your email address" required onChange={(e) => setEmailAdd(e.target.value)} />
+                        <div id="whitelist-section" className="d-block">
+                            <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
+                            <div className="px-lg-4 mx-lg-4">
+                                <form className="rascals-form" onSubmit={submitForm}>
+                                    <div className="d-flex align-items-center flex-wrap mb-3">
+                                        <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
+                                            <input id="emailAdd" type="email" name="email_address" className="form-control d-block px-3 py-1 font-size-100" style={{"borderRadius": "5px 0 0 5px"}} placeholder="Your email address" required onChange={(e) => setEmailAdd(e.target.value)} />
+                                        </div>
+                                        <div className="rascals-form rascals-btn-form-wrapper">
+                                            <button type="submit" className="btn btn-custom-2 px-3 py-1 font-size-100" style={{"width": "200px","letterSpacing": "0.05em", "borderRadius": "0 5px 5px 0"}}>LET ME IN!</button>
+                                        </div>
                                     </div>
-                                    <div className="rascals-form rascals-btn-form-wrapper">
-                                        <button type="submit" className="btn btn-custom-2 px-3 py-1 font-size-100" style={{"width": "200px","letterSpacing": "0.05em", "borderRadius": "0 5px 5px 0"}}>LET ME IN!</button>
+                                    <div className="form-check d-flex align-items-start mb-3">
+                                        <div>
+                                            <input className="form-check-input" type="checkbox" id="agreement" required />
+                                        </div>
+                                        <div className="ps-1">
+                                            <label className="form-check-label font-size-80 text-white" for="agreement">
+                                            You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="form-check d-flex align-items-start mb-3">
-                                    <div>
-                                        <input className="form-check-input" type="checkbox" id="agreement" required />
-                                    </div>
-                                    <div className="ps-1">
-                                        <label className="form-check-label font-size-80 text-white" for="agreement">
-                                        You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
-                                        </label>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
 
                         <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap">

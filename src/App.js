@@ -11,6 +11,7 @@ import * as smoothscroll from "smoothscroll-polyfill"
 // components
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
+import AboutRascals from './components/AboutRascals/AboutRascals'
 import NFT from './components/NFT/NFT'
 import Game from './components/Game/Game'
 import ARSection from './components/ARSection/ARSection'
@@ -314,6 +315,7 @@ export default function App() {
             <Switch>
                 <Route exact path="/">
                     <Hero />
+                    <AboutRascals />
                     <NFT />
                     <Game />
                     <ARSection />
