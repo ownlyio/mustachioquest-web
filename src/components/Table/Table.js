@@ -22,7 +22,7 @@ export default function Table(props) {
     return (
         <section id="nft">
             <div className="container">
-                <p className="mq-table-title gotham-black text-white text-center font-size-170 mb-5">WHAT MUSTACHIOS CAN I OWN?</p>
+                <p className="mq-table-title gotham-black text-white text-center font-size-170 font-size-lg-230 mb-5">What Mustachios Can I Own?</p>
 
                 {/* Types */}
                 <div className="row justify-content-center align-items-start mb-5">
@@ -57,7 +57,7 @@ export default function Table(props) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">10,000 MUSTACHIOS</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this Q3 2022</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this October 8, 2022</p>
                         </div>
                     </div>
                 </div>
@@ -72,13 +72,13 @@ export default function Table(props) {
                                 <tr className="font-size-70 font-size-md-100">
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">Utilities and Perks</th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">
-                                        <a href="/pathfinders" className="link-color-2">Mustachio Pathfinders</a>
+                                        Pathfinders (<a href="https://ownly.market/pathfinders2d" target="_blank" rel="noreferrer" className="link-color-2">2D</a> and <a href="https://ownly.market/pathfinders3d" target="_blank" rel="noreferrer" className="link-color-2">3D</a>)
                                     </th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">
-                                        <a href="/marauders" className="link-color-2">Mustachio Marauders</a>
+                                        <a href="https://ownly.market/marauders" target="_blank" rel="noreferrer" className="link-color-2">Marauders</a>
                                     </th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">
-                                        <a href="/rascals" className="link-color-2">Mustachio Rascals</a>
+                                        <a href="#" target="_blank" rel="noreferrer" className="link-color-2">Rascals</a>
                                     </th>
                                 </tr>
                             </thead>
@@ -160,7 +160,7 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">MustachioVerse Land Sale Discount</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">Hand-drawn 3D PFP by Boii Mustache</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
@@ -169,6 +169,16 @@ export default function Table(props) {
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr>
+                                {/* <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">MustachioVerse Land Sale Discount</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={greenCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100">
+                                        <img src={orangeCheck} alt="check" className="mq-table-check" />
+                                    </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
+                                </tr> */}
                                 {/* <tr>
                                     <td className="align-middle gotham-light text-white font-size-100"><a href="https://ownly.io/ar" target="_blank" className="text-white" rel="noreferrer">Augmented Reality Filter on Instagram</a></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
@@ -179,14 +189,14 @@ export default function Table(props) {
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                 </tr> */}
-                                <tr>
+                                {/* <tr>
                                     <td className="align-middle gotham-light text-white font-size-100">Exclusive Land Access within Mustachio Quest</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={greenCheck} alt="check" className="mq-table-check" />
                                     </td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
-                                </tr>
+                                </tr> */}
                                 {/*<tr>*/}
                                 {/*    <td className="align-middle gotham-light text-white font-size-100">10% Cryptoback in OWN</td>*/}
                                 {/*    <td className="text-center align-middle gotham-light text-white font-size-100">*/}
@@ -217,12 +227,18 @@ export default function Table(props) {
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={orangeCheck} alt="check" className="mq-table-check" />
                                     </td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
+                                </tr>
+                                <tr>
+                                    <td className="align-middle gotham-light text-white font-size-100">Generative 3D Art</td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
+                                    <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
                                         <img src={goldCheck} alt="check" className="mq-table-check" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">Generative 3D Art</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">$OWN Token Airdrop for holders</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
@@ -246,7 +262,7 @@ export default function Table(props) {
                                         <button className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={triggerMintButton}>MINT NOW</button>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
-                                        <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING Q3 2022</p>
+                                        <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING OCT 2022</p>
                                     </td>
                                 </tr>
                             </tbody>
