@@ -13,9 +13,10 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import AboutRascals from './components/AboutRascals/AboutRascals'
 import NFT from './components/NFT/NFT'
-import Game from './components/Game/Game'
+import Utilities from './components/Utilities/Utilities'
 import ARSection from './components/ARSection/ARSection'
 import Tales from './components/Tales/Tales'
+import Game from './components/Game/Game'
 import Visualizer from './components/Visualizer/Visualizer'
 import Table from './components/Table/Table'
 import Roadmap from './components/Roadmap/Roadmap'
@@ -32,9 +33,9 @@ import SneakPeek from './components/SneakPeek/SneakPeek'
 import Updates from './components/Updates/Updates'
 
 // pages
-import Pathfinders from './components/Pathfinders/Pathfinders'
-import Marauders from './components/Marauders/Marauders'
-import Rascals from './components/Rascals/Rascals'
+// import Pathfinders from './components/Pathfinders/Pathfinders'
+// import Marauders from './components/Marauders/Marauders'
+// import Rascals from './components/Rascals/Rascals'
 import AR from './components/AR/AR'
 import Artist from './components/Artist/Artist'
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
@@ -317,6 +318,7 @@ export default function App() {
                     <Hero />
                     <AboutRascals />
                     <NFT />
+                    <Utilities />
                     <ARSection />
                     <Tales />
                     <Game />
@@ -329,7 +331,7 @@ export default function App() {
                     <CTA />
                 </Route>
                 <Route exact path="/discord" component={Discord}></Route>
-                <Route exact path="/pathfinders">
+                {/* <Route exact path="/pathfinders">
                     <Pathfinders mintBtn={initUtilsAndMint} />
                 </Route>
                 <Route exact path="/marauders">
@@ -337,7 +339,7 @@ export default function App() {
                 </Route>
                 <Route exact path="/rascals">
                     <Rascals />
-                </Route>
+                </Route> */}
                 <Route exact path="/ar">
                     <AR />
                 </Route>
