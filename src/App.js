@@ -317,9 +317,9 @@ export default function App() {
                     <Hero />
                     <AboutRascals />
                     <NFT />
-                    <Game />
                     <ARSection />
                     <Tales />
+                    <Game />
                     <Visualizer />
                     <Table mintBtn={initUtilsAndMint} />
                     <Roadmap />

@@ -97,12 +97,14 @@ export default function Hero() {
         <section id="hero" className="h-screen">
             <div className="container h-100">
                 <div className="row align-items-center justify-content-center h-100">
-                    <div className="col-12 col-md-6 d-none d-md-block">
-                        <div className="hero-img mx-auto">
-                            <img src={rascals} alt="Rascals GIF" className="w-100" />
+                    <div className="col-12 col-lg-6 d-none d-lg-block">
+                        <div className="hero-img-wrap ms-0 ms-lg-1">
+                            <div className="hero-img mx-auto">
+                                <img src={rascals} alt="Rascals GIF" className="w-100" />
+                            </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-lg-6">
                         <div className="hero-logo mx-auto">
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
@@ -117,7 +119,7 @@ export default function Hero() {
 
                         <div id="whitelist-section" className="d-block">
                             <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
-                            <div className="px-lg-4 mx-lg-4">
+                            <div className="px-xl-4 mx-xl-4">
                                 <form className="rascals-form" onSubmit={submitForm}>
                                     <div className="d-flex align-items-center flex-wrap mb-3">
                                         <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
