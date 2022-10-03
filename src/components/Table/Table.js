@@ -254,15 +254,14 @@ export default function Table(props) {
                                 <tr>
                                     <td className="border-left-none"></td>
                                     <td className="border-bottom text-center">
-                                        <button onClick={props.mintBtn} className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT<br />NOW</button>
-                                        <button onClick={props.mintBtn} className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140">MINT NOW</button>
+                                        <p className="gotham-bold text-white font-size-100 font-size-sm-140 mb-0">SOLD OUT</p>
                                     </td>
                                     <td className="border-bottom text-center">
                                         <button className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={triggerMintButton}>MINT<br />NOW</button>
-                                        <button className="d-none d-md-block mt-2 mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={triggerMintButton}>MINT NOW</button>
+                                        <button className="d-none d-md-block mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={triggerMintButton}>MINT NOW</button>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
-                                        <p className="gotham-bold text-white font-size-80 font-size-sm-100 mb-0">LAUNCHING OCT 2022</p>
+                                        <p className="gotham-bold text-white font-size-100 font-size-sm-140 mb-0">LAUNCHING OCT 2022</p>
                                     </td>
                                 </tr>
                             </tbody>
