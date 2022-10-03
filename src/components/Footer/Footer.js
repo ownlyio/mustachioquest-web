@@ -1,4 +1,4 @@
-import { faDiscord, faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faDiscord, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Footer.css'
 
@@ -19,9 +19,9 @@ export default function Footer() {
                     <a className="footer-item cursor-pointer" href="https://twitter.com/mustachioverse" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon color="white" icon={faTwitter} size="3x" />
                     </a>
-                    <a className="footer-item cursor-pointer" href="https://www.tiktok.com/@mustachioverse" target="_blank" rel="noreferrer">
+                    {/* <a className="footer-item cursor-pointer" href="https://www.tiktok.com/@mustachioverse" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon color="white" icon={faTiktok} size="3x" />
-                    </a>
+                    </a> */}
                 </div>
                 <p className="text-center mt-3 mb-0">
                     <a href="/privacy-policy" className="font-size-80 text-white">Privacy Policy</a>
