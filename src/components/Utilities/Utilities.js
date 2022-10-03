@@ -143,7 +143,7 @@ export default function Utilities(props) {
                                     </div>
 
                                     <p className="text-center fw-bold font-size-140">The First-Ever NFT Tales</p>
-                                    <p className="text-center mb-0">Join the Pathfinders in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="link-color-4" >The Sages Rant</a>, a book with 10 chapters that reveal the stories of the Pathfinders on their quest to find The Sages Rant Collectibles.</p>
+                                    <p className="text-center mb-0">Join the Pathfinders in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" target="_blank" rel="noreferrer" className="link-color-4">The Sages Rant</a>, a book with 10 chapters that reveal the stories of the Pathfinders on their quest to find The Sages Rant Collectibles.</p>
                                 </div>
                             </div>
                         </div>
