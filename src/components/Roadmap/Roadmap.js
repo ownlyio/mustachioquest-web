@@ -64,6 +64,10 @@ export default function Roadmap() {
                         </div>
                         <div className="q-column quarter-mr">
                             <div className="soon q-pointer"></div>
+                            <div className="soon q-content gotham-light text-black font-size-110">AMAC and BBC IRL events for Mustachio and Ownly holders</div>
+                        </div>
+                        <div className="q-column quarter-mr">
+                            <div className="soon q-pointer"></div>
                             <div className="soon q-content gotham-light text-black font-size-110">Mustachio Quest Multi-user Early Preview</div>
                         </div>
                         <div className="q-column quarter-mr">
