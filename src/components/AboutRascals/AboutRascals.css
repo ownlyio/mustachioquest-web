@@ -1,0 +1,10 @@
+.rascals-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.form-check-input:checked {
+    background-color: #ff9f42 !important;
+    border-color: #ff9f42 !important;
+}

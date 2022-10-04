@@ -17,7 +17,19 @@ export default function FAQ() {
                     <div id="flush-collapse-1" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
                             <p className="font-size-120 gotham-light">The Mustachios are the first-ever NFT Tales to be told in the NFT industry. Intricately hand-drawn by the talented Boii Mustache, it took the artist years in the making to actualize the idea of being whatever you want to be, in a land of mustached beings. Now, the concept is solidified through our play-and-earn game, Mustachio Quest, where our Mustachio holders can fulfill quests in an open world NFT game as their 3D Mustachio avatar.</p>
-                            <p className="font-size-120 gotham-light">There will be a total of 300 Mustachios that come with 2D Mustachio NFTs. Our first 100 Mustachios from our Genesis set are called <a className="font-size-100 gotham-light link-color-1" href="https://mustachioverse.com/pathfinders">Mustachio Pathfinders</a>. Our second generation of Mustachios from 101-300 are called <a className="font-size-100 gotham-light link-color-1" href="https://mustachioverse.com/marauders">Mustachio Marauders</a>. There will be additional 10,000 3D generative Mustachios soon to launch called the Mustachio Rascals.</p>
+                            <p className="font-size-120 gotham-light">There's a total of 10,000 3D Mustachios Rascals, these are generative Mustachios. Our first 100 Mustachios from our Genesis set are called Mustachio Pathfinders. Our second generation of Mustachios from 101-300 are called Mustachio Marauders.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="flush-header-1a">
+                        <button className="accordion-button gotham-light text-center font-size-70 justify-content-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-1a">
+                            How many Mustachio Rascals are there?
+                        </button>
+                    </h2>
+                    <div id="flush-collapse-1a" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
+                        <div className="accordion-body">
+                            <p className="font-size-120 gotham-light">Mustachio Rascals are 3D generative mustachios, we only have a maximum supply of 10,000 Mustachio Rascal available for minting.</p>
                         </div>
                     </div>
                 </div>
@@ -29,22 +41,24 @@ export default function FAQ() {
                     </h2>
                     <div id="flush-collapse-2" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
-                            <p className="font-size-120">To get a Mustachio Pathfinder NFT:</p>
-                            <ol>
-                                <li className="font-size-120 gotham-light">Click MINT NOW at the <a className="font-size-100 gotham-light link-color-1" href="#nft" target="_blank">Archetypes Table in the Home Page</a>.</li>
-                                <li className="font-size-120 gotham-light">Connect your MetaMask wallet (Ethereum Network).</li>
-                                <li className="font-size-120 gotham-light">Mint your Mustachio Pathfinder and pay the gas fee.</li>
-                                <li className="font-size-120 gotham-light">Check your OpenSea or  <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Pathfinder.</li>
-                            </ol>
-                            <a className="font-size-120 gotham-light link-color-1" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Click here for a more detailed instruction.</a>
+                            <p className="font-size-120 gotham-light mt-3">Unfortunately, our Mustachio Pathfinders are already sold out, but you can still get your own Mustachio by any of the following:</p>
 
-                            <p className="font-size-120 mt-5">To get a Mustachio Marauder NFT:</p>
+                            <p className="font-size-120">To get a Mustachio Marauder NFT:</p>
                             <ol>
-                                <li className="font-size-120 gotham-light">Click MINT NOW at the upper right corner of the Navigation Menu.</li>
+                                <li className="font-size-120 gotham-light">Click MINT NOW at the lower part of the <a className="font-size-100 gotham-light link-color-1" href="/#nft">"What Mustachios can I Own?"</a> section</li>
                                 <li className="font-size-120 gotham-light">Connect your MetaMask wallet (BNB Chain Network).</li>
                                 <li className="font-size-120 gotham-light">Mint your Mustachio Marauder and pay the gas fee.</li>
                                 <li className="font-size-120 gotham-light">Check your <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Marauder.</li>
                             </ol>
+
+                            <p className="font-size-120 mt-4">To get a Mustachio Rascal NFT:</p>
+                            <p className="font-size-120 gotham-light">Instructions TBA.</p>
+                            {/* <ol>
+                                <li className="font-size-120 gotham-light">Click MINT NOW at the upper right corner of the Navigation Menu.</li>
+                                <li className="font-size-120 gotham-light">Connect your MetaMask wallet (BNB Chain Network).</li>
+                                <li className="font-size-120 gotham-light">Mint your Mustachio Marauder and pay the gas fee.</li>
+                                <li className="font-size-120 gotham-light">Check your <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Marauder.</li>
+                            </ol> */}
 
                             {/*<p className="font-size-120 mt-4">To earn a Mustachio Marauder NFT:</p>*/}
                             {/*<ol>*/}
@@ -66,7 +80,7 @@ export default function FAQ() {
                     </h2>
                     <div id="flush-collapse-3" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
-                            <p className="font-size-120 gotham-light">To add the element of surprise, you will enter the portal to MustachioVerse as a <b>random</b> Mustachio, each with a unique tale to be unraveled.</p>
+                            <p className="font-size-120 gotham-light">To add the element of surprise, you will enter the portal to MustachioVerse as a random Mustachio.</p>
                         </div>
                     </div>
                 </div>
@@ -109,9 +123,8 @@ export default function FAQ() {
                     </h2>
                     <div id="flush-collapse-6" className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
                         <div className="accordion-body">
-                            <p className="font-size-120 gotham-light">There are so many possibilities on how you can make use of your Mustachio!</p>
-                            <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Marauders, they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
-                            <p className="font-size-120 gotham-light">Aside from partaking in our play-and-earn NFT game, Mustachio Quest, you can also own 9 single-edition artifacts at <a href="https://ownly.market/sagesrantcollectibles" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant Collectibles</a>. The Sages Rant is our official NFT Tales with 10 chapters that reveal the stories behind the genesis set of Mustachios on their quest to find the 9 valuable artifacts that are collectively called the Grooming Kit.</p>
+                            <p className="font-size-120 gotham-light">There are so many possibilities on how you can make use of your Mustachio Rascals! You'll get to own a 3D Playable Character plus a Mustachio Instagram AR Filter, an access ti Mustachio NFT Visualizer Experience, access to our IRL events such as AMAC and BBC! Learn more about our utilities <a href="/#nft" className="link-color-1" target="_blank" rel="noreferrer">here</a>.</p>
+                            <p className="font-size-120 gotham-light">For the Mustachio Pathfinders and Mustachio Marauders they get a playable 3D avatar version of their 2D Mustachio. They also get a quarterly OWN token airdrop until our marketing and community airdrops wallet runs out.</p>
                         </div>
                     </div>
                 </div>

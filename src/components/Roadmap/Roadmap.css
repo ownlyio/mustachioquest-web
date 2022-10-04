@@ -23,6 +23,7 @@
   overflow-x: auto;
   top: -80px;
   -webkit-overflow-scrolling: touch;
+  cursor: grab;
 }
 
 /* .card {

@@ -2,10 +2,14 @@
     background-color: #0a8c7e;
 }
 
+.hero-img-wrap {
+    margin-left: -5em !important;
+}
+
 .hero-img {
     width: 70%;
 }
 
 .hero-logo {
-    width: 70%;
+    width: 60%;
 }

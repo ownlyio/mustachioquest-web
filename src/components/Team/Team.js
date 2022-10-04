@@ -124,8 +124,8 @@ export default function Team() {
         <section id="team">
             <div className="container">
                 <div className="row justify-content-center align-items-start">
-                    <p className="team-title text-color-2 gotham-black text-center font-size-170 mb-3">MEET THE TEAM</p>
-                    <p className="text-color-2 team-sub font-w-hermann w-hermann-reg text-center font-size-140 mb-5">With a combined 70 years of experience in software development, education, marketing, art, and design, the same team that won 13th place in Decentraland's Global Game Jam in 2019 launches its first play-and-earn NFT game in 2022.</p>
+                    <p className="team-title text-color-2 gotham-black text-center font-size-170 font-size-lg-230 mb-3">Meet the Team</p>
+                    <p className="text-color-4 team-sub font-w-hermann w-hermann-reg text-center font-size-140 mb-5">The Mustachios team consist of the <a href="https://ownly.io#team" target="_blank" rel="noreferrer" className="link-color-1 font-w-hermann w-hermann-reg">Ownly</a>'s experts and professionals from diverse fields with a combined 70 years of experience in software development, education, marketing, art, and design. The same team who launched its first web3 experience in Decentraland's Global Game Jam and won 13th place in 2019.</p>
                     
                     <div className="row justify-content-evenly align-items-center flex-wrap">
                         { team.map(x => (

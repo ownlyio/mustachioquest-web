@@ -433,10 +433,12 @@ export default function Navbar(props) {
                         </a>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
+                        <a href="https://mustachio.quest" target="_blank" rel="noreferrer" className="btn font-size-100">
+                            3D GALLERY
+                        </a>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
-                        <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)}>ROADMAP</HashLink>
+                        <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)}>NFT</HashLink>
                     </li>
                     <li className="px-0 px-xxl-2 font-size-lg-90 font-size-xxl-100">
                         <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)}>TEAM</HashLink>
@@ -488,8 +490,8 @@ export default function Navbar(props) {
                     <a href="/game" className="btn text-start px-0 py-3 font-size-100">GAME</a>
                     <a href="/ar" className="btn text-start px-0 py-3 font-size-100">AR FILTER</a>
                     <a href="/artist" className="btn text-start px-0 py-3 font-size-100">ARTIST</a>
+                    <a href="https://mustachio.quest" target="_blank" rel="noreferrer" className="btn text-start px-0 py-3 font-size-100">3D GALLERY</a>
                     <HashLink smooth to="/#nft" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">NFT</HashLink>
-                    <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">ROADMAP</HashLink>
                     <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">TEAM</HashLink>
                     {/* <HashLink smooth to="#rewards" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">REWARDS</HashLink> */}
                     {/*<HashLink smooth to="/#visualizer" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} className="text-black d-block py-3 w-100 text-decoration-none">VISUALIZER</HashLink>*/}
