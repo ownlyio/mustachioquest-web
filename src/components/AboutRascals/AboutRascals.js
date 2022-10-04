@@ -19,9 +19,9 @@ export default function AboutRascals() {
                             <p className="gotham-black text-center text-lg-start font-size-240 font-size-md-270 mb-4">What are the Rascals?</p>
 
                             <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
-
-                            <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">As the Pathfinders (<a href="https://ownly.market/pathfinders2d" className="link-color-4" target="_blank" rel="noreferrer">2D</a> and <a href="https://ownly.market/pathfinders3d" className="link-color-4" target="_blank" rel="noreferrer">3D</a> Genesis Mustachios) and <a href="https://ownly.market/marauders" className="link-color-4" target="_blank" rel="noreferrer">Marauders</a> (Second Generation Mustachios) wander in the Metaverse, another set of mustached adventurers are coming to join them! Behold the next generation set called Mustachio Rascals.</p>
-                            <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Our third generation of Mustachios are called Mustachio Rascals with a maximum supply of 10,000 Generated 3D NFTs. Of course, you can use your 3D Mustachio Rascal to explore and play our game, Mustachio Quest.</p>
+                            
+                            <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Another set of Mustachio adventurers are joining the Pathfinders (<a href="https://ownly.market/pathfinders2d" className="link-color-4" target="_blank" rel="noreferrer">2D</a> and <a href="https://ownly.market/pathfinders3d" className="link-color-4" target="_blank" rel="noreferrer">3D</a> Genesis Mustachios) and <a href="https://ownly.market/marauders" className="link-color-4" target="_blank" rel="noreferrer">Marauders</a> (Second Generation Mustachios) as they explore the Metaverse! Here comes the Mustachio Rascals, the next generation of our Mustachios.</p>
+                            <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">With a maximum supply of 10,000 Generated 3D NFTs, the Mustachio Rascals are the third generation of Mustachios. Of course, you may explore and play Mustachio Quest with your 3D Mustachio Rascal.</p>
                             <p className="font-size-120 text-center text-lg-start gotham-bold line-height-150 pt-2 mb-2 pb-3">Launching this October 8, 2022 at AMAC 2022.</p>
 
                             {/* <div className="text-center text-lg-start">
