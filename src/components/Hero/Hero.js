@@ -10,13 +10,13 @@ import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-
 import { useState, useEffect } from "react"
 import './Hero.css'
 
-export default function Hero() {
+export default function Hero({ mintRascal }) {
     const defaultTime = "00"
     const [days, setDays] = useState(defaultTime)
     const [hours, setHours] = useState(defaultTime)
     const [minutes, setMinutes] = useState(defaultTime)
     const [seconds, setSeconds] = useState(defaultTime)
-    const [isComingSoon, setIsComingSoon] = useState(true)
+    const [isComingSoon, setIsComingSoon] = useState(false)
     const [emailAdd, setEmailAdd] = useState("")
     const [showSubscribed, setShowSubscribed] = useState(false);
     const handleCloseSubscribed = () => setShowSubscribed(false);
@@ -45,8 +45,6 @@ export default function Hero() {
     let interval
 
     const startTimer = timeSec => {
-        const countdownObj = document.querySelector(".hero-countdown")
-        const whitelistObj = document.querySelector("#whitelist-section")
         const countdownDate = new Date().getTime() + (timeSec * 1000)
 
         interval = setInterval(() => {
@@ -61,10 +59,6 @@ export default function Hero() {
             if (distance < 0) {
                 clearInterval(interval.current)
                 setIsComingSoon(false)
-                countdownObj?.classList.remove('d-flex')
-                countdownObj?.classList.add('d-none')
-                whitelistObj?.classList.remove('d-block')
-                whitelistObj?.classList.add('d-none')
             } else {
                 setDays(d)
                 setHours(h)
@@ -109,61 +103,80 @@ export default function Hero() {
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
                         <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160 mb-0">Launching on October 8, 2022 at</p>
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">
-                            <a href="https://amac.ph" target="_blank" rel="noreferrer">
-                                <span className="link-color-2">AMAC2022</span>&nbsp;
-                                <img src={amacLogo} alt="AMAC Logo" style={{"width": "50px"}} />
-                            </a>
-                        </p>
 
-                        <div id="whitelist-section" className="d-block">
-                            <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
-                            <div className="px-xl-4 mx-xl-4">
-                                <form className="rascals-form" onSubmit={submitForm}>
-                                    <div className="d-flex align-items-center flex-wrap mb-3">
-                                        <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
-                                            <input id="emailAdd" type="email" name="email_address" className="form-control d-block px-3 py-1 font-size-100" style={{"borderRadius": "5px 0 0 5px"}} placeholder="Your email address" required onChange={(e) => setEmailAdd(e.target.value)} />
-                                        </div>
-                                        <div className="rascals-form rascals-btn-form-wrapper">
-                                            <button type="submit" className="btn btn-custom-2 px-3 py-1 font-size-100" style={{"width": "200px","letterSpacing": "0.05em", "borderRadius": "0 5px 5px 0"}}>LET ME IN!</button>
-                                        </div>
-                                    </div>
-                                    <div className="form-check d-flex align-items-start mb-3">
-                                        <div>
-                                            <input className="form-check-input" type="checkbox" id="agreement" required />
-                                        </div>
-                                        <div className="ps-1">
-                                            <label className="form-check-label font-size-80 text-white" for="agreement">
-                                            You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
-                                            </label>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                        {isComingSoon ? (
+                            <>
+                                <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160 mb-0">Launching on October 8, 2022 at</p>
+                                <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">
+                                    <a href="https://amac.ph" target="_blank" rel="noreferrer">
+                                        <span className="link-color-2">AMAC2022</span>&nbsp;
+                                        <img src={amacLogo} alt="AMAC Logo" style={{"width": "50px"}} />
+                                    </a>
+                                </p>
 
-                        <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap">
-                            <div className="countdown days">
-                                <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{days}</p>
-                                <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">DAYS</p>
-                            </div>
-                            {/* <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
-                            <div className="countdown hours">
-                                <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{hours}</p>
-                                <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">HOURS</p>
-                            </div>
-                            {/* <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
-                            <div className="countdown minutes">
-                                <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{minutes}</p>
-                                <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">MINUTES</p>
-                            </div>
-                            {/* <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
-                            <div className="countdown seconds">
-                                <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{seconds}</p>
-                                <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">SECONDS</p>
-                            </div>
-                        </div>
+                                <div id="whitelist-section" className="d-block">
+                                    <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
+                                    <div className="px-xl-4 mx-xl-4">
+                                        <form className="rascals-form" onSubmit={submitForm}>
+                                            <div className="d-flex align-items-center flex-wrap mb-3">
+                                                <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
+                                                    <input id="emailAdd" type="email" name="email_address" className="form-control d-block px-3 py-1 font-size-100" style={{"borderRadius": "5px 0 0 5px"}} placeholder="Your email address" required onChange={(e) => setEmailAdd(e.target.value)} />
+                                                </div>
+                                                <div className="rascals-form rascals-btn-form-wrapper">
+                                                    <button type="submit" className="btn btn-custom-2 px-3 py-1 font-size-100" style={{"width": "200px","letterSpacing": "0.05em", "borderRadius": "0 5px 5px 0"}}>LET ME IN!</button>
+                                                </div>
+                                            </div>
+                                            <div className="form-check d-flex align-items-start mb-3">
+                                                <div>
+                                                    <input className="form-check-input" type="checkbox" id="agreement" required />
+                                                </div>
+                                                <div className="ps-1">
+                                                    <label className="form-check-label font-size-80 text-white" for="agreement">
+                                                    You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap">
+                                    <div className="countdown days">
+                                        <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{days}</p>
+                                        <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">DAYS</p>
+                                    </div>
+                                    {/* <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
+                                    <div className="countdown hours">
+                                        <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{hours}</p>
+                                        <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">HOURS</p>
+                                    </div>
+                                    {/* <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
+                                    <div className="countdown minutes">
+                                        <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{minutes}</p>
+                                        <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">MINUTES</p>
+                                    </div>
+                                    {/* <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
+                                    <div className="countdown seconds">
+                                        <p className="font-size-200 font-size-lg-350 gotham-black text-center text-white line-height-110 mb-0">{seconds}</p>
+                                        <p className="font-size-110 font-size-lg-140 text-center text-white mb-0">SECONDS</p>
+                                    </div>
+                                </div>  
+                            </>
+                        ) : (
+                            <>
+                                <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160 mb-0">Launched now at</p>
+                                <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">
+                                    <a href="https://amac.ph" target="_blank" rel="noreferrer">
+                                        <span className="link-color-2">AMAC2022</span>&nbsp;
+                                        <img src={amacLogo} alt="AMAC Logo" style={{"width": "50px"}} />
+                                    </a>
+                                </p>
+
+                                <div className="mx-auto text-center">
+                                    <button onClick={mintRascal} className="btn btn-custom-2 gotham-black font-size-130 px-4">MINT NOW!</button>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

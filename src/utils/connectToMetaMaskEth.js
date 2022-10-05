@@ -6,8 +6,8 @@ const connectToMetaMask = async () => {
             // Get network ID
             let n = parseInt(window.ethereum.chainId);
 
-            if(n !== 1) {
-            // if(n !== 4) {
+            // if(n !== 1) {
+            if(n !== 5) {
                 await switchNetwork();
             }
 
@@ -29,8 +29,8 @@ const switchNetwork = async () => {
         console.log("switch");
         await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
-            params: [{ chainId: "0x1"}],
-            // params: [{ chainId: "0x4"}],
+            // params: [{ chainId: "0x1"}],
+            params: [{ chainId: "0x5"}],
         });
         console.log("You have switched to the right network")
     } catch (switchError) {
@@ -54,15 +54,15 @@ const addNetwork = async () => {
                     nativeCurrency: {
                         symbol:'ETH',
                         decimals: 18
+                    },
+                    chainId: '0x5',
+                    chainName:'Goerli Test Network',
+                    rpcUrls:['https://goerli.infura.io/v3/'],
+                    blockExplorerUrls:['https://goerli.etherscan.io/'],
+                    nativeCurrency: {
+                        symbol:'ETH',
+                        decimals: 18
                     }
-                    // chainId: '0x4',
-                    // chainName:'Rinkeby Test Network',
-                    // rpcUrls:['https://rinkeby.infura.io/v3/'],
-                    // blockExplorerUrls:['https://rinkeby.etherscan.io/'],
-                    // nativeCurrency: {
-                    //     symbol:'ETH',
-                    //     decimals: 18
-                    // }
                 }
             ]
         });
