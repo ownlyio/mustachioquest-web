@@ -100,7 +100,7 @@ export default function Hero() {
                     <div className="col-12 col-lg-6 d-none d-lg-block">
                         <div className="hero-img-wrap ms-0 ms-lg-1">
                             <div className="hero-img mx-auto">
-                                <img src={rascals} alt="Rascals GIF" className="w-100" />
+                                <img src={rascals} alt="Rascals GIF" className="shifting-rascals" />
                             </div>
                         </div>
                     </div>
@@ -108,9 +108,9 @@ export default function Hero() {
                         <div className="hero-logo mx-auto">
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
-                        <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160 mb-0">Launching on October 8, 2022 at</p>
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">
+                        <p className="font-size-110 font-size-lg-130 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
+                        <p className="font-size-110 font-size-lg-130 gotham-bold text-center text-white line-height-160 mb-0">Launching on October 8, 2022 at</p>
+                        <p className="font-size-110 font-size-lg-130 gotham-bold text-center text-white line-height-160">
                             <a href="https://amac.ph" target="_blank" rel="noreferrer">
                                 <span className="link-color-2">AMAC2022</span>&nbsp;
                                 <img src={amacLogo} alt="AMAC Logo" style={{"width": "50px"}} />
@@ -118,7 +118,7 @@ export default function Hero() {
                         </p>
 
                         <div id="whitelist-section" className="d-block">
-                            <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
+                            <p className="text-white font-size-100 font-size-sm-120 text-center px-md-5 mb-2">Be the first to know! Join our VIP List.</p>
                             <div className="px-xl-4 mx-xl-4">
                                 <form className="rascals-form" onSubmit={submitForm}>
                                     <div className="d-flex align-items-center flex-wrap mb-3">
@@ -134,7 +134,7 @@ export default function Hero() {
                                             <input className="form-check-input" type="checkbox" id="agreement" required />
                                         </div>
                                         <div className="ps-1">
-                                            <label className="form-check-label font-size-80 text-white" for="agreement">
+                                            <label className="form-check-label font-size-60 text-white" for="agreement">
                                             You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
                                             </label>
                                         </div>
