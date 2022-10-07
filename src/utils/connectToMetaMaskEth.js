@@ -17,8 +17,6 @@ const connectToMetaMask = async () => {
                 window.location.reload();
             });
         }).catch((err) => console.log(err))
-    } else {
-        alert("Please install your MetaMask to proceed.");
     }
 
     return address;

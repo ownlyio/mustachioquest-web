@@ -2,7 +2,7 @@ import './App.css'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Modal } from 'react-bootstrap'
-import { faCheckCircle, faExclamationCircle, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCheckCircle, faExclamationCircle, faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Discord } from './components/ShortLinks'
 import $ from 'jquery'
@@ -46,12 +46,13 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 // import getCurrentNetwork from './utils/getCurrentNetwork'
 
 // blockchain
-import connectToMetaMask from "./utils/connectToMetaMask";
+import connectToMetaMask from "./utils/connectToMetaMask"
 import connectToMetaMaskEth  from './utils/connectToMetaMaskEth'
-import ownContract from "./utils/ownContract";
-import sparkSwapContract from "./utils/sparkSwapRouterContract";
-import marketplaceContract from "./utils/marketplaceContract";
-import numberFormat from "./utils/numberFormat";
+import ownContract from "./utils/ownContract"
+import rascalsContract from "./utils/rascalsContract"
+import sparkSwapContract from "./utils/sparkSwapRouterContract"
+import marketplaceContract from "./utils/marketplaceContract"
+import numberFormat from "./utils/numberFormat"
 import web3 from "./utils/web3"
 
 // images
@@ -65,27 +66,6 @@ import marauders from "./images/MQ_marauders.png"
 smoothscroll.polyfill()
 
 export default function App() {
-    // State variables for initialization
-    // const [walletAddress, setWallet] = useState("")
-    // const [status, setStatus] = useState(0)
-    // const [network, setNetwork] = useState("")
-    // const [netStatus, setNetStatus] = useState(0)
-    const [tokenId, setTokenId] = useState(0)
-
-    // State variables for minting
-    const [txHash, setTxHash] = useState("")
-    const [txError, setTxError] = useState("")
-    const [txData, setTxData] = useState([])
-
-    // Other Variables (Change upon deployment)
-    // const explorerUrl = "https://rinkeby.etherscan.io/tx/"
-    const explorerUrl = "https://etherscan.io/tx/"
-    // const contractAddress = "0x421dC2b62713223491Daf075C23B39EF0E340E94" // Rinkeby
-    const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
-    // const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
-    const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
-    const marketplaceUrl = "https://ownly.market/pathfinders2d/" // (Production only)
-
     // Modals
     const [showMetamaskInstall, setShowMetamaskInstall] = useState(false);
     const handleCloseMetamaskInstall = () => setShowMetamaskInstall(false);
@@ -93,18 +73,9 @@ export default function App() {
     const [showWrongNetwork, setShowWrongNetwork] = useState(false);
     const handleCloseWrongNetwork = () => setShowWrongNetwork(false);
     const handleShowWrongNetwork = () => setShowWrongNetwork(true);
-    const [showOnProcess, setShowOnProcess] = useState(false);
-    const handleCloseOnProcess = () => setShowOnProcess(false);
-    const handleShowOnProcess = () => setShowOnProcess(true);
-    const [showOnError, setShowOnError] = useState(false);
-    const handleCloseOnError = () => setShowOnError(false);
-    const handleShowOnError = () => setShowOnError(true);
-    const [showOnSuccess, setShowOnSuccess] = useState(false);
-    const handleCloseOnSuccess = () => setShowOnSuccess(false);
-    const handleShowOnSuccess = () => setShowOnSuccess(true);
-    const [showSoldOut, setShowSoldOut] = useState(false);
-    const handleCloseSoldOut = () => setShowSoldOut(false);
-    const handleShowSoldOut = () => setShowSoldOut(true);
+    // const [showOnProcess, setShowOnProcess] = useState(false);
+    // const handleCloseOnProcess = () => setShowOnProcess(false);
+    // const handleShowOnProcess = () => setShowOnProcess(true);
 
     // ------------------------------------------ MARAUDERS MINT ---------------------------------------------------------
     let isProduction = true;
@@ -394,6 +365,70 @@ export default function App() {
     const [showMintRascal, setShowMintRascal] = useState(false)
     const handleCloseMintRascal = () => setShowMintRascal(false)
     const handleShowMintRascal = () => setShowMintRascal(true)
+    const [showOnSuccessRascal, setShowOnSuccessRascal] = useState(false);
+    const handleCloseOnSuccessRascal = () => setShowOnSuccessRascal(false);
+    const handleShowOnSuccessRascal = () => setShowOnSuccessRascal(true);
+    const [showOnErrorRascal, setShowOnErrorRascal] = useState(false)
+    const handleCloseOnErrorRascal = () => setShowOnErrorRascal(false)
+    const handleShowOnErrorRascal = () => setShowOnErrorRascal(true)
+
+    const [isFreeMint, setIsFreeMint] = useState(false)
+    const [isWhiteListed, setIsWhiteListed] = useState(true)
+    const [currentMinter, setCurrentMinter] = useState("")
+    const [isDisabled, setIsDisabled] = useState(true)
+    const [isMinting, setIsMinting] = useState(false)
+    const [isSoldout, setIsSoldout] = useState(false)
+    const [mintQty, setMintQty] = useState(0)
+    const [currentPrice, setCurrentPrice] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
+    const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0)
+    const [txHashRascal, setTxHashRascal] = useState("#")
+    const [tokenId, setTokenId] = useState(0)
+    const [txError, setTxError] = useState("")
+
+    const mintCost = [
+        0.025,
+        0.018,
+        0.014,
+        0.009
+    ]
+
+    const percentageDiscount = 0.75
+
+    // Mainnet
+    // const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
+    // Testnet
+    const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
+    // Mainnet
+    // const etherScanUrl = 'https://etherscan.io/tx/'
+    // Testnet
+    const etherScanUrl = 'https://goerli.etherscan.io/tx/'
+
+    const handleKeypress = (e) => {
+        const characterCode = e.key
+        if (characterCode === 'Backspace') return
+    
+        const characterNumber = Number(characterCode)
+        if (characterNumber >= 0 && characterNumber <= 9) {
+          if (e.currentTarget.value && e.currentTarget.value.length) {
+            return
+          } else if (characterNumber === 0) {
+            e.preventDefault()
+          }
+        } else {
+          e.preventDefault()
+        }
+    }
+
+    const handleQtyChange = (e) => {
+        const qty = e.currentTarget.value
+        if (qty != "") {
+            setIsDisabled(false)
+            // if (qty <= 2) {
+                
+            // }
+        } else setIsDisabled(true)
+    }
 
     const mintRascal = async () => {
         let address = await connectToMetaMaskEth()
@@ -403,7 +438,7 @@ export default function App() {
         } else {
             handleShowMetamaskInstall()
         }
-    };
+    }
     // ---------------------------------------------------------- END RASCALS MINT --------------------------------------------------
 
     $(document).ready(function(){
@@ -510,7 +545,7 @@ export default function App() {
             <Navbar mintMarauder={mintMarauder} /> 
             <Switch>
                 <Route exact path="/">
-                    <Hero mintRascal={mintRascal} />
+                    <Hero mintRascal={mintRascal} isSoldout={isSoldout} />
                     <AboutRascals />
                     <NFT />
                     <Utilities />
@@ -557,21 +592,6 @@ export default function App() {
             </Switch>
             <Footer />
 
-            {/* Modal for soldout */}
-            <Modal show={showSoldOut} onHide={handleCloseSoldOut} backdrop="static" keyboard={false} size="sm" centered>
-                <Modal.Body>
-                    <div className="text-center mb-3">
-                        <FontAwesomeIcon color="yellow" size="6x" icon={faExclamationCircle} />
-                    </div>
-                    <p className="app-soldout-modal-content text-center font-andes text-lg"><b style={{fontSize: "1.5rem"}}>SOLD OUT!</b><br />All 100 Mustachios have gone through The Portal. Watch out for the next generation of mustached beings.</p>
-                </Modal.Body>
-                <Modal.Footer className="justify-content-center">
-                    <Button variant="secondary" onClick={handleCloseSoldOut}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal> 
-
             {/* Modal for No Metamask */}
             <Modal show={showMetamaskInstall} onHide={handleCloseMetamaskInstall} backdrop="static" keyboard={false} size="sm" centered>
                 <Modal.Body>
@@ -607,53 +627,14 @@ export default function App() {
             </Modal>    
 
             {/* Modal for pending transaction */}
-            <Modal show={showOnProcess} onHide={handleCloseOnProcess} backdrop="static" keyboard={false} size="sm" centered>
+            {/* <Modal show={showOnProcess} onHide={handleCloseOnProcess} backdrop="static" keyboard={false} size="sm" centered>
                 <Modal.Body>
                     <div className="text-center mb-3">
                         <img src={loading} alt="Loading..." style={{width: "150px", margin: "0 auto"}} />
                     </div>
                     <p className="app-pending-modal-content text-center font-andes text-lg"><span className="app-loading-big-letter">O</span>, what great honour. Put on your armor and hold your fire, dear friend, for we are minting your Mustachio.</p>
                 </Modal.Body>
-            </Modal>    
-
-            {/* Modal for error transaction */}
-            <Modal show={showOnError} onHide={handleCloseOnError} backdrop="static" keyboard={false} size="sm" centered>
-                <Modal.Body>
-                    <div className="text-center mb-3">
-                        <FontAwesomeIcon color="red" size="6x" icon={faExclamationCircle} />
-                    </div>
-                    <p className="app-error-modal-content text-center font-andes text-lg">Error: {txError}</p>
-                </Modal.Body>
-                <Modal.Footer className="justify-content-center">
-                    <Button variant="secondary" onClick={handleCloseOnError}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>    
-
-            {/* Modal for successful transaction */}
-            <Modal show={showOnSuccess} onHide={handleCloseOnSuccess} backdrop="static" keyboard={false} size="md" centered>
-                <Modal.Body>
-                    <div className="text-center mb-3">
-                        <FontAwesomeIcon color="green" size="6x" icon={faCheckCircle} />
-                    </div>
-                    <p className="app-success-modal-content text-center font-andes text-lg">Your Mustachio has been successfully minted! You're ready to join the quest to find the Golden Mustache.</p>
-                </Modal.Body>
-                <Modal.Footer className="justify-content-center">
-                    <Button variant="secondary" onClick={handleCloseOnSuccess}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={() => window.open(explorerUrl + txHash, '_blank').focus()}>
-                        View on EtherScan
-                    </Button>
-                    <Button variant="primary" onClick={() => window.open(openSeaUrl + tokenId, '_blank').focus()}>
-                        View on OpenSea
-                    </Button>
-                    <Button variant="primary" onClick={() => window.open(marketplaceUrl + tokenId, '_blank').focus()}>
-                        View on Marketplace
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            </Modal>     */}
 
             <Modal show={showMintMarauder} onHide={handleCloseMintMarauder} centered>
                 <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"3px solid white"}}>
@@ -727,46 +708,89 @@ export default function App() {
             </Modal>
 
             <Modal show={showMintRascal} onHide={handleCloseMintRascal} centered>
-                <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"3px solid white"}}>
-                    <div className="position-absolute" style={{"top":"15px", "right":"20px", "zIndex":"5"}}>
+                <Modal.Body className="px-4 position-relative modal-body-style">
+                    <div className="position-absolute modal-close-icon">
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMintRascal} />
                     </div>
 
-                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Rascal</p>
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Rascal</p>
 
                     <div className="mb-4">
                         <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
                     </div>
 
-                    {/* <p className="app-metamask-modal-content text-white text-center font-andes font-size-90 px-5 mb-1">Select Payment Method:</p>
+                    {isFreeMint ? (
+                        <>
+                            <p className="app-metamask-modal-content text-white fw-bold text-center font-size-130 px-3">Woohoo! Looks like you have a FREE MINT available on your account.</p>
+                            <button type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>MINT MY FREE RASCAL!</button>
+                        </>
+                    ) : (
+                        <>
+                            <p className="app-metamask-modal-content text-white text-center fw-bold font-size-150 mb-3">Price: {numberFormat(currentPrice,4)} ETH</p>
 
-                    <div className="d-flex justify-content-center mb-3" id="select-mint-method">
-                        <div className="form-check form-check-inline px-4 mx-4 d-flex align-items-center me-0">
-                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio1" value="OWN" onChange={handleInputChange} style={{"width":"25px", "height":"25px"}} checked={inputsValues.paymentMethod === "OWN"} />
-                            <label className="form-check-label text-white font-size-150 ps-3 cursor-pointer" htmlFor="inlineRadio1">OWN</label>
-                        </div>
-                        <div className="form-check form-check-inline px-4 mx-4 d-flex align-items-center me-0">
-                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio2" value="BNB" onChange={handleInputChange} style={{"width":"25px", "height":"25px"}} checked={inputsValues.paymentMethod === "BNB"} />
-                            <label className="form-check-label text-white font-size-150 ps-3 cursor-pointer" htmlFor="inlineRadio2">BNB</label>
-                        </div>
-                    </div>  */}
+                            <input type="number" id="qtyToMint" onKeyDown={handleKeypress} onChange={handleQtyChange} className="rascals-mint-qty text-center form-control font-size-150 mb-3" placeholder="Enter Qty to mint" min="1" step="1"/>
 
-                    {/* <div>{ updateBalanceContent() }</div>
+                            { isWhiteListed ? (
+                                <>
+                                    <p className="text-white text-center fw-bold mb-0">
+                                        Total: <s className="font-size-100 gotham">{numberFormat(totalPrice, 4)} ETH</s>
+                                    </p>
+                                    <p className="text-white text-center fw-bold font-size-150 mb-1">
+                                        {numberFormat(totalDiscountedPrice, 4)} ETH
+                                    </p>
+                                    <p className="font-weight-130 text-white text-center fw-bold mb-4">Less 25%!</p>
+                                </>
+                            ) : (
+                                <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
+                            )}
+                            <button type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
+                                {isMinting ? (
+                                    <FontAwesomeIcon icon={faSpinner} color="white" spin />
+                                ) : (
+                                    isSoldout ? "SOLD OUT" : "MINT NOW!"
+                                )}
+                            </button>
+                        </>
+                    )}
+                </Modal.Body>
+            </Modal>
 
-                    <div className="mb-4">
-                        <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
+             {/* Modal for error transaction */}
+             <Modal show={showOnErrorRascal} onHide={handleCloseOnErrorRascal} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body className="px-4 position-relative modal-body-style">
+                    <div className="position-absolute modal-close-icon">
+                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseOnErrorRascal} />
                     </div>
 
-                    <p className="app-metamask-modal-content text-white text-center font-andes font-size-90 px-5 mb-2">Price:</p>
+                    <p className="text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Error: {txError}</p>
+                </Modal.Body>
+            </Modal>    
 
-                    <div>{ updateDiscountContent() }</div>
-
-                    <div className="d-flex justify-content-center align-items-center mb-4 pb-2">
-                        <p className="text-white text-center fw-bold font-size-150 mb-0 pe-3">{ (price !== "Loading") ? numberFormat(finalPrice,(inputsValues.paymentMethod === "OWN") ? 0 : 4) : price }</p>
-                        <div>{ updatePaymentMethodTokenLogo() }</div>
+            {/* Modal for successful transaction */}
+            <Modal show={showOnSuccessRascal} onHide={handleCloseOnSuccessRascal} centered>
+                <Modal.Body className="px-4 position-relative modal-body-style">
+                    <div className="position-absolute modal-close-icon">
+                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseOnSuccessRascal} />
                     </div>
 
-                    <div>{ updateActionButtons() }</div> */}
+                    <div className="text-center pt-4">
+                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Pathfinders" />
+                    </div>
+
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-140 px-md-5 pt-3 mb-1">Congratulations!</p>
+                    <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-110 px-md-5 pb-4 mb-2">You have successfully owned your Mustachio Rascals</p>
+
+                    <div className="row mb-4">
+                        <div className="col-12 text-center">
+                            {/* Mainnet */}
+                            {/* <a href={ 'https://opensea.io/assets/ethereum/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a> */}
+
+                            {/* Testnet */}
+                            <a href={ 'https://testnets.opensea.io/assets/goerli/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a>
+
+                            <a href={ etherScanUrl + txHashRascal } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
+                        </div>
+                    </div>
                 </Modal.Body>
             </Modal>
         </Router>

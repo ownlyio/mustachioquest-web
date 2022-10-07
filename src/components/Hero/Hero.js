@@ -10,7 +10,7 @@ import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-
 import { useState, useEffect } from "react"
 import './Hero.css'
 
-export default function Hero({ mintRascal }) {
+export default function Hero({ mintRascal, isSoldout }) {
     const defaultTime = "00"
     const [days, setDays] = useState(defaultTime)
     const [hours, setHours] = useState(defaultTime)
@@ -81,7 +81,7 @@ export default function Hero({ mintRascal }) {
     useEffect(() => {
         async function _init() {
             const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-10-08%2012:00")
-            startTimer(Number(remaining.data))
+            startTimer(Number(5))
         }
 
         _init()
@@ -173,7 +173,13 @@ export default function Hero({ mintRascal }) {
                                 </p>
 
                                 <div className="mx-auto text-center">
-                                    <button onClick={mintRascal} className="btn btn-custom-2 gotham-black font-size-130 px-4">MINT NOW!</button>
+                                    {isSoldout ? (
+                                        <>
+                                            <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160 mb-2"><b>NOTE:</b> All 10,000 Mustachio Rascals have gone through The Portal and is now <b>SOLD OUT.</b> Thank you so much for your support.</p>
+                                        </>
+                                    ) : (
+                                        <button onClick={mintRascal} className="btn btn-custom-2 gotham-black font-size-130 px-4">MINT NOW!</button>
+                                    )}
                                 </div>
                             </>
                         )}
