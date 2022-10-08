@@ -3,11 +3,11 @@ import rascals from '../../images/rascal-gif.gif'
 import rascalsLogo from '../../images/MQ_rascals.png'
 import amacLogo from '../../images/amac-logo.png'
 
-import axios from 'axios'
-import { Button, Modal } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react"
+// import axios from 'axios'
+// import { Button, Modal } from "react-bootstrap";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+// import { useState, useEffect } from "react"
 import './Hero.css'
 
 export default function Hero({ mintRascal, isSoldout }) {

@@ -450,11 +450,14 @@ export default function App() {
                 setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             }
 
-            if (isWhiteListed) {
-                const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
-                setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
-            }
-            else setTotalDiscountedPrice(0)
+            // if (isWhiteListed) {
+            //     const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
+            //     setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
+            // }
+            // else setTotalDiscountedPrice(0)
+
+            const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
+            setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
         } else {
             setCurrentPrice(web3.utils.fromWei(mintCost[0].toString(), "ether"))
             setTotalPrice(0)
@@ -486,7 +489,8 @@ export default function App() {
     const rascalsMintProcess = async qtyToMint => {
         if (totalSupply + Number(qtyToMint) <= 10000) {
             const userBalance = await web3.eth.getBalance(address)
-            const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
+            // const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
+            const totalPriceToPay = web3.utils.toWei(totalDiscountedPrice.toString())
 
             if (BigInt(userBalance) >= BigInt(totalPriceToPay)) {
                 await rascalsContract.methods.mint(qtyToMint).send({
@@ -575,32 +579,20 @@ export default function App() {
             setFreeMintQty(Number(freeMintEligible))
         } else setIsFreeMint(false)
 
+        // TODO: Uncomment tomorrow
         // check if whitelisted
-        const wlEligible = await rascalsContract.methods.isWhitelisted(addr).call()
-        if (wlEligible) setIsWhiteListed(true)
-        else setIsWhiteListed(false)
+        // const wlEligible = await rascalsContract.methods.isWhitelisted(addr).call()
+        // if (wlEligible) setIsWhiteListed(true)
+        // else setIsWhiteListed(false)
 
         // check totalSupply
         const totSup = await rascalsContract.methods.totalSupply().call()
-        console.log("Current total Supply: " + totSup)
         setTotalSupply(Number(totSup))
 
         // check if sold out
         if (Number(totSup) === 10000) setIsSoldout(true)
         else setIsSoldout(false)
     }
-
-    // NOTICE (remove once okay) same with the modal
-    const [showNotice, setShowNotice] = useState(false)
-    const handleCloseNotice = () => setShowNotice(false)
-    const handleShowNotice = () => setShowNotice(true)
-
-    // TO DO: remove line 387 (const [isNotice, setIsNotice] = useState(true)) and update the mintRascal props to initRascal
-
-    useEffect(() => {
-        handleShowNotice()
-    }, [])
-    // END NOTICE
     // ---------------------------------------------------------- END RASCALS MINT --------------------------------------------------
 
     $(document).ready(function(){
@@ -704,10 +696,10 @@ export default function App() {
             {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
             {/*</div>*/}
 
-            <Navbar mintRascal={mintMarauder} /> 
+            <Navbar mintRascal={initRascal} /> 
             <Switch>
                 <Route exact path="/">
-                    <Hero mintRascal={handleShowNotice} isSoldout={isSoldout} isNotice={isNotice} />
+                    <Hero mintRascal={initRascal} isSoldout={isSoldout} />
                     <AboutRascals />
                     <NFT />
                     <Utilities />
@@ -715,7 +707,7 @@ export default function App() {
                     <Tales />
                     <Game />
                     <Visualizer />
-                    <Table mintMarauder={mintMarauder} mintRascal={handleShowNotice} isNotice={isNotice} />
+                    <Table mintMarauder={mintMarauder} mintRascal={initRascal} />
                     <Roadmap />
                     <Gmfrens />
                     <Team />
@@ -864,7 +856,7 @@ export default function App() {
                             <a href={ 'https://ownly.market/marauders/' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>
 
                             {/* Testnet */}
-                            {/*<a href={ 'http://ownlyio.marketplace.test/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>*/}
+                            {/* <a href={ 'http://ownlyio.marketplace.test/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a> */}
 
                             <a href={ purchaseTransactionHash } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
                         </div>
@@ -912,7 +904,8 @@ export default function App() {
                                 </>
                             ) : (
                                 <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
-                                )}
+                            )}
+
                             <button onClick={mintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
                                 {isMinting ? (
                                     <FontAwesomeIcon icon={faSpinner} color="white" spin />
@@ -921,12 +914,9 @@ export default function App() {
                                     )}
                             </button>
 
-                            {currentMinter === "WL" && (
-                                <>
-                                    <p className="text-white text-center font-size-100 mt-3 mb-0">For whitelisted addresses only</p>
-                                    <p className="text-white text-center font-size-100 my-0">Public mint will be on Oct. 9, 7PM SGT</p>
-                                </>
-                            )}
+                            {/* TODO: For removal tomorrow 7pm */}
+                            <p className="text-white text-center font-size-100 mt-3 mb-0">For whitelisted addresses only</p>
+                            <p className="text-white text-center font-size-100 my-0">Public mint will be on Oct. 9, 7PM SGT</p>
                         </>
                     )}
                 </Modal.Body>
@@ -970,20 +960,6 @@ export default function App() {
                     </div>
                 </Modal.Body>
             </Modal>
-
-            {/* NOTICE MODAL remove once done */}
-            <Modal show={showNotice} onHide={handleCloseNotice} backdrop="static" keyboard={false} centered>
-                <Modal.Body className="px-4 position-relative modal-body-style">
-                    <div className="position-absolute modal-close-icon">
-                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseNotice} />
-                    </div>
-
-                    <p className="text-white gotham-black text-center font-andes font-size-160 text-center mb-3">NOTICE TO THE PUBLIC</p>
-                    <p className="text-white text-center font-andes font-size-120 text-center mb-3">We are currently experiencing technical difficulties with our minting process for the Rascals and are working as quickly as possible to resolve the issue.</p>
-                    <p className="text-white text-center font-andes font-size-120 text-center mb-3">Please be patient as this issue is being addressed internally and kindly continue to check back for updates.</p>
-                    <p className="text-white text-center font-andes font-size-120 text-center mb-0">Thank you for your patience during this time.</p>
-                </Modal.Body>
-            </Modal>  
         </Router>
     );
 }
