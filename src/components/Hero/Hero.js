@@ -81,7 +81,7 @@ export default function Hero({ mintRascal, isSoldout }) {
     useEffect(() => {
         async function _init() {
             const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-10-08%2011:00")
-            startTimer(Number(remaining.data))
+            startTimer(Number(5))
         }
 
         _init()
@@ -94,7 +94,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                     <div className="col-12 col-lg-6 d-none d-lg-block">
                         <div className="hero-img-wrap ms-0 ms-lg-1">
                             <div className="hero-img mx-auto">
-                                <img src={rascals} alt="Rascals GIF" className="shifting-rascals" />
+                                <img src={rascals} alt="Rascals GIF" className="shifting-rascals w-100" />
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                                             <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160 mb-2"><b>NOTE:</b> All 10,000 Mustachio Rascals have gone through The Portal and is now <b>SOLD OUT.</b> Thank you so much for your support.</p>
                                         </>
                                     ) : (
-                                        <button onClick={mintRascal} className="btn btn-custom-2 gotham-black font-size-130 px-4">MINT NOW!</button>
+                                        <button onClick={mintRascal} className="btn btn-custom-2 gotham-black font-size-150 px-4 py-3">MINT NOW!</button>
                                     )}
                                 </div>
                             </>

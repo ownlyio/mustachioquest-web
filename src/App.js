@@ -401,7 +401,7 @@ export default function App() {
     // Mainnet
     // const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
     // Testnet
-    const rascalsAddress = '0x6fCdeF3F1ee15109Aa91e7195834438264e91744'
+    const rascalsAddress = '0x3235981927E5Ba0283155a98A92c64381C4eB14B'
     // Mainnet
     // const etherScanUrl = 'https://etherscan.io/tx/'
     // Testnet
@@ -900,14 +900,21 @@ export default function App() {
                                 </>
                             ) : (
                                 <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
-                            )}
+                                )}
                             <button onClick={mintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
                                 {isMinting ? (
                                     <FontAwesomeIcon icon={faSpinner} color="white" spin />
-                                ) : (
-                                    isSoldout ? "SOLD OUT" : "MINT NOW!"
-                                )}
+                                    ) : (
+                                        isSoldout ? "SOLD OUT" : "MINT NOW!"
+                                    )}
                             </button>
+
+                            {currentMinter === "WL" && (
+                                <>
+                                    <p className="text-white text-center font-size-100 mt-3 mb-0">For whitelisted addresses only</p>
+                                    <p className="text-white text-center font-size-100 my-0">Public mint will be on Oct. 9, 7PM SGT</p>
+                                </>
+                            )}
                         </>
                     )}
                 </Modal.Body>
