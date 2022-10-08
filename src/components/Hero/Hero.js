@@ -86,7 +86,7 @@ export default function Hero() {
 
     useEffect(() => {
         async function _init() {
-            const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-10-08%2012:00")
+            const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-10-08%2011:00")
             startTimer(Number(remaining.data))
         }
 
