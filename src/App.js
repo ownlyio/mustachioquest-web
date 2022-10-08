@@ -464,21 +464,26 @@ export default function App() {
     }
 
     const mintRascal = async () => {
-        if (currentMinter == "WL") {
-            if (!isWhiteListed) {
-                setTxError("Public Mint is not allowed yet! Please wait for our announcement. Thank you!")
-                handleShowOnErrorRascal()
+        const qtyToMint = document.getElementById("qtyToMint").value
+
+        if (qtyToMint) {
+            if (currentMinter == "WL") {
+                if (!isWhiteListed) {
+                    setTxError("Public Mint is not allowed yet! Please wait for our announcement. Thank you!")
+                    handleShowOnErrorRascal()
+                } else {
+                    rascalsMintProcess(qtyToMint)
+                }   
             } else {
-                rascalsMintProcess()
-            }   
+                rascalsMintProcess(qtyToMint)
+            }
         } else {
-            rascalsMintProcess()
+            setTxError("Please input a valid amount greater than 0.")
+            handleShowOnErrorRascal()
         }
     }
 
-    const rascalsMintProcess = async () => {
-        const qtyToMint = document.getElementById("qtyToMint").value
-
+    const rascalsMintProcess = async qtyToMint => {
         if (totalSupply + Number(qtyToMint) <= 10000) {
             const userBalance = await web3.eth.getBalance(address)
             const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
