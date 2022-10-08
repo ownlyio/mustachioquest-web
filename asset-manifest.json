@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.d30ef1b1.css",
-    "main.js": "/static/js/main.be8cdcc4.js",
+    "main.css": "/static/css/main.09ec3e9a.css",
+    "main.js": "/static/js/main.f3237691.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
+    "static/media/rascal-gif.gif": "/static/media/rascal-gif.7cf03784879fbcc5e165.gif",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
-    "static/media/rascal-gif.gif": "/static/media/rascal-gif.7dc08d8de4d02cda5fcb.gif",
     "static/media/ar-grim.mp4": "/static/media/ar-grim.c49251a092549124c0fa.mp4",
     "static/media/ar-mexico.mp4": "/static/media/ar-mexico.7374efb6af1c280bdac9.mp4",
     "static/media/tale-img.png": "/static/media/tale-img.1c3de115de14c597a0a7.png",
@@ -167,12 +167,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.d30ef1b1.css.map": "/static/css/main.d30ef1b1.css.map",
-    "main.be8cdcc4.js.map": "/static/js/main.be8cdcc4.js.map",
+    "main.09ec3e9a.css.map": "/static/css/main.09ec3e9a.css.map",
+    "main.f3237691.js.map": "/static/js/main.f3237691.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d30ef1b1.css",
-    "static/js/main.be8cdcc4.js"
+    "static/css/main.09ec3e9a.css",
+    "static/js/main.f3237691.js"
   ]
 }
