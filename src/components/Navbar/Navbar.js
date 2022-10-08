@@ -22,7 +22,7 @@ import marketplaceContract from "../../utils/marketplaceContract";
 import numberFormat from "../../utils/numberFormat";
 import web3 from "../../utils/web3"
 
-export default function Navbar({mintRascal}) {
+export default function Navbar({mintMarauder}) {
     const [menuOpenState, setMenuOpenState] = useState(false)
 
     const scrollWithOffset = (el) => {
@@ -152,7 +152,7 @@ export default function Navbar({mintRascal}) {
                         <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100">
                             PLAY NOW
                         </a>
-                        <button type="button" onClick={mintRascal} className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100 mint-marauder">
+                        <button type="button" onClick={mintMarauder} className="btn mq-nav-discord mx-1 text-white gotham-black font-size-100 mint-marauder">
                             MINT NOW
                         </button>
                     </li>
@@ -201,7 +201,7 @@ export default function Navbar({mintRascal}) {
                     <a href="https://mustachio.quest" target="_blank" className="btn mq-nav-discord text-white gotham-black font-size-100">
                         PLAY NOW
                     </a>
-                    <button type="button" onClick={mintRascal} className="btn mq-nav-discord text-white gotham-black font-size-100">
+                    <button type="button" onClick={mintMarauder} className="btn mq-nav-discord text-white gotham-black font-size-100">
                         MINT NOW
                     </button>
                 </Menu>
