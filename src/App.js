@@ -384,6 +384,7 @@ export default function App() {
     const [address, setAddress] = useState("")
     const [totalSupply, setTotalSupply] = useState(0)
     const [freeMintQty, setFreeMintQty] = useState(0)
+    const [isNotice, setIsNotice] = useState(true)
     const [isFreeMint, setIsFreeMint] = useState(false)
     const [isWhiteListed, setIsWhiteListed] = useState(true)
     const [currentMinter, setCurrentMinter] = useState("WL")
@@ -588,6 +589,18 @@ export default function App() {
         if (Number(totSup) === 10000) setIsSoldout(true)
         else setIsSoldout(false)
     }
+
+    // NOTICE (remove once okay) same with the modal
+    const [showNotice, setShowNotice] = useState(false)
+    const handleCloseNotice = () => setShowNotice(false)
+    const handleShowNotice = () => setShowNotice(true)
+
+    // TO DO: remove line 387 (const [isNotice, setIsNotice] = useState(true)) and update the mintRascal props to initRascal
+
+    useEffect(() => {
+        handleShowNotice()
+    }, [])
+    // END NOTICE
     // ---------------------------------------------------------- END RASCALS MINT --------------------------------------------------
 
     $(document).ready(function(){
@@ -691,10 +704,11 @@ export default function App() {
             {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
             {/*</div>*/}
 
-            <Navbar mintRascal={initRascal} /> 
+            {/* <Navbar mintRascal={initRascal} />  */}
+            <Navbar mintMarauder={mintMarauder} /> 
             <Switch>
                 <Route exact path="/">
-                    <Hero mintRascal={initRascal} isSoldout={isSoldout} />
+                    <Hero mintRascal={handleShowNotice} isSoldout={isSoldout} isNotice={isNotice} />
                     <AboutRascals />
                     <NFT />
                     <Utilities />
@@ -702,7 +716,7 @@ export default function App() {
                     <Tales />
                     <Game />
                     <Visualizer />
-                    <Table mintMarauder={mintMarauder} mintRascal={initRascal} />
+                    <Table mintMarauder={mintMarauder} mintRascal={handleShowNotice} isNotice={isNotice} />
                     <Roadmap />
                     <Gmfrens />
                     <Team />
@@ -926,7 +940,7 @@ export default function App() {
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseOnErrorRascal} />
                     </div>
 
-                    <p className="text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">{txError}</p>
+                    <p className="text-white fw-bold text-center font-andes font-size-130 pt-4 pb-2">{txError}</p>
                 </Modal.Body>
             </Modal>    
 
@@ -957,6 +971,20 @@ export default function App() {
                     </div>
                 </Modal.Body>
             </Modal>
+
+            {/* NOTICE MODAL remove once done */}
+            <Modal show={showNotice} onHide={handleCloseNotice} backdrop="static" keyboard={false} centered>
+                <Modal.Body className="px-4 position-relative modal-body-style">
+                    <div className="position-absolute modal-close-icon">
+                        <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseNotice} />
+                    </div>
+
+                    <p className="text-white gotham-black text-center font-andes font-size-160 text-center mb-3">NOTICE TO THE PUBLIC</p>
+                    <p className="text-white text-center font-andes font-size-120 text-center mb-3">We are currently experiencing technical difficulties with our minting process for the Rascals and are working as quickly as possible to resolve the issue.</p>
+                    <p className="text-white text-center font-andes font-size-120 text-center mb-3">Please be patient as this issue is being addressed internally and kindly continue to check back for updates.</p>
+                    <p className="text-white text-center font-andes font-size-120 text-center mb-0">Thank you for your patience during this time.</p>
+                </Modal.Body>
+            </Modal>  
         </Router>
     );
 }
