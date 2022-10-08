@@ -363,12 +363,12 @@ export default function App() {
     };
     // ---------------------------------------------------------- END MARAUDER MINT --------------------------------------------------
     // ---------------------------------------------------------- RASCALS MINT --------------------------------------------------
-    const percentageDiscount = 0.75
+    const percentageDiscount = 75
     const mintCost = [
-        0.025,
-        0.018,
-        0.014,
-        0.009
+        25000000000000000,
+        18000000000000000,
+        14000000000000000,
+        9000000000000000
     ]
 
     const [showMintRascal, setShowMintRascal] = useState(false)
@@ -391,7 +391,7 @@ export default function App() {
     const [isMinting, setIsMinting] = useState(false)
     const [isSoldout, setIsSoldout] = useState(false)
     const [mintQty, setMintQty] = useState(0)
-    const [currentPrice, setCurrentPrice] = useState(mintCost[0])
+    const [currentPrice, setCurrentPrice] = useState(web3.utils.fromWei(mintCost[0].toString(), "ether"))
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0)
     const [txHashRascal, setTxHashRascal] = useState("#")
@@ -424,39 +424,98 @@ export default function App() {
     }
 
     const handleQtyChange = (e) => {
-        let price, totalPrice
+        let price, tempTotalPrice
         const qty = e.currentTarget.value
         if (qty != "") {
             setIsDisabled(false)
             if (qty <= 2) {
-                price = mintCost[0]
-                setCurrentPrice(price)
-                totalPrice = mintCost[0] * parseInt(qty)
-                setTotalPrice(totalPrice)
+                price = BigInt(mintCost[0])
+                setCurrentPrice(web3.utils.fromWei(price.toString(), "ether"))
+                tempTotalPrice = BigInt(mintCost[0]) * BigInt(qty)
+                setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             } else if (qty <= 4) {
-                price = mintCost[1]
-                setCurrentPrice(price)
-                totalPrice = mintCost[1] * parseInt(qty)
-                setTotalPrice(totalPrice)
+                price = BigInt(mintCost[1])
+                setCurrentPrice(web3.utils.fromWei(price.toString(), "ether"))
+                tempTotalPrice = BigInt(mintCost[1]) * BigInt(qty)
+                setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             } else if (qty <= 9) {
-                price = mintCost[2]
-                setCurrentPrice(price)
-                totalPrice = mintCost[2] * parseInt(qty)
-                setTotalPrice(totalPrice)
+                price = BigInt(mintCost[2])
+                setCurrentPrice(web3.utils.fromWei(price.toString(), "ether"))
+                tempTotalPrice = BigInt(mintCost[2]) * BigInt(qty)
+                setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             } else {
-                price = mintCost[3]
-                setCurrentPrice(price)
-                totalPrice = mintCost[3] * parseInt(qty)
-                setTotalPrice(totalPrice)
+                price = BigInt(mintCost[3])
+                setCurrentPrice(web3.utils.fromWei(price.toString(), "ether"))
+                tempTotalPrice = BigInt(mintCost[3]) * BigInt(qty)
+                setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             }
 
-            if (isWhiteListed) setTotalDiscountedPrice(totalPrice * percentageDiscount)
+            if (isWhiteListed) {
+                const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
+                setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
+            }
             else setTotalDiscountedPrice(0)
         } else {
-            setCurrentPrice(mintCost[0])
+            setCurrentPrice(web3.utils.fromWei(mintCost[0].toString(), "ether"))
             setTotalPrice(0)
             setTotalDiscountedPrice(0)
             setIsDisabled(true)
+        }
+    }
+
+    const mintRascal = async () => {
+        if (currentMinter == "WL") {
+            if (!isWhiteListed) {
+                setTxError("Public Mint is not allowed yet! Please wait for our announcement. Thank you!")
+                handleShowOnErrorRascal()
+            } else {
+                rascalsMintProcess()
+            }   
+        } else {
+            rascalsMintProcess()
+        }
+    }
+
+    const rascalsMintProcess = async () => {
+        const qtyToMint = document.getElementById("qtyToMint").value
+
+        if (totalSupply + Number(qtyToMint) <= 10000) {
+            const userBalance = await web3.eth.getBalance(address)
+            const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
+
+            if (BigInt(userBalance) >= BigInt(totalPriceToPay)) {
+                await rascalsContract.methods.mint(qtyToMint).send({
+                    from: address,
+                    value: totalPriceToPay,
+                    type: '0x2'
+                })
+                .on('transactionHash', function(hash){
+                    setIsMinting(true)
+                })
+                .on('error', function(error) {
+                    setIsMinting(false)
+                    setTxError(error.message)
+                    handleShowOnErrorRascal()
+                })
+                .then(async function(receipt) {
+                    console.log(receipt)
+                    setIsMinting(false)
+                    handleShowOnSuccessRascal()
+                    setTxHashRascal(receipt.transactionHash)
+        
+                    if (qtyToMint > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
+                    else setTokenId(receipt.events.Transfer.returnValues.tokenId)
+        
+                    // reload data
+                    _init(address)
+                })
+            } else {
+                setTxError("You don't have enough ETH balance to proceed with the mint.")
+                handleShowOnErrorRascal()
+            }
+        } else {
+            setTxError("The quantity you want to mint exceeds the number of rascals left (" + (10000-Number(totalSupply)) + " rascals left). Please try a different value.")
+            handleShowOnErrorRascal()
         }
     }
 
@@ -486,7 +545,7 @@ export default function App() {
         })
     }
 
-    const mintRascal = async () => {
+    const initRascal = async () => {
         let addr = await connectToMetaMaskEth()
         
         if (addr) {
@@ -628,10 +687,10 @@ export default function App() {
             {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
             {/*</div>*/}
 
-            <Navbar mintRascal={mintRascal} /> 
+            <Navbar mintRascal={initRascal} /> 
             <Switch>
                 <Route exact path="/">
-                    <Hero mintRascal={mintRascal} isSoldout={isSoldout} />
+                    <Hero mintRascal={initRascal} isSoldout={isSoldout} />
                     <AboutRascals />
                     <NFT />
                     <Utilities />
@@ -639,7 +698,7 @@ export default function App() {
                     <Tales />
                     <Game />
                     <Visualizer />
-                    <Table mintMarauder={mintMarauder} mintRascal={mintRascal} />
+                    <Table mintMarauder={mintMarauder} mintRascal={initRascal} />
                     <Roadmap />
                     <Gmfrens />
                     <Team />
@@ -796,7 +855,7 @@ export default function App() {
                 </Modal.Body>
             </Modal>
 
-            <Modal show={showMintRascal} onHide={handleCloseMintRascal} centered>
+            <Modal show={showMintRascal} onHide={handleCloseMintRascal} backdrop="static" keyboard={false} centered>
                 <Modal.Body className="px-4 position-relative modal-body-style">
                     <div className="position-absolute modal-close-icon">
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMintRascal} />
@@ -837,7 +896,7 @@ export default function App() {
                             ) : (
                                 <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
                             )}
-                            <button type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
+                            <button onClick={mintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
                                 {isMinting ? (
                                     <FontAwesomeIcon icon={faSpinner} color="white" spin />
                                 ) : (
@@ -850,18 +909,18 @@ export default function App() {
             </Modal>
 
              {/* Modal for error transaction */}
-             <Modal show={showOnErrorRascal} onHide={handleCloseOnErrorRascal} backdrop="static" keyboard={false} size="sm" centered>
+             <Modal show={showOnErrorRascal} onHide={handleCloseOnErrorRascal} backdrop="static" keyboard={false} centered>
                 <Modal.Body className="px-4 position-relative modal-body-style">
                     <div className="position-absolute modal-close-icon">
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseOnErrorRascal} />
                     </div>
 
-                    <p className="text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Error: {txError}</p>
+                    <p className="text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">{txError}</p>
                 </Modal.Body>
             </Modal>    
 
             {/* Modal for successful transaction */}
-            <Modal show={showOnSuccessRascal} onHide={handleCloseOnSuccessRascal} centered>
+            <Modal show={showOnSuccessRascal} onHide={handleCloseOnSuccessRascal} backdrop="static" keyboard={false} centered>
                 <Modal.Body className="px-4 position-relative modal-body-style">
                     <div className="position-absolute modal-close-icon">
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseOnSuccessRascal} />
