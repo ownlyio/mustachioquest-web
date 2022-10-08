@@ -704,8 +704,7 @@ export default function App() {
             {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
             {/*</div>*/}
 
-            {/* <Navbar mintRascal={initRascal} />  */}
-            <Navbar mintMarauder={mintMarauder} /> 
+            <Navbar mintRascal={mintMarauder} /> 
             <Switch>
                 <Route exact path="/">
                     <Hero mintRascal={handleShowNotice} isSoldout={isSoldout} isNotice={isNotice} />
