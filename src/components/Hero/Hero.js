@@ -121,6 +121,10 @@ export default function Hero({ mintRascal, isSoldout }) {
                                 <button onClick={mintRascal} className="btn btn-custom-2 gotham-black font-size-150 px-4 py-3">MINT NOW!</button>
                             )}
                         </div>
+
+                        <div className="mx-auto text-center mt-2">
+                            <a href="https://etherscan.io/address/0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46" target="_blank" rel="noreferrer" className="link-color-3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>
