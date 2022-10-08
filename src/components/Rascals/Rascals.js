@@ -1,96 +1,76 @@
 // images
 import banner from '../../images/banner.jpg'
 import rascals from '../../images/rascals-bg.gif'
+import rascalsPic from '../../images/rascals-pic.png'
 import rascalsLogo from '../../images/MQ_rascals.png'
-// import pathfinder1 from "../../images/pathfinders/pathfinder1.png";
-// import pathfinder2 from "../../images/pathfinders/pathfinder2.png";
-// import pathfinder3 from "../../images/pathfinders/pathfinder3.png";
-// import pathfinder4 from "../../images/pathfinders/pathfinder4.png";
-// import pathfinder5 from "../../images/pathfinders/pathfinder5.png";
-// import pathfinder6 from "../../images/pathfinders/pathfinder6.png";
-// import bordertop from "../../images/sneakpeek-top.png";
-// import borderbot from "../../images/sneakpeek-bot.png";
-// import whatsup1 from "../../images/pathfinders/whatsup1.png";
-// import whatsup2 from "../../images/pathfinders/whatsup2.png";
-// import whatsup3 from "../../images/pathfinders/whatsup3.png";
-// import bordertl from "../../images/updates-tl.png";
-// import bordertr from "../../images/updates-tr.png";
-// import borderbl from "../../images/updates-bl.png";
-// import borderbr from "../../images/updates-br.png";
-import border from "../../images/faq-top.png";
+import rascal1 from "../../images/rascals/rascals1.jpg"
+import rascal2 from "../../images/rascals/rascals2.jpg"
+import rascal3 from "../../images/rascals/rascals3.jpg"
+import rascal4 from "../../images/rascals/rascals4.jpg"
+import rascal5 from "../../images/rascals/rascals5.jpg"
+import rascal6 from "../../images/rascals/rascals6.jpg"
+import bordertop from "../../images/sneakpeek-top.png"
+import borderbot from "../../images/sneakpeek-bot.png"
+// import whatsup1 from "../../images/pathfinders/whatsup1.png"
+// import whatsup2 from "../../images/pathfinders/whatsup2.png"
+// import whatsup3 from "../../images/pathfinders/whatsup3.png"
+// import bordertl from "../../images/updates-tl.png"
+// import bordertr from "../../images/updates-tr.png"
+// import borderbl from "../../images/updates-bl.png"
+// import borderbr from "../../images/updates-br.png"
+import border from "../../images/faq-top.png"
 
 import axios from 'axios'
 // import $ from 'jquery'
 import {Button, Modal} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import {useState} from "react";
 import './Rascals.css'
 
 export default function Rascals() {
-    const [emailAdd, setEmailAdd] = useState("")
-    const [showSubscribed, setShowSubscribed] = useState(false);
-    const handleCloseSubscribed = () => setShowSubscribed(false);
-    const handleShowSubscribed = () => setShowSubscribed(true);
-    const [showErrorEmail, setShowErrorEmail] = useState(false);
-    const handleCloseErrorEmail = () => setShowErrorEmail(false);
-    const handleShowErrorEmail = () => setShowErrorEmail(true);
+    const [showVideoPlayer, setShowVideoPlayer] = useState(false)
+    const handleCloseVideoPlayer = () => setShowVideoPlayer(false)
+    const handleShowVideoPlayer = () => setShowVideoPlayer(true)
 
-    const submitForm = (e) => {
-        e.preventDefault()
-
-        let re = /^[ ]*([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i;
-    
-        if (re.test(emailAdd)) {
-            axios.post('https://ownly.market/api/email-signup', {email: emailAdd, type: 'rascals'}).then(res => {
-                document.getElementById("emailAdd").value = ""
-                document.getElementById("agreement").checked = false
-                setEmailAdd("")
-                handleShowSubscribed()
-            })
-        } else {
-            handleShowErrorEmail()
+    const sneak = [
+        {
+            id: 0,
+            thumbnail: rascal1,
+            link: "https://twitter.com/ismaeljerusalem/status/1574014285503922176",
+            title: ""
+        },
+        {
+            id: 1,
+            thumbnail: rascal2,
+            link: "https://twitter.com/ownlyio/status/1574008009646227456",
+            title: ""
+        },
+        {
+            id: 2,
+            thumbnail: rascal3,
+            link: "https://twitter.com/mustachioverse/status/1572478751598063617",
+            title: ""
+        },
+        {
+            id: 3,
+            thumbnail: rascal4,
+            link: "https://twitter.com/mustachioverse/status/1571741641995853824",
+            title: ""
+        },
+        {
+            id: 4,
+            thumbnail: rascal5,
+            link: "https://twitter.com/ricozuniga/status/1570485388309057536",
+            title: "",
+        },
+        {
+            id: 5,
+            thumbnail: rascal6,
+            link: "https://twitter.com/mustachioverse/status/1565634368865193990",
+            title: "",
         }
-    }
-
-    // const sneak = [
-    //     {
-    //         id: 0,
-    //         thumbnail: pathfinder1,
-    //         link: "#",
-    //         title: ""
-    //     },
-    //     {
-    //         id: 1,
-    //         thumbnail: pathfinder2,
-    //         link: "#",
-    //         title: ""
-    //     },
-    //     {
-    //         id: 2,
-    //         thumbnail: pathfinder3,
-    //         link: "#",
-    //         title: ""
-    //     },
-    //     {
-    //         id: 3,
-    //         thumbnail: pathfinder4,
-    //         link: "#",
-    //         title: ""
-    //     },
-    //     {
-    //         id: 4,
-    //         thumbnail: pathfinder5,
-    //         link: "#",
-    //         title: "",
-    //     },
-    //     {
-    //         id: 5,
-    //         thumbnail: pathfinder6,
-    //         link: "#",
-    //         title: "",
-    //     }
-    // ]
+    ]
 
     // const [showMintingNotYetAvailable, setShowMintingNotYetAvailable] = useState(false);
     // const handleCloseMintingNotYetAvailable = () => setShowMintingNotYetAvailable(false);
@@ -110,52 +90,32 @@ export default function Rascals() {
                         </div>
                         <p className="arch-text font-size-110 font-size-sm-130 font-size-lg-160 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
 
-                        <div className="container">
-                            <div className="row justify-content-center">
-                                <div className="col-lg-8 text-center">
-                                    <p className="text-white font-size-100 font-size-sm-120 font-size-lg-140 text-center px-md-5 mb-4">Wanna be the first to get notified when we announce the release of the Mustachio Rascals? Join our VIP List to be first to know.</p>
-                                    <div className="px-lg-5 mx-lg-5">
-                                        <form className="rascals-form" onSubmit={submitForm}>
-                                            <div className="d-flex align-items-center flex-wrap mb-3">
-                                                <div className="rascals-form rascals-input-wrapper d-flex flex-fill justify-content-center">
-                                                    <input id="emailAdd" type="email" name="email_address" className="form-control d-block px-3 py-1 font-size-100" style={{"borderRadius": "5px 0 0 5px"}} placeholder="Your email address" required onChange={(e) => setEmailAdd(e.target.value)} />
-                                                </div>
-                                                <div className="rascals-form rascals-btn-form-wrapper">
-                                                    <button type="submit" className="btn btn-custom-2 px-3 py-1 font-size-100" style={{"width": "200px","letterSpacing": "0.05em", "borderRadius": "0 5px 5px 0"}}>LET ME IN!</button>
-                                                </div>
-                                            </div>
-                                            <div className="form-check d-flex align-items-start mb-3">
-                                                <div>
-                                                    <input className="form-check-input" type="checkbox" id="agreement" required />
-                                                </div>
-                                                <div className="ps-1">
-                                                    <label className="form-check-label font-size-90 text-white" for="agreement">
-                                                    You consent to receive updates and news from us by signing up for our newsletter. You may opt out of receiving our marketing emails at any time. Your email address will be saved in our database and not given to any third parties.
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                        <button className="arch-play-btn btn" onClick={handleShowVideoPlayer}>
+                            <i className="fa-solid fa-play font-size-180 font-size-sm-210 font-size-md-250 font-size-lg-300 text-white"></i>
+                        </button>
+
+                        <div className="arch-btns d-flex flex-wrap">
+                            <div>
+                                <a href="https://ownly.market/rascals" target="_blank" rel="noreferrer" className="btn font-size-110 font-size-sm-120 font-size-lg-130 text-center line-height-150 btn-custom-2 mx-2" style={{"width":"300px"}}>VIEW RASCALS</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* <div className="container py-5">
+                <div className="container py-5">
                     <div className="row align-items-center py-5">
                         <div className="col-lg-8 order-1 order-lg-0">
                             <div className="pe-lg-3">
-                                <p className="gotham-black text-center text-lg-start font-size-240 font-size-md-270 mb-4">What are the Pathfinders?</p>
+                                <p className="gotham-black text-center text-lg-start font-size-240 font-size-md-270 mb-4">What are the Rascals?</p>
 
                                 <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
 
-                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">There are three archetypes of Mustachios in the land of MustachioVerse and the Genesis set from 1-100 are called Mustachio Pathfinders with a maximum supply of 100 Mustachio Pathfinder NFTs. These Pathfinders created the route and discovered the land of MustachioVerse in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" className="link-color-1" target="_blank" rel="noreferrer">The Sages Rant</a>.</p>
+                                <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">There are three archetypes of Mustachios in the land of MustachioVerse and the Genesis set from 1-100 are called Mustachio Pathfinders with a maximum supply of 100 Mustachio Pathfinder NFTs. These Pathfinders created the route and discovered the land of MustachioVerse in the first-ever NFT Tales called <a href="https://tales.mustachioverse.com" className="link-color-4" target="_blank" rel="noreferrer">The Sages Rant</a>.</p>
                                 <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2 pb-3">Each Pathfinder comes with an intricately hand-drawn 2D PFP and 3D playable character by Boii Mustache, the creator of MustachioVerse. You can use your 3D Mustachio Marauder as your in-game character in our upcoming Play-and-Earn NFT Game, Mustachio Quest.</p>
 
-                                <div className="text-center text-lg-start">
+                                {/* <div className="text-center text-lg-start">
                                     <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial", "marginRight": "5px"}} onClick={props.mintBtn}>MINT NOW!</button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -163,14 +123,14 @@ export default function Rascals() {
                             <div className="ps-lg-4">
                                 <div className="mx-4 mx-sm-5 mx-lg-0 px-sm-5 px-lg-0">
                                     <div className="mx-md-5 mx-lg-0 px-md-5 px-lg-0">
-                                        <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + grim + ")"}}>
+                                        <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + rascalsPic + ")"}}>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 <div className="background-image-cover py-5" style={{"backgroundImage":"url(" + banner + ")"}}>
                     <div className="container py-4">
@@ -272,27 +232,29 @@ export default function Rascals() {
                     </div>
                 </div>
 
-                {/* <section id="progress">
+                <section id="progress">
                     <div className="container py-5">
                         <div className="row justify-content-center align-items-start">
-                            <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">The Pathfinders Gallery</p>
+                            <p className="sneakpeeks-title gotham-black text-white text-center font-size-200 mb-5">The Rascals Gallery</p>
                             { sneak.map(x => (
                                 <div className="col-12 col-sm-6 col-xl-4 mb-3" key={x.id}>
-                                    <div className="sneakpeek-thumbnail mb-3 background-image-cover" style={{"background-image":"url('" + x.thumbnail + "')"}}></div>
-                                    <p className="cursor-pointer mb-3">
+                                    <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href={x.link} target="_blank" rel="noreferrer">
+                                        <div className="sneakpeek-thumbnail mb-3 background-image-cover" style={{"background-image":"url('" + x.thumbnail + "')"}}></div>
+                                    </a>
+                                    {/* <p className="cursor-pointer mb-3">
                                         <a className="sneakpeek-title font-w-hermann w-hermann-reg text-white font-size-150" href={x.link} target="_blank" rel="noreferrer">
                                             {x.title}
                                         </a>
-                                    </p>
+                                    </p> */}
                                 </div>
                             ))}
                         </div>
-                    </div> */}
+                    </div>
 
                     {/* Borders */}
-                    {/* <img src={bordertop} className="sneakpeek-border sneakpeek-top" alt="Border Top" />
+                    <img src={bordertop} className="sneakpeek-border sneakpeek-top" alt="Border Top" />
                     <img src={borderbot} className="sneakpeek-border sneakpeek-bot" alt="Border Bottom" />
-                </section> */}
+                </section>
 
                 {/* <section id="nft">
                     <div className="container pt-5">
@@ -491,35 +453,16 @@ export default function Rascals() {
                 </Modal.Body>
             </Modal> */}
 
-            {/* Modal for successful subscription */}
-            <Modal show={showSubscribed} onHide={handleCloseSubscribed} size="sm" centered>
-                <Modal.Body>
-                    <div className="text-center mb-3">
-                        <FontAwesomeIcon color="green" size="6x" icon={faCheckCircle} />
+            <Modal className="no-border" show={showVideoPlayer} onHide={handleCloseVideoPlayer} backdrop="static" keyboard={false} size="xl" centered>
+                <Modal.Body className="p-0">
+                    <div className="position-relative">
+                        <button className="video-close-btn text-white font-size-80 font-size-sm-100 btn fw-bold" onClick={handleCloseVideoPlayer}>X</button>
+                        <div className="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qKziayF7Cic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
-                    <p className="text-center text-lg">Thank you for subscribing!</p>
                 </Modal.Body>
-                <Modal.Footer className="justify-content-center">
-                    <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseSubscribed}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal> 
-
-            {/* Modal for error in email */}
-            <Modal show={showErrorEmail} onHide={handleCloseErrorEmail} size="sm" centered>
-                <Modal.Body>
-                    <div className="text-center mb-3">
-                        <FontAwesomeIcon color="red" size="6x" icon={faExclamationCircle} />
-                    </div>
-                    <p className="text-center text-lg">Please provide a valid email address and try again.</p>
-                </Modal.Body>
-                <Modal.Footer className="justify-content-center">
-                    <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseErrorEmail}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal> 
+            </Modal>
         </div>
     )
 }

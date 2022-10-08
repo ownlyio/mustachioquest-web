@@ -91,3 +91,15 @@
 .video-close-btn:focus {
   background-color: #ff8e31;
 }
+
+.modal-body-style {
+  background-color: #1c5091; 
+  border-radius: 0.2rem; 
+  border: 3px solid white;
+}
+
+.modal-close-icon {
+  top: 15px;
+  right: 20px;
+  z-index: 5;
+}
