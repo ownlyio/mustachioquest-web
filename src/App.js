@@ -401,7 +401,7 @@ export default function App() {
     // Mainnet
     // const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
     // Testnet
-    const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
+    const rascalsAddress = '0x6fCdeF3F1ee15109Aa91e7195834438264e91744'
     // Mainnet
     // const etherScanUrl = 'https://etherscan.io/tx/'
     // Testnet
@@ -433,11 +433,29 @@ export default function App() {
                 setCurrentPrice(price)
                 totalPrice = mintCost[0] * parseInt(qty)
                 setTotalPrice(totalPrice)
+            } else if (qty <= 4) {
+                price = mintCost[1]
+                setCurrentPrice(price)
+                totalPrice = mintCost[1] * parseInt(qty)
+                setTotalPrice(totalPrice)
+            } else if (qty <= 9) {
+                price = mintCost[2]
+                setCurrentPrice(price)
+                totalPrice = mintCost[2] * parseInt(qty)
+                setTotalPrice(totalPrice)
+            } else {
+                price = mintCost[3]
+                setCurrentPrice(price)
+                totalPrice = mintCost[3] * parseInt(qty)
+                setTotalPrice(totalPrice)
             }
 
             if (isWhiteListed) setTotalDiscountedPrice(totalPrice * percentageDiscount)
+            else setTotalDiscountedPrice(0)
         } else {
+            setCurrentPrice(mintCost[0])
             setTotalPrice(0)
+            setTotalDiscountedPrice(0)
             setIsDisabled(true)
         }
     }
@@ -456,15 +474,12 @@ export default function App() {
             handleShowOnErrorRascal()
         })
         .then(async function(receipt) {
-            console.log(receipt)
             setIsMinting(false)
             handleShowOnSuccessRascal()
             setTxHashRascal(receipt.transactionHash)
 
             if (freeMintQty > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
             else setTokenId(receipt.events.Transfer.returnValues.tokenId)
-
-            handleCloseMintRascal()
 
             // reload data
             _init(address)
@@ -490,11 +505,11 @@ export default function App() {
         else setCurrentMinter("PBL") // public
 
         // check if the account has free mint
-        // const freeMintEligible = await rascalsContract.methods.freeMintQuantity(addr).call()
-        // if (Number(freeMintEligible) > 0) {
-        //     setIsFreeMint(true)
-        //     setFreeMintQty(Number(freeMintEligible))
-        // } else setIsFreeMint(false)
+        const freeMintEligible = await rascalsContract.methods.freeMintQuantity(addr).call()
+        if (Number(freeMintEligible) > 0) {
+            setIsFreeMint(true)
+            setFreeMintQty(Number(freeMintEligible))
+        } else setIsFreeMint(false)
 
         // check if whitelisted
         const wlEligible = await rascalsContract.methods.isWhitelisted(addr).call()
@@ -503,6 +518,7 @@ export default function App() {
 
         // check totalSupply
         const totSup = await rascalsContract.methods.totalSupply().call()
+        console.log("Current total Supply: " + totSup)
         setTotalSupply(Number(totSup))
 
         // check if sold out
@@ -795,9 +811,14 @@ export default function App() {
                     {isFreeMint ? (
                         <>
                             <p className="text-white fw-bold text-center font-size-130 px-3">Woohoo! Looks like you have a FREE MINT available on your account.</p>
-                            <button onClick={freeMintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>MINT MY FREE RASCAL!</button>
+                            
+                            <button onClick={freeMintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" disabled={isMinting} style={{"width":"initial"}}>
+                                {isMinting ? (
+                                    <FontAwesomeIcon icon={faSpinner} color="white" spin />
+                                ) : "MINT MY FREE RASCAL" }
+                            </button>
                         </>
-                    ) : (
+                    ) : (   
                         <>
                             <p className="text-white text-center fw-bold font-size-150 mb-3">Price: {numberFormat(currentPrice,4)} ETH</p>
 
