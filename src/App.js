@@ -468,7 +468,7 @@ export default function App() {
         if (qtyToMint) {
             if (currentMinter == "WL") {
                 if (!isWhiteListed) {
-                    setTxError("Public Mint is not allowed yet! Please wait for our announcement. Thank you!")
+                    setTxError("Public Mint is not allowed yet. You can mint starting Oct. 9, 7PM SGT. Thank you!")
                     handleShowOnErrorRascal()
                 } else {
                     rascalsMintProcess(qtyToMint)
