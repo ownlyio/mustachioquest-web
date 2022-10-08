@@ -16,7 +16,7 @@ export default function Hero({ mintRascal, isSoldout }) {
     const [hours, setHours] = useState(defaultTime)
     const [minutes, setMinutes] = useState(defaultTime)
     const [seconds, setSeconds] = useState(defaultTime)
-    const [isComingSoon, setIsComingSoon] = useState(false)
+    const [isComingSoon, setIsComingSoon] = useState(true)
     const [emailAdd, setEmailAdd] = useState("")
     const [showSubscribed, setShowSubscribed] = useState(false);
     const handleCloseSubscribed = () => setShowSubscribed(false);
@@ -81,7 +81,7 @@ export default function Hero({ mintRascal, isSoldout }) {
     useEffect(() => {
         async function _init() {
             const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-10-08%2012:00")
-            startTimer(Number(5))
+            startTimer(Number(remaining.data))
         }
 
         _init()

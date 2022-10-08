@@ -14,7 +14,7 @@ import borderbr from '../../images/updates-br.png'
 
 import $ from 'jquery'
 
-export default function Table({ mintMarauder }) {
+export default function Table({ mintMarauder, mintRascal }) {
     return (
         <section id="nft">
             <div className="container">
@@ -257,7 +257,8 @@ export default function Table({ mintMarauder }) {
                                         <button className="d-none d-md-block mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={mintMarauder}>MINT NOW</button>
                                     </td>
                                     <td className="border-bottom align-middle text-center">
-                                        <p className="gotham-bold text-white font-size-100 font-size-sm-140 mb-0">LAUNCHING OCT 2022</p>
+                                        <button className="d-block d-md-none mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={mintRascal}>MINT<br />NOW</button>
+                                        <button className="d-none d-md-block mx-auto btn link-color-2 p-0 font-size-100 font-size-sm-140" onClick={mintRascal}>MINT NOW</button>
                                     </td>
                                 </tr>
                             </tbody>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Modal } from 'react-bootstrap'
 import { faCheckCircle, faExclamationCircle, faTimes, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Discord } from './components/ShortLinks'
+import { Discord, Pathfinders, Marauders, Rascals } from './components/ShortLinks'
 import $ from 'jquery'
 import * as smoothscroll from "smoothscroll-polyfill"
 
@@ -61,6 +61,7 @@ import metamask from './images/metamask.png'
 import bnbImage from "./images/bnb.png"
 import ownImage from "./images/own-token.png"
 import marauders from "./images/MQ_marauders.png"
+import rascals from "./images/MQ_rascals.png"
 
 // smooth scrolling for safari
 smoothscroll.polyfill()
@@ -362,6 +363,14 @@ export default function App() {
     };
     // ---------------------------------------------------------- END MARAUDER MINT --------------------------------------------------
     // ---------------------------------------------------------- RASCALS MINT --------------------------------------------------
+    const percentageDiscount = 0.75
+    const mintCost = [
+        0.025,
+        0.018,
+        0.014,
+        0.009
+    ]
+
     const [showMintRascal, setShowMintRascal] = useState(false)
     const handleCloseMintRascal = () => setShowMintRascal(false)
     const handleShowMintRascal = () => setShowMintRascal(true)
@@ -372,28 +381,22 @@ export default function App() {
     const handleCloseOnErrorRascal = () => setShowOnErrorRascal(false)
     const handleShowOnErrorRascal = () => setShowOnErrorRascal(true)
 
+    const [address, setAddress] = useState("")
+    const [totalSupply, setTotalSupply] = useState(0)
+    const [freeMintQty, setFreeMintQty] = useState(0)
     const [isFreeMint, setIsFreeMint] = useState(false)
     const [isWhiteListed, setIsWhiteListed] = useState(true)
-    const [currentMinter, setCurrentMinter] = useState("")
+    const [currentMinter, setCurrentMinter] = useState("WL")
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinting, setIsMinting] = useState(false)
     const [isSoldout, setIsSoldout] = useState(false)
     const [mintQty, setMintQty] = useState(0)
-    const [currentPrice, setCurrentPrice] = useState(0)
+    const [currentPrice, setCurrentPrice] = useState(mintCost[0])
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0)
     const [txHashRascal, setTxHashRascal] = useState("#")
     const [tokenId, setTokenId] = useState(0)
     const [txError, setTxError] = useState("")
-
-    const mintCost = [
-        0.025,
-        0.018,
-        0.014,
-        0.009
-    ]
-
-    const percentageDiscount = 0.75
 
     // Mainnet
     // const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
@@ -421,23 +424,90 @@ export default function App() {
     }
 
     const handleQtyChange = (e) => {
+        let price, totalPrice
         const qty = e.currentTarget.value
         if (qty != "") {
             setIsDisabled(false)
-            // if (qty <= 2) {
-                
-            // }
-        } else setIsDisabled(true)
+            if (qty <= 2) {
+                price = mintCost[0]
+                setCurrentPrice(price)
+                totalPrice = mintCost[0] * parseInt(qty)
+                setTotalPrice(totalPrice)
+            }
+
+            if (isWhiteListed) setTotalDiscountedPrice(totalPrice * percentageDiscount)
+        } else {
+            setTotalPrice(0)
+            setIsDisabled(true)
+        }
+    }
+
+    const freeMintRascal = async () => {
+        await rascalsContract.methods.freeMint().send({
+            from: address,
+            type: '0x2'
+        })
+        .on('transactionHash', function(hash){
+            setIsMinting(true)
+        })
+        .on('error', function(error) {
+            setIsMinting(false)
+            setTxError(error.message)
+            handleShowOnErrorRascal()
+        })
+        .then(async function(receipt) {
+            console.log(receipt)
+            setIsMinting(false)
+            handleShowOnSuccessRascal()
+            setTxHashRascal(receipt.transactionHash)
+
+            if (freeMintQty > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
+            else setTokenId(receipt.events.Transfer.returnValues.tokenId)
+
+            handleCloseMintRascal()
+
+            // reload data
+            _init(address)
+        })
     }
 
     const mintRascal = async () => {
-        let address = await connectToMetaMaskEth()
-
-        if(address) {
+        let addr = await connectToMetaMaskEth()
+        
+        if (addr) {
+            _init(addr)
+            setAddress(addr)
             handleShowMintRascal()
         } else {
             handleShowMetamaskInstall()
         }
+    }
+
+    const _init = async addr => {
+        // check currentMinter
+        const currMinter = await rascalsContract.methods.onlyWhitelisted().call()
+        if (currMinter) setCurrentMinter("WL") // whitelisted
+        else setCurrentMinter("PBL") // public
+
+        // check if the account has free mint
+        // const freeMintEligible = await rascalsContract.methods.freeMintQuantity(addr).call()
+        // if (Number(freeMintEligible) > 0) {
+        //     setIsFreeMint(true)
+        //     setFreeMintQty(Number(freeMintEligible))
+        // } else setIsFreeMint(false)
+
+        // check if whitelisted
+        const wlEligible = await rascalsContract.methods.isWhitelisted(addr).call()
+        if (wlEligible) setIsWhiteListed(true)
+        else setIsWhiteListed(false)
+
+        // check totalSupply
+        const totSup = await rascalsContract.methods.totalSupply().call()
+        setTotalSupply(Number(totSup))
+
+        // check if sold out
+        if (Number(totSup) === 10000) setIsSoldout(true)
+        else setIsSoldout(false)
     }
     // ---------------------------------------------------------- END RASCALS MINT --------------------------------------------------
 
@@ -542,7 +612,7 @@ export default function App() {
             {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
             {/*</div>*/}
 
-            <Navbar mintMarauder={mintMarauder} /> 
+            <Navbar mintRascal={mintRascal} /> 
             <Switch>
                 <Route exact path="/">
                     <Hero mintRascal={mintRascal} isSoldout={isSoldout} />
@@ -553,7 +623,7 @@ export default function App() {
                     <Tales />
                     <Game />
                     <Visualizer />
-                    <Table mintMarauder={mintMarauder} />
+                    <Table mintMarauder={mintMarauder} mintRascal={mintRascal} />
                     <Roadmap />
                     <Gmfrens />
                     <Team />
@@ -561,6 +631,9 @@ export default function App() {
                     <CTA />
                 </Route>
                 <Route exact path="/discord" component={Discord}></Route>
+                <Route exact path="/pathfinders" component={Pathfinders}></Route>
+                <Route exact path="/marauders" component={Marauders}></Route>
+                <Route exact path="/rascals" component={Rascals}></Route>
                 {/* <Route exact path="/pathfinders">
                     <Pathfinders mintBtn={initUtilsAndMint} />
                 </Route>
@@ -713,7 +786,7 @@ export default function App() {
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMintRascal} />
                     </div>
 
-                    <p className="app-metamask-modal-content text-white fw-bold text-center font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Rascal</p>
+                    <p className="text-white fw-bold text-center font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Rascal</p>
 
                     <div className="mb-4">
                         <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
@@ -721,12 +794,12 @@ export default function App() {
 
                     {isFreeMint ? (
                         <>
-                            <p className="app-metamask-modal-content text-white fw-bold text-center font-size-130 px-3">Woohoo! Looks like you have a FREE MINT available on your account.</p>
-                            <button type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>MINT MY FREE RASCAL!</button>
+                            <p className="text-white fw-bold text-center font-size-130 px-3">Woohoo! Looks like you have a FREE MINT available on your account.</p>
+                            <button onClick={freeMintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>MINT MY FREE RASCAL!</button>
                         </>
                     ) : (
                         <>
-                            <p className="app-metamask-modal-content text-white text-center fw-bold font-size-150 mb-3">Price: {numberFormat(currentPrice,4)} ETH</p>
+                            <p className="text-white text-center fw-bold font-size-150 mb-3">Price: {numberFormat(currentPrice,4)} ETH</p>
 
                             <input type="number" id="qtyToMint" onKeyDown={handleKeypress} onChange={handleQtyChange} className="rascals-mint-qty text-center form-control font-size-150 mb-3" placeholder="Enter Qty to mint" min="1" step="1"/>
 
@@ -774,7 +847,7 @@ export default function App() {
                     </div>
 
                     <div className="text-center pt-4">
-                        <img className="mt-2" src={marauders} width="220" alt="Mustachio Pathfinders" />
+                        <img className="mt-2" src={rascals} width="220" alt="Mustachio Rascals" />
                     </div>
 
                     <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-140 px-md-5 pt-3 mb-1">Congratulations!</p>
