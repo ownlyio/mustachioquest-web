@@ -6,8 +6,8 @@ const connectToMetaMask = async () => {
             // Get network ID
             let n = parseInt(window.ethereum.chainId);
 
-            // if(n !== 1) {
-            if(n !== 5) {
+            if(n !== 1) {
+            // if(n !== 5) {
                 await switchNetwork();
             }
 
@@ -27,8 +27,8 @@ const switchNetwork = async () => {
         console.log("switch");
         await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
-            // params: [{ chainId: "0x1"}],
-            params: [{ chainId: "0x5"}],
+            params: [{ chainId: "0x1"}],
+            // params: [{ chainId: "0x5"}],
         });
         console.log("You have switched to the right network")
     } catch (switchError) {

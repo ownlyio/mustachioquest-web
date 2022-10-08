@@ -390,7 +390,6 @@ export default function App() {
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinting, setIsMinting] = useState(false)
     const [isSoldout, setIsSoldout] = useState(false)
-    const [mintQty, setMintQty] = useState(0)
     const [currentPrice, setCurrentPrice] = useState(web3.utils.fromWei(mintCost[0].toString(), "ether"))
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0)
@@ -399,13 +398,13 @@ export default function App() {
     const [txError, setTxError] = useState("")
 
     // Mainnet
-    // const rascalsAddress = '0xd1F6e0D0B5d31238632d2bcCbB110a3D8D24c73e'
+    const rascalsAddress = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
     // Testnet
-    const rascalsAddress = '0x3235981927E5Ba0283155a98A92c64381C4eB14B'
+    // const rascalsAddress = '0x3235981927E5Ba0283155a98A92c64381C4eB14B'
     // Mainnet
-    // const etherScanUrl = 'https://etherscan.io/tx/'
+    const etherScanUrl = 'https://etherscan.io/tx/'
     // Testnet
-    const etherScanUrl = 'https://goerli.etherscan.io/tx/'
+    // const etherScanUrl = 'https://goerli.etherscan.io/tx/'
 
     const handleKeypress = (e) => {
         const characterCode = e.key
@@ -948,10 +947,10 @@ export default function App() {
                     <div className="row mb-4">
                         <div className="col-12 text-center">
                             {/* Mainnet */}
-                            {/* <a href={ 'https://opensea.io/assets/ethereum/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a> */}
+                            <a href={ 'https://opensea.io/assets/ethereum/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a>
 
                             {/* Testnet */}
-                            <a href={ 'https://testnets.opensea.io/assets/goerli/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a>
+                            {/* <a href={ 'https://testnets.opensea.io/assets/goerli/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a> */}
 
                             <a href={ etherScanUrl + txHashRascal } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
                         </div>
