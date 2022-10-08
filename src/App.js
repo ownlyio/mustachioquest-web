@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Modal } from 'react-bootstrap'
 import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Discord } from './components/ShortLinks'
+import { Discord, Pathfinders, Marauders, Rascals } from './components/ShortLinks'
 import $ from 'jquery'
 import * as smoothscroll from "smoothscroll-polyfill"
 
@@ -331,6 +331,9 @@ export default function App() {
                     <CTA />
                 </Route>
                 <Route exact path="/discord" component={Discord}></Route>
+                <Route exact path="/pathfinders" component={Pathfinders}></Route>
+                <Route exact path="/marauders" component={Marauders}></Route>
+                <Route exact path="/rascals" component={Rascals}></Route>
                 {/* <Route exact path="/pathfinders">
                     <Pathfinders mintBtn={initUtilsAndMint} />
                 </Route>
