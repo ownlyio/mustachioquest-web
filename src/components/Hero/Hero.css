@@ -17,6 +17,6 @@
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .shifting-rascals {
-        min-height:100vh;
+        max-height:100vh;
     }
 }
