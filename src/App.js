@@ -876,7 +876,7 @@ export default function App() {
                         <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
                     </div>
 
-                    {isFreeMint ? (
+                    {false ? (
                         <>
                             <p className="text-white fw-bold text-center font-size-130 px-3">Woohoo! Looks like you have a FREE MINT available on your account.</p>
                             
