@@ -21,12 +21,11 @@ export default function AboutRascals() {
                             <div className="bg-color-1 w-100 mb-4" style={{"height":"1px"}}></div>
                             
                             <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">Another set of Mustachio adventurers are joining the Pathfinders (<a href="https://ownly.market/pathfinders2d" className="link-color-4" target="_blank" rel="noreferrer">2D</a> and <a href="https://ownly.market/pathfinders3d" className="link-color-4" target="_blank" rel="noreferrer">3D</a> Genesis Mustachios) and <a href="https://ownly.market/marauders" className="link-color-4" target="_blank" rel="noreferrer">Marauders</a> (Second Generation Mustachios) as they explore the Metaverse! Here comes the Mustachio Rascals, the next generation of our Mustachios.</p>
-                            <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-2">With a maximum supply of 10,000 Generated 3D NFTs, the Mustachio Rascals are the third generation of Mustachios. Of course, you may explore and play Mustachio Quest with your 3D Mustachio Rascal.</p>
-                            <p className="font-size-120 text-center text-lg-start gotham-bold line-height-150 pt-2 mb-2 pb-3">Launching this October 8, 2022 at AMAC 2022.</p>
+                            <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4">With a maximum supply of 10,000 Generated 3D NFTs, the Mustachio Rascals are the third generation of Mustachios. Of course, you may explore and play Mustachio Quest with your 3D Mustachio Rascal.</p>
 
-                            {/* <div className="text-center text-lg-start">
-                                <button className="btn btn-custom-2 font-size-120 px-5 py-2 fw-bold" style={{"width":"initial", "marginRight": "5px"}} onClick={props.mintBtn}>MINT NOW!</button>
-                            </div> */}
+                            <div className="text-center text-lg-start">
+                                <a href="https://opensea.io/collection/mustachiorascals" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-150">VIEW ON OPENSEA</a>
+                            </div>
                         </div>
                     </div>
 

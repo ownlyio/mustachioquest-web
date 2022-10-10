@@ -74,7 +74,7 @@ export default function Table({ mintMarauder, mintRascal }) {
                                         <a href="https://ownly.market/marauders" target="_blank" rel="noreferrer" className="link-color-2">Marauders</a>
                                     </th>
                                     <th className="text-center align-middle gotham-bold text-white font-size-150">
-                                        <a href="#" target="_blank" rel="noreferrer" className="link-color-2">Rascals</a>
+                                        <a href="https://opensea.io/collection/mustachiorascals" target="_blank" rel="noreferrer" className="link-color-2">Rascals</a>
                                     </th>
                                 </tr>
                             </thead>
