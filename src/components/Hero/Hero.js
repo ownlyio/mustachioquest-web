@@ -123,7 +123,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                         </div>
 
                         <div className="mx-auto text-center mt-2">
-                            <a href="https://etherscan.io/address/0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46" target="_blank" rel="noreferrer" className="link-color-3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contact</a>
+                            <a href="https://etherscan.io/address/0x80D148E0512B68d1c10979f107f9900F1A66d432" target="_blank" rel="noreferrer" className="link-color-3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contact</a>
                         </div>
                     </div>
                 </div>
