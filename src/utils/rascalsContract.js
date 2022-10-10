@@ -1,8 +1,8 @@
 import web3 from "./web3"
 
 // mainnet
-// const address = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
-const address = '0x80D148E0512B68d1c10979f107f9900F1A66d432'
+const address = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
+// const address = '0x80D148E0512B68d1c10979f107f9900F1A66d432'
 
 // testnet
 // const address = '0x7Aa03f408371604992eBD411e22D8fc0c0f0ddbD'

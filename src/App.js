@@ -387,8 +387,8 @@ export default function App() {
     const [txError, setTxError] = useState("")
 
     // Mainnet
-    // const rascalsAddress = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
-    const rascalsAddress = '0x80D148E0512B68d1c10979f107f9900F1A66d432'
+    const rascalsAddress = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
+    // const rascalsAddress = '0x80D148E0512B68d1c10979f107f9900F1A66d432'
     // Testnet
     // const rascalsAddress = '0x7Aa03f408371604992eBD411e22D8fc0c0f0ddbD'
     // Mainnet
@@ -869,7 +869,7 @@ export default function App() {
                                 ) : "MINT MY FREE RASCAL" }
                             </button>
                         </>
-                    ) : (   
+                    ) : (
                         <>
                             <p className="text-white text-center font-size-100 mb-0">1-2 = 0.025 ETH / Rascal</p>
                             <p className="text-white text-center font-size-100 mb-0">2-4 = 0.018 ETH / Rascal</p>
