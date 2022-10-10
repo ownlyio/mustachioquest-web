@@ -271,8 +271,6 @@ export default function App() {
 
             let owner = (isProduction) ? "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B" : "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
 
-            console.log(_marketItem);
-
             if(_marketItem && _marketItem.itemId !== "0" && _marketItem.seller === owner) {
                 setMarketItem(_marketItem);
 
@@ -293,9 +291,6 @@ export default function App() {
     const approveOwn = async function() {
         let address = await connectToMetaMask();
 
-        console.log(marketplaceContract.options.address);
-        console.log(web3.utils.toWei(finalPrice.toString(), "ether"));
-
         setIsApproving(true);
 
         await ownContract.methods.approve(marketplaceContract.options.address, web3.utils.toWei(finalPrice.toString(), "ether")).send({
@@ -311,9 +306,6 @@ export default function App() {
 
     const purchaseWithOwn = async function() {
         let address = await connectToMetaMask();
-
-        console.log(marketItem.itemId);
-        console.log(finalPrice);
 
         setIsPurchasing(true);
 
@@ -332,9 +324,6 @@ export default function App() {
 
     const purchaseWithBnb = async function() {
         let address = await connectToMetaMask();
-
-        console.log(marketItem.itemId);
-        console.log(finalPrice);
 
         setIsPurchasing(true);
 
@@ -504,7 +493,6 @@ export default function App() {
                     handleShowOnErrorRascal()
                 })
                 .then(async function(receipt) {
-                    console.log(receipt)
                     setIsMinting(false)
                     handleShowOnSuccessRascal()
                     setTxHashRascal(receipt.transactionHash)
