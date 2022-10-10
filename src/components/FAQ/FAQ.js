@@ -52,13 +52,13 @@ export default function FAQ() {
                             </ol>
 
                             <p className="font-size-120 mt-4">To get a Mustachio Rascal NFT:</p>
-                            <p className="font-size-120 gotham-light">Instructions TBA.</p>
-                            {/* <ol>
+                            <ol>
                                 <li className="font-size-120 gotham-light">Click MINT NOW at the upper right corner of the Navigation Menu.</li>
-                                <li className="font-size-120 gotham-light">Connect your MetaMask wallet (BNB Chain Network).</li>
-                                <li className="font-size-120 gotham-light">Mint your Mustachio Marauder and pay the gas fee.</li>
-                                <li className="font-size-120 gotham-light">Check your <a className="font-size-100 gotham-light link-color-1" href="https://ownly.market" target="_blank" rel="noreferrer">Ownly Market</a> account, and there you go! You now OWN a Mustachio Marauder.</li>
-                            </ol> */}
+                                <li className="font-size-120 gotham-light">Connect your MetaMask wallet (Ethereum Network).</li>
+                                <li className="font-size-120 gotham-light">Add the quantity of Rascals you wanted to mint.</li>
+                                <li className="font-size-120 gotham-light">Mint your Mustachio Rascal/s and pay the gas fee.</li>
+                                <li className="font-size-120 gotham-light">Check your minted NFT at <a className="font-size-100 gotham-light link-color-1" href="https://opensea.io/collection/mustachiorascals" target="_blank" rel="noreferrer">OpenSea</a>, and there you go! You now OWN a Mustachio Rascal/s.</li>
+                            </ol>
 
                             {/*<p className="font-size-120 mt-4">To earn a Mustachio Marauder NFT:</p>*/}
                             {/*<ol>*/}
