@@ -94,7 +94,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                     <div className="col-12 col-lg-6 d-none d-lg-block">
                         <div className="hero-img-wrap ms-0 ms-lg-1">
                             <div className="hero-img mx-auto">
-                                <img src={rascals} alt="Rascals GIF" className="w-100" />
+                                <img src={rascals} alt="Rascals GIF" className="shifting-rascals" />
                             </div>
                         </div>
                     </div>
