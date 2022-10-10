@@ -59,12 +59,12 @@ export default function Roadmap() {
                             <p className="text-color-3 gotham-black font-size-170 mb-0">2022 Q4</p>
                         </div>                    
                         <div className="q-column quarter-mr">
-                            <div className="now q-pointer"></div>
-                            <div className="now q-content gotham-light text-black font-size-110">Launch of 10,00 3D Mustachio Rascals NFT</div>
+                            <div className="done q-pointer"></div>
+                            <div className="done q-content gotham-light text-black font-size-110">Launch of 10,000 3D Mustachio Rascals NFT</div>
                         </div>
                         <div className="q-column quarter-mr">
-                            <div className="soon q-pointer"></div>
-                            <div className="soon q-content gotham-light text-black font-size-110">AMAC and BBC IRL events for Mustachio and Ownly holders</div>
+                            <div className="now q-pointer"></div>
+                            <div className="now q-content gotham-light text-black font-size-110">AMAC and BBC IRL events for Mustachio and Ownly holders</div>
                         </div>
                         <div className="q-column quarter-mr">
                             <div className="soon q-pointer"></div>
