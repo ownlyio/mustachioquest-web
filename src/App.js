@@ -387,8 +387,8 @@ export default function App() {
     const [txError, setTxError] = useState("")
 
     // Mainnet
-    const rascalsAddress = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
-    // const rascalsAddress = '0x80D148E0512B68d1c10979f107f9900F1A66d432'
+    // const rascalsAddress = '0x0Ad92EA349ddbb08AA2129D4af823Ac4C78bab46'
+    const rascalsAddress = '0x3f5c11ff5c004313a5d1bb0b5160551e05988569'
     // Testnet
     // const rascalsAddress = '0x7Aa03f408371604992eBD411e22D8fc0c0f0ddbD'
     // Mainnet
