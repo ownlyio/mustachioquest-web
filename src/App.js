@@ -374,14 +374,14 @@ export default function App() {
     const [totalSupply, setTotalSupply] = useState(0)
     const [freeMintQty, setFreeMintQty] = useState(0)
     const [isFreeMint, setIsFreeMint] = useState(false)
-    // const [isWhiteListed, setIsWhiteListed] = useState(true)
-    // const [currentMinter, setCurrentMinter] = useState("WL")
+    const [isWhiteListed, setIsWhiteListed] = useState(true)
+    const [currentMinter, setCurrentMinter] = useState("WL")
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinting, setIsMinting] = useState(false)
     const [isSoldout, setIsSoldout] = useState(false)
     const [currentPrice, setCurrentPrice] = useState(web3.utils.fromWei(mintCost[0].toString(), "ether"))
     const [totalPrice, setTotalPrice] = useState(0)
-    // const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0)
+    const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0)
     const [txHashRascal, setTxHashRascal] = useState("#")
     const [tokenId, setTokenId] = useState(0)
     const [txError, setTxError] = useState("")
@@ -440,15 +440,15 @@ export default function App() {
                 setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             }
 
-            // if (isWhiteListed) {
-            //     const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
-            //     setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
-            // }
-            // else setTotalDiscountedPrice(0)
+            if (isWhiteListed) {
+                const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
+                setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
+            }
+            else setTotalDiscountedPrice(0)
         } else {
             setCurrentPrice(web3.utils.fromWei(mintCost[0].toString(), "ether"))
             setTotalPrice(0)
-            // setTotalDiscountedPrice(0)
+            setTotalDiscountedPrice(0)
             setIsDisabled(true)
         }
     }
@@ -457,16 +457,16 @@ export default function App() {
         const qtyToMint = document.getElementById("qtyToMint").value
 
         if (qtyToMint) {
-            // if (currentMinter == "WL") {
-            //     if (!isWhiteListed) {
-            //         setTxError("Public Mint is not allowed yet. You can mint starting Oct. 9, 7PM SGT. Thank you!")
-            //         handleShowOnErrorRascal()
-            //     } else {
-            //         rascalsMintProcess(qtyToMint)
-            //     }   
-            // } else {
-            rascalsMintProcess(qtyToMint)
-            // }
+            if (currentMinter == "WL") {
+                if (!isWhiteListed) {
+                    setTxError("Public Mint is not allowed yet. You can mint starting Oct. 9, 7PM SGT. Thank you!")
+                    handleShowOnErrorRascal()
+                } else {
+                    rascalsMintProcess(qtyToMint)
+                }   
+            } else {
+                rascalsMintProcess(qtyToMint)
+            }
         } else {
             setTxError("Please input a valid amount greater than 0.")
             handleShowOnErrorRascal()
@@ -552,9 +552,9 @@ export default function App() {
 
     const _init = async addr => {
         // check currentMinter
-        // const currMinter = await rascalsContract.methods.onlyWhitelisted().call()
-        // if (currMinter) setCurrentMinter("WL") // whitelisted
-        // else setCurrentMinter("PBL") // public
+        const currMinter = await rascalsContract.methods.onlyWhitelisted().call()
+        if (currMinter) setCurrentMinter("WL") // whitelisted
+        else setCurrentMinter("PBL") // public
 
         // check if the account has free mint
         const freeMintEligible = await rascalsContract.methods.freeMintQuantity(addr).call()
@@ -880,7 +880,7 @@ export default function App() {
 
                             <input type="number" id="qtyToMint" onKeyDown={handleKeypress} onChange={handleQtyChange} className="rascals-mint-qty text-center form-control font-size-150 mb-3" placeholder="Enter Qty to mint" min="1" step="1"/>
 
-                            {/* { isWhiteListed ? (
+                            { isWhiteListed ? (
                                 <>
                                     <p className="text-white text-center fw-bold mb-0">
                                         Total: <s className="font-size-100 gotham">{numberFormat(totalPrice, 4)} ETH</s>
@@ -892,15 +892,14 @@ export default function App() {
                                 </>
                             ) : (
                                 <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
-                            )} */}
-                            <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
+                            )}
 
                             <button onClick={mintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
                                 {isMinting ? (
                                     <FontAwesomeIcon icon={faSpinner} color="white" spin />
-                                    ) : (
-                                        isSoldout ? "SOLD OUT" : "MINT NOW!"
-                                    )}
+                                ) : (
+                                    isSoldout ? "SOLD OUT" : "MINT NOW!"
+                                )}
                             </button>
                         </>
                     )}

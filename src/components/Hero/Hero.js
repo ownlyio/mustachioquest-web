@@ -1,7 +1,6 @@
 // images
 import rascals from '../../images/rascal-gif.gif'
 import rascalsLogo from '../../images/MQ_rascals.png'
-import amacLogo from '../../images/amac-logo.png'
 
 // import axios from 'axios'
 // import { Button, Modal } from "react-bootstrap";
@@ -104,13 +103,10 @@ export default function Hero({ mintRascal, isSoldout }) {
                         </div>
                         <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
 
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160 mb-0">Launched now at</p>
-                        <p className="font-size-110 font-size-lg-140 gotham-bold text-center text-white line-height-160">
-                            <a href="https://amac.ph" target="_blank" rel="noreferrer">
-                                <span className="link-color-2">AMAC2022</span>&nbsp;
-                                <img src={amacLogo} alt="AMAC Logo" style={{"width": "50px"}} />
-                            </a>
-                        </p>
+                        <p className="text-white text-center font-size-110 mb-0">1-2 = 0.025 ETH / Rascal</p>
+                        <p className="text-white text-center font-size-110 mb-0">2-4 = 0.018 ETH / Rascal</p>
+                        <p className="text-white text-center font-size-110 mb-0">5-9 = 0.014 ETH / Rascal</p>
+                        <p className="text-white text-center font-size-110 mb-3">10+ = 0.009 ETH / Rascal</p>
 
                         <div className="mx-auto text-center">
                             {isSoldout ? (
@@ -123,7 +119,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                         </div>
 
                         <div className="mx-auto text-center mt-2">
-                            <a href="https://etherscan.io/address/0x3f5c11ff5c004313a5d1bb0b5160551e05988569" target="_blank" rel="noreferrer" className="link-color-3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contact</a>
+                            <a href="https://etherscan.io/address/0x3f5c11ff5c004313a5d1bb0b5160551e05988569" target="_blank" rel="noreferrer" className="link-color-3"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contract</a>
                         </div>
                     </div>
                 </div>
