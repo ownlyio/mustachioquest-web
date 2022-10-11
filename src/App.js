@@ -872,7 +872,7 @@ export default function App() {
                     ) : (
                         <>
                             <p className="text-white text-center font-size-100 mb-0">1-2 = 0.025 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">2-4 = 0.018 ETH / Rascal</p>
+                            <p className="text-white text-center font-size-100 mb-0">3-4 = 0.018 ETH / Rascal</p>
                             <p className="text-white text-center font-size-100 mb-0">5-9 = 0.014 ETH / Rascal</p>
                             <p className="text-white text-center font-size-100 mb-0">10+ = 0.009 ETH / Rascal</p>
 

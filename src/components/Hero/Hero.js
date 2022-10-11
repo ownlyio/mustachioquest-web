@@ -104,7 +104,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                         <p className="font-size-110 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
 
                         <p className="text-white text-center font-size-110 mb-0">1-2 = <s>0.025 ETH</s> 0.01875 ETH / Rascal</p>
-                        <p className="text-white text-center font-size-110 mb-0">2-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
+                        <p className="text-white text-center font-size-110 mb-0">3-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
                         <p className="text-white text-center font-size-110 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
                         <p className="text-white text-center font-size-110 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
                         <p className="text-white fw-bold text-center font-size-140 mb-3">25% off until October 31, 2022!</p>
