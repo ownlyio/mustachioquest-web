@@ -871,10 +871,10 @@ export default function App() {
                         </>
                     ) : (
                         <>
-                            <p className="text-white text-center font-size-100 mb-0">1-2 = 0.025 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">3-4 = 0.018 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">5-9 = 0.014 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">10+ = 0.009 ETH / Rascal</p>
+                            <p className="text-white text-center font-size-100 mb-0">1-2 = <s>0.025 ETH</s> 0.01875 ETH / Rascal</p>
+                            <p className="text-white text-center font-size-100 mb-0">3-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
+                            <p className="text-white text-center font-size-100 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
+                            <p className="text-white text-center font-size-100 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
 
                             <p className="text-white text-center fw-bold font-size-150 mb-3">Price: {numberFormat(currentPrice,4)} ETH</p>
 
