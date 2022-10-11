@@ -2,89 +2,60 @@
 import rascals from '../../images/rascal-gif.gif'
 import rascalsLogo from '../../images/MQ_rascals.png'
 
-// import axios from 'axios'
-// import { Button, Modal } from "react-bootstrap";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-// import { useState, useEffect } from "react"
+import axios from "axios"
+import { useState, useEffect } from "react"
 import './Hero.css'
 
 export default function Hero({ mintRascal, isSoldout }) {
-//     const defaultTime = "00"
-//     const [days, setDays] = useState(defaultTime)
-//     const [hours, setHours] = useState(defaultTime)
-//     const [minutes, setMinutes] = useState(defaultTime)
-//     const [seconds, setSeconds] = useState(defaultTime)
-//     const [isComingSoon, setIsComingSoon] = useState(true)
-//     const [emailAdd, setEmailAdd] = useState("")
-//     const [showSubscribed, setShowSubscribed] = useState(false);
-//     const handleCloseSubscribed = () => setShowSubscribed(false);
-//     const handleShowSubscribed = () => setShowSubscribed(true);
-//     const [showErrorEmail, setShowErrorEmail] = useState(false);
-//     const handleCloseErrorEmail = () => setShowErrorEmail(false);
-//     const handleShowErrorEmail = () => setShowErrorEmail(true);
+    const defaultTime = "00"
+    const [days, setDays] = useState(defaultTime)
+    const [hours, setHours] = useState(defaultTime)
+    const [minutes, setMinutes] = useState(defaultTime)
+    const [seconds, setSeconds] = useState(defaultTime)
 
-//     const submitForm = (e) => {
-//         e.preventDefault()
+    let interval
 
-//         let re = /^[ ]*([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i;
-    
-//         if (re.test(emailAdd)) {
-//             axios.post('https://ownly.market/api/email-signup', {email: emailAdd, type: 'rascals'}).then(res => {
-//                 document.getElementById("emailAdd").value = ""
-//                 document.getElementById("agreement").checked = false
-//                 setEmailAdd("")
-//                 handleShowSubscribed()
-//             })
-//         } else {
-//             handleShowErrorEmail()
-//         }
-//     }
+    const startTimer = timeSec => {
+        const countdownDate = new Date().getTime() + (timeSec * 1000)
 
-//     let interval
+        interval = setInterval(() => {
+            const now = new Date().getTime()
+            const distance = countdownDate - now
 
-//     const startTimer = timeSec => {
-//         const countdownDate = new Date().getTime() + (timeSec * 1000)
+            const d = padZeroes(Math.floor(distance / (24 * 60 * 60 * 1000)))
+            const h = padZeroes(Math.floor((distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)))
+            const m = padZeroes(Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60)))
+            const s = padZeroes(Math.floor((distance % (1000 * 60  )) / 1000))
 
-//         interval = setInterval(() => {
-//             const now = new Date().getTime()
-//             const distance = countdownDate - now
+            if (distance < 0) {
+                clearInterval(interval.current)
+            } else {
+                setDays(d)
+                setHours(h)
+                setMinutes(m)
+                setSeconds(s)
+            }
+        }, 1000)
+    }
 
-//             const d = padZeroes(Math.floor(distance / (24 * 60 * 60 * 1000)))
-//             const h = padZeroes(Math.floor((distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)))
-//             const m = padZeroes(Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60)))
-//             const s = padZeroes(Math.floor((distance % (1000 * 60  )) / 1000))
+    const padZeroes = number => {
+        number = number.toString();
 
-//             if (distance < 0) {
-//                 clearInterval(interval.current)
-//                 setIsComingSoon(false)
-//             } else {
-//                 setDays(d)
-//                 setHours(h)
-//                 setMinutes(m)
-//                 setSeconds(s)
-//             }
-//         }, 1000)
-//     }
+        while (number.length < 2) {
+            number = "0" + number;
+        }
 
-//     const padZeroes = number => {
-//         number = number.toString();
+        return number;
+    }
 
-//         while (number.length < 2) {
-//             number = "0" + number;
-//         }
+    useEffect(() => {
+        async function _init() {
+            const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-11-01%2000:00")
+            startTimer(Number(remaining.data))
+        }
 
-//         return number;
-//     }
-
-//     useEffect(() => {
-//         async function _init() {
-//             const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-10-08%2011:00")
-//             startTimer(Number(remaining.data))
-//         }
-
-//         _init()
-//     }, [])
+        _init()
+    }, [])
 
     return (
         <section id="hero" className="h-screen">
@@ -108,6 +79,29 @@ export default function Hero({ mintRascal, isSoldout }) {
                         <p className="text-white text-center font-size-110 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
                         <p className="text-white text-center font-size-110 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
                         <p className="text-white fw-bold text-center font-size-140 mb-3">25% off until October 31, 2022!</p>
+
+                        <p className="text-white fw-bold text-center font-size-120 mb-0">Discount will expire on:</p>
+                        <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap mb-4 px-0 px-md-5">
+                            <div className="countdown days">
+                                <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{days}</p>
+                                <p className="font-size-110 font-size-lg-90 text-center text-white mb-0">DAYS</p>
+                            </div>
+                            {/* <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
+                            <div className="countdown hours">
+                                <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{hours}</p>
+                                <p className="font-size-110 font-size-lg-90 text-center text-white mb-0">HOURS</p>
+                            </div>
+                            {/* <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
+                            <div className="countdown minutes">
+                                <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{minutes}</p>
+                                <p className="font-size-110 font-size-lg-90 text-center text-white mb-0">MINUTES</p>
+                            </div>
+                            {/* <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">:</p> */}
+                            <div className="countdown seconds">
+                                <p className="font-size-200 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{seconds}</p>
+                                <p className="font-size-110 font-size-lg-90 text-center text-white mb-0">SECONDS</p>
+                            </div>
+                        </div>  
 
                         <div className="mx-auto text-center">
                             {isSoldout ? (
