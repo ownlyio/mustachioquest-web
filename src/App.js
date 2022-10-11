@@ -476,8 +476,8 @@ export default function App() {
     const rascalsMintProcess = async qtyToMint => {
         if (totalSupply + Number(qtyToMint) <= 10000) {
             const userBalance = await web3.eth.getBalance(address)
-            // const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
-            const totalPriceToPay = web3.utils.toWei(totalPrice.toString())
+            const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
+            // const totalPriceToPay = web3.utils.toWei(totalPrice.toString())
 
             if (BigInt(userBalance) >= BigInt(totalPriceToPay)) {
                 await rascalsContract.methods.mint(qtyToMint).send({
