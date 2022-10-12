@@ -656,6 +656,10 @@
     margin-left: 2.5%;
     margin-right: 2.5%;
   }
+
+  .hero-logo {
+    width: 50% !important;
+  }
 }
 
 /* MIN WIDTH */
