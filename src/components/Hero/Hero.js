@@ -72,31 +72,31 @@ export default function Hero({ mintRascal, isSoldout }) {
                         <div className="hero-logo mx-auto">
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
-                        <p className="font-size-100 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
+                        <p className="font-size-100 font-size-lg-140 text-center text-color-5 line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
 
-                        <p className="text-color-5 text-center font-size-100 mb-0">1-2 = <s>0.025 ETH</s> 0.01875 ETH / Rascal</p>
-                        <p className="text-color-5 text-center font-size-100 mb-0">3-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
-                        <p className="text-color-5 text-center font-size-100 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
-                        <p className="text-color-5 text-center font-size-100 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
-                        <p className="text-white fw-bold text-center font-size-120 font-size-md-140 mb-3">25% off until October 31, 2022!</p>
+                        <p className="text-white fw-bold text-center font-size-100 mb-0">1-2 = <s>0.025 ETH</s> 0.01875 ETH / Rascal</p>
+                        <p className="text-white fw-bold text-center font-size-100 mb-0">3-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
+                        <p className="text-white fw-bold text-center font-size-100 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
+                        <p className="text-white fw-bold text-center font-size-100 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
+                        <p className="text-white gotham-black text-center font-size-120 font-size-md-140 mb-3">25% off until October 31, 2022!</p>
 
                         <p className="text-color-5 fw-bold text-center font-size-100 font-size-lg-120 mb-0">Discount will expire on:</p>
                         <div className="hero-countdown d-flex align-items-center justify-content-evenly flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
-                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{days}</p>
-                                <p className="font-size-80 font-size-lg-90 text-center text-white mb-0">DAYS</p>
+                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-color-5 line-height-110 mb-0">{days}</p>
+                                <p className="font-size-80 font-size-lg-90 text-center text-color-5 mb-0">DAYS</p>
                             </div>
                             <div className="countdown hours">
-                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{hours}</p>
-                                <p className="font-size-80 font-size-lg-90 text-center text-white mb-0">HOURS</p>
+                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-color-5 line-height-110 mb-0">{hours}</p>
+                                <p className="font-size-80 font-size-lg-90 text-center text-color-5 mb-0">HOURS</p>
                             </div>
                             <div className="countdown minutes">
-                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{minutes}</p>
-                                <p className="font-size-80 font-size-lg-90 text-center text-white mb-0">MINUTES</p>
+                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-color-5 line-height-110 mb-0">{minutes}</p>
+                                <p className="font-size-80 font-size-lg-90 text-center text-color-5 mb-0">MINUTES</p>
                             </div>
                             <div className="countdown seconds">
-                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-white line-height-110 mb-0">{seconds}</p>
-                                <p className="font-size-80 font-size-lg-90 text-center text-white mb-0">SECONDS</p>
+                                <p className="font-size-110 font-size-lg-160 gotham-black text-center text-color-5 line-height-110 mb-0">{seconds}</p>
+                                <p className="font-size-80 font-size-lg-90 text-center text-color-5 mb-0">SECONDS</p>
                             </div>
                         </div>  
 
