@@ -4,6 +4,8 @@ import rascalsLogo from '../../images/MQ_rascals.png'
 
 import axios from "axios"
 import { useState, useEffect } from "react"
+import numberFormat from './../../utils/numberFormat'
+import rascalsContract from '../../utils/rascalsContract'
 import './Hero.css'
 
 export default function Hero({ mintRascal, isSoldout }) {
@@ -12,6 +14,7 @@ export default function Hero({ mintRascal, isSoldout }) {
     const [hours, setHours] = useState(defaultTime)
     const [minutes, setMinutes] = useState(defaultTime)
     const [seconds, setSeconds] = useState(defaultTime)
+    const [totalSupplyRascals, setTotalSupplyRascals] = useState(0)
 
     let interval
 
@@ -47,11 +50,23 @@ export default function Hero({ mintRascal, isSoldout }) {
 
         return number;
     }
+    
+    const totalRemaining = supply => {
+        return 10000 - supply
+    }
+
+    const computePercentage = supply => {
+        const percent = (totalRemaining(supply) / 10000) * 100
+        return percent
+    }
 
     useEffect(() => {
         async function _init() {
             const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-11-01%2000:00")
             startTimer(Number(remaining.data))
+
+            const totSup = await rascalsContract.methods.totalSupply().call()
+            setTotalSupplyRascals(Number(totSup))
         }
 
         _init()
@@ -99,6 +114,14 @@ export default function Hero({ mintRascal, isSoldout }) {
                                 <p className="font-size-80 font-size-lg-90 text-center text-color-5 mb-0">SECONDS</p>
                             </div>
                         </div>  
+
+                        <div className="remaining-rascals text-center mb-3">
+                            <div className="remaining-rascals-bar mx-auto">
+                                <div className="remaining-bar-inner" style={{"width": `${computePercentage(totalSupplyRascals)}%`}}></div>
+                                <div className="remaining-count fw-bold font-size-100 text-white">{numberFormat(totalRemaining(totalSupplyRascals), 0)} of 10,000</div>
+                            </div>
+                            <div className="remaining-label font-size-100 text-color-5">Rascals Remaining</div>
+                        </div>
 
                         <div className="mx-auto text-center">
                             {isSoldout ? (
