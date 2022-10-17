@@ -35,6 +35,10 @@
 }
 
 @media (max-width: 1200px) {
+  .hero-countdown {
+    width: 80% !important;
+  }
+
   .feat-icon {
     width: 85% !important;
   }
@@ -91,6 +95,10 @@
 }
 
 @media (max-width: 992px) {
+  .hero-countdown {
+    width: 52% !important;
+  }
+
   .feat {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -317,6 +325,10 @@
 }
 
 @media (max-width: 576px) {
+  .hero-countdown {
+    width: 250px !important;
+  }
+
   .mobile-logo {
     width: 250px !important;
   }
@@ -651,11 +663,11 @@
     width: 90% !important;
   }
 
-  .countdown {
+  /* .countdown {
     width: 45% !important;
     margin-left: 2.5%;
     margin-right: 2.5%;
-  }
+  } */
 
   .hero-logo {
     width: 50% !important;
