@@ -538,6 +538,19 @@ export default function App() {
         })
     }
 
+    const initQtyPrice = () => {
+        document.getElementById("qtyToMint").value = 1
+        setIsDisabled(false)
+        setCurrentPrice(web3.utils.fromWei(BigInt(mintCost[0]).toString(), "ether"))
+        let tempTotalPrice = BigInt(mintCost[0]) * BigInt(1)
+        setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
+
+        if (isWhiteListed) {
+            const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
+            setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
+        }
+    }
+
     const initRascal = async () => {
         let addr = await connectToMetaMaskEth()
         
@@ -575,6 +588,9 @@ export default function App() {
         // check if sold out
         if (Number(totSup) === 10000) setIsSoldout(true)
         else setIsSoldout(false)
+
+        // add default value
+        initQtyPrice()
     }
     // ---------------------------------------------------------- END RASCALS MINT --------------------------------------------------
 
