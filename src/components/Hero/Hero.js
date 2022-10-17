@@ -5,7 +5,8 @@ import rascalsLogo from '../../images/MQ_rascals.png'
 import axios from "axios"
 import { useState, useEffect } from "react"
 import numberFormat from './../../utils/numberFormat'
-import rascalsContract from '../../utils/rascalsContract'
+import readWeb3 from '../../utils/readWeb3Eth'
+import { address, abi } from '../../utils/rascals'
 import './Hero.css'
 
 export default function Hero({ mintRascal, isSoldout }) {
@@ -65,6 +66,7 @@ export default function Hero({ mintRascal, isSoldout }) {
             const remaining = await axios.get("https://ownly.market/api/get-remaining-time/2022-11-01%2000:00")
             startTimer(Number(remaining.data))
 
+            const rascalsContract = new readWeb3.eth.Contract(abi, address)
             const totSup = await rascalsContract.methods.totalSupply().call()
             setTotalSupplyRascals(Number(totSup))
         }
