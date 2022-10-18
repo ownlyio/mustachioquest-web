@@ -97,7 +97,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                         <p className="text-white fw-bold text-center font-size-100 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
                         <p className="text-white gotham-black text-center font-size-120 font-size-md-140 mb-3">25% off until October 31, 2022!</p>
 
-                        <p className="text-white fw-bold text-center font-size-100 font-size-lg-120 mb-0">Discount will expire on:</p>
+                        <p className="text-white fw-bold text-center font-size-100 font-size-lg-120 mb-0">Discount will expire in:</p>
                         <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
                                 <p className="font-size-110 font-size-lg-140 gotham-black text-center text-color-5 line-height-110 mb-0">{days}</p>
