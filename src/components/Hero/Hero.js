@@ -82,7 +82,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                         <div className="hero-logo mx-auto">
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
-                        <p className="font-size-110 font-size-lg-140 gotham-light text-center text-white line-height-160">10,000 3D Generative Mustachio Rascals NFT</p>
+                        <p className="hero-desc font-size-110 font-size-lg-140 gotham-light text-center text-white line-height-160">10,000 3D Generative Mustachio Rascals NFT</p>
 
                         <div className="hero-prices">
                             <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
@@ -90,7 +90,7 @@ export default function Hero({ mintRascal, isSoldout }) {
                             <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
                             <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
                         </div>
-                        <p className="text-white gotham-black text-center font-size-120 font-size-sm-130 font-size-md-150 font-size-lg-180 mb-3">25% OFF until 31 OCT 2022!</p>
+                        <p className="text-white gotham-black text-center font-size-120 font-size-sm-130 font-size-md-150 mb-3">25% OFF until 31 OCT 2022!</p>
 
                         <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
