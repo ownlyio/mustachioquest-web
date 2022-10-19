@@ -39,6 +39,10 @@
     width: 80% !important;
   }
 
+  .hero-prices {
+    width: 90% !important;
+  }
+
   .feat-icon {
     width: 85% !important;
   }
@@ -97,6 +101,10 @@
 @media (max-width: 992px) {
   .hero-countdown {
     width: 52% !important;
+  }
+
+  .hero-prices {
+    width: 60% !important;
   }
 
   .feat {
@@ -181,6 +189,10 @@
 @media (max-width: 768px) {
   .mobile-logo {
     width: 350px !important;
+  }
+
+  .hero-prices {
+    width: 70% !important;
   }
 
   #features .col-12 {
@@ -327,6 +339,10 @@
 @media (max-width: 576px) {
   .hero-countdown {
     width: 250px !important;
+  }
+
+  .hero-prices {
+    width: 350px !important;
   }
 
   .mobile-logo {
@@ -567,6 +583,10 @@
 @media (max-width: 480px) {
   .mobile-logo {
     width: 180px !important;
+  }
+
+  .hero-prices {
+    width: 100% !important;
   }
 
   .feat-2d {
