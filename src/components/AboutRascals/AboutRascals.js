@@ -1,4 +1,5 @@
 // images
+import osLogo from '../../images/opensea-logo.png'
 import rascalsGif from '../../images/rascal-gif.gif'
 
 // import axios from 'axios'
@@ -24,7 +25,10 @@ export default function AboutRascals() {
                             <p className="font-size-120 text-center text-lg-start line-height-150 pt-2 mb-4">With a maximum supply of 10,000 Generated 3D NFTs, the Mustachio Rascals are the third generation of Mustachios. Of course, you may explore and play Mustachio Quest with your 3D Mustachio Rascal.</p>
 
                             <div className="text-center text-lg-start">
-                                <a href="https://opensea.io/collection/mustachiorascals" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-150">VIEW ON OPENSEA</a>
+                                <a href="https://opensea.io/collection/mustachiorascals" target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-150">
+                                    <img src={osLogo} alt="OpenSea Logo" className="os-logo" />
+                                    VIEW ON OPENSEA
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -33,7 +37,10 @@ export default function AboutRascals() {
                         <div className="ps-lg-4">
                             <div className="mx-4 mx-sm-5 mx-lg-0 px-sm-5 px-lg-0">
                                 <div className="mx-md-5 mx-lg-0 px-md-5 px-lg-0">
-                                    <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + rascalsGif + ")"}}>
+                                    {/* <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + rascalsGif + ")"}}>
+                                    </div> */}
+                                    <div className="about-rascals-img">
+                                        <img src={rascalsGif} alt="Rascals" className="rascals-gif w-100" />
                                     </div>
                                 </div>
                             </div>

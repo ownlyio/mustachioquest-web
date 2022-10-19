@@ -1,10 +1,19 @@
-.rascals-banner {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; 
+.about-rascals-img, 
+.about-rascals-img .rascals-gif {
+    border-radius: 50%;
+    width: 100%;
 }
 
-.form-check-input:checked {
-    background-color: #ff9f42 !important;
-    border-color: #ff9f42 !important;
+.about-rascals-image {
+    aspect-ratio: 1/1;
+}
+
+.about-rascals-img .rascals-gif {
+    object-fit: fill;
+}
+
+.os-logo {
+    margin-top: -8px;
+    width: 30px;
+    margin-right: 5px;
 }
