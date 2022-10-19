@@ -103,3 +103,11 @@
   right: 20px;
   z-index: 5;
 }
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
+.opacity-half {
+  opacity: 0.5;
+}

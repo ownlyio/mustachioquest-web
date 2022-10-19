@@ -446,11 +446,29 @@ export default function App() {
                 setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
             }
             else setTotalDiscountedPrice(0)
+            toggleTiers(parseInt(qty))
         } else {
             setCurrentPrice(web3.utils.fromWei(mintCost[0].toString(), "ether"))
             setTotalPrice(0)
             setTotalDiscountedPrice(0)
             setIsDisabled(true)
+            toggleTiers(0)
+        }
+    }
+
+    const toggleTiers = qty => {
+        const tier1 = document.querySelector('.tier-1')
+        const tier2 = document.querySelector('.tier-2')
+        const tier3 = document.querySelector('.tier-3')
+        const tier4 = document.querySelector('.tier-4')
+        const currentTier = document.querySelector('.opacity-1')
+        currentTier?.classList.remove('opacity-1')
+
+        if (qty !== 0) {
+            if (qty <= 2) tier1?.classList.add('opacity-1')
+            else if (qty <= 4) tier2?.classList.add('opacity-1')
+            else if (qty <= 9) tier3?.classList.add('opacity-1')
+            else tier4?.classList.add('opacity-1')
         }
     }
 
@@ -550,6 +568,8 @@ export default function App() {
             const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
             setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
         }
+
+        toggleTiers(1)
     }
 
     const initRascal = async () => {
@@ -892,24 +912,24 @@ export default function App() {
                         </>
                     ) : (
                         <>
-                            <p className="text-white text-center font-size-100 mb-0">1-2 = <s>0.025 ETH</s> 0.01875 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">3-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
-                            <p className="text-white text-center font-size-100 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
-
-                            <p className="text-white text-center fw-bold font-size-150 mb-3">Price: {numberFormat(currentPrice,4)} ETH</p>
+                            <div className="modal-prices-rascals mb-3">
+                                <p className="tier-1 opacity-half text-white text-center font-size-100 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
+                                <p className="tier-2 opacity-half text-white text-center font-size-100 mb-0">3-4 = <s className="hero-striked-price font-size-80 font-size-md-90">0.018 ETH</s> <b>0.0135 ETH</b> / Rascal</p>
+                                <p className="tier-3 opacity-half text-white text-center font-size-100 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
+                                <p className="tier-4 opacity-half text-white text-center font-size-100 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
+                            </div>
 
                             <input type="number" id="qtyToMint" onKeyDown={handleKeypress} onChange={handleQtyChange} className="rascals-mint-qty text-center form-control font-size-150 mb-3" placeholder="Enter Qty to mint" min="1" step="1"/>
 
                             { isWhiteListed ? (
                                 <>
                                     <p className="text-white text-center fw-bold mb-0">
-                                        Total: <s className="font-size-100 gotham">{numberFormat(totalPrice, 4)} ETH</s>
+                                        Subtotal: <s className="font-size-100 gotham">{numberFormat(totalPrice, 4)} ETH</s>
                                     </p>
-                                    <p className="text-white text-center fw-bold font-size-150 mb-1">
-                                        {numberFormat(totalDiscountedPrice, 4)} ETH
+                                    <p className="font-weight-130 text-white text-center fw-bold mb-1">Less 25%!</p>
+                                    <p className="text-white text-center fw-bold font-size-150 mb-4">
+                                        TOTAL: {numberFormat(totalDiscountedPrice, 4)} ETH
                                     </p>
-                                    <p className="font-weight-130 text-white text-center fw-bold mb-4">Less 25%!</p>
                                 </>
                             ) : (
                                 <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
