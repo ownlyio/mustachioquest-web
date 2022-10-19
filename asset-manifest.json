@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.06b20886.css",
-    "main.js": "/static/js/main.5ba081fe.js",
+    "main.css": "/static/css/main.ca0560c8.css",
+    "main.js": "/static/js/main.885800fa.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
-    "static/media/rascal-gif.gif": "/static/media/rascal-gif.7cf03784879fbcc5e165.gif",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
+    "static/media/rascal-gif.gif": "/static/media/rascal-gif.90a1a35c500959744991.gif",
     "static/media/ar-grim.mp4": "/static/media/ar-grim.c49251a092549124c0fa.mp4",
     "static/media/ar-mexico.mp4": "/static/media/ar-mexico.7374efb6af1c280bdac9.mp4",
     "static/media/tale-img.png": "/static/media/tale-img.1c3de115de14c597a0a7.png",
@@ -16,6 +16,7 @@
     "static/media/mexico-3d.webm": "/static/media/mexico-3d.b94ad2f6da43ab21d29b.webm",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
     "static/media/mustachios-cover.png": "/static/media/mustachios-cover.6e2b5e22407b8d2957ea.png",
+    "static/media/hero-section.png": "/static/media/hero-section.78f39b8f50d58cbda8d8.png",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
     "static/media/bm_square.png": "/static/media/bm_square.5d160190826618da1d8a.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
@@ -28,7 +29,6 @@
     "static/media/8-gif-sludgie.jpg": "/static/media/8-gif-sludgie.e7317c43937ede1a1af5.jpg",
     "static/media/3-mexico-strength.png": "/static/media/3-mexico-strength.90abe7b7e489075a961f.png",
     "static/media/Mustachio Time.png": "/static/media/Mustachio Time.63adcdce20e9d21736fe.png",
-    "static/media/rascal-pic.jpg": "/static/media/rascal-pic.b390c5aa216997b9f871.jpg",
     "static/media/Magic Users.png": "/static/media/Magic Users.91a87f435c6c09d6616e.png",
     "static/media/Team Mustachios.png": "/static/media/Team Mustachios.bf487a108066fb7fa1ae.png",
     "static/media/Royalties 2.png": "/static/media/Royalties 2.5ed13fe52dffb3d6bb1b.png",
@@ -78,6 +78,8 @@
     "static/media/5-loonywise.jpg": "/static/media/5-loonywise.44b9490325d2a5c795ee.jpg",
     "static/media/WHermann-Italic.woff2": "/static/media/WHermann-Italic.f949063f1346dd45b1d8.woff2",
     "static/media/WHermann-HeavyItalic.woff2": "/static/media/WHermann-HeavyItalic.444dd4947a6c8fc7512e.woff2",
+    "static/media/RobotoCondensed-Bold.woff": "/static/media/RobotoCondensed-Bold.de31490429a1f6ae32e5.woff",
+    "static/media/RobotoCondensed-Regular.woff": "/static/media/RobotoCondensed-Regular.362edd5359a239be31fb.woff",
     "static/media/the-mint-12.jpg": "/static/media/the-mint-12.24ca1cbc86a63a4061f8.jpg",
     "static/media/7-squarehead.jpg": "/static/media/7-squarehead.f06e96f16df8ae65b1da.jpg",
     "static/media/the-mint-10.jpg": "/static/media/the-mint-10.8866f3496645a1070d88.jpg",
@@ -97,6 +99,8 @@
     "static/media/mountainwarrior.jpg": "/static/media/mountainwarrior.8efb9195eed1e2fe5c0a.jpg",
     "static/media/squarehead.jpg": "/static/media/squarehead.61740d47eb5b08936e23.jpg",
     "static/media/hotdog-prince.jpg": "/static/media/hotdog-prince.eef161d5a4a08dd10d93.jpg",
+    "static/media/RobotoCondensed-Regular.woff2": "/static/media/RobotoCondensed-Regular.7b7301be89f3656091ac.woff2",
+    "static/media/RobotoCondensed-Bold.woff2": "/static/media/RobotoCondensed-Bold.071f8dcb9a54a33d23e6.woff2",
     "static/media/sludgie.jpg": "/static/media/sludgie.f5e469159d6732623a90.jpg",
     "static/media/grim.jpg": "/static/media/grim.42dbf9d7b256ce38be8f.jpg",
     "static/media/feat-bot.png": "/static/media/feat-bot.4c0a7f68be37e45935ae.png",
@@ -166,12 +170,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.06b20886.css.map": "/static/css/main.06b20886.css.map",
-    "main.5ba081fe.js.map": "/static/js/main.5ba081fe.js.map",
+    "main.ca0560c8.css.map": "/static/css/main.ca0560c8.css.map",
+    "main.885800fa.js.map": "/static/js/main.885800fa.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06b20886.css",
-    "static/js/main.5ba081fe.js"
+    "static/css/main.ca0560c8.css",
+    "static/js/main.885800fa.js"
   ]
 }
