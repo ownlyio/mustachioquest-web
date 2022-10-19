@@ -585,10 +585,6 @@
     width: 180px !important;
   }
 
-  .hero-prices {
-    width: 100% !important;
-  }
-
   .feat-2d {
     left: 23% !important;
   }
@@ -691,6 +687,14 @@
 
   .hero-logo {
     width: 50% !important;
+  }
+
+  .hero-prices {
+    width: 100% !important;
+  }
+
+  .prices-text {
+    font-size: 1em !important;
   }
 }
 

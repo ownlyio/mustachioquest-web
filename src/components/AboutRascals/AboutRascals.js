@@ -1,5 +1,5 @@
 // images
-import rascals from '../../images/rascal-pic.jpg'
+import rascalsGif from '../../images/rascal-gif.gif'
 
 // import axios from 'axios'
 // import $ from 'jquery'
@@ -33,7 +33,7 @@ export default function AboutRascals() {
                         <div className="ps-lg-4">
                             <div className="mx-4 mx-sm-5 mx-lg-0 px-sm-5 px-lg-0">
                                 <div className="mx-md-5 mx-lg-0 px-md-5 px-lg-0">
-                                    <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + rascals + ")"}}>
+                                    <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + rascalsGif + ")"}}>
                                     </div>
                                 </div>
                             </div>

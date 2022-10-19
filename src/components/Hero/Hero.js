@@ -1,5 +1,5 @@
 // images
-import rascals from '../../images/rascal-gif.gif'
+import rascals from '../../images/hero-section.png'
 import rascalsLogo from '../../images/MQ_rascals.png'
 
 import axios from "axios"
@@ -29,7 +29,7 @@ export default function Hero({ mintRascal, isSoldout }) {
             const d = padZeroes(Math.floor(distance / (24 * 60 * 60 * 1000)))
             const h = padZeroes(Math.floor((distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)))
             const m = padZeroes(Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60)))
-            const s = padZeroes(Math.floor((distance % (1000 * 60  )) / 1000))
+            const s = padZeroes(Math.floor((distance % (1000 * 60)) / 1000))
 
             if (distance < 0) {
                 clearInterval(interval.current)
@@ -51,7 +51,7 @@ export default function Hero({ mintRascal, isSoldout }) {
 
         return number;
     }
-    
+
     const totalRemaining = supply => {
         return 10000 - supply
     }
@@ -75,56 +75,48 @@ export default function Hero({ mintRascal, isSoldout }) {
     }, [])
 
     return (
-        <section id="hero" className="h-screen">
+        <section id="hero" className="h-screen background-image-cover" style={{ "backgroundImage": `url(${rascals})` }}>
             <div className="container h-100">
                 <div className="row align-items-center justify-content-center h-100">
-                    <div className="col-12 col-lg-6 d-none d-lg-block">
-                        <div className="hero-img-wrap ms-0 ms-lg-1">
-                            <div className="hero-img mx-auto">
-                                <img src={rascals} alt="Rascals GIF" className="shifting-rascals" />
-                            </div>
-                        </div>
-                    </div>
                     <div className="col-12 col-lg-6">
                         <div className="hero-logo mx-auto">
                             <img src={rascalsLogo} alt="Rascals Logo" className="w-100" />
                         </div>
-                        <p className="font-size-100 font-size-lg-140 text-center text-white line-height-160">Generative 3D Mustachios with a maximum supply of 10,000 Mustachio Rascals NFTs.</p>
+                        <p className="font-size-110 font-size-lg-140 gotham-light text-center text-white line-height-160">10,000 3D Generative Mustachio Rascals NFT</p>
 
-                        <div className="hero-prices p-2">
-                            <p className="text-white fw-bold text-center font-size-100 mb-0">1-2 = <s>0.025 ETH</s> 0.01875 ETH / Rascal</p>
-                            <p className="text-white fw-bold text-center font-size-100 mb-0">3-4 = <s>0.018 ETH</s> 0.0135 ETH / Rascal</p>
-                            <p className="text-white fw-bold text-center font-size-100 mb-0">5-9 = <s>0.014 ETH</s> 0.0105 ETH / Rascal</p>
-                            <p className="text-white fw-bold text-center font-size-100 mb-0">10+ = <s>0.009 ETH</s> 0.00675 ETH / Rascal</p>
-                            <p className="text-white gotham-black text-center font-size-120 font-size-md-140 mb-0">25% off until October 31, 2022!</p>
+                        <div className="hero-prices">
+                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
+                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">3-4 = <s className="hero-striked-price font-size-80 font-size-md-90">0.018 ETH</s> <b>0.0135 ETH</b> / Rascal</p>
+                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
+                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
                         </div>
+                        <p className="text-white gotham-black text-center font-size-120 font-size-sm-130 font-size-md-150 font-size-lg-180 mb-3">25% OFF until 31 OCT 2022!</p>
 
-                        <p className="text-white fw-bold text-center font-size-100 font-size-lg-120 mb-0 mt-2">Discount will expire in:</p>
                         <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
-                                <p className="font-size-110 font-size-lg-140 gotham-black text-center text-color-5 line-height-110 mb-0">{days}</p>
-                                <p className="font-size-70 text-center text-color-5 mb-0">DAYS</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{days}</p>
+                                <p className="font-size-70 text-center text-white mb-0">DAYS</p>
                             </div>
                             <div className="countdown hours">
-                                <p className="font-size-110 font-size-lg-140 gotham-black text-center text-color-5 line-height-110 mb-0">{hours}</p>
-                                <p className="font-size-70 text-center text-color-5 mb-0">HOURS</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{hours}</p>
+                                <p className="font-size-70 text-center text-white mb-0">HOURS</p>
                             </div>
                             <div className="countdown minutes">
-                                <p className="font-size-110 font-size-lg-140 gotham-black text-center text-color-5 line-height-110 mb-0">{minutes}</p>
-                                <p className="font-size-70 text-center text-color-5 mb-0">MINUTES</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{minutes}</p>
+                                <p className="font-size-70 text-center text-white mb-0">MINUTES</p>
                             </div>
                             <div className="countdown seconds">
-                                <p className="font-size-110 font-size-lg-140 gotham-black text-center text-color-5 line-height-110 mb-0">{seconds}</p>
-                                <p className="font-size-70 text-center text-color-5 mb-0">SECONDS</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{seconds}</p>
+                                <p className="font-size-70 text-center text-white mb-0">SECONDS</p>
                             </div>
-                        </div>  
+                        </div>
 
                         <div className="remaining-rascals text-center mb-3">
                             <div className="remaining-rascals-bar mx-auto">
-                                <div className="remaining-bar-inner" style={{"width": `${computePercentage(totalSupplyRascals)}%`}}></div>
+                                <div className="remaining-bar-inner" style={{ "width": `${computePercentage(totalSupplyRascals)}%` }}></div>
                                 <div className="remaining-count fw-bold font-size-100 text-white">{numberFormat(totalRemaining(totalSupplyRascals), 0)} of 10,000</div>
                             </div>
-                            <div className="remaining-label font-size-100 text-white">Rascals Remaining</div>
+                            <div className="remaining-label gotham-light font-size-100 text-white">Rascals Remaining</div>
                         </div>
 
                         <div className="mx-auto text-center">
@@ -138,9 +130,10 @@ export default function Hero({ mintRascal, isSoldout }) {
                         </div>
 
                         <div className="mx-auto text-center mt-2">
-                            <a href="https://etherscan.io/address/0x3f5c11ff5c004313a5d1bb0b5160551e05988569" target="_blank" rel="noreferrer" className="link-color-3 font-size-100"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contract</a>
+                            <a href="https://etherscan.io/address/0x3f5c11ff5c004313a5d1bb0b5160551e05988569" target="_blank" rel="noreferrer" className="link-color-3 font-size-100 gotham-light"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Rascals Contract</a>
                         </div>
                     </div>
+                    <div className="col-12 col-lg-6 d-none d-lg-block"></div>
                 </div>
             </div>
         </section>

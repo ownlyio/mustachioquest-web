@@ -370,6 +370,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+      url('fonts/RobotoCondensed-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 .roboto-c {
   font-family: "Roboto Condensed";
+}
+
+.roboto-c-bold {
+  font-family: "Roboto Condensed";
+  font-weight: bold;
 }
