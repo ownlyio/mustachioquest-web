@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ca0560c8.css",
-    "main.js": "/static/js/main.885800fa.js",
+    "main.js": "/static/js/main.02759f76.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
     "static/media/rascal-gif.gif": "/static/media/rascal-gif.90a1a35c500959744991.gif",
@@ -16,8 +16,8 @@
     "static/media/mexico-3d.webm": "/static/media/mexico-3d.b94ad2f6da43ab21d29b.webm",
     "static/media/9-gif-slendie.jpg": "/static/media/9-gif-slendie.40d411927579d59b46ab.jpg",
     "static/media/mustachios-cover.png": "/static/media/mustachios-cover.6e2b5e22407b8d2957ea.png",
-    "static/media/hero-section.png": "/static/media/hero-section.78f39b8f50d58cbda8d8.png",
     "static/media/visualizer-2.png": "/static/media/visualizer-2.c1a9d5a33fbc5b466fd1.png",
+    "static/media/hero-section.png": "/static/media/hero-section.5841f482a8141c4c9b24.png",
     "static/media/bm_square.png": "/static/media/bm_square.5d160190826618da1d8a.png",
     "static/media/10-gif-squarehead.png": "/static/media/10-gif-squarehead.587eafa73b20862e5847.png",
     "static/media/gmfrens.png": "/static/media/gmfrens.bcc92fb2f3839657554b.png",
@@ -171,11 +171,11 @@
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
     "main.ca0560c8.css.map": "/static/css/main.ca0560c8.css.map",
-    "main.885800fa.js.map": "/static/js/main.885800fa.js.map",
+    "main.02759f76.js.map": "/static/js/main.02759f76.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca0560c8.css",
-    "static/js/main.885800fa.js"
+    "static/js/main.02759f76.js"
   ]
 }
