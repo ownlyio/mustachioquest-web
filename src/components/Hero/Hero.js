@@ -94,19 +94,19 @@ export default function Hero({ mintRascal, isSoldout }) {
 
                         <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
-                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{days}</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-color-6 mb-0">{days}</p>
                                 <p className="font-size-70 text-center text-white mb-0">DAYS</p>
                             </div>
                             <div className="countdown hours">
-                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{hours}</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-color-6 mb-0">{hours}</p>
                                 <p className="font-size-70 text-center text-white mb-0">HOURS</p>
                             </div>
                             <div className="countdown minutes">
-                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{minutes}</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-color-6 mb-0">{minutes}</p>
                                 <p className="font-size-70 text-center text-white mb-0">MINUTES</p>
                             </div>
                             <div className="countdown seconds">
-                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-white line-height-110 mb-0">{seconds}</p>
+                                <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-color-6 mb-0">{seconds}</p>
                                 <p className="font-size-70 text-center text-white mb-0">SECONDS</p>
                             </div>
                         </div>
