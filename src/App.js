@@ -6,6 +6,7 @@ import { faCheckCircle, faExclamationCircle, faTimes, faSpinner } from '@fortawe
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Discord, Pathfinders, Marauders, Rascals } from './components/ShortLinks'
 import $ from 'jquery'
+import {isMobile} from 'react-device-detect'
 import * as smoothscroll from "smoothscroll-polyfill"
 
 // components
@@ -754,7 +755,11 @@ export default function App() {
                     <div className="text-center">
                         <img src={metamask} alt="Metamask logo" />
                     </div>
-                    <p className="app-metamask-modal-content text-center font-andes text-lg">Metamask is currently not installed</p>
+                    { isMobile ? (
+                        <p className="app-metamask-modal-content text-center font-andes text-lg">No Web3 Provider detected. Please use the in-app browser of MetaMask app on your device to mint.</p>
+                    ) : (
+                        <p className="app-metamask-modal-content text-center font-andes text-lg">No MetaMask detected. Please install Metamask extension on your browser to proceed.</p>
+                    )}
                 </Modal.Body>
                 <Modal.Footer className="justify-content-center">
                     <Button variant="secondary" onClick={handleCloseMetamaskInstall}>
