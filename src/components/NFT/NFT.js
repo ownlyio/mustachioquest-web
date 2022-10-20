@@ -7,10 +7,8 @@ import './NFT.css'
 import mustachios from '../../images/mustachios-cover.png'
 import mexico from "../../images/mexico-3d.webm";
 
-export default function NFT() {
-    const [showVideoPlayer, setShowVideoPlayer] = useState(false);
-    const handleCloseVideoPlayer = () => setShowVideoPlayer(false);
-    const handleShowVideoPlayer = () => setShowVideoPlayer(true);
+export default function NFT({ YTvid }) {
+    const vidUrl = "https://www.youtube.com/embed/qKziayF7Cic"
 
     return (
         <section id="mustachios">
@@ -19,7 +17,7 @@ export default function NFT() {
             </div>
             <div className="container">
                 <div className="text-center">
-                    <button className="arch-play-btn btn mb-2" onClick={handleShowVideoPlayer}>
+                    <button className="arch-play-btn btn mb-2" onClick={() => YTvid(vidUrl)}>
                         <i className="fa-solid fa-play font-size-180 font-size-sm-210 font-size-md-250 font-size-lg-300 text-white"></i>
                     </button>
                 </div>
@@ -72,17 +70,6 @@ export default function NFT() {
                     </div>
                 </div>
             </div>
-
-            <Modal className="no-border" show={showVideoPlayer} onHide={handleCloseVideoPlayer} backdrop="static" keyboard={false} size="xl" centered>
-                <Modal.Body className="p-0">
-                    <div className="position-relative">
-                        <button className="video-close-btn text-white font-size-80 font-size-sm-100 btn fw-bold" onClick={handleCloseVideoPlayer}>X</button>
-                        <div className="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qKziayF7Cic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>
         </section>
     )
 }

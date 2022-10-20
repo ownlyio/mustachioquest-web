@@ -75,9 +75,18 @@ export default function App() {
     const [showWrongNetwork, setShowWrongNetwork] = useState(false);
     const handleCloseWrongNetwork = () => setShowWrongNetwork(false);
     const handleShowWrongNetwork = () => setShowWrongNetwork(true);
+    const [YTvideoUrl, setYTVideoUrl] = useState("");
+    const [showYTVideoPlayer, setShowYTVideoPlayer] = useState(false);
+    const handleCloseYTVideoPlayer = () => setShowYTVideoPlayer(false);
+    const handleShowYTVideoPlayer = () => setShowYTVideoPlayer(true);
     // const [showOnProcess, setShowOnProcess] = useState(false);
     // const handleCloseOnProcess = () => setShowOnProcess(false);
     // const handleShowOnProcess = () => setShowOnProcess(true);
+
+    const showVideoPlayerModal = url => {
+        setYTVideoUrl(url)
+        handleShowYTVideoPlayer()
+    }
 
     // ------------------------------------------ MARAUDERS MINT ---------------------------------------------------------
     let isProduction = true;
@@ -721,7 +730,7 @@ export default function App() {
                 <Route exact path="/">
                     <Hero mintRascal={initRascal} isSoldout={isSoldout} />
                     <AboutRascals />
-                    <NFT />
+                    <NFT YTvid={showVideoPlayerModal}/>
                     <Utilities />
                     <ARSection />
                     <Tales />
@@ -981,6 +990,17 @@ export default function App() {
                             {/* <a href={ 'https://testnets.opensea.io/assets/goerli/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a> */}
 
                             <a href={ etherScanUrl + txHashRascal } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+            
+            <Modal className="no-border" show={showYTVideoPlayer} onHide={handleCloseYTVideoPlayer} backdrop="static" keyboard={false} size="xl" centered>
+                <Modal.Body className="p-0">
+                    <div className="position-relative">
+                        <button className="video-close-btn text-white font-size-80 font-size-sm-100 btn fw-bold" onClick={handleCloseYTVideoPlayer}>X</button>
+                        <div className="video-container">
+                            <iframe width="560" height="315" src={YTvideoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </Modal.Body>
