@@ -15,6 +15,7 @@ import Hero from './components/Hero/Hero'
 import AboutRascals from './components/AboutRascals/AboutRascals'
 import NFT from './components/NFT/NFT'
 import Utilities from './components/Utilities/Utilities'
+// import Gallery from './components/Gallery/Gallery'
 import ARSection from './components/ARSection/ARSection'
 import Tales from './components/Tales/Tales'
 import Game from './components/Game/Game'
@@ -732,6 +733,7 @@ export default function App() {
                     <AboutRascals YTvid={showVideoPlayerModal} />
                     <NFT YTvid={showVideoPlayerModal} />
                     <Utilities />
+                    {/* <Gallery /> */}
                     <ARSection />
                     <Tales />
                     <Game />
