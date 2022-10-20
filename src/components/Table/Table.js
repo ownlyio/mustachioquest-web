@@ -40,7 +40,7 @@ export default function Table({ mintMarauder, mintRascal }) {
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">MUSTACHIOS #101 to #300</p>
                             <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Get 20% off our Mustachio Marauder NFT using OWN.&nbsp;
-                            <button className="btn link-color-2 p-0 font-size-100" style={{"marginTop": "-6px"}}>MINT NOW!</button></p>
+                            <button onClick={mintMarauder} className="btn link-color-2 p-0 font-size-100" style={{"marginTop": "-6px"}}>MINT NOW!</button></p>
                             {/*<p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">Stake 15M OWN for 60 Days to earn a Marauder.*/}
                             {/*    /!* <a href="https://ownly.io/ownmarauder" className="link-color-2 fw-bold" target="_blank" rel="noreferrer">STAKE NOW!</a> *!/*/}
                             {/*</p>*/}
@@ -53,7 +53,9 @@ export default function Table({ mintMarauder, mintRascal }) {
                             </div>
 
                             <p className="mq-table-types-sub gotham-semibold font-size-130 text-white text-center mb-2">10,000 MUSTACHIOS</p>
-                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachios launching this October 8, 2022</p>
+                            <p className="mq-table-types-sub gotham-light font-size-120 text-white text-center">10,000 Generative 3D Mustachio NFTs . &nbsp;
+                            <button onClick={mintRascal} className="btn link-color-2 p-0 font-size-100" style={{"marginTop": "-6px"}}>MINT NOW!</button>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -62,7 +64,7 @@ export default function Table({ mintMarauder, mintRascal }) {
                 <div className="mq-table-content">
                     <p className="mq-table-content-title gotham-black text-white text-center font-size-170 mb-4">HERE'S WHAT YOU'LL GET</p>
                     
-                    <div className="table-responsive">
+                    <div className="table-responsive">Z
                         <table className="table table-bordered mq-table-table font-size-70 font-size-md-100">
                             <thead>
                                 <tr className="font-size-70 font-size-md-100">
@@ -234,7 +236,7 @@ export default function Table({ mintMarauder, mintRascal }) {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle gotham-light text-white font-size-100">$OWN Token Airdrop for holders</td>
+                                    <td className="align-middle gotham-light text-white font-size-100">$OWN Token Reward for holders</td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100"></td>
                                     <td className="text-center align-middle gotham-light text-white font-size-100">
