@@ -9,11 +9,31 @@
 }
 
 .about-rascals-img .rascals-gif {
-    object-fit: fill;
+    z-index: 2;
 }
 
 .os-logo {
     margin-top: -8px;
     width: 30px;
     margin-right: 5px;
+}
+
+.play-vid-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10,140,126,0.3);
+    border-radius: 50%;
+}
+
+.play-vid-btn svg {
+    transition: 0.5s all ease;
+}
+
+.play-vid-btn:hover svg {
+    font-size: 4em !important;
 }

@@ -729,8 +729,8 @@ export default function App() {
             <Switch>
                 <Route exact path="/">
                     <Hero mintRascal={initRascal} isSoldout={isSoldout} />
-                    <AboutRascals />
-                    <NFT YTvid={showVideoPlayerModal}/>
+                    <AboutRascals YTvid={showVideoPlayerModal} />
+                    <NFT YTvid={showVideoPlayerModal} />
                     <Utilities />
                     <ARSection />
                     <Tales />

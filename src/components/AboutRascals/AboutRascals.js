@@ -1,4 +1,6 @@
 // images
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import osLogo from '../../images/opensea-logo.png'
 import rascalsGif from '../../images/rascal-gif.gif'
 
@@ -10,7 +12,9 @@ import rascalsGif from '../../images/rascal-gif.gif'
 // import {useState} from "react";
 import './AboutRascals.css'
 
-export default function AboutRascals() {
+export default function AboutRascals({ YTvid }) {
+    const vidUrl = "https://www.youtube.com/embed/kuzi2Jpt60c"
+
     return (
         <section id="about-rascals">
             <div className="container py-5">
@@ -39,8 +43,15 @@ export default function AboutRascals() {
                                 <div className="mx-md-5 mx-lg-0 px-md-5 px-lg-0">
                                     {/* <div className="background-image-cover w-100" style={{"paddingTop":"100%", "borderRadius":"50%", "backgroundImage":"url(" + rascalsGif + ")"}}>
                                     </div> */}
-                                    <div className="about-rascals-img">
+                                    <div className="about-rascals-img position-relative">
                                         <img src={rascalsGif} alt="Rascals" className="rascals-gif w-100" />
+
+                                        {/* overlay */}
+                                        <div className="play-vid-btn cursor-pointer" onClick={() => YTvid(vidUrl)}>
+                                            <div className="h-100 d-flex justify-content-center align-items-center">
+                                                <FontAwesomeIcon icon={faPlay} color="white" size="2x" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
