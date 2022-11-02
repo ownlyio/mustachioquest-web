@@ -386,7 +386,7 @@ export default function App() {
     const [freeMintQty, setFreeMintQty] = useState(0)
     const [isFreeMint, setIsFreeMint] = useState(false)
     const [isDiscounted, setIsDiscounted] = useState(false)
-    const [currentMinter, setCurrentMinter] = useState("WL")
+    // const [currentMinter, setCurrentMinter] = useState("WL")
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinting, setIsMinting] = useState(false)
     const [isSoldout, setIsSoldout] = useState(false)
@@ -486,16 +486,16 @@ export default function App() {
         const qtyToMint = document.getElementById("qtyToMint").value
 
         if (qtyToMint) {
-            if (currentMinter == "WL") {
-                if (!isDiscounted) {
-                    setTxError("Public Mint is not allowed yet. You can mint starting Oct. 9, 7PM SGT. Thank you!")
-                    handleShowOnErrorRascal()
-                } else {
-                    rascalsMintProcess(qtyToMint)
-                }
-            } else {
-                rascalsMintProcess(qtyToMint)
-            }
+            // if (currentMinter == "WL") {
+            //     if (!isDiscounted) {
+            //         setTxError("Public Mint is not allowed yet. You can mint starting Oct. 9, 7PM SGT. Thank you!")
+            //         handleShowOnErrorRascal()
+            //     } else {
+            //         rascalsMintProcess(qtyToMint)
+            //     }
+            // } else {
+            rascalsMintProcess(qtyToMint)
+            // }
         } else {
             setTxError("Please input a valid amount greater than 0.")
             handleShowOnErrorRascal()
@@ -596,9 +596,9 @@ export default function App() {
 
     const _init = async addr => {
         // check currentMinter
-        const currMinter = await rascalsContract.methods.onlyWhitelisted().call()
-        if (currMinter) setCurrentMinter("WL") // whitelisted
-        else setCurrentMinter("PBL") // public
+        // const currMinter = await rascalsContract.methods.onlyWhitelisted().call()
+        // if (currMinter) setCurrentMinter("WL") // whitelisted
+        // else setCurrentMinter("PBL") // public
 
         // check if the account has free mint
         const freeMintEligible = await rascalsContract.methods.freeMintQuantity(addr).call()
