@@ -9,7 +9,7 @@ import readWeb3 from '../../utils/readWeb3Eth'
 import { address, abi } from '../../utils/rascals'
 import './Hero.css'
 
-export default function Hero({ mintRascal, isSoldout }) {
+export default function Hero({ mintRascal, isSoldout, isDiscounted }) {
     const defaultTime = "00"
     const [days, setDays] = useState(defaultTime)
     const [hours, setHours] = useState(defaultTime)
@@ -85,14 +85,25 @@ export default function Hero({ mintRascal, isSoldout }) {
                         <p className="hero-desc font-size-110 font-size-lg-140 gotham-light text-center text-white line-height-160">10,000 3D Generative Mustachio Rascals NFT</p>
 
                         <div className="hero-prices">
-                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
-                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">3-4 = <s className="hero-striked-price font-size-80 font-size-md-90">0.018 ETH</s> <b>0.0135 ETH</b> / Rascal</p>
-                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
-                            <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
+                            {isDiscounted ? (
+                                <>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">3-4 = <s className="hero-striked-price font-size-80 font-size-md-90">0.018 ETH</s> <b>0.0135 ETH</b> / Rascal</p>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
+                                </>
+                            ) : (
+                                <>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">1-2 = <b>0.025 ETH</b> / Rascal</p>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">3-4 = <b>0.018 ETH</b> / Rascal</p>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">5-9 = <b>0.014 ETH</b> / Rascal</p>
+                                    <p className="prices-text text-white text-center font-size-110 font-size-md-120 mb-0">10+ = <b>0.009 ETH</b> / Rascal</p>
+                                </>
+                            )}
                         </div>
-                        <p className="text-white gotham-black text-center font-size-120 font-size-sm-130 font-size-md-150 mb-3">25% OFF until 31 OCT 2022!</p>
+                        {isDiscounted && <p className="text-white gotham-black text-center font-size-120 font-size-sm-130 font-size-md-150 mb-3">25% OFF until 31 OCT 2022!</p>}
 
-                        <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
+                        {/* <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
                                 <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-color-6 mb-0">{days}</p>
                                 <p className="font-size-70 text-center text-white mb-0">DAYS</p>
@@ -109,9 +120,9 @@ export default function Hero({ mintRascal, isSoldout }) {
                                 <p className="font-size-160 font-size-sm-180 font-size-lg-220 roboto-c-bold text-center text-color-6 mb-0">{seconds}</p>
                                 <p className="font-size-70 text-center text-white mb-0">SECONDS</p>
                             </div>
-                        </div>
+                        </div> */}
 
-                        <div className="remaining-rascals text-center mb-3">
+                        <div className="remaining-rascals text-center mt-3 mb-3">
                             <div className="remaining-rascals-bar mx-auto">
                                 <div className="remaining-bar-inner" style={{ "width": `${computePercentage(totalSupplyRascals)}%` }}></div>
                                 <div className="remaining-count fw-bold font-size-100 text-white">{numberFormat(totalRemaining(totalSupplyRascals), 0)} of 10,000</div>

@@ -6,7 +6,7 @@ import { faCheckCircle, faExclamationCircle, faTimes, faSpinner } from '@fortawe
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Discord, Pathfinders, Marauders, Rascals } from './components/ShortLinks'
 import $ from 'jquery'
-import {isMobile} from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 import * as smoothscroll from "smoothscroll-polyfill"
 
 // components
@@ -49,7 +49,7 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 
 // blockchain
 import connectToMetaMask from "./utils/connectToMetaMask"
-import connectToMetaMaskEth  from './utils/connectToMetaMaskEth'
+import connectToMetaMaskEth from './utils/connectToMetaMaskEth'
 import ownContract from "./utils/ownContract"
 import rascalsContract from "./utils/rascalsContract"
 import sparkSwapContract from "./utils/sparkSwapRouterContract"
@@ -123,7 +123,7 @@ export default function App() {
         const { name, value } = e.target;
         setInputsValues({ ...inputsValues, [name]: value });
 
-        if(name === "paymentMethod") {
+        if (name === "paymentMethod") {
             paymentMethodChange(value);
         }
     }
@@ -140,7 +140,7 @@ export default function App() {
         setPrice("Loading");
         setDiscountPercentage("Loading");
 
-        if(value === "OWN") {
+        if (value === "OWN") {
             let _ownBalance = await ownContract.methods.balanceOf(address).call();
             _ownBalance = web3.utils.fromWei(_ownBalance, "ether");
             setOwnBalance(_ownBalance);
@@ -150,7 +150,7 @@ export default function App() {
             setOwnAllowance(_ownAllowance);
 
             await getMarketItem();
-        } else if(value === "BNB") {
+        } else if (value === "BNB") {
             let _bnbBalance = await web3.eth.getBalance(address);
             _bnbBalance = web3.utils.fromWei(_bnbBalance, "ether");
 
@@ -179,14 +179,14 @@ export default function App() {
     const updateBalanceContent = () => {
         let balance = "Loading";
 
-        if((inputsValues.paymentMethod === "OWN" && !isNaN(ownBalance)) || (inputsValues.paymentMethod === "BNB" && !isNaN(bnbBalance))) {
+        if ((inputsValues.paymentMethod === "OWN" && !isNaN(ownBalance)) || (inputsValues.paymentMethod === "BNB" && !isNaN(bnbBalance))) {
             balance = ((inputsValues.paymentMethod === "OWN") ? numberFormat(ownBalance, 0) : numberFormat(bnbBalance, 4)) + " " + inputsValues.paymentMethod;
         }
 
         return (
             <div className="d-flex justify-content-center align-items-center mb-4">
                 <div>
-                    <img src={ (inputsValues.paymentMethod === "OWN") ? ownImage : bnbImage } width="35" />
+                    <img src={(inputsValues.paymentMethod === "OWN") ? ownImage : bnbImage} width="35" />
                 </div>
 
                 <div className="ps-3">
@@ -195,45 +195,45 @@ export default function App() {
 
 
                     </div>
-                    <p className="text-white font-size-90 mb-0">{ balance }</p>
+                    <p className="text-white font-size-90 mb-0">{balance}</p>
                 </div>
 
-                <div>{ displayGetOwnButton() }</div>
+                <div>{displayGetOwnButton()}</div>
             </div>
         );
     };
 
     const displayGetOwnButton = () => {
-        if(inputsValues.paymentMethod === "OWN") {
+        if (inputsValues.paymentMethod === "OWN") {
             return (
                 <div className="ps-3">
-                    <a href="https://sparkswap.finance/#/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0x7665cb7b0d01df1c9f9b9cc66019f00abd6959ba" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-80 py-1" style={{"width":"110px"}}>GET $OWN</a>
+                    <a href="https://sparkswap.finance/#/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0x7665cb7b0d01df1c9f9b9cc66019f00abd6959ba" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-80 py-1" style={{ "width": "110px" }}>GET $OWN</a>
                 </div>
             );
         }
     }
 
     const updateDiscountContent = () => {
-        if(inputsValues.paymentMethod === "OWN") {
+        if (inputsValues.paymentMethod === "OWN") {
             return (
                 <div>
                     <div className="d-flex justify-content-center align-items-center position-relative">
                         <p className="text-white text-center font-size-100 mb-0 pe-2">5,000,000</p>
                         <img src={ownImage} width="18" />
 
-                        <div className="w-100 d-flex justify-content-center position-absolute" style={{"top":"50%", "left":"0"}}>
-                            <div className="" style={{"backgroundColor":"#ffffff", "height":"1px", "width":"150px"}}></div>
+                        <div className="w-100 d-flex justify-content-center position-absolute" style={{ "top": "50%", "left": "0" }}>
+                            <div className="" style={{ "backgroundColor": "#ffffff", "height": "1px", "width": "150px" }}></div>
                         </div>
                     </div>
 
-                    <p className="text-white text-center font-size-90 mb-0 pe-2 mb-3">Enjoy { discountPercentage }% Discount</p>
+                    <p className="text-white text-center font-size-90 mb-0 pe-2 mb-3">Enjoy {discountPercentage}% Discount</p>
                 </div>
             );
         }
     };
 
     const updatePaymentMethodTokenLogo = () => {
-        if(inputsValues.paymentMethod === "OWN") {
+        if (inputsValues.paymentMethod === "OWN") {
             return (
                 <div className="">
                     <img src={ownImage} width="35" />
@@ -249,14 +249,14 @@ export default function App() {
     };
 
     const updateActionButtons = () => {
-        if(inputsValues.paymentMethod === "OWN") {
+        if (inputsValues.paymentMethod === "OWN") {
             return (
                 <div className="row mb-4 pb-2">
                     <div className="col-6">
-                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={approveOwn} style={{"width":"initial"}} disabled={ !(price !== "Loading" && !isApproving && parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) < parseFloat(finalPrice)) }>APPROVE $OWN</button>
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={approveOwn} style={{ "width": "initial" }} disabled={!(price !== "Loading" && !isApproving && parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) < parseFloat(finalPrice))}>APPROVE $OWN</button>
                     </div>
                     <div className="col-6">
-                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithOwn} style={{"width":"initial"}} disabled={ !(price !== "Loading" && !isPurchasing && parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) >= parseFloat(finalPrice)) }>MINT NOW!</button>
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithOwn} style={{ "width": "initial" }} disabled={!(price !== "Loading" && !isPurchasing && parseFloat(ownBalance) >= parseFloat(finalPrice) && parseFloat(ownAllowance) >= parseFloat(finalPrice))}>MINT NOW!</button>
                     </div>
                 </div>
             );
@@ -264,25 +264,25 @@ export default function App() {
             return (
                 <div className="row mb-4 pb-2">
                     <div className="col-12">
-                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithBnb} style={{"width":"initial"}} disabled={ !(price !== "Loading" && !isPurchasing && parseFloat(bnbBalance) >= parseFloat(finalPrice)) }>MINT NOW!</button>
+                        <button className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" onClick={purchaseWithBnb} style={{ "width": "initial" }} disabled={!(price !== "Loading" && !isPurchasing && parseFloat(bnbBalance) >= parseFloat(finalPrice))}>MINT NOW!</button>
                     </div>
                 </div>
             );
         }
     };
 
-    const getMarketItem = async function() {
+    const getMarketItem = async function () {
         let _addressListDiscountPercentage = await checkAddressListDiscountPercentage();
 
         let tokenId = 196;
         let _marketItem;
 
-        for(let i = tokenId; i <= 299; i++) {
+        for (let i = tokenId; i <= 299; i++) {
             _marketItem = await marketplaceContract.methods.fetchMarketItemV2(marauderContractAddress, i).call();
 
             let owner = (isProduction) ? "0x672b733C5350034Ccbd265AA7636C3eBDDA2223B" : "0x768532c218f4f4e6E4960ceeA7F5a7A947a1dd61";
 
-            if(_marketItem && _marketItem.itemId !== "0" && _marketItem.seller === owner) {
+            if (_marketItem && _marketItem.itemId !== "0" && _marketItem.seller === owner) {
                 setMarketItem(_marketItem);
 
                 setPrice(_marketItem.price);
@@ -299,14 +299,14 @@ export default function App() {
         }
     };
 
-    const approveOwn = async function() {
+    const approveOwn = async function () {
         let address = await connectToMetaMask();
 
         setIsApproving(true);
 
         await ownContract.methods.approve(marketplaceContract.options.address, web3.utils.toWei(finalPrice.toString(), "ether")).send({
             from: address
-        }).on('error', function() {
+        }).on('error', function () {
             setIsApproving(false);
         });
 
@@ -315,7 +315,7 @@ export default function App() {
         setOwnAllowance(_ownAllowance);
     };
 
-    const purchaseWithOwn = async function() {
+    const purchaseWithOwn = async function () {
         let address = await connectToMetaMask();
 
         setIsPurchasing(true);
@@ -323,9 +323,9 @@ export default function App() {
         await marketplaceContract.methods.createMarketSaleV2(marketItem.itemId, "OWN").send({
             from: address,
             value: 0
-        }).on('error', function() {
+        }).on('error', function () {
             setIsPurchasing(false);
-        }).on('transactionHash', function(hash) {
+        }).on('transactionHash', function (hash) {
             setPurchaseTransactionHash(((isProduction) ? "https://bscscan.com/tx/" : "https://testnet.bscscan.com/tx/") + hash);
         });
 
@@ -333,7 +333,7 @@ export default function App() {
         handleShowSuccessfullyMintedMarauder();
     };
 
-    const purchaseWithBnb = async function() {
+    const purchaseWithBnb = async function () {
         let address = await connectToMetaMask();
 
         setIsPurchasing(true);
@@ -342,9 +342,9 @@ export default function App() {
             from: address,
             // value: web3.utils.toWei(finalPrice.toString(), "ether")
             value: web3.utils.toWei("0.1", "ether")
-        }).on('error', function() {
+        }).on('error', function () {
             setIsPurchasing(false);
-        }).on('transactionHash', function(hash) {
+        }).on('transactionHash', function (hash) {
             setPurchaseTransactionHash(((isProduction) ? "https://bscscan.com/tx/" : "https://testnet.bscscan.com/tx/") + hash);
         });
 
@@ -355,7 +355,7 @@ export default function App() {
     const mintMarauder = async () => {
         let address = await connectToMetaMask();
 
-        if(address) {
+        if (address) {
             handleShowMintMarauder();
 
             paymentMethodChange(inputsValues.paymentMethod);
@@ -385,7 +385,7 @@ export default function App() {
     const [totalSupply, setTotalSupply] = useState(0)
     const [freeMintQty, setFreeMintQty] = useState(0)
     const [isFreeMint, setIsFreeMint] = useState(false)
-    const [isWhiteListed, setIsWhiteListed] = useState(true)
+    const [isDiscounted, setIsDiscounted] = useState(false)
     const [currentMinter, setCurrentMinter] = useState("WL")
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinting, setIsMinting] = useState(false)
@@ -411,16 +411,16 @@ export default function App() {
     const handleKeypress = (e) => {
         const characterCode = e.key
         if (characterCode === 'Backspace') return
-    
+
         const characterNumber = Number(characterCode)
         if (characterNumber >= 0 && characterNumber <= 9) {
-          if (e.currentTarget.value && e.currentTarget.value.length) {
-            return
-          } else if (characterNumber === 0) {
-            e.preventDefault()
-          }
+            if (e.currentTarget.value && e.currentTarget.value.length) {
+                return
+            } else if (characterNumber === 0) {
+                e.preventDefault()
+            }
         } else {
-          e.preventDefault()
+            e.preventDefault()
         }
     }
 
@@ -451,7 +451,7 @@ export default function App() {
                 setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
             }
 
-            if (isWhiteListed) {
+            if (isDiscounted) {
                 const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
                 setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
             }
@@ -487,12 +487,12 @@ export default function App() {
 
         if (qtyToMint) {
             if (currentMinter == "WL") {
-                if (!isWhiteListed) {
+                if (!isDiscounted) {
                     setTxError("Public Mint is not allowed yet. You can mint starting Oct. 9, 7PM SGT. Thank you!")
                     handleShowOnErrorRascal()
                 } else {
                     rascalsMintProcess(qtyToMint)
-                }   
+                }
             } else {
                 rascalsMintProcess(qtyToMint)
             }
@@ -505,7 +505,7 @@ export default function App() {
     const rascalsMintProcess = async qtyToMint => {
         if (totalSupply + Number(qtyToMint) <= 10000) {
             const userBalance = await web3.eth.getBalance(address)
-            const totalPriceToPay = (isWhiteListed) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
+            const totalPriceToPay = (isDiscounted) ? web3.utils.toWei(totalDiscountedPrice.toString()) : web3.utils.toWei(totalPrice.toString())
             // const totalPriceToPay = web3.utils.toWei(totalPrice.toString())
 
             if (BigInt(userBalance) >= BigInt(totalPriceToPay)) {
@@ -513,31 +513,31 @@ export default function App() {
                     from: address,
                     value: totalPriceToPay,
                 })
-                .on('transactionHash', function(hash){
-                    setIsMinting(true)
-                })
-                .on('error', function(error) {
-                    setIsMinting(false)
-                    setTxError(error.message)
-                    handleShowOnErrorRascal()
-                })
-                .then(async function(receipt) {
-                    setIsMinting(false)
-                    handleShowOnSuccessRascal()
-                    setTxHashRascal(receipt.transactionHash)
-        
-                    if (qtyToMint > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
-                    else setTokenId(receipt.events.Transfer.returnValues.tokenId)
-        
-                    // reload data
-                    _init(address)
-                })
+                    .on('transactionHash', function (hash) {
+                        setIsMinting(true)
+                    })
+                    .on('error', function (error) {
+                        setIsMinting(false)
+                        setTxError(error.message)
+                        handleShowOnErrorRascal()
+                    })
+                    .then(async function (receipt) {
+                        setIsMinting(false)
+                        handleShowOnSuccessRascal()
+                        setTxHashRascal(receipt.transactionHash)
+
+                        if (qtyToMint > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
+                        else setTokenId(receipt.events.Transfer.returnValues.tokenId)
+
+                        // reload data
+                        _init(address)
+                    })
             } else {
                 setTxError("You don't have enough ETH balance to proceed with the mint.")
                 handleShowOnErrorRascal()
             }
         } else {
-            setTxError("The quantity you want to mint exceeds the number of rascals left (" + (10000-Number(totalSupply)) + " rascals left). Please try a different value.")
+            setTxError("The quantity you want to mint exceeds the number of rascals left (" + (10000 - Number(totalSupply)) + " rascals left). Please try a different value.")
             handleShowOnErrorRascal()
         }
     }
@@ -546,25 +546,25 @@ export default function App() {
         await rascalsContract.methods.freeMint().send({
             from: address,
         })
-        .on('transactionHash', function(hash){
-            setIsMinting(true)
-        })
-        .on('error', function(error) {
-            setIsMinting(false)
-            setTxError(error.message)
-            handleShowOnErrorRascal()
-        })
-        .then(async function(receipt) {
-            setIsMinting(false)
-            handleShowOnSuccessRascal()
-            setTxHashRascal(receipt.transactionHash)
+            .on('transactionHash', function (hash) {
+                setIsMinting(true)
+            })
+            .on('error', function (error) {
+                setIsMinting(false)
+                setTxError(error.message)
+                handleShowOnErrorRascal()
+            })
+            .then(async function (receipt) {
+                setIsMinting(false)
+                handleShowOnSuccessRascal()
+                setTxHashRascal(receipt.transactionHash)
 
-            if (freeMintQty > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
-            else setTokenId(receipt.events.Transfer.returnValues.tokenId)
+                if (freeMintQty > 1) setTokenId(receipt.events.Transfer['0'].returnValues.tokenId)
+                else setTokenId(receipt.events.Transfer.returnValues.tokenId)
 
-            // reload data
-            _init(address)
-        })
+                // reload data
+                _init(address)
+            })
     }
 
     const initQtyPrice = () => {
@@ -574,7 +574,7 @@ export default function App() {
         let tempTotalPrice = BigInt(mintCost[0]) * BigInt(1)
         setTotalPrice(web3.utils.fromWei(tempTotalPrice.toString(), "ether"))
 
-        if (isWhiteListed) {
+        if (isDiscounted) {
             const tempDiscountedPrice = (tempTotalPrice * BigInt(percentageDiscount)) / BigInt(100)
             setTotalDiscountedPrice(web3.utils.fromWei(tempDiscountedPrice.toString(), "ether"))
         }
@@ -584,7 +584,7 @@ export default function App() {
 
     const initRascal = async () => {
         let addr = await connectToMetaMaskEth()
-        
+
         if (addr) {
             _init(addr)
             setAddress(addr)
@@ -625,7 +625,7 @@ export default function App() {
     }
     // ---------------------------------------------------------- END RASCALS MINT --------------------------------------------------
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         if (window.location.hash !== "#rewards") $(this).scrollTop(0)
 
         // scroll variables
@@ -673,7 +673,7 @@ export default function App() {
                 "opacity": 1 - (valueY * 0.01),
             })
             portal.css({
-                "transform": "rotate(-"+ (360 - (valueY * 0.3)) +"deg)",
+                "transform": "rotate(-" + (360 - (valueY * 0.3)) + "deg)",
                 "opacity": 1 - (valueY * 0.003),
             })
             landscape.css("opacity", 0 + (valueY * 0.0023))
@@ -700,7 +700,7 @@ export default function App() {
                 "opacity": 1 - (valueY * 0.01),
             })
             mobilePortal.css({
-                "transform": "translate(-50%, -50%) rotate(-"+ (360 - (valueY * 0.3)) +"deg) ",
+                "transform": "translate(-50%, -50%) rotate(-" + (360 - (valueY * 0.3)) + "deg) ",
                 "opacity": 1 - (valueY * 0.003),
             })
             mobileLandscape.css("opacity", 0.5 + (valueY * 0.0025))
@@ -712,13 +712,13 @@ export default function App() {
                 "bottom": 100 + (valueY * 0.45) + 'px',
                 "opacity": 0 + (valueY * 0.007),
             })
-        })  
+        })
 
         // disable pointer events for image
-        $("img").mousedown(function(){
+        $("img").mousedown(function () {
             return false;
         })
-     });
+    });
 
     return (
         <Router basename={process.env.PUBLIC_URL}>
@@ -726,10 +726,10 @@ export default function App() {
             {/*    <div className="container text-center text-black font-size-100 fw-bold py-2">Public Mint Date: Jun 10, 2022 - 8:00PM (SGT)</div>*/}
             {/*</div>*/}
 
-            <Navbar mintRascal={initRascal} /> 
+            <Navbar mintRascal={initRascal} />
             <Switch>
                 <Route exact path="/">
-                    <Hero mintRascal={initRascal} isSoldout={isSoldout} />
+                    <Hero mintRascal={initRascal} isSoldout={isSoldout} isDiscounted={isDiscounted} />
                     <AboutRascals YTvid={showVideoPlayerModal} />
                     <NFT YTvid={showVideoPlayerModal} />
                     <Utilities />
@@ -761,7 +761,7 @@ export default function App() {
                 <Route exact path="/ar">
                     <AR />
                 </Route>
-                <Route exact path="/game"> 
+                <Route exact path="/game">
                     <BannerGame />
                     <Features />
                     <Updates />
@@ -786,7 +786,7 @@ export default function App() {
                     <div className="text-center">
                         <img src={metamask} alt="Metamask logo" />
                     </div>
-                    { isMobile ? (
+                    {isMobile ? (
                         <p className="app-metamask-modal-content text-center font-andes text-lg">No Web3 Provider detected. Please use the in-app browser of MetaMask app on your device to mint.</p>
                     ) : (
                         <p className="app-metamask-modal-content text-center font-andes text-lg">No MetaMask detected. Please install Metamask extension on your browser to proceed.</p>
@@ -800,7 +800,7 @@ export default function App() {
                         Install Metamask
                     </Button>
                 </Modal.Footer>
-            </Modal>     
+            </Modal>
 
             {/* Modal for incorrect network */}
             <Modal show={showWrongNetwork} onHide={handleCloseWrongNetwork} backdrop="static" keyboard={false} size="sm" centered>
@@ -816,7 +816,7 @@ export default function App() {
                         Close
                     </Button>
                 </Modal.Footer>
-            </Modal>    
+            </Modal>
 
             {/* Modal for pending transaction */}
             {/* <Modal show={showOnProcess} onHide={handleCloseOnProcess} backdrop="static" keyboard={false} size="sm" centered>
@@ -829,52 +829,52 @@ export default function App() {
             </Modal>     */}
 
             <Modal show={showMintMarauder} onHide={handleCloseMintMarauder} centered>
-                <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"3px solid white"}}>
-                    <div className="position-absolute" style={{"top":"15px", "right":"20px", "zIndex":"5"}}>
+                <Modal.Body className="px-4 position-relative" style={{ "backgroundColor": "#1c5091", "borderRadius": "0.2rem", "border": "3px solid white" }}>
+                    <div className="position-absolute" style={{ "top": "15px", "right": "20px", "zIndex": "5" }}>
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseMintMarauder} />
                     </div>
 
                     <p className="app-metamask-modal-content text-white fw-bold text-center font-andes font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Marauder</p>
 
                     <div className="mb-4">
-                        <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
+                        <div className="w-100" style={{ "backgroundColor": "#ffffff", "height": "1px" }}></div>
                     </div>
 
                     <p className="app-metamask-modal-content text-white text-center font-andes font-size-90 px-5 mb-1">Select Payment Method:</p>
 
                     <div className="d-flex justify-content-center mb-3" id="select-mint-method">
                         <div className="form-check form-check-inline px-4 mx-4 d-flex align-items-center me-0">
-                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio1" value="OWN" onChange={handleInputChange} style={{"width":"25px", "height":"25px"}} checked={inputsValues.paymentMethod === "OWN"} />
+                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio1" value="OWN" onChange={handleInputChange} style={{ "width": "25px", "height": "25px" }} checked={inputsValues.paymentMethod === "OWN"} />
                             <label className="form-check-label text-white font-size-150 ps-3 cursor-pointer" htmlFor="inlineRadio1">OWN</label>
                         </div>
                         <div className="form-check form-check-inline px-4 mx-4 d-flex align-items-center me-0">
-                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio2" value="BNB" onChange={handleInputChange} style={{"width":"25px", "height":"25px"}} checked={inputsValues.paymentMethod === "BNB"} />
+                            <input className="form-check-input mb-1 cursor-pointer" type="radio" name="paymentMethod" id="inlineRadio2" value="BNB" onChange={handleInputChange} style={{ "width": "25px", "height": "25px" }} checked={inputsValues.paymentMethod === "BNB"} />
                             <label className="form-check-label text-white font-size-150 ps-3 cursor-pointer" htmlFor="inlineRadio2">BNB</label>
                         </div>
                     </div>
 
-                    <div>{ updateBalanceContent() }</div>
+                    <div>{updateBalanceContent()}</div>
 
                     <div className="mb-4">
-                        <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
+                        <div className="w-100" style={{ "backgroundColor": "#ffffff", "height": "1px" }}></div>
                     </div>
 
                     <p className="app-metamask-modal-content text-white text-center font-andes font-size-90 px-5 mb-2">Price:</p>
 
-                    <div>{ updateDiscountContent() }</div>
+                    <div>{updateDiscountContent()}</div>
 
                     <div className="d-flex justify-content-center align-items-center mb-4 pb-2">
-                        <p className="text-white text-center fw-bold font-size-150 mb-0 pe-3">{ (price !== "Loading") ? numberFormat(finalPrice,(inputsValues.paymentMethod === "OWN") ? 0 : 4) : price }</p>
-                        <div>{ updatePaymentMethodTokenLogo() }</div>
+                        <p className="text-white text-center fw-bold font-size-150 mb-0 pe-3">{(price !== "Loading") ? numberFormat(finalPrice, (inputsValues.paymentMethod === "OWN") ? 0 : 4) : price}</p>
+                        <div>{updatePaymentMethodTokenLogo()}</div>
                     </div>
 
-                    <div>{ updateActionButtons() }</div>
+                    <div>{updateActionButtons()}</div>
                 </Modal.Body>
             </Modal>
 
             <Modal show={showSuccessfullyMintedMarauder} onHide={handleCloseSuccessfullyMintedMarauder} centered>
-                <Modal.Body className="px-4 position-relative" style={{"backgroundColor":"#1c5091", "borderRadius":"0.2rem", "border":"2px solid white"}}>
-                    <div className="position-absolute" style={{"top":"15px", "right":"20px", "zIndex":"5"}}>
+                <Modal.Body className="px-4 position-relative" style={{ "backgroundColor": "#1c5091", "borderRadius": "0.2rem", "border": "2px solid white" }}>
+                    <div className="position-absolute" style={{ "top": "15px", "right": "20px", "zIndex": "5" }}>
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseSuccessfullyMintedMarauder} />
                     </div>
 
@@ -888,12 +888,12 @@ export default function App() {
                     <div className="row mb-4">
                         <div className="col-12 text-center">
                             {/* Mainnet */}
-                            <a href={ 'https://ownly.market/marauders/' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>
+                            <a href={'https://ownly.market/marauders/' + tokenIdPurchased} target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{ "width": "initial" }}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a>
 
                             {/* Testnet */}
                             {/* <a href={ 'http://ownlyio.marketplace.test/3dmustachios/?network=bsc&contract=' + marauderContractAddress + '&token=' + tokenIdPurchased } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW MY MUSTACHIO&nbsp;MARAUDER</a> */}
 
-                            <a href={ purchaseTransactionHash } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
+                            <a href={purchaseTransactionHash} target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{ "width": "initial" }}>View Transaction Hash</a>
                         </div>
                     </div>
                 </Modal.Body>
@@ -908,31 +908,42 @@ export default function App() {
                     <p className="text-white fw-bold text-center font-size-130 px-5 pt-4 pb-2">Mint a Mustachio Rascal</p>
 
                     <div className="mb-4">
-                        <div className="w-100" style={{"backgroundColor":"#ffffff", "height":"1px"}}></div>
+                        <div className="w-100" style={{ "backgroundColor": "#ffffff", "height": "1px" }}></div>
                     </div>
 
                     {isFreeMint ? (
                         <>
                             <p className="text-white fw-bold text-center font-size-130 px-3">Woohoo! Looks like you have a FREE MINT available on your account.</p>
-                            
-                            <button onClick={freeMintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" disabled={isMinting} style={{"width":"initial"}}>
+
+                            <button onClick={freeMintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" disabled={isMinting} style={{ "width": "initial" }}>
                                 {isMinting ? (
                                     <FontAwesomeIcon icon={faSpinner} color="white" spin />
-                                ) : "MINT MY FREE RASCAL" }
+                                ) : "MINT MY FREE RASCAL"}
                             </button>
                         </>
                     ) : (
                         <>
                             <div className="modal-prices-rascals mb-3">
-                                <p className="tier-1 opacity-half text-white text-center font-size-100 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
-                                <p className="tier-2 opacity-half text-white text-center font-size-100 mb-0">3-4 = <s className="hero-striked-price font-size-80 font-size-md-90">0.018 ETH</s> <b>0.0135 ETH</b> / Rascal</p>
-                                <p className="tier-3 opacity-half text-white text-center font-size-100 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
-                                <p className="tier-4 opacity-half text-white text-center font-size-100 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
+                                {isDiscounted ? (
+                                    <>
+                                        <p className="tier-1 opacity-half text-white text-center font-size-100 mb-0">1-2 = <s className="hero-striked-price font-size-80 font-size-md-90">0.025 ETH</s> <b>0.01875 ETH</b> / Rascal</p>
+                                        <p className="tier-2 opacity-half text-white text-center font-size-100 mb-0">3-4 = <s className="hero-striked-price font-size-80 font-size-md-90">0.018 ETH</s> <b>0.0135 ETH</b> / Rascal</p>
+                                        <p className="tier-3 opacity-half text-white text-center font-size-100 mb-0">5-9 = <s className="hero-striked-price font-size-80 font-size-md-90">0.014 ETH</s> <b>0.0105 ETH</b> / Rascal</p>
+                                        <p className="tier-4 opacity-half text-white text-center font-size-100 mb-0">10+ = <s className="hero-striked-price font-size-80 font-size-md-90">0.009 ETH</s> <b>0.00675 ETH</b> / Rascal</p>
+                                    </>
+                                ) : (
+                                    <>
+                                        <p className="tier-1 opacity-half text-white text-center font-size-100 mb-0">1-2 = <b>0.025 ETH</b> / Rascal</p>
+                                        <p className="tier-2 opacity-half text-white text-center font-size-100 mb-0">3-4 = <b>0.018 ETH</b> / Rascal</p>
+                                        <p className="tier-3 opacity-half text-white text-center font-size-100 mb-0">5-9 = <b>0.014 ETH</b> / Rascal</p>
+                                        <p className="tier-4 opacity-half text-white text-center font-size-100 mb-0">10+ = <b>0.009 ETH</b> / Rascal</p>
+                                    </>
+                                )}
                             </div>
 
-                            <input type="number" id="qtyToMint" onKeyDown={handleKeypress} onChange={handleQtyChange} className="rascals-mint-qty text-center form-control font-size-150 mb-3" placeholder="Enter Qty to mint" min="1" step="1"/>
+                            <input type="number" id="qtyToMint" onKeyDown={handleKeypress} onChange={handleQtyChange} className="rascals-mint-qty text-center form-control font-size-150 mb-3" placeholder="Enter Qty to mint" min="1" step="1" />
 
-                            { isWhiteListed ? (
+                            {isDiscounted ? (
                                 <>
                                     <p className="text-white text-center fw-bold mb-0">
                                         Subtotal: <s className="font-size-100 gotham">{numberFormat(totalPrice, 4)} ETH</s>
@@ -946,7 +957,7 @@ export default function App() {
                                 <p className="text-white text-center fw-bold font-size-150 mb-4">TOTAL PRICE: {numberFormat(totalPrice, 4)} ETH</p>
                             )}
 
-                            <button onClick={mintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{"width":"initial"}} disabled={isMinting || isSoldout || isDisabled}>
+                            <button onClick={mintRascal} type="button" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2" style={{ "width": "initial" }} disabled={isMinting || isSoldout || isDisabled}>
                                 {isMinting ? (
                                     <FontAwesomeIcon icon={faSpinner} color="white" spin />
                                 ) : (
@@ -958,8 +969,8 @@ export default function App() {
                 </Modal.Body>
             </Modal>
 
-             {/* Modal for error transaction */}
-             <Modal show={showOnErrorRascal} onHide={handleCloseOnErrorRascal} backdrop="static" keyboard={false} centered>
+            {/* Modal for error transaction */}
+            <Modal show={showOnErrorRascal} onHide={handleCloseOnErrorRascal} backdrop="static" keyboard={false} centered>
                 <Modal.Body className="px-4 position-relative modal-body-style">
                     <div className="position-absolute modal-close-icon">
                         <FontAwesomeIcon color="white" className="font-size-160 cursor-pointer" icon={faTimes} onClick={handleCloseOnErrorRascal} />
@@ -967,7 +978,7 @@ export default function App() {
 
                     <p className="text-white fw-bold text-center font-andes font-size-130 pt-4 pb-2">{txError}</p>
                 </Modal.Body>
-            </Modal>    
+            </Modal>
 
             {/* Modal for successful transaction */}
             <Modal show={showOnSuccessRascal} onHide={handleCloseOnSuccessRascal} backdrop="static" keyboard={false} centered>
@@ -986,17 +997,17 @@ export default function App() {
                     <div className="row mb-4">
                         <div className="col-12 text-center">
                             {/* Mainnet */}
-                            <a href={ 'https://opensea.io/assets/ethereum/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a>
+                            <a href={'https://opensea.io/assets/ethereum/' + rascalsAddress + '/' + tokenId} target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{ "width": "initial" }}>VIEW ON OPENSEA</a>
 
                             {/* Testnet */}
                             {/* <a href={ 'https://testnets.opensea.io/assets/goerli/' + rascalsAddress + '/' + tokenId } target="_blank" rel="noreferrer" className="btn btn-custom-2 gotham-black font-size-110 w-100 py-2 mb-2" style={{"width":"initial"}}>VIEW ON OPENSEA</a> */}
 
-                            <a href={ etherScanUrl + txHashRascal } target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{"width":"initial"}}>View Transaction Hash</a>
+                            <a href={etherScanUrl + txHashRascal} target="_blank" rel="noreferrer" className="text-white text-center font-size-90" style={{ "width": "initial" }}>View Transaction Hash</a>
                         </div>
                     </div>
                 </Modal.Body>
             </Modal>
-            
+
             <Modal className="no-border" show={showYTVideoPlayer} onHide={handleCloseYTVideoPlayer} backdrop="static" keyboard={false} size="xl" centered>
                 <Modal.Body className="p-0">
                     <div className="position-relative">
