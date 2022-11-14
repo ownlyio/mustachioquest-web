@@ -389,7 +389,7 @@ export default function App() {
     const [totalSupply, setTotalSupply] = useState(0)
     const [freeMintQty, setFreeMintQty] = useState(0)
     const [isFreeMint, setIsFreeMint] = useState(false)
-    const [isDiscounted, setIsDiscounted] = useState(false)
+    const [isDiscounted, setIsDiscounted] = useState(true)
     // const [currentMinter, setCurrentMinter] = useState("WL")
     const [isDisabled, setIsDisabled] = useState(true)
     const [isMinting, setIsMinting] = useState(false)
