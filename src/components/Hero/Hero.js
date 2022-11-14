@@ -101,7 +101,7 @@ export default function Hero({ mintRascal, isSoldout, isDiscounted }) {
                                 </>
                             )}
                         </div>
-                        {isDiscounted && <p className="text-white gotham-black text-center font-size-120 font-size-sm-130 font-size-md-150 mb-3">25% OFF until 31 OCT 2022!</p>}
+                        {isDiscounted && <p className="text-white gotham-black text-center font-size-120 mt-2 mb-3">11.15 PAYDAY SALE! ENJOY 25% DISCOUNT!</p>}
 
                         {/* <div className="hero-countdown d-flex align-items-center justify-content-between flex-wrap mb-4 px-0 px-md-5">
                             <div className="countdown days">
