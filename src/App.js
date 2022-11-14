@@ -64,6 +64,7 @@ import bnbImage from "./images/bnb.png"
 import ownImage from "./images/own-token.png"
 import marauders from "./images/MQ_marauders.png"
 import rascals from "./images/MQ_rascals.png"
+import axios from "axios";
 
 // smooth scrolling for safari
 smoothscroll.polyfill()
@@ -83,6 +84,9 @@ export default function App() {
     // const [showOnProcess, setShowOnProcess] = useState(false);
     // const handleCloseOnProcess = () => setShowOnProcess(false);
     // const handleShowOnProcess = () => setShowOnProcess(true);
+
+    const params = new URLSearchParams(window.location.search);
+    const minterType = params.get("ref");
 
     const showVideoPlayerModal = url => {
         setYTVideoUrl(url)
@@ -522,6 +526,13 @@ export default function App() {
                         handleShowOnErrorRascal()
                     })
                     .then(async function (receipt) {
+                        if(minterType === "web3fest") {
+                            axios.post("https://ownly.market/api/rascals/store-minter", {
+                                type: minterType,
+                                address: address
+                            })
+                        }
+
                         setIsMinting(false)
                         handleShowOnSuccessRascal()
                         setTxHashRascal(receipt.transactionHash)
