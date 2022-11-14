@@ -595,13 +595,16 @@ export default function App() {
 
     const initRascal = async () => {
         let addr = await connectToMetaMaskEth()
-
         if (addr) {
             _init(addr)
             setAddress(addr)
             handleShowMintRascal()
         } else {
-            handleShowMetamaskInstall()
+            if(isMobile) {
+                window.location.href = "https://metamask.app.link/dapp/mustachioverse.com" + ((minterType) ? minterType : '');
+            } else {
+                handleShowMetamaskInstall()
+            }
         }
     }
 
