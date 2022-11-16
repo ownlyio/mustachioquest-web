@@ -600,11 +600,7 @@ export default function App() {
             setAddress(addr)
             handleShowMintRascal()
         } else {
-            if(isMobile) {
-                window.location.href = "https://metamask.app.link/dapp/mustachioverse.com" + ((minterType) ? minterType : '');
-            } else {
-                handleShowMetamaskInstall()
-            }
+            handleShowMetamaskInstall()
         }
     }
 
@@ -801,7 +797,7 @@ export default function App() {
                         <img src={metamask} alt="Metamask logo" />
                     </div>
                     {isMobile ? (
-                        <p className="app-metamask-modal-content text-center font-andes text-lg">No Web3 Provider detected. Please use the in-app browser of MetaMask app on your device to mint.</p>
+                        <p className="app-metamask-modal-content text-center font-andes text-lg">Please use the in-app browser of MetaMask app on your device to mint.</p>
                     ) : (
                         <p className="app-metamask-modal-content text-center font-andes text-lg">No MetaMask detected. Please install Metamask extension on your browser to proceed.</p>
                     )}
@@ -810,9 +806,15 @@ export default function App() {
                     <Button variant="secondary" onClick={handleCloseMetamaskInstall}>
                         Close
                     </Button>
+                    {isMobile ? (
+                    <Button variant="primary" onClick={() => window.open("https://metamask.app.link/dapp/mustachioverse.com" + ((minterType) ? minterType : ''), '_blank').focus()}>
+                        Open with MetaMask Mobile
+                    </Button>
+                    ) : (
                     <Button variant="primary" onClick={() => window.open("https://metamask.io/download", '_blank').focus()}>
                         Install Metamask
                     </Button>
+                    )}
                 </Modal.Footer>
             </Modal>
 
