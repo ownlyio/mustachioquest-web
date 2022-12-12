@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0dd6bd9.css",
-    "main.js": "/static/js/main.748641d8.js",
+    "main.css": "/static/css/main.11f663ba.css",
+    "main.js": "/static/js/main.4cc1f352.js",
     "static/js/787.69eacd62.chunk.js": "/static/js/787.69eacd62.chunk.js",
     "static/media/AR.gif": "/static/media/AR.9e1c98b70547d565244f.gif",
     "static/media/rascal-gif.gif": "/static/media/rascal-gif.90a1a35c500959744991.gif",
@@ -52,12 +52,14 @@
     "static/media/15-mountainwarrior.png": "/static/media/15-mountainwarrior.fc31070f778acccfe3ee.png",
     "static/media/bm_wide.png": "/static/media/bm_wide.81b6cd21283a72777fef.png",
     "static/media/candy-floss.jpg": "/static/media/candy-floss.9f35f6b1261f4ca25127.jpg",
+    "static/media/mustashow-bg.webp": "/static/media/mustashow-bg.a45212ccad29988aceda.webp",
     "static/media/Players.png": "/static/media/Players.06805779dccd7ffbfb6a.png",
     "static/media/game-dev-4.png": "/static/media/game-dev-4.991de96c458a82220c15.png",
     "static/media/13-kingstellar.png": "/static/media/13-kingstellar.174b04912d4137e124cf.png",
     "static/media/WHermann-SemiBoldItalic.woff": "/static/media/WHermann-SemiBoldItalic.413bb88828b05baf05f9.woff",
     "static/media/WHermann-BlackItalic.woff": "/static/media/WHermann-BlackItalic.bf9eb8358d1cbc442747.woff",
     "static/media/WHermann-UltraBoldItalic.woff": "/static/media/WHermann-UltraBoldItalic.81fe754f0aef4b107fb2.woff",
+    "static/media/mustashow-title.png": "/static/media/mustashow-title.ffc64052f3aec74ace43.png",
     "static/media/WHermann-Italic.woff": "/static/media/WHermann-Italic.f1fa15c4d4dab64cea0a.woff",
     "static/media/WHermann-HeavyItalic.woff": "/static/media/WHermann-HeavyItalic.18ceff9b8b29acf29521.woff",
     "static/media/sneakpeek-top.png": "/static/media/sneakpeek-top.6bfc0031ebd85dff54d9.png",
@@ -115,8 +117,10 @@
     "static/media/mustachios.png": "/static/media/mustachios.9e6a1020d012288cbcec.png",
     "static/media/roadmap-bg.jpg": "/static/media/roadmap-bg.7afa658e665ce1257685.jpg",
     "static/media/banner.jpg": "/static/media/banner.333799b7b41c92614de2.jpg",
+    "static/media/mustachios-logo.webp": "/static/media/mustachios-logo.4cffe5b63bd5207c48a5.webp",
     "static/media/check-3d-green.png": "/static/media/check-3d-green.d00d89d5101079e29ea0.png",
     "static/media/faq-top.png": "/static/media/faq-top.43d1b3a5a0fc658336ca.png",
+    "static/media/ownly-logo.png": "/static/media/ownly-logo.b252ea49278799bcc834.png",
     "static/media/Gotham-ExtraLightItalic.woff": "/static/media/Gotham-ExtraLightItalic.c572c3ccc8e1211ededf.woff",
     "static/media/Gotham-BlackItalic.woff": "/static/media/Gotham-BlackItalic.a1f46881f03892f9e1b9.woff",
     "static/media/Gotham-BookItalic.woff": "/static/media/Gotham-BookItalic.4bb8188a07b2607f6098.woff",
@@ -170,12 +174,12 @@
     "static/media/MQ_logo_white.png": "/static/media/MQ_logo_white.e2a1aa42f1c2a583ce55.png",
     "static/media/ygg.png": "/static/media/ygg.2f5a32e4c0c1ee7530bf.png",
     "index.html": "/index.html",
-    "main.a0dd6bd9.css.map": "/static/css/main.a0dd6bd9.css.map",
-    "main.748641d8.js.map": "/static/js/main.748641d8.js.map",
+    "main.11f663ba.css.map": "/static/css/main.11f663ba.css.map",
+    "main.4cc1f352.js.map": "/static/js/main.4cc1f352.js.map",
     "787.69eacd62.chunk.js.map": "/static/js/787.69eacd62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0dd6bd9.css",
-    "static/js/main.748641d8.js"
+    "static/css/main.11f663ba.css",
+    "static/js/main.4cc1f352.js"
   ]
 }
